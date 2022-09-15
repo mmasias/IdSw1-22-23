@@ -11,7 +11,7 @@
 
 - ¿Por qué parte comenzarías, continuarías y terminarías la producción de código?
 - ¿Qué medidas aplicarías para obtener la calidad del software adecuada para facilitar la depuración de errores, mantenibilidad correctiva, perfectiva o adaptativa?
-- ¿Cómo repartirías las tareas de producción entre las personas del equipo d desarrollo? 
+- ¿Cómo repartirías las tareas de producción entre las personas del equipo de desarrollo? 
 - ¿A cuánta gente incorporarías?
 
 ## Soy miembro del equipo directivo de la empresa
