@@ -2,7 +2,7 @@
 
 Ante todo, muchas gracias por embarcarse y participar de esta actividad: como he comentado con alguno de ustedes, no me consta (y he estado mirándolo) que en otras latitudes universitarias se realicen este tipo de dinámicas de modo global con el alumno, así que vamos a ver que tal resulta... 
 
-Esquematizo el discurso debajo.
+Esquematizo el planteamiento debajo.
 
 ## Que haremos
 
@@ -28,12 +28,17 @@ Los documentos que se tendrán, como final de esta dinámica (es decir, a fin de
 ## Cuándo y cómo lo haremos
 
 El planning previsto son dos sesiones de dos horas (como máximo) cada una, en las siguientes fechas:
-Primera sesión
-21 octubre - Alicia Bustamante / Marisa Sámano
-22 octubre - Alicia Huidobro / Carlos Lago
-Segunda sesión
-11 noviembre - Alicia Huidobro / Marisa Sámano
-12 noviembre - Alicia Bustamante / Carlos Lago
+
+<center>
+
+|Sesión|Fecha|Participantes
+|-|-|-
+|I|13 oct 2022| *xDefinir*
+|II|18 nov 2022| *xDefinir*
+|||
+
+</center>
+
 Si hubiera algún inconveniente con estas fechas, sin ningún problema podemos ajustarlas. 
 
 A las sesiones les sugeriría ir con "refuerzos" ;) es decir, si va alguien que trabaje ese tema con ustedes y puede aportar un punto de vista adicional, extra o incluso disruptivo, mucho mejor.
