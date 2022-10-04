@@ -33,7 +33,7 @@ El planning previsto son dos sesiones de dos horas (como máximo) cada una, en l
 
 |Sesión|Jorge|Alicia|Rodrigo|Lucía
 |:-:|:-:|:-:|:-:|:-:|
-|I| Viernes 14<br>12:00h|*#xDefinir*|*#xDefinir*|*#xDefinir*
+|I| Viernes 14<br>12:00h|*#xDefinir*|*#xDefinir*|Jueves 13<br>12:00h
 |II|*#xDefinir*|*#xDefinir*|*#xDefinir*|*#xDefinir*
 
 </center>
