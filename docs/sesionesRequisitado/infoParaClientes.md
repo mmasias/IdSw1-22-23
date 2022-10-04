@@ -35,7 +35,6 @@ El planning previsto son dos sesiones de dos horas (como máximo) cada una, en l
 |:-:|:-:|:-:|:-:|:-:|
 |I| Viernes 14<br>12:00h|*#xDefinir*|*#xDefinir*|*#xDefinir*
 |II|*#xDefinir*|*#xDefinir*|*#xDefinir*|*#xDefinir*
-|||
 
 </center>
 
