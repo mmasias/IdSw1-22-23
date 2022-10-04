@@ -31,10 +31,10 @@ El planning previsto son dos sesiones de dos horas (como máximo) cada una, en l
 
 <center>
 
-|Sesión|Fecha|Participantes
-|-|-|-
-|I|13 oct 2022| *xDefinir*
-|II|18 nov 2022| *xDefinir*
+|Sesión|Jorge|Alicia|Rodrigo|Lucía
+|:-:|:-:|:-:|:-:|:-:|
+|I| Viernes 14<br>12:00h|*#xDefinir*|*#xDefinir*|*#xDefinir*
+|II|*#xDefinir*|*#xDefinir*|*#xDefinir*|*#xDefinir*
 |||
 
 </center>
