@@ -49,3 +49,15 @@ Modelo del dominio no son componentes de software: no ventanas, no BBDD, no resp
 1. Asocie
 1. Añada atributos
 
+#### Error común
+
+Representar algo como atributo cuando debería ser un concepto. Por tanto:
+
+> Si no consideramos algo X como un número o texto, probablemente X sea una clase conceptual
+
+|Opción 1 | | Opción 2 
+|-|-|-|
+|![](../images/claseVenta.png)|¿o ...?|![](../images/claseVentaTienda.png)
+
+En el mundo real una tienda no se considera un número o texto, sino que el término sugiere una entidad real, una organización. Por tanto, Tienda debe ser un concepto.
+
