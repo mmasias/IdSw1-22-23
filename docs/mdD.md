@@ -1,5 +1,7 @@
 # Mis apuntes extra sobre Modelo del Dominio
 
+Modelo del dominio [en la wikipedia](https://es.wikipedia.org/wiki/Modelo_de_dominio)
+
 * Conjunto de clases conceptuales significativas del mundo real, no de componentes de software.
 * Fuente de inspiración para el diseño de los objetos software.
 * No son diagramas de clases u objetos de software con responsabilidades.
@@ -61,3 +63,6 @@ Representar algo como atributo cuando debería ser un concepto. Por tanto:
 
 En el mundo real una tienda no se considera un número o texto, sino que el término sugiere una entidad real, una organización. Por tanto, Tienda debe ser un concepto.
 
+## Asociaciones
+
+Una asociación es una relación entre tipos (o instancias de esos tipos) que indica alguna conexión significativa e interesante.
