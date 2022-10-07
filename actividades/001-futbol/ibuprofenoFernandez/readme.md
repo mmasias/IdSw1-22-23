@@ -1,3 +1,9 @@
-# Modelo del dominio del fútbol
+# Fútbol / Modelo del dominio
 
-## Ibuprofeno Fernandez
+## Diagrama de clases
+
+![Imagen](images/modeloDelDominio.png)
+
+[Código](modeloDelDominio.puml)
+
+---
