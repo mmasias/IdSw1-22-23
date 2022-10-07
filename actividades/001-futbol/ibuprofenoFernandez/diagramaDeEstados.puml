@@ -1,0 +1,20 @@
+@startuml
+
+state Inicio <<start>>
+state Saque
+state EnJuego
+state Detenido
+state Pausa <<choice>>
+state Fin <<end>>
+
+Inicio --> Saque
+Saque --> EnJuego
+EnJuego --> Detenido
+Detenido --> Pausa : [Final de un período]
+Detenido --> Saque
+
+
+Pausa --> Fin : [No hay mas tiempos]
+Pausa --> Saque : [Quedan períodos]
+
+@enduml
