@@ -1,6 +1,6 @@
 # Grupos para las sesiones de requisitado
 
-# Grupo 1
+## Grupo 1
 
 Cliente: Jorge Crespo
 
@@ -10,7 +10,7 @@ Cliente: Jorge Crespo
 - Andres  Requena
 - Javier Ruiz
 
-# Grupo 2
+## Grupo 2
 
 Cliente: Rodrigo Zaldaña
 
@@ -19,7 +19,7 @@ Cliente: Rodrigo Zaldaña
 - Diego Musitu
 - Omar Barrios
 
-# Grupo 3
+## Grupo 3
 
 Cliente: Alicia Bustamante
 
@@ -28,7 +28,7 @@ Cliente: Alicia Bustamante
 - Jaime Polidura
 - Ivan Santovenia
 
-# Grupo 4
+## Grupo 4
 
 Cliente: Lucía Terán
 
