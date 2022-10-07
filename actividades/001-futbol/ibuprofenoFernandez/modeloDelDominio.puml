@@ -2,13 +2,13 @@
 
 Partido  --> Período : Se desarrolla en un >
 
-Alineacion --> Partido : Disputa >
+Alineación --> Partido : Disputa >
 
-Equipo --> Alineacion : Presenta >
+Equipo --> Alineación : Presenta >
 
 Arbitro --> Partido : Dirige >
 
-Jugador --> Equipo : Pertenece a >
+Jugador --> Equipo : Pertenece >
 
 Partido --> Reglas : Sigue >
 
