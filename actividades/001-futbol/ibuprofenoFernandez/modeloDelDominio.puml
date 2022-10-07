@@ -1,0 +1,18 @@
+@startuml
+
+Partido  --> Período : Se desarrolla en un >
+
+Alineación --> Partido : Disputa >
+
+Equipo --> Alineación : Presenta >
+
+Arbitro --> Partido : Dirige >
+
+Jugador --> Equipo : Pertenece >
+
+Partido --> Reglas : Sigue >
+
+Persona <|-- Arbitro
+Persona <|-- Jugador
+
+@enduml
