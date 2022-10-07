@@ -1,10 +1,12 @@
 @startuml
 
-Partido  -r-> Período : Se desarrolla en un >
+Partido  --> Período : Se desarrolla en un >
 
-Equipo -u-> Partido : Juega >
+Alineacion --> Partido : Disputa >
 
-Arbitro -r-> Partido : Dirige >
+Equipo --> Alineacion : Presenta >
+
+Arbitro --> Partido : Dirige >
 
 Jugador --> Equipo : Pertenece a >
 
@@ -12,6 +14,5 @@ Partido --> Reglas : Sigue >
 
 Persona <|-- Arbitro
 Persona <|-- Jugador
-
 
 @enduml
