@@ -1,0 +1,17 @@
+@startuml
+
+Partido  -r-> Período : Se desarrolla en un >
+
+Equipo -u-> Partido : Juega >
+
+Arbitro -r-> Partido : Dirige >
+
+Jugador --> Equipo : Pertenece a >
+
+Partido --> Reglas : Sigue >
+
+Persona <|-- Arbitro
+Persona <|-- Jugador
+
+
+@enduml
