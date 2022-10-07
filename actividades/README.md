@@ -2,7 +2,7 @@
 
 <center>
 
-![](../images/estrategiaTrabajo.png)
+[![](../images/estrategiaTrabajo.png)](../puml.source/estrategiaTrabajo.puml)
 
 </center>
 
