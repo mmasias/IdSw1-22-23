@@ -10,5 +10,5 @@ Primero, [#2Think](docs/2think.md)
 * Proyectos que abordaremos:
   * [Modelado del fútbol](actividades/001-futbol/)
 * Sesiones de requisitado
-  * [Planteamiento](docs/requisitado.md)
+  * [Planteamiento](docs/sesionesRequisitado/infoParaAlumnos.md)
   * [Grupos](docs/grupos.md)
