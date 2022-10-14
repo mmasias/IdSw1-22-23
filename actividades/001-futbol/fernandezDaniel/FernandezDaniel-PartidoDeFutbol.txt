@@ -1,0 +1,24 @@
+@startuml
+class PartidoDeFutbol
+class Estadio
+class Espectadores
+class Equipos
+class EquipoLocal
+class EquipoVisitante
+class ExtrasDeEstadio
+class EquipoArbitrario
+class Reglamento
+
+PartidoDeFutbol --> Estadio
+PartidoDeFutbol --> Reglamento
+
+Estadio --> Espectadores
+Estadio --> Equipos
+Estadio --> ExtrasDeEstadio
+
+
+Equipos --> EquipoLocal
+Equipos --> Reglamento
+Equipos --> EquipoVisitante
+Equipos --> EquipoArbitrario
+@enduml
