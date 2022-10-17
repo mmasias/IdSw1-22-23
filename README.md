@@ -7,5 +7,8 @@ Repo de materiales y proyectos de la asignatura **Ingeniería del Software I** d
 Primero, [#2Think](docs/2think.md)
 
 * [Temario](docs/temario.md)
-* [Proyectos que abordaremos:](docs/proyectos.md).
-* [Grupos](docs/grupos.md)
+* Proyectos que abordaremos:
+  * [Modelado del fútbol](actividades/001-futbol/)
+* Sesiones de requisitado
+  * [Planteamiento](docs/sesionesRequisitado/infoParaAlumnos.md)
+  * [Grupos](docs/grupos.md)
