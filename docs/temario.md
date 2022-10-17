@@ -1,8 +1,15 @@
 # Temario
 
 - [Acerca de la Ingeniería del Software](./contenidos/acercaDe.md)
+    - Patrones
+    - Conocimiento
+    - Complejidad 
 - Elementos fundamentales en la producción de software
+    - Software
+    - Crisis del software
+    - Características
+    - Problemas del software
+    -   Objetivos de la ingeniería de software
 - Ingeniería de Requisitos
-- Modelado para el desarrollo
-    - Lenguaje unificado de modelado UML
-- Introducción al análisis
+    - Modelo del dominio
+    - Casos de Uso

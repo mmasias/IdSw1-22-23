@@ -1,0 +1,27 @@
+@startuml
+class cuerpoTecnicoA
+class cuerpoTecnicoB
+class jugadoresTitularesA
+class jugadoresTitularesB
+class jugadoresSuplenteA
+class jugadoresSuplenteB
+class Arbitraje
+class Var
+class campo
+class cesped
+class balon
+Arbitraje*--cuerpoTecnicoA
+Arbitraje*--cuerpoTecnicoB
+Arbitraje*--jugadoresTitularesA
+Arbitraje*--jugadoresTitularesB
+Arbitraje*--jugadoresSuplenteA
+Arbitraje*--jugadoresSuplenteB
+Arbitraje*--Var
+cuerpoTecnicoA*--jugadoresTitularesA
+cuerpoTecnicoA*--jugadoresSuplenteA
+cuerpoTecnicoB*--jugadoresTitularesB
+cuerpoTecnicoB*--jugadoresSuplenteB
+campo*--cesped
+balon*--jugadoresTitularesA
+balon*--jugadoresTitularesB
+@enduml
