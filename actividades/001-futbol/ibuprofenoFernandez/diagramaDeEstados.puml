@@ -1,22 +1,26 @@
 @startuml
+
 State Encuentro {
-  [*] -> Inicio
+  [*] -d-> Inicio
+
   State reloj <<choice>>
   State Inicio
   State PeríodoIntermedio
 
   State Período {
-    Saque --> EnJuego
-    EnJuego --> Detenido
-    Detenido --> Saque  
+    Saque -d-> EnJuego
+    EnJuego -r-> Detenido
+    Detenido -u-> Saque  
   }
 
-  Inicio --> Saque
+Inicio -d-> Período
+
+Período-r-> reloj : Se acabó el tiempo
+reloj -u-> PeríodoIntermedio : Quedan períodos
+reloj -r-> [*] : No quedan períodos
+
+PeríodoIntermedio -l-> Inicio
+  
 }
 
-Período--> reloj : Se acabó el tiempo
-reloj --> PeríodoIntermedio : Quedan períodos
-reloj --> [*] : No quedan períodos
-
-PeríodoIntermedio --> Inicio
 @enduml
