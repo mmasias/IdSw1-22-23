@@ -7,7 +7,6 @@ PartidoFutbol -- Estadio
 PartidoFutbol -- Árbitro
 PartidoFutbol -- Equipos
 
-Árbitro -- Balón
 Jugadores -- Balón
 Equipos -- Jugadores
 Equipos -- CuerpoTécnico
