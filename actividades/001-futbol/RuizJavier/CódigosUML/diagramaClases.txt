@@ -6,11 +6,13 @@ class PartidoFutbol
 PartidoFutbol -- Estadio 
 PartidoFutbol -- Árbitro
 PartidoFutbol -- Equipos
-
-Jugadores -- Balón
+Estadio -- Material
+Estadio -- Afición
 Equipos -- Jugadores
 Equipos -- CuerpoTécnico
-PartidoFutbol -- Acciones
+Jugadores -- Titulares
+Jugadores -- Suplentes
+PartidoFutbol -- Eventos
 
 
 @enduml
