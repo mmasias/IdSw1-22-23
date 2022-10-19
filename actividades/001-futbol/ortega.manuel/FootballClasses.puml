@@ -4,18 +4,18 @@ class Arbitro
 class Cancha
 class Pelota
 class Marcador
-class Goles
+class Gol
 class Partido
 class Jugador
 
 Partido *--- Equipo : Juega <
-Equipo *--- Jugador : Tiene >
+Equipo --- Cancha : Se forma en >
+Equipo *--- Jugador : Juega en <
 Partido *--- Arbitro : Dirige <
 Arbitro --- Jugador : Sanciona >
-Jugador --- Pelota : Juega con >
-Partido *--- Pelota : Juega con >
-Goles *--- Marcador : Se muestran en >
+Partido *--- Pelota : Se usa una >
+Gol *--- Marcador : Se muestra en >
 Partido *--- Cancha :  Se disputa en >
-Jugador *--- Goles : Anota >
+Jugador *--- Gol : Anota >
 
 @enduml
