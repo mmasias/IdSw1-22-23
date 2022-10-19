@@ -1,0 +1,22 @@
+@startuml
+class Partido
+class Equipo
+class Equipo1
+class Equipo2
+class ContadorPuntos
+class ContadorTiempo
+class Estado
+
+Partido*--Equipo1
+Partido*--Equipo2
+Partido*--ContadorPuntos
+Partido*--ContadorTiempo
+Partido*--Estado
+Partido*--Arbitro
+
+Campo*--Partido
+Equipo*--Jugadores
+Equipo*--Suplentes
+Equipo*--Entrenador
+
+@enduml
