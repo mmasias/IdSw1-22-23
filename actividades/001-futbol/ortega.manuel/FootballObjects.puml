@@ -1,0 +1,15 @@
+@startuml Football
+object "Chelsea : Equipo" as Chelsea 
+object "Riverplate : Equipo" as Riverplate 
+object Camp_Nou
+object BalonClasico
+Object 3_0
+object ArbitroAleman
+
+Camp_Nou *--- Chelsea
+Camp_Nou *--- Riverplate
+Camp_Nou *--- ArbitroAleman
+Camp_Nou *--- BalonClasico
+Camp_Nou *--- 3_0
+
+@enduml
