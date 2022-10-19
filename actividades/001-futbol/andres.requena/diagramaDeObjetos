@@ -1,0 +1,28 @@
+@startuml
+
+Object Campo
+
+Campo --|> Partido : Se juega
+
+
+Partido : equipo1 = string
+Partido : equipo1 = string
+Partido : puntosEquipo1 = int
+Partido : puntosEquipo1 = int
+Partido : tiempo = Temporizador
+Partido : tiempoExtra = int
+Partido : faltas = string[]
+Partido : balon = balon
+Partido : Arbitro = Jugador
+
+Equipo1 : plantilla = Jugador[]
+Equipo1 : entrenador = string
+
+Equipo2 : plantilla = Jugador[]
+Equipo2 : entrenador = string
+
+Equipo1 -- Partido
+Equipo2 -- Partido
+Equipo1 -- Equipo2 : Contra
+
+@enduml
