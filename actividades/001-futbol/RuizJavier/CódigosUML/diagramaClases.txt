@@ -1,0 +1,18 @@
+@startuml
+
+class PartidoFutbol
+
+
+PartidoFutbol -- Estadio 
+PartidoFutbol -- Árbitro
+PartidoFutbol -- Equipos
+Estadio -- Material
+Estadio -- Afición
+Equipos -- Jugadores
+Equipos -- CuerpoTécnico
+Jugadores -- Titulares
+Jugadores -- Suplentes
+PartidoFutbol -- Eventos
+
+
+@enduml
