@@ -1,20 +1,19 @@
 @startuml
 class Partido
 class cuerpoTecnico
-class jugadoresTitulares
+class jugadores
 class Arbitraje
 class Var
 class campo
 class cesped
 class balon
 Partido*--campo
-campo*--jugadoresTitulares
+campo*--jugadores
 campo*--Arbitraje
 Arbitraje*--cuerpoTecnico
 Arbitraje*--jugadoresTitulares
 Arbitraje*--Var
-cuerpoTecnico*--jugadoresTitulares
-cuerpoTecnico*--jugadoresSuplente
+cuerpoTecnico*--jugadores
 campo*--cesped
 balon*--jugadoresTitulares
 @enduml
