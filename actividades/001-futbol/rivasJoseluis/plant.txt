@@ -1,23 +1,24 @@
 @startuml
 class Partido
-class cuerpoTecnico
-class jugadores
+class CuerpoTecnico
+class Jugadores
 class Arbitraje
 class Var
-class campo
-class cesped
-class balon
-class equipo
-class marcador
-campo*--marcador
-equipo*--cuerpoTecnico
-equipo*--jugadores
-Partido*--campo
-campo*--Arbitraje
-campo*--equipo
-Arbitraje*--cuerpoTecnico
-Arbitraje*--jugadores
-Arbitraje*--Var
-campo*--cesped
-balon*--jugadores
+class Campo
+class Cesped
+class Balon
+class Equipo
+class Marcador
+class Resultado
+Campo--Marcador
+Equipo--CuerpoTecnico
+Equipo--Jugadores
+Partido--Campo
+Campo--Arbitraje
+Campo--Equipo
+Arbitraje--Jugadores
+Arbitraje--Var
+Campo--Cesped
+Marcador-- Resultado
+Jugadores--Balon
 @enduml
