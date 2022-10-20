@@ -1,0 +1,33 @@
+@startuml
+
+Partido  --> Período : Se desarrolla en un >
+
+Alineación --> Partido : Inicia >
+Equipo --> Alineación : Presenta >
+Arbitro --> Partido : Dirige >
+Arbitro --> Jugador : Sanciona >
+Jugador --> Equipo : Pertenece >
+Jugador --> Goles : Hace >
+Jugador <|-- Delantero
+Jugador <|-- Defensa
+Jugador <|-- Mediocampo
+Jugador <|-- Arquero
+
+Partido --> Normativa : Tiene >
+Partido --l> Goles : Tiene >
+
+Espectador --> Partido : Observa >
+
+Seguridad --> Espectador : controla
+
+Medicos --> Jugador : Cura
+
+
+Persona <|-- Arbitro
+Persona <|-- Jugador
+Persona <|-- Medicos
+Persona <|-- Seguridad
+Persona <|-- Espectador
+
+
+@enduml 
