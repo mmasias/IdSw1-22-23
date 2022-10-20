@@ -2,5 +2,5 @@
 
 |Diagrama de clases|Diagrama de Estados|
 |:-:|:-:|
-|![Imagen](images/modeloDeDominio.png)|![Imagen](images/diagramaDeEstados.png)
+|![Imagen](images/ModeloDeDominio.png)|![Imagen](images/DiagramaDeEstados.png)
 |[Código](modeloDelDominio.puml)|[Código](diagramaDeEstados.puml)
