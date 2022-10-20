@@ -1,0 +1,38 @@
+@startuml Football
+object "El_Clasico : Parido" as El_Clasico
+object "Real_Madrid : Equipo" as Real_Madrid
+object "Barcelona : Equipo" as Barcelona 
+object "Camp_Nou : Cancha" as Camp_Nou
+object "BalonClasico : Pelota" as BalonClasico
+Object "2_1 : Marcador" as 2_1
+object "ArbitroAleman : Arbitro" as ArbitroAleman
+object "Cristiano_Ronaldo : Jugador" as Cristiano_Ronaldo
+object "Lionel_Messi : Jugador" as Lionel_Messi
+object "Neymar : Jugador" as Neymar
+object "Luis_Suarez : Jugador" as Luis_Suarez
+object "Eden_Hazard : Jugador" as Eden_Hazard
+object "Tiro_Libre : Gol" as Tiro_Libre
+object "Penal : Gol" as Penal
+object "Chilena : Gol" as Chilena
+
+Real_Madrid -u-* El_Clasico : Juega >
+Barcelona -u-* El_Clasico : Juega >
+Real_Madrid -u- Camp_Nou : Se forma en >
+Barcelona -u- Camp_Nou : Se forma en >
+Barcelona *--- Lionel_Messi : Juega en <
+Barcelona *--- Neymar : Juega en <
+Barcelona *--- Luis_Suarez : Juega en <
+Real_Madrid *--- Cristiano_Ronaldo : Juega en <
+Real_Madrid *--- Eden_Hazard : Juega en <
+El_Clasico *--- ArbitroAleman : Dirige <
+ArbitroAleman --- Luis_Suarez : Sanciona >
+El_Clasico *--- BalonClasico : Se usa un >
+El_Clasico *--- Camp_Nou :  Se disputa en >
+Lionel_Messi *--- Tiro_Libre : Anota >
+Neymar *--- Penal : Anota >
+Cristiano_Ronaldo *--- Chilena : Anota >
+Tiro_Libre *--- 2_1 : Se muestra en >
+Penal *--- 2_1 : Se muestra en >
+Chilena *--- 2_1 : Se muestra en >
+
+@enduml

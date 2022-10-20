@@ -1,0 +1,21 @@
+@startuml Football
+class Equipo
+class Arbitro
+class Cancha
+class Pelota
+class Marcador
+class Gol
+class Partido
+class Jugador
+
+Partido *--- Equipo : Juega <
+Equipo --- Cancha : Se forma en >
+Equipo *--- Jugador : Juega en <
+Partido *--- Arbitro : Dirige <
+Arbitro --- Jugador : Sanciona >
+Partido *--- Pelota : Se usa una >
+Gol *--- Marcador : Se muestra en >
+Partido *--- Cancha :  Se disputa en >
+Jugador *--- Gol : Anota >
+
+@enduml
