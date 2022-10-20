@@ -1,0 +1,9 @@
+@startuml
+Partido *-- Equipo : Juega
+Partido *-- Temporizador : Marca el tiempo del
+Partido --* Campo : Se juega en un
+Partido --* Balon : se juega con un
+Partido *-- Arbitro : Arbitra el
+Equipo *-- Balon : Juega con un
+Equipo --* Campo: Juega en un
+@enduml
