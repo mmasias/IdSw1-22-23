@@ -1,18 +1,22 @@
 @startuml
 
-Partido  --> Período : Se desarrolla en un >
+Partido  -l-> Encuentro: Se desarrolla en un >
+Encuentro *-d- Períodos : Consta de uno o varios >
 
-Alineación --> Partido : Disputa >
+Partido *-- Reglas : Sigue varias >
 
-Equipo --> Alineación : Presenta >
+Partido <-- Alineación  : Disputa <
+Partido <--- Arbitro  : Dirige <
 
-Arbitro --> Partido : Dirige >
+Equipo -u-> Alineación : Presenta >
 
-Jugador --> Equipo : Pertenece >
-
-Partido --> Reglas : Sigue >
+Jugador -r-* Equipo : Pertenece >
 
 Persona <|-- Arbitro
 Persona <|-- Jugador
+
+
+Arbitro ... Reglas : Valida el cumplimiento de >
+Jugador ... Reglas : Debe respetar >
 
 @enduml
