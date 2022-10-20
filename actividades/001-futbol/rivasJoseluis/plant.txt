@@ -1,27 +1,20 @@
 @startuml
-class cuerpoTecnicoA
-class cuerpoTecnicoB
-class jugadoresTitularesA
-class jugadoresTitularesB
-class jugadoresSuplenteA
-class jugadoresSuplenteB
+class Partido
+class cuerpoTecnico
+class jugadoresTitulares
 class Arbitraje
 class Var
 class campo
 class cesped
 class balon
-Arbitraje*--cuerpoTecnicoA
-Arbitraje*--cuerpoTecnicoB
-Arbitraje*--jugadoresTitularesA
-Arbitraje*--jugadoresTitularesB
-Arbitraje*--jugadoresSuplenteA
-Arbitraje*--jugadoresSuplenteB
+Partido*--campo
+campo*--jugadoresTitulares
+campo*--Arbitraje
+Arbitraje*--cuerpoTecnico
+Arbitraje*--jugadoresTitulares
 Arbitraje*--Var
-cuerpoTecnicoA*--jugadoresTitularesA
-cuerpoTecnicoA*--jugadoresSuplenteA
-cuerpoTecnicoB*--jugadoresTitularesB
-cuerpoTecnicoB*--jugadoresSuplenteB
+cuerpoTecnico*--jugadoresTitulares
+cuerpoTecnico*--jugadoresSuplente
 campo*--cesped
-balon*--jugadoresTitularesA
-balon*--jugadoresTitularesB
+balon*--jugadoresTitulares
 @enduml
