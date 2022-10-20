@@ -1,0 +1,37 @@
+@startuml
+
+State Partido{
+  [*] --u> Comienzo
+  State contador <<choice>>
+  State Comienzo
+  State EntreTiempo
+
+  State PeriodoDeJuego{
+    State Intervención
+    Saque --> EnJuego
+    EnJuego --> Detenido
+    EnJuego --> Intervención
+    Intervención --> Detenido : falta o cambio de jugador
+    Detenido --> Saque
+
+  }
+
+  State PeriodoDePenales{
+    TiroJugador --> CambioJugador
+    CambioJugador --> TiroJugador
+  }
+
+  Comienzo --> Saque
+}
+
+PeriodoDeJuego --> contador : Se acabó el PeriodoDeJuego
+contador --> EntreTiempo: Hay más tiempos
+contador --> PeriodoDePenales: Hay Penales
+contador --> [*] : No hay más tiempos ni Penales
+PeriodoDePenales --> [*] : Finalizo el periodo de penales
+
+
+
+EntreTiempo --> Comienzo
+
+@enduml
