@@ -1,4 +1,4 @@
 |Diagrama de clases|
 |:-:|
-|![Imagen](images/modeloDelDominio.png)|
+|![Imagen](images/diagramaDeClases.png)|
 |[Código](modeloDelDominio.puml)|
