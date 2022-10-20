@@ -1,0 +1,43 @@
+@startuml Domain soccerMatch
+class Match {
+    teamA : SoccerTeamInformation
+    teamB : SoccerTeamInformation
+    stadium: Stadium
+    duration: string
+    starts: string
+    weather: string
+    ballUsed: Ball
+    teamAGoals: int
+    teamBGoals: int
+    typeOfMatch: string
+}
+class SoccerTeamInformation {   
+    soccerTeam: SoccerTeam
+    equipment: string 
+}
+class SoccerTeam {
+    name: string
+    country: string
+    league: string
+    rating: double
+    players: Player[] players
+}
+class Player{
+    name: string
+    lastname: string
+    position: string
+    numberTShirt: string
+    rating: double
+}
+class Stadium {   
+    name: string
+    country: int
+    seats: int    
+}
+class Ball{
+    name: string
+    year: int
+    type: string
+}
+
+@enduml
