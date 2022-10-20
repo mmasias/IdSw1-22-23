@@ -7,13 +7,17 @@ class Var
 class campo
 class cesped
 class balon
+class equipo
+class marcador
+campo*--marcador
+equipo*--cuerpoTecnico
+equipo*--jugadores
 Partido*--campo
-campo*--jugadores
 campo*--Arbitraje
+campo*--equipo
 Arbitraje*--cuerpoTecnico
-Arbitraje*--jugadoresTitulares
+Arbitraje*--jugadores
 Arbitraje*--Var
-cuerpoTecnico*--jugadores
 campo*--cesped
-balon*--jugadoresTitulares
+balon*--jugadores
 @enduml
