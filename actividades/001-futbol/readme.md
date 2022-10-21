@@ -4,3 +4,5 @@ Vamos a ir poniendo aquí los trabajos. Creamos cada uno (en esta carpeta) una c
 
 
 El pull request a su propia rama
+
+![image](https://user-images.githubusercontent.com/96113274/196933062-644a25cf-a1c8-441d-8650-f72e09b060dd.png)
