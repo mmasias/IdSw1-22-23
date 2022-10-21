@@ -2,5 +2,5 @@
 
 |Modelo de Dominio|
 |:-:|
-|![Image](images/ModeloDominioFutbol.PNG)|
+|![Image](Images/ModeloDominioFutbol.PNG)|
 |[Código](ModeloDominio.txt)|
