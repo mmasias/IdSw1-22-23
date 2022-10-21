@@ -2,5 +2,5 @@
 
 |Modelo de clases|
 |:-:|
-|!.[Image].(imagenes/DigramaClases.PNG)|
+|![Image](imagenes/DigramaClases.PNG)|
 
