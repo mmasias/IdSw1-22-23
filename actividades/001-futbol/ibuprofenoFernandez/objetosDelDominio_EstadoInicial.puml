@@ -1,0 +1,69 @@
+@startuml
+
+object "arbitro : Arbitro" as arbitro {
+rol = "Primer árbitro"
+}
+
+object "arbitro2 : Arbitro" as arbitro2 {
+rol = "juez de línea"
+}
+
+object "arbitro3 : Arbitro" as arbitro3 {
+rol = "juez de línea"
+}
+
+object "partido : Partido" as partido
+
+partido -l-- arbitro : "Dirige <" 
+arbitro2 -d-- arbitro : "> Colabora con"
+arbitro3 -u-- arbitro : "> Colabora con"
+
+object "Real Madrid : Equipo" as equipoMadrid
+object "Barcelona : Equipo" as equipoBarcelona
+
+object "alineacionMadrid : Alineacion" as alineacionMadrid
+object "alineacionBarcelona : Alineacion" as alineacionBarcelona
+
+partido -u- equipoBarcelona
+partido -d- equipoMadrid
+
+object "primerTiempo : Periodo" as primerTiempo
+' object "segundoTiempo : Periodo" as segundoTiempo
+
+object "encuentro: Encuentro" as encuentro {
+name = "Clásico"
+fecha = "12/10/2022"
+}
+
+partido -r- encuentro
+
+encuentro -- primerTiempo
+
+object "jugador1: Jugador" as jugador1 {
+nombre="Iker Casillas"
+titular = TRUE
+}
+
+object "jugador2 Jugador" as jugador2 {
+nombre="Raul"
+titular = TRUE
+}
+
+object "jugador3 Jugador" as jugador3 {
+nombre="Sancochado"
+titular = FALSE
+}
+
+equipoMadrid -d- alineacionMadrid
+equipoBarcelona -u- alineacionBarcelona
+
+alineacionMadrid -- jugador1
+alineacionMadrid -- jugador2
+alineacionMadrid -- jugador3
+
+note "El encuentro lo\ninician 11 jugadores" as nota1
+
+jugador2 .r. nota1
+nota1 .r. jugador3
+
+@enduml
