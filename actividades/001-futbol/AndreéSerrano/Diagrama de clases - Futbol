@@ -1,0 +1,52 @@
+@startuml
+class Partido
+class Equipo
+class Publico
+class Estadio
+class CuerpoDeArbitraje
+class CuerpoMedico
+class CuerpoTecnico
+class Jugador
+class Liga
+
+Liga : nombre
+Liga : region
+Liga : posiciones
+
+Partido : marcador
+Partido : tiempo
+
+Equipo : nombre
+Equipo : escudo
+Equipo : uniforme
+
+Estadio : ubicacion
+Estadio : capacidad
+Estadio : nombre
+
+CuerpoDeArbitraje : posición
+CuerpoDeArbitraje : uniforme
+
+Jugador : nombre
+Jugador : apellido
+Jugador : uniforme
+Jugador : dolsal
+Jugador : posición
+Jugador : salario
+
+Publico : asiento
+Publico : equipo
+
+Liga *-- Partido
+
+Partido *-- Equipo
+Partido *-- Estadio
+Partido *-- CuerpoDeArbitraje
+
+Estadio *-- Publico
+Equipo --- Publico
+
+Equipo *-- CuerpoMedico
+Equipo *-- CuerpoTecnico
+Equipo *-- Jugador
+@enduml
