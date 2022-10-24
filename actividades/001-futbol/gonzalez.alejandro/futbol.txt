@@ -1,0 +1,13 @@
+@startuml Domain soccerMatch
+class Match 
+class SoccerTeamInformation    
+class SoccerTeam 
+class Player
+class Stadium 
+class Ball 
+SoccerTeamInformation *-- Match : tiene
+SoccerTeamInformation *-- SoccerTeam : tiene
+SoccerTeam *-- Player : pertenece
+Match *-- Stadium : tiene
+Match *-- Ball : tiene
+@enduml
