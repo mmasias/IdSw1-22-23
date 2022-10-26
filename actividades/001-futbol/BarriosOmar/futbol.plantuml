@@ -1,0 +1,24 @@
+@startuml futbol
+
+Arbitro -right-> Partido : Controla >
+Arbitro --> Jugador: Penaliza >
+
+Jugador --> Equipo : Forma parte de un >
+
+Espectador --> Equipo: Anima >
+
+Entrenador -down> Equipo : Organiza >
+
+Jugador --|> Arquero
+Jugador --|> Defensa
+Jugador --|> CentroCampista
+Jugador --|> Delantero 
+
+Persona --|> Arbitro
+Persona --|> Jugador
+Persona --|> Espectador
+Persona --|> Entrenador
+
+Torneo -down-|> Partido
+
+@enduml
