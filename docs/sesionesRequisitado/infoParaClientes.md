@@ -4,7 +4,7 @@ Ante todo, muchas gracias por embarcarse y participar de esta actividad: como he
 
 Esquematizo el planteamiento debajo.
 
-## Que haremos
+## Qué haremos
 
 La idea es desarrollar junto con los alumnos la **disciplina de requisitado**, que es la puerta de entrada al desarrollo de una solución basada en software (una aplicación, vamos). Se ha demostrado, empírica y académicamente, que un porcentaje no menor de proyectos de software que fracasan lo hacen porque está mal llevada esta fase.  
 
