@@ -1,0 +1,13 @@
+@startuml futbol
+
+[*] --> Inicio
+Inicio -r-> PrimeraParte
+PrimeraParte --> BalonEnJuego 
+
+state FinPrimeraParte <<choice>> 
+
+BalonEnJuego --> FinPrimeraParte : Fin segunda parte
+FinPrimeraParte --> [*]  : si
+FinPrimeraParte -left-> BalonEnJuego  : no
+
+@enduml
