@@ -3,11 +3,12 @@ class Partido
 class Equipo
 class Publico
 class Estadio
-class CuerpoDeArbitraje
-class CuerpoMedico
-class CuerpoTecnico
+class Arbitro
+class Medico
+class Tecnico
 class Jugador
 class Liga
+class Persona
 
 Liga : nombre
 Liga : region
@@ -24,29 +25,37 @@ Estadio : ubicacion
 Estadio : capacidad
 Estadio : nombre
 
-CuerpoDeArbitraje : posición
-CuerpoDeArbitraje : uniforme
+Arbitro : posición
+Arbitro : uniforme
 
-Jugador : nombre
-Jugador : apellido
 Jugador : uniforme
 Jugador : dolsal
 Jugador : posición
 Jugador : salario
+Jugador : titularidad
 
 Publico : asiento
 Publico : equipo
 
-Liga *-- Partido
+Persona : nombre
+Persona : apellido
+Persona : edad
+Persona : nacionalidad
 
-Partido *-- Equipo
-Partido *-- Estadio
-Partido *-- CuerpoDeArbitraje
+Liga --- Partido
 
-Estadio *-- Publico
-Equipo --- Publico
+Partido --- Equipo
+Partido --- Estadio
+Partido --- Arbitro
 
-Equipo *-- CuerpoMedico
-Equipo *-- CuerpoTecnico
-Equipo *-- Jugador
+Estadio --- Publico
+
+Equipo --- Medico
+Equipo --- Tecnico
+Equipo --- Jugador
+
+Arbitro --- Persona 
+Jugador --- Persona 
+Medico --- Persona
+Tecnico --- Persona
 @enduml
