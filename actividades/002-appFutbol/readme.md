@@ -8,7 +8,7 @@ El objetivo de la aplicación es desarrollar una aplicación de seguimiento de u
 
 # 2DO
 
-Inspirándonos en el modelo del dominio visto en el apartado [001-futbol](../001-futbol/readme.md), y con lo comentado por el cliente líneas arriba (+ un poco de aporde del equipo de creación) se desarrollarán las actividades de la disciplina de requisitos:
+Inspirándonos en el modelo del dominio visto en el apartado [001-futbol](../001-futbol/readme.md), y con lo comentado por el cliente líneas arriba (+ un poco de aporte del equipo de creación) se desarrollarán las actividades de la disciplina de requisitos:
 
 1. Encontrar actores y casos de uso
 1. Priorizar casos de uso
