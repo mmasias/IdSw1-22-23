@@ -1,6 +1,6 @@
 # Fútbol - Modelo del dominio
 
-|Diagrama de clases|
-|:-:|
-|![Imagen](futbol-diagrama.PNG)|
-|[Código del modelo](futbol.plantuml)|
+|Diagrama de dominio|Diagrama de estados|
+|:-:|:-:|
+|![Imagen](diagrama-dominio.PNG)|![Imagen](diagrama-estados.PNG)|
+|[Código del modelo](futbol.plantuml)|[Código del modelo](futbol-estados.plantuml)|
