@@ -1,0 +1,19 @@
+@startuml
+
+state partido {
+[*] --> jugando : saque inicial
+
+jugando --> detenido : falta
+jugando --> detenido : gol
+jugando --> detenido : incidencia
+jugando --> detenido : lesión
+jugando --> detenido : balón fuera
+
+detenido --> jugando : saque
+
+detenido --> [*] : final
+
+}
+
+
+@enduml
