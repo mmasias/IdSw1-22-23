@@ -1,0 +1,14 @@
+@startuml
+
+actor Usuario
+
+package MaquinaDeCafé {
+  usecase HacerCafé
+  usecase CalentarCafé
+}
+
+
+Usuario .u.> CalentarCafé
+Usuario .u.> HacerCafé
+
+@enduml
