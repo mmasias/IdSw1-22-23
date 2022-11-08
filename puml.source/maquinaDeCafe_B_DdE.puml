@@ -15,7 +15,9 @@ balanza --> listo : [vacía]
 balanza --> enUso : [llena]
 
 listo --> enUso : cuando(llena)
+enUso: hacerCafe
 enUso --> listo : cuando(termina)
+listo: calentarCafe
 
 encendida --> apagada : apagar
 

@@ -2,7 +2,6 @@
 
 state apagado
 state encendido: hacerCafe
-encendido: calentarCafe
 
 [*] --> apagado
 encendido --> apagado
