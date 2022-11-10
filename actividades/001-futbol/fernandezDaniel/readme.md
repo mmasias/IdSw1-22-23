@@ -2,10 +2,10 @@
 
 |Diagrama de clases|Diagrama de Estados|
 |:-:|:-:|
-|![Imagen](images/diagramaClases.png)|![Imagen](images/diagramaEstados.png)
+|![Imagen](images/diagramaClases.PNG)|![Imagen](images/diagramaEstados.PNG)
 |[Código](clases.puml)|[Código](estados.puml)
 
 |Diagrama de objetos
 |:-:
-|![Imagen](images/diagramaObjetos.png)
+|![Imagen](images/diagramaObjetos.PNG)
 |[Código](objetos.puml)
