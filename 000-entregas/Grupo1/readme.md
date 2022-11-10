@@ -1,9 +1,9 @@
 |Diagrama de clases
-|:-:|:-:|
-|![Imagen](images/Clases.PNG)
-|[Código](clases.puml)
+|:-:
+|![Imagen](images/Clases.png)
+|[Código](Clases_v2.puml)
 
 |Diagrama de objetos
 |:-:
-|![Imagen](images/Objetos.PNG)
-|[Código](objetos.puml)
+|![Imagen](images/Objetos.png)
+|[Código](Objetos_v2.puml)
