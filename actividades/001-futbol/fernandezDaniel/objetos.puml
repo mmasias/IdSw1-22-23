@@ -1,0 +1,86 @@
+@startuml Objetos
+
+object "partido : PartidoDeFútbol" as PartidoDeFútbol {
+    lugar = "Santander"
+}
+
+object "estadio : Estadio" as Estadio {
+    estadio = "El Sardinero"
+}
+
+object "espectadores : Espectadores" as Espectadores
+
+object "extrasDeEstadio1 : ExtrasDeEstadio" as ExtrasDeEstadio1 {
+    prop = "Cabina de speaker"
+}
+
+object "extrasDeEstadio2 : ExtrasDeEstadio" as ExtrasDeEstadio2 {
+    prop = "Palco presidencial"
+}
+
+object "extrasDeEstadio3 : ExtrasDeEstadio" as ExtrasDeEstadio3 {
+    prop = "Máquina perritos calientes"
+}
+
+object "equipos : Equipos" as Equipos
+
+object "Racing : EquipoLocal" as EquipoLocal
+object "Barcelona : EquipoVisitante" as EquipoVisitante
+object "árbitros : EquipoArbitrario" as EquipoArbitrario
+
+object "alineaciónLocal : Alineación" as AlineaciónLocal
+object "alineaciónVisitante : Alineación" as AlineaciónVisitante
+
+object "reglamento : Reglamento" as Reglamento {
+    id = "Normativa2010"
+}
+
+object "Munitis : Jugador" as JugadorLocal1 {
+    rol = "Delantero"
+}
+object "Toño : Jugador" as JugadorLocal2 {
+    rol = "Portero"
+}
+
+object "Valdés : Jugador" as JugadorVisitante1 {
+    rol = "Portero"
+}
+
+object "Ibrahimovic : Jugador" as JugadorVisitante2 {
+    rol = "Delantero"
+}
+
+note "El encuentro lo\ninician 11 jugadores" as nota2
+note "El encuentro lo\ninician 11 jugadores" as nota1
+
+
+PartidoDeFútbol -d- Estadio : Se disputa en >
+
+Estadio -l- Espectadores : Visitan <
+Estadio -r-> ExtrasDeEstadio1 : Tiene
+ExtrasDeEstadio1 -d-> ExtrasDeEstadio2 : Tiene 
+ExtrasDeEstadio2 -d-> ExtrasDeEstadio3 : Tiene
+
+Estadio -d- Equipos : Juegan >
+
+Equipos -r- Reglamento : Cumplen >
+Equipos -d- EquipoLocal : Es un >
+Equipos -d- EquipoVisitante : Es un >
+
+Reglamento -d- EquipoArbitrario : Vela por >
+
+EquipoLocal -- AlineaciónLocal : Tiene >
+EquipoVisitante -- AlineaciónVisitante : Tiene >
+
+AlineaciónLocal -- JugadorLocal1 : Se compone de >
+AlineaciónLocal -- JugadorLocal2 : Se compone de >
+
+AlineaciónVisitante -- JugadorVisitante1 : Se compone de >
+AlineaciónVisitante -- JugadorVisitante2 : Se compone de >
+
+JugadorLocal1 .r. nota1
+nota1 .r. JugadorLocal2
+
+JugadorVisitante1 .r. nota2
+nota2 .r. JugadorVisitante2
+@enduml
