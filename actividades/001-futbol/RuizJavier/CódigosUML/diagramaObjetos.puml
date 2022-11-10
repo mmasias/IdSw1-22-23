@@ -1,0 +1,42 @@
+@startuml
+
+object "partidoFutbol : PartidoFutbol" as PartidoFutbol
+
+object "arbitro : Arbitro" as Árbitro
+
+object "Camp Nou: Estadio" as Estadio
+
+object "reglas : Reglas" as Reglas
+
+object "Real Madrid : Equipo" as equipoMadrid
+object "Barcelona : Equipo" as equipoBarcelona
+
+object "cuerpoTecnicoMadrid : CuerpoTecnico" as cuerpoTecnicoMadrid
+object "cuerpoTecnicoBarcelona : CuerpoTecnico" as cuerpoTecnicoBarcelona
+
+object "alineacionMadrid : Alineacion" as alineacionMadrid
+object "alineacionBarcelona : Alineacion" as alineacionBarcelona
+
+
+object "Lewandowski : Jugador" as jugadorBarcelona
+
+
+PartidoFutbol --> Estadio : se disputa en
+PartidoFutbol <-- Árbitro : dirige
+PartidoFutbol <-- equipoBarcelona: disputa
+PartidoFutbol <-- equipoMadrid: disputa
+Árbitro --> Reglas : encargado hacer cumplir
+
+
+equipoBarcelona *-- jugadorBarcelona : pertenece
+equipoMadrid *-- cuerpoTecnicoMadrid: pertenece
+equipoBarcelona*-- cuerpoTecnicoBarcelona: pertenece
+
+jugadorBarcelona --> Reglas : cumplir
+
+
+cuerpoTecnicoMadrid --> alineacionMadrid : presenta
+cuerpoTecnicoBarcelona --> alineacionBarcelona: presenta
+
+
+@enduml
