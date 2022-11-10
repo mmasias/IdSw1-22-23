@@ -1,26 +1,38 @@
 @startuml proyecto
 /' Diagrama de Clases -> Diagrama de Objetos -> Diagrama de estados '/
 
-class Red 
-class Sistema
-class Hardware
+class Router 
+class Firewall
+class Switch
+class Dispositivo
+class Contacto
 class Usuario
-class Notifiacion
+class Red
 
-Red  *-l-> Sistema  : Posee >
-Red *--> Hardware : Obtiene >
-Red *--> Usuario : Tiene >
-Red *--> Notifiacion : Realiza >
+Red --* Router
+Red --* Firewall
+Red --* Switch
+Red -r-* Dispositivo
+Usuario --o Red
+Router --* Contacto
 
-Sistema <|--o SistemaDeVigilacion
-Sistema <|--o SistemaDeAlarmas
+Usuario <|-r- Admin
+Red <|-l- RedAlumnos
+Router <|-l- Modem
+Contacto <|-- Movistar
+Firewall <|-- Grupo
+Switch <|-- Alumnos
+Dispositivo <|-- Ordenador
+Dispositivo <|-- SistemaCamaras
 
-Hardware <|--o Switch
-Hardware <|--o Router
+/'
+Router -r-> Firewall
+Firewall -r-> Switch
+Switch --> Dispositivo
+Router -l* Contacto
+'/
 
-Notifiacion <|..o Gmail
+/' Usuario --o Red '/
 
-Usuario <|--o TecnicosInternos
-Usuario <|--o TecnicosExternos
 
 @enduml
