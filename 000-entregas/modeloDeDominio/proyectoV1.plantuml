@@ -1,39 +1,24 @@
 @startuml proyecto
-/' Diagrama de Clases -> Diagrama de Objetos -> Diagrama de estados '/
 
-class Router 
-class Firewall
+class "Router(WAN)" 
 class Switch
 class Dispositivo
 class Contacto
 class Usuario
-class Red
+class Seguridad
 
-Red --* Router
-Red --* Firewall
-Red --* Switch
-Red -r-* Dispositivo
-Usuario --o Red
-Router --* Contacto
+Seguridad -r-* "Router(WAN)": Posee >
+Seguridad --* Switch: Tiene >
+Switch -r-* Dispositivo: Contiene >
+Usuario --o "Router(WAN)": Gestiona >
+Contacto -l-* "Router(WAN)" : Contiene >
 
 Usuario <|-r- Admin
-Red <|-l- RedAlumnos
-Router <|-l- Modem
+Seguridad <|-l- Firewall
+"Router(WAN)" <|-d- WAN1
 Contacto <|-- Movistar
-Firewall <|-- Router1
-Firewall <|-- Router2
-Switch <|-- Alumnos
+Switch <|-d- "Alumnos(Vlan)"
 Dispositivo <|-- Ordenador
 Dispositivo <|-- SistemaCamaras
-
-/'
-Router -r-> Firewall
-Firewall -r-> Switch
-Switch --> Dispositivo
-Router -l* Contacto
-'/
-
-/' Usuario --o Red '/
-
 
 @enduml

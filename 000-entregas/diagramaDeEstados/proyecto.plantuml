@@ -3,15 +3,11 @@
 state fork_state <<fork>>
 
 state NONAME_REDES as " "
-state NONAME_HARDWARE as " "
-
-state NONAME_HARDWARERED as " "
-state NONAME_SISTEMARED as " "
-
 state NONAME_USUARIOS as " "
-state NONAME_SISTEMA as " "
-state NONAME_NOTIFICACION as " "
-
+state NONAME_DISPOSITIVOS as " "
+state NONAME_ROUTERS as " "
+state NONAME_CONTACTOS as " "
+state NONAME_SWITCHES as " "
 
 [*] --> Inicio
 Inicio --> fork_state
@@ -25,23 +21,19 @@ fork_state --> NONAME_REDES: listarRedes
 NONAME_REDES --> NONAME_REDES: crear red
 NONAME_REDES --> Red: AbrirRed / listar hardware
 
-Red --> NONAME_HARDWARERED: asociar hardware
-NONAME_HARDWARERED --> Red: AbrirRed / listar hardware
+'Routers
+Red --> NONAME_ROUTERS: listarRouters
+NONAME_ROUTERS --> NONAME_ROUTERS: agregar routers
 
-Red --> NONAME_SISTEMARED: asociar sistema
-NONAME_SISTEMARED --> Red: AbrirRed / listar hardware
+'Contactos
+NONAME_ROUTERS --> NONAME_CONTACTOS: listarContactos
+NONAME_CONTACTOS --> NONAME_CONTACTOS: agregar contactos
 
+'Switches
+Red -r-> NONAME_SWITCHES: listarSwitches
+NONAME_SWITCHES --> NONAME_SWITCHES: agregar switches
 
-'HARDWARE
-fork_state --> NONAME_HARDWARE: listarHardware
-NONAME_HARDWARE --> NONAME_HARDWARE: crear hardware
-
-'SISTEMA
-fork_state --> NONAME_SISTEMA: listarSistemas
-NONAME_SISTEMA --> NONAME_SISTEMA: crear sistema
-
-'NOTIFIACION
-fork_state -r-> NONAME_NOTIFICACION: listarTiposNotificaciones
-NONAME_NOTIFICACION --> NONAME_NOTIFICACION: crearTipoNotificacion
-
+'Dispositivos
+Red --> NONAME_DISPOSITIVOS: listarDispositivos
+NONAME_DISPOSITIVOS --> NONAME_DISPOSITIVOS: agregar dispositivos
 @enduml
