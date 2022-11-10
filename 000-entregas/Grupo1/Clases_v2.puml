@@ -1,0 +1,16 @@
+@startuml Clases
+
+Alumno -r- Master : Se matricula en >
+Alumno -- Plataforma : Interactúa > 
+Alumno -d- SistemaGestionUniversitario : Se registra >
+
+
+ProcesadoDeDatos -- DatosProcesados : Procesa los datos del alumno >
+
+
+SistemaGestionUniversitario -- ProcesadoDeDatos : Pide datos <
+Plataforma -- ProcesadoDeDatos : Pide datos <
+
+DatosProcesados -- Accion : Se realiza >
+
+@enduml

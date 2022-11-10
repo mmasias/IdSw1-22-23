@@ -1,0 +1,35 @@
+@startuml Objetos
+
+object "Javier Ruiz : Alumno" as Alumno{
+posibilidadAbandono: 100
+}
+
+object "ProcesadoDeDatos : ProcesadoDeDatos" as ProcesadoDeDatos
+object "Moodle : Plataforma" as Plataforma1
+object "Twitter : Plataforma" as Plataforma2
+object "Facebook : Plataforma" as Plataforma3
+object "GUIIA : SistemaGestionUniversitario" as SistemaGestionUniversitario
+
+object "Gestion Sanitaria : Master" as Master {
+modalidad: virtual 
+}
+
+object "DatosProcesados : DatosProcesados" as DatosProcesados
+object "EnviarCorreo : Accion" as Accion
+
+Alumno -r- Master : Se matricula en >
+Alumno -- Plataforma1 : Interactúa > 
+Alumno -- Plataforma2 : Interactúa > 
+Alumno -- Plataforma3 : Interactúa > 
+Alumno -d- SistemaGestionUniversitario : Se registra >
+
+ProcesadoDeDatos -- DatosProcesados : Procesa los datos del alumno >
+
+SistemaGestionUniversitario -- ProcesadoDeDatos : Pide datos <
+Plataforma1 -- ProcesadoDeDatos : Pide datos <
+Plataforma2 -- ProcesadoDeDatos : Pide datos <
+Plataforma3 -- ProcesadoDeDatos : Pide datos <
+
+DatosProcesados -- Accion : Se realiza >
+
+@enduml

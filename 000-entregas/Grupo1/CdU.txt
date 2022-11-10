@@ -1,0 +1,22 @@
+Actores:
+
+GestionAltaDireccion 		--> GAD
+EncargadosSeguimientosAlumnos	--> ESA
+
+
+
+CdU:
+	Ambos:
+	- Login
+	- Logout
+	- SolicitarDatosAlumno
+
+	GAD:
+	- VisualizarAbandono
+	- VisualizarEstadisticas
+	- VisualizarInteracciones
+
+	ESA:
+	- VisualizarCambiosAlumnos
+	- GestionarAlertas
+	- VisualizarClusters
