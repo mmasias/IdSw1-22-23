@@ -2,5 +2,5 @@
 
 |Diagrama de estados|
 |:-:|
-|![Imagen](proyectoDE.PNG)|
+|![Imagen](proyectoDeE.PNG)|
 |[Código del diagrama](proyecto.plantuml)|
