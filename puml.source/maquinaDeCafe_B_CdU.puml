@@ -1,0 +1,11 @@
+actor Usuario
+
+
+package MaquinaDeCafé_B  {
+  usecase HacerCafé
+  usecase CalentarCafé
+}
+
+Usuario .r.> CalentarCafé
+Usuario .r.> HacerCafé
+
