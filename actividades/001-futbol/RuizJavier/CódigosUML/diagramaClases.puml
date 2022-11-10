@@ -1,19 +1,17 @@
 @startuml
+
 class PartidoFutbol
 
-
-PartidoFutbol -- Estadio 
-PartidoFutbol -- Árbitro
-PartidoFutbol -- Equipos
-Árbitro -- Reglas
-Estadio -- Instalaciones
-Estadio -- Afición
-Equipos -- Jugadores
-Equipos -- CuerpoTécnico
-Jugadores -- Titulares
-Jugadores -- Suplentes
-PartidoFutbol -- Acciones
-Acciones -- Jugadores
+PartidoFutbol --> Estadio : se disputa en
+PartidoFutbol <-- Árbitro : dirige
+PartidoFutbol <-- Equipos : disputa
+Árbitro --> Reglas : encargado hacer cumplir
+Estadio <|-- Instalaciones : hay
+Estadio <|-- Afición : hay
+Equipos *-- Jugadores : pertenece
+Equipos *-- CuerpoTécnico : pertenece
+Jugadores --> Reglas : cumplir
+CuerpoTécnico --> Alineacion : presenta
 
 
 @enduml
