@@ -20,7 +20,8 @@ Usuario <|-r- Admin
 Red <|-l- RedAlumnos
 Router <|-l- Modem
 Contacto <|-- Movistar
-Firewall <|-- Grupo
+Firewall <|-- Router1
+Firewall <|-- Router2
 Switch <|-- Alumnos
 Dispositivo <|-- Ordenador
 Dispositivo <|-- SistemaCamaras
