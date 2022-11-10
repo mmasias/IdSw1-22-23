@@ -1,16 +1,28 @@
-@startuml
+@startuml Estados
+
+State Partido {
+
+  State elecciónProrrogaPenalties <<choice>>
+  State Inicio
 
 
-state partido {
+  [*] -d-> Calentamiento
 
-State inicio
+  Calentamiento -d-> Inicio
 
-[*] --> inicio
+  State Período {
+    EnJuego -r-> Detenido
+    Detenido -u-> EnJuego  
+  }
 
-inicio --> jugando
-jugando --> detenido 
-detenido --> jugando 
+Inicio -d-> Período
 
-detenido --> [*] : final
+Período-r-> elecciónProrrogaPenalties : No queda tiempo
+elecciónProrrogaPenalties -u-> PeríodoExtra : Quedan períodos
+elecciónProrrogaPenalties -r-> [*] : No quedan períodos
 
+PeríodoExtra -l-> Inicio
+  
 }
+
+@enduml
