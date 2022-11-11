@@ -1,28 +1,37 @@
 @startuml
+object "partido" as Partido{
+    locacion = "Madrid"
+}
+object "campo" as Campo{
+    locacion = "Santiago Bernabeu"
+}
+object "temporizador" as temporizador{
+    locacion = "Santiago Bernabeu"
+}
+object "Real Madrid" as Equipo1
+object "Atletico de Madrid" as Equipo2
+object "Arbitro" as Arbitro
+object "Reglamento" as Reglamento
+object "Alineacion" as Alineacion1
+object "Alineacion" as Alineacion2
+object "Jugadores" as Jugador1
+object "Jugadores" as Jugador2
 
-Object Campo
-
-Campo --|> Partido : Se juega
 
 
-Partido : equipo1 = string
-Partido : equipo1 = string
-Partido : puntosEquipo1 = int
-Partido : puntosEquipo1 = int
-Partido : tiempo = Temporizador
-Partido : tiempoExtra = int
-Partido : faltas = string[]
-Partido : balon = balon
-Partido : Arbitro = Jugador
 
-Equipo1 : plantilla = Jugador[]
-Equipo1 : entrenador = string
 
-Equipo2 : plantilla = Jugador[]
-Equipo2 : entrenador = string
-
-Equipo1 -- Partido
-Equipo2 -- Partido
-Equipo1 -- Equipo2 : Contra
+Partido -d- Campo : Se juega en el >
+Partido -u- temporizador: Marca el tiempo hasta que acabe el <
+Equipo1 --- Equipo2 : Juega contra
+Equipo1 --- Campo: Juega en el >
+Equipo2 --- Campo: Juega en el >
+Arbitro --- Reglamento: Impone el cumplimiento del >
+Arbitro --- Equipo1: Juzga el comportamiento de >
+Arbitro --- Equipo2: Juzga el comportamiento de >
+Equipo1 --- Alineacion1 : Cuenta con una alineacion >
+Equipo2 --- Alineacion2 : Cuenta con una alineacion >
+Alineacion1 "1" --- "11" Jugador1 
+Alineacion2 "1" --- "11" Jugador2 
 
 @enduml
