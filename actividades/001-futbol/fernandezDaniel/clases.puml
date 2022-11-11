@@ -7,12 +7,8 @@ Estadio -d- Equipos : Juegan <
 
 Equipos -r- Reglamento : Cumplen >
 
-Equipos --> EquipoLocal
-Equipos --> EquipoVisitante
-
-EquipoLocal -d- Alineación : Tiene >
-EquipoVisitante -d- Alineación : Tiene >
-Alineación -r- Jugador : Se compone de >
+Equipos -d- Alineación : Tiene >
+Alineación -d- Jugador : Se compone de >
 Equipos -- EquipoArbitrario
 
 Reglamento -d- EquipoArbitrario : Vigila que se cumpla <
