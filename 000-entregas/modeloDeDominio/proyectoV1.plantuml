@@ -1,24 +1,17 @@
 @startuml proyecto
 
-class "Router(WAN)" 
+class "Red" 
 class Switch
 class Dispositivo
-class Contacto
+class Proveedor
 class Usuario
 class Seguridad
 
-Seguridad -r-* "Router(WAN)": Posee >
-Seguridad --* Switch: Tiene >
-Switch -r-* Dispositivo: Contiene >
-Usuario --o "Router(WAN)": Gestiona >
-Contacto -l-* "Router(WAN)" : Contiene >
-
-Usuario <|-r- Admin
-Seguridad <|-l- Firewall
-"Router(WAN)" <|-d- WAN1
-Contacto <|-- Movistar
-Switch <|-d- "Alumnos(Vlan)"
-Dispositivo <|-- Ordenador
-Dispositivo <|-- SistemaCamaras
+"Red" *-l- Seguridad: Tiene >
+Seguridad *-- Switch: Posee >
+Switch *-l- Dispositivo: Contiene >
+Usuario --o "Red": Gestiona >
+"Red" o-r- Proveedor  : Contiene >
+"Red" o-- Edificio  : Está en >
 
 @enduml

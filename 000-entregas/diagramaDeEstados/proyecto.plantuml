@@ -15,25 +15,30 @@ Inicio --> fork_state
 'Usuarios
 fork_state --> NONAME_USUARIOS: listarUsuarios
 NONAME_USUARIOS --> NONAME_USUARIOS: crear usuario
-
+NONAME_USUARIOS -up-> Inicio
 'Redes
 fork_state --> NONAME_REDES: listarRedes
 NONAME_REDES --> NONAME_REDES: crear red
-NONAME_REDES --> Red: AbrirRed / listar hardware
-
-'Routers
-Red --> NONAME_ROUTERS: listarRouters
-NONAME_ROUTERS --> NONAME_ROUTERS: agregar routers
+NONAME_REDES --> Red: AbrirRed
+NONAME_REDES -up-> Inicio
 
 'Contactos
-NONAME_ROUTERS --> NONAME_CONTACTOS: listarContactos
-NONAME_CONTACTOS --> NONAME_CONTACTOS: agregar contactos
+Red --> NONAME_CONTACTOS: listarProveedores
+NONAME_CONTACTOS --> NONAME_CONTACTOS: agregar 
+NONAME_CONTACTOS --> Red
+
+'Routers
+NONAME_CONTACTOS --> NONAME_ROUTERS: listarRouters
+NONAME_ROUTERS --> NONAME_ROUTERS: agregar 
+NONAME_ROUTERS --> NONAME_CONTACTOS
 
 'Switches
-Red -r-> NONAME_SWITCHES: listarSwitches
-NONAME_SWITCHES --> NONAME_SWITCHES: agregar switches
+Red --> NONAME_SWITCHES: listarSwitches
+NONAME_SWITCHES --> NONAME_SWITCHES: agregar 
+NONAME_SWITCHES --> Red
 
 'Dispositivos
-Red --> NONAME_DISPOSITIVOS: listarDispositivos
-NONAME_DISPOSITIVOS --> NONAME_DISPOSITIVOS: agregar dispositivos
+NONAME_SWITCHES --> NONAME_DISPOSITIVOS: listarDispositivos
+NONAME_DISPOSITIVOS --> NONAME_DISPOSITIVOS: agregar 
+NONAME_DISPOSITIVOS --> NONAME_SWITCHES
 @enduml

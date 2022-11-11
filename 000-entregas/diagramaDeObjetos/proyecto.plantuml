@@ -6,26 +6,30 @@ object "admin : Usuario" as admin {
     rol = "admin"
 }
 
-object "redIris : Router" as router1 {
+object "redIris : Red" as red1 {
 ip = "192.168.1.1"
 hostname = "Router"
 nombre = "red Iris"
 }
 
-object "rediris : Contacto" as contacto1 {
+object "Uneat : Edificio" as uneat {
+nombre = "Universidad uneatlantico"
+}
+
+object "redIris : Proveedor" as redIris {
 nombre = "rediris"
 numeroDeTelefono = "5311"
 motivo = "produce micro cortes"
 }
 
-object "firewall : Red" as redAlumnos {
+object "firewall : Seguridad" as firewall {
 mac = "00-1B-33-22-55-H1"
 nombre = "red alumnos"
 marca = "Pfsense"
 version = "2.0"
 }
 
-object "vlanAlumnos : Switch" as alumnosVlan {
+object "vlanAlumnos : Switch" as vlanAlumnos {
     ip = "127.0.0.1"
     numeroSerial = "j3245jh342"
     hostname = "Switch"
@@ -42,12 +46,13 @@ object "sistemaCamaras : Dispositivo" as sistemaCamaras1 {
     estado = "activo"
 }
 
-admin -- router1: gestiona >
-router1 -r- redAlumnos: tiene >
-router1 -- contacto1: contiene >
-redAlumnos -r- alumnosVlan: posee >
-alumnosVlan -- ordenador1: contiene >
-alumnosVlan -- sistemaCamaras1: contiene >
+admin -- red1: gestiona >
+red1 -r- firewall: tiene >
+red1 -- redIris: contiene >
+red1 -- uneat: está en >
+firewall -r- vlanAlumnos: posee >
+vlanAlumnos -- ordenador1: contiene >
+vlanAlumnos -- sistemaCamaras1: contiene >
 
 
 @enduml
