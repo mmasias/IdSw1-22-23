@@ -9,6 +9,7 @@ package FootbalLogger {
 
   usecase "Agregar evento" as CE
   usecase "Crear partido" as CP
+  usecase "Concluir partido" as CLP
 }
 
 User --> (Login)
@@ -19,4 +20,5 @@ User --> (LP)
 Admin --> (Login)
 Admin --> (CE)
 Admin --> (CP)
+Admin --> (CLP)
 @enduml
