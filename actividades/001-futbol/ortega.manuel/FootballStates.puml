@@ -1,0 +1,7 @@
+@startuml Football
+[*] --> BalonEnJuego
+BalonEnJuego --> BalonDetenido
+BalonDetenido --> BalonEnJuego
+BalonEnJuego --> PartidoFinalizado
+PartidoFinalizado --> [*]
+@enduml
