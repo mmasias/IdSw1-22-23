@@ -17,7 +17,7 @@ Al `switch` se le pueden agregar varios dispositivos, uno de ellos es un sistema
 |![](./casos/images/estructura-sistema.PNG)|
 
 
-|Readmes| |
+|Readme|Readme|
 |-|-|
 |[Ver diagramas](./diagramas/readme.md)  |  [Ver actores y casos de uso](./casos/readme.md)|
 
