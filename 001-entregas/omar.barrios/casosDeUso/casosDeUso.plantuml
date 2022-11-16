@@ -1,0 +1,53 @@
+@startuml casos de uso
+
+left to right direction
+
+package Sistema {
+    actor Administrador
+    actor TecnicosInternos
+    actor TecnicosExternos
+
+    usecase ListarUsuarios
+    usecase ListarProveedores
+    usecase ListarRedes
+
+    package Usuario {
+        usecase CrearUsuario
+        usecase ActualizarUsuario
+        usecase EliminarUsuario
+        usecase ObtenerUsuario
+    }
+
+    Administrador -l-> Usuario
+
+    package Red {
+        usecase CrearRed
+        usecase ActualizarRed
+        usecase EliminarRed
+        usecase ObtenerRed
+    }
+
+    Administrador --> Red
+    TecnicosInternos --> Red
+
+    package Proveedor {
+        usecase CrearProveedor
+        usecase ActualizarProveedor
+        usecase EliminarProveedor
+        usecase ObtenerProveedor
+    }
+
+    Administrador --> Proveedor
+    TecnicosInternos --> Proveedor
+
+    Administrador --> ListarUsuarios
+    Administrador --> ListarRedes
+    Administrador --> ListarProveedores 
+
+    TecnicosInternos -u-> ListarProveedores
+    TecnicosInternos -u-> ListarRedes
+    TecnicosExternos -u-> ListarRedes
+
+}
+
+@enduml
