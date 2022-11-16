@@ -6,7 +6,7 @@ state NONAME_REDES as " "
 state NONAME_USUARIOS as " "
 state NONAME_DISPOSITIVOS as " "
 state NONAME_ROUTERS as " "
-state NONAME_CONTACTOS as " "
+state NONAME_PROVEEDORES as " "
 state NONAME_SWITCHES as " "
 
 [*] --> Inicio
@@ -20,17 +20,18 @@ NONAME_USUARIOS -up-> Inicio
 fork_state --> NONAME_REDES: listarRedes
 NONAME_REDES --> NONAME_REDES: crear red
 NONAME_REDES --> Red: AbrirRed
+NONAME_REDES <-r- Red
 NONAME_REDES -up-> Inicio
 
-'Contactos
-Red --> NONAME_CONTACTOS: listarProveedores
-NONAME_CONTACTOS --> NONAME_CONTACTOS: agregar 
-NONAME_CONTACTOS --> Red
-
 'Routers
-NONAME_CONTACTOS --> NONAME_ROUTERS: listarRouters
+Red --> NONAME_ROUTERS: listarRouters
 NONAME_ROUTERS --> NONAME_ROUTERS: agregar 
-NONAME_ROUTERS --> NONAME_CONTACTOS
+NONAME_ROUTERS --> Red
+
+'Proveedores
+NONAME_ROUTERS --> NONAME_PROVEEDORES: listarProveedores
+NONAME_PROVEEDORES --> NONAME_PROVEEDORES: agregar 
+NONAME_PROVEEDORES --> NONAME_ROUTERS
 
 'Switches
 Red --> NONAME_SWITCHES: listarSwitches

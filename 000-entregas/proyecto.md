@@ -1,7 +1,5 @@
 # Proyecto ingeniería de software
 
-- [Modelo de dominio](https://github.com/OmarBarrios/IdSw1-22-23/blob/main/modeloDeDominio/README.md)
-
-- [Diagrama de estados](https://github.com/OmarBarrios/IdSw1-22-23/blob/main/diagramaDeEstados/README.md)
-
-- [Diagrama de objetos](https://github.com/OmarBarrios/IdSw1-22-23/blob/main/diagramaDeObjetos/README.md)
+|Modelo de dominio|Modelo de objetos|Modelo de estados|
+|:-:|:-:|:-:|
+|![Imagen](https://github.com/OmarBarrios/proyect_IdSw/blob/main/000-entregas/modeloDeDominio/proyectoV1.PNG)|![Imagen](https://github.com/OmarBarrios/proyect_IdSw/blob/main/000-entregas/diagramaDeObjetos/proyectoDO.PNG)|![Imagen](https://github.com/OmarBarrios/proyect_IdSw/blob/main/000-entregas/diagramaDeEstados/proyectoDeE.PNG)|
