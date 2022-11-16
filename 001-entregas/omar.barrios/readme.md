@@ -12,6 +12,7 @@
 
 </div>
 
+
 ## Casos de uso
 
 <div align="center">
@@ -22,6 +23,7 @@
 |[Código](./casosDeUso/casosDeUso.plantuml)|
 
 </div>
+
 
 ## Diagrama de contexto
 
