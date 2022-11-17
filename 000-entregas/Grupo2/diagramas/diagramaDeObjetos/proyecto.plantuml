@@ -1,0 +1,58 @@
+@startuml proyecto
+
+object "admin : Usuario" as admin {
+    usuario = "systemAdmin"
+    contraseña = "1Sr2.4Ga=1!"
+    rol = "admin"
+}
+
+object "redIris : Red" as red1 {
+ip = "192.168.1.1"
+hostname = "Router"
+nombre = "red Iris"
+}
+
+object "Uneat : Edificio" as uneat {
+nombre = "Universidad uneatlantico"
+}
+
+object "redIris : Proveedor" as redIris {
+nombre = "rediris"
+numeroDeTelefono = "5311"
+motivo = "produce micro cortes"
+}
+
+object "firewall : Seguridad" as firewall {
+mac = "00-1B-33-22-55-H1"
+nombre = "red alumnos"
+marca = "Pfsense"
+version = "2.0"
+}
+
+object "vlanAlumnos : Switch" as vlanAlumnos {
+    ip = "127.0.0.1"
+    numeroSerial = "j3245jh342"
+    hostname = "Switch"
+}
+
+object "ordenador1 : Dispositivo" as ordenador1 {
+    ip = "127.0.0.1"
+    marca = "asus"
+    estado = "activo"
+}
+
+object "sistemaCamaras : Dispositivo" as sistemaCamaras1 {
+    ip = "127.0.0.1"
+    estado = "activo"
+}
+
+admin -- red1: gestiona >
+red1 -r- firewall: tiene >
+red1 -- redIris: contiene >
+red1 -- uneat: está en >
+firewall -r- vlanAlumnos: posee >
+vlanAlumnos -- ordenador1: contiene >
+vlanAlumnos -- sistemaCamaras1: contiene >
+
+
+@enduml
