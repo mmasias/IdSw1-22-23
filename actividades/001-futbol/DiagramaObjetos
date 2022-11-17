@@ -1,0 +1,32 @@
+@startuml
+object  "partido : Partido" as Partido
+object "Bernaveu : Campo" as Campo
+object "Carlos del Cerro : Arbitro" as Arbitro
+object "Natural : Cesped" as Cesped
+object "Real Madrid : Equipo" as EquipoLocal
+object "Barsa : Equipo" as EquipoVisitante
+object "Marcador digital : Marcador" as Marcador
+object "2-0 : Resultado" as Resultado
+object "Xavi : CuerpoTecnico" as CuerpoTecnicoVisitante
+object "Carlo Ancelotti : CuerpoTecnico" as CuerpoTecnicoLocal
+object "Luis Medina : Var" as Var
+object "Benzema : Jugadores" as JugadoresLocal
+object "Pedri: Jugadores" as JugadoresVisitante
+object "Balon Tradicional : Balon" as Balon 
+Partido -- Campo
+Campo -- Arbitro
+Campo -- Cesped
+Campo -- EquipoLocal
+Campo -- EquipoVisitante
+Campo -- Marcador
+Marcador -- Resultado
+Arbitro -- Var
+EquipoLocal -- CuerpoTecnicoLocal
+EquipoVisitante -- CuerpoTecnicoVisitante
+Arbitro -- JugadoresLocal
+Arbitro -- JugadoresVisitante
+EquipoLocal -- JugadoresLocal
+EquipoVisitante -- JugadoresVisitante
+JugadoresLocal -- Balon
+JugadoresVisitante -- Balon
+@enduml
