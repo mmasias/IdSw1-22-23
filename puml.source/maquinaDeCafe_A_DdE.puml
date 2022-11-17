@@ -1,0 +1,10 @@
+@startuml
+
+state apagado
+state encendido: hacerCafe
+
+[*] --> apagado
+encendido --> apagado
+apagado --> encendido : encender
+
+@enduml

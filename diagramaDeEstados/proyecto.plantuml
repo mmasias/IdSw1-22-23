@@ -1,0 +1,47 @@
+@startuml proyecto
+
+state fork_state <<fork>>
+
+state NONAME_REDES as " "
+state NONAME_HARDWARE as " "
+
+state NONAME_HARDWARERED as " "
+state NONAME_SISTEMARED as " "
+
+state NONAME_USUARIOS as " "
+state NONAME_SISTEMA as " "
+state NONAME_NOTIFICACION as " "
+
+
+[*] --> Inicio
+Inicio --> fork_state
+
+'Usuarios
+fork_state --> NONAME_USUARIOS: listarUsuarios
+NONAME_USUARIOS --> NONAME_USUARIOS: crear usuario
+
+'Redes
+fork_state --> NONAME_REDES: listarRedes
+NONAME_REDES --> NONAME_REDES: crear red
+NONAME_REDES --> Red: AbrirRed / listar hardware
+
+Red --> NONAME_HARDWARERED: asociar hardware
+NONAME_HARDWARERED --> Red: AbrirRed / listar hardware
+
+Red --> NONAME_SISTEMARED: asociar sistema
+NONAME_SISTEMARED --> Red: AbrirRed / listar hardware
+
+
+'HARDWARE
+fork_state --> NONAME_HARDWARE: listarHardware
+NONAME_HARDWARE --> NONAME_HARDWARE: crear hardware
+
+'SISTEMA
+fork_state --> NONAME_SISTEMA: listarSistemas
+NONAME_SISTEMA --> NONAME_SISTEMA: crear sistema
+
+'NOTIFIACION
+fork_state -r-> NONAME_NOTIFICACION: listarTiposNotificaciones
+NONAME_NOTIFICACION --> NONAME_NOTIFICACION: crearTipoNotificacion
+
+@enduml
