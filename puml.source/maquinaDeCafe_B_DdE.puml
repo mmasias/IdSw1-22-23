@@ -1,0 +1,26 @@
+@startuml
+
+state apagada
+state balanza <<choice>>
+
+[*] --> apagada
+
+state encendida {
+    state listo
+    state enUso
+}
+
+apagada --> balanza : encender
+balanza --> listo : [vacía]
+balanza --> enUso : [llena]
+
+listo --> enUso : cuando(llena)
+enUso: hacerCafe
+enUso --> listo : cuando(termina)
+listo: calentarCafe
+
+encendida --> apagada : apagar
+
+
+
+@enduml

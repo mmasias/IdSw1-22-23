@@ -1,0 +1,15 @@
+@startuml Clases
+PartidoDeFútbol -d- Estadio : Se disputa en >
+
+Estadio -l- Espectadores : Visitan <
+Estadio -r- ExtrasDeEstadio : Tiene <
+Estadio -d- Equipos : Juegan <
+
+Equipos -r- Reglamento : Cumplen >
+
+Equipos -d- Alineación : Tiene >
+Alineación -d- Jugador : Se compone de >
+Equipos -- EquipoArbitrario
+
+Reglamento -d- EquipoArbitrario : Vigila que se cumpla <
+@enduml
