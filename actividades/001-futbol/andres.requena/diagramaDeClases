@@ -6,4 +6,7 @@ Partido --* Balon : se juega con un
 Partido *-- Arbitro : Arbitra el
 Equipo *-- Balon : Juega con un
 Equipo --* Campo: Juega en un
+Equipo --* Alineacion: Esta compuesto por una
+Alineacion --* Jugador : Se compone de
+Reglamento *-- Arbitro : Exige que se cumpla
 @enduml
