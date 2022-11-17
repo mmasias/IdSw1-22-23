@@ -1,0 +1,27 @@
+@startuml casosDeUso
+
+actor Usuario
+actor Gestor
+actor Editor
+actor Revisor
+actor Autor
+actor Traductor
+
+
+usecase Leer
+usecase Configurar
+usecase LlevarAsignacion
+usecase AnalizarContenido
+usecase Traducir
+usecase SubirArticulo
+
+left to right direction
+Usuario ..> Leer
+Gestor ..> Configurar
+Editor ..> LlevarAsignacion
+Revisor ..> AnalizarContenido
+Traductor ..> Traducir
+Autor ..> SubirArticulo
+
+
+@enduml

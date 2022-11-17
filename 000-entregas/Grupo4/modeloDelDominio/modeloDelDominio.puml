@@ -1,0 +1,58 @@
+@startuml modeloDelDominio
+
+
+class Editorial{
+    -nombre: String
+    -direccion: String
+    -telefono: String
+    -email: String
+}
+class Revista {
+    -nombre: String
+    -numero: Integer
+    -fecha: Date
+    -ISSN: String
+    -DOI: String
+    -formato: String
+    -idioma: String
+}  
+class Tematica{
+    -nombre: String
+    -descripcion: String
+}
+class Volumen {
+    -ISBN: String
+    -portada: String
+}
+
+class Articulo {
+    -titulo: String
+    -DOI: String
+}
+
+abstract class Persona {
+    -nombre: String
+    -apellido: String
+    -email: String
+    -telefono: String
+}
+
+class Usuario extends Persona {
+    -nombreUsuario: String
+    -contraseña: String
+}
+
+class Editor extends Usuario 
+class Revisor extends Usuario
+class Autor extends Usuario 
+class Traductor extends Usuario
+class Gestor extends Usuario
+
+Editorial "1 " *--  "n " Revista
+Revista "1 " *--  "n " Tematica
+Revista  *--  Volumen : Tiene 2 >
+Volumen  *--  Articulo : Tiene 8 >
+
+Revista "1 " *--  " n" Usuario
+
+@enduml

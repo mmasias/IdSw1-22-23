@@ -1,0 +1,56 @@
+@startuml diagramaDeEstados
+
+State Revista{
+    State Selector3 <<choice>>
+    State RevistaCerrada as "Cerrada"
+
+    State Volumen {
+        State VolumenCreado as "Creado"
+        State VolumenCerrado as "Cerrado" 
+        State Selector1 <<choice>>
+
+
+        State Artículo {
+
+            State ArticuloCreado as "Creado"
+            State ArticuloRevisado as "Revisado"
+            State ArticuloPostulado as "Postulado"
+            State ArticuloAprobado as "Aprobado"
+            State ArticuloRechazado as "Rechazado"
+            State Selector2 <<choice>>
+
+            [*] -d-> ArticuloPostulado
+
+            ArticuloPostulado -d-> ArticuloRevisado : Revisar
+
+            ArticuloRevisado -d-> Selector2
+            Selector2 -d-> ArticuloAprobado : Aprobar
+            Selector2 -d-> ArticuloRechazado : Rechazar
+
+
+            ArticuloAprobado -u-> ArticuloCreado
+
+            ArticuloRechazado -u-> ArticuloPostulado : Reintentar
+
+            ArticuloCreado -d-> Selector1 : ¿Hay 8 Artículos creados?
+
+        }
+
+        Selector1 -d-> VolumenCreado : Si los hay
+        Selector1 -d-> ArticuloPostulado : Si no los hay
+
+        VolumenCreado --> VolumenCerrado : Cerrar 
+        VolumenCerrado --> Selector3: ¿Hay 2 Volumenes cerrados?
+         
+    }
+        
+
+        Selector3 -d-> RevistaCerrada : Si los hay
+        Selector3 -d-> Selector1 : Si no los hay
+}
+
+    RevistaCerrada --> [*] : Publicar Revista
+
+@enduml
+
+
