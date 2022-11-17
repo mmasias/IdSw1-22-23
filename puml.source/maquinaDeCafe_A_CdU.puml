@@ -1,0 +1,11 @@
+@startuml
+
+actor Usuario
+
+package MaquinaDeCafé_A {
+  usecase HacerCafé as HacerCafé_2 
+}
+
+Usuario .r.> HacerCafé_2
+
+@enduml
