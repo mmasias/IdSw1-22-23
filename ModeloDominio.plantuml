@@ -1,0 +1,42 @@
+@startuml
+class User
+class Admin
+class System
+Class Moderador
+class Dashboard
+class Software
+class Hardware
+class Notification
+class Router
+class SistemaAlarmas
+class SistemaIncendios
+class SecurityCamera
+
+
+Admin -r-- System
+Admin <|-- Notification
+Admin --- User
+Admin -- Moderador :Genera
+
+Moderador -- User: Gestiona
+Moderador -- Dashboard: Gestiona
+
+User "*" .r.. "1" Dashboard
+
+System *--- Dashboard : Representado en
+System *-- Notification :Crea
+
+Dashboard -- Software :Contiene
+Dashboard -- Hardware :Contiene
+
+Software -- SistemaAlarmas
+Software -- SistemaIncendios
+
+Hardware -- Router
+Hardware -- Switch
+
+Switch -- Vlan
+
+Vlan -- SecurityCamera
+
+@enduml
