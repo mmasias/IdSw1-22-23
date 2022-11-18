@@ -1,0 +1,29 @@
+package Memoria {
+
+    Universidad -d- Facultad
+    Facultad -d- Grado
+    Materia -r- Asignatura
+    Grado -- Asignatura
+
+    Class Materia {
+        denominación
+        ECTS Materia
+    }
+
+    Materia -l- Caracter
+    Materia -- Rama
+    Rama -r- MateriaBasica
+    Materia .. MateriaBasica
+
+}
+
+package LaUniversidad {
+
+class VersionAsignatura
+class VersionGrado
+
+    Grado -r- VersionGrado
+    Asignatura -r- VersionAsignatura
+    VersionGrado -d- VersionAsignatura
+
+}
