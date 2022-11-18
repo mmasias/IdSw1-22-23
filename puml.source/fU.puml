@@ -1,17 +1,17 @@
 package Memoria {
 
     class  Materia {
-        denominación
-        ECTS Materia
+        ECTS
     }
 
     Universidad -- Facultad
     Facultad -- Grado
     Materia -- Asignatura
     Grado -- Asignatura
+    Grado .l. Materia
 
-    Grado -- Competencias
-    Materia -- Competencias
+    Grado -l- Competencias
+    Materia -u- Competencias
 
     Grado -- ActividadesFormativas
     Materia -- ActividadesFormativas
@@ -32,6 +32,7 @@ package Memoria {
 
     Asignatura -- Rama
     Asignatura .. MateriaBasica
+    Asignatura -l- ActividadesFormativas
 
 }
 
@@ -43,6 +44,6 @@ class VersionGrado
     Grado -l- VersionGrado
     Asignatura -l- VersionAsignatura
     VersionGrado -d- VersionAsignatura
+    VersionAsignatura -l- ActividadesFormativas
 
 }
-
