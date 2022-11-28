@@ -6,6 +6,8 @@ object "ocurrencias: Ocurrencias" as ocurrencias{
 object "factura: Factura" as factura{
 }
 object "dieta: Dieta" as dieta{
+	esViajeInternacional: true
+	presupuesto: 100
 }
 object "transporte: Transporte" as transporte{
 	medio: Coche
@@ -33,6 +35,10 @@ object "fechas: Fechas" as fechas{
 object "profesor: Profesor" as profesor{
 
 }
+object "vicerrectorado: Vicerrectorado" as vicerrectorado{
+
+}
+vicerrectorado --> peticionViaje : Acepta / Deniega
 viaje -o ocurrencias
 ocurrencias - factura : Genera
 dieta o--- ocurrencias
@@ -44,3 +50,4 @@ peticionViaje --* destino
 peticionViaje --* fechas
 profesor *- peticionViaje : Solicita >
 @enduml
+
