@@ -15,5 +15,5 @@
 
 |Actores y casos de uso
 |:-:
-|![Imagen](images/casosDeUsoActores.PNG)
-|[Código](CdU.txt)
+|![Imagen](images/Cdu.PNG)
+|[Código](Cdu.puml)
