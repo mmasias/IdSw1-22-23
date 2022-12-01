@@ -1,0 +1,25 @@
+@startuml
+class Usuario
+class Red
+class Router
+class Ubicacion
+class Proveedor
+class Firewall
+class Switch
+class Sistema
+
+class Dispositivo
+
+Usuario --o Red : gestiona >
+
+Red *-r- Ubicacion : posee >
+Red *-l- Router
+
+Router *-l- Proveedor: tiene >
+
+Red *-- Firewall : posee >
+Firewall *-- Switch : posee >
+Switch *-- Dispositivo : posee >
+Dispositivo *-l- Sistema : posee un >
+
+@enduml
