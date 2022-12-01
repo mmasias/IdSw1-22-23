@@ -7,10 +7,13 @@ Alumno -d- SistemaGestionUniversitario : Se registra >
 
 ProcesadoDeDatos -- DatosProcesados : Procesa los datos del alumno >
 
+Plataforma -r- SistemaGestionUniversitario : Intercambian datos 
 
-SistemaGestionUniversitario -- ProcesadoDeDatos : Pide datos <
-Plataforma -- ProcesadoDeDatos : Pide datos <
+SistemaGestionUniversitario -- ProcesadoDeDatos : Envía datos >
+Plataforma -- ProcesadoDeDatos : Envía datos >
 
-DatosProcesados -- Accion : Se realiza >
+DatosProcesados -- Interprete : Se envia a >
+
+Interprete -- Accion : Realiza >
 
 @enduml
