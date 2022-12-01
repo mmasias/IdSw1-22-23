@@ -14,6 +14,7 @@ object "Gestion Sanitaria : Master" as Master {
 modalidad: virtual 
 }
 
+object "Interprete : Interprete" as Interprete
 object "DatosProcesados : DatosProcesados" as DatosProcesados
 object "EnviarCorreo : Accion" as Accion
 
@@ -30,6 +31,8 @@ Plataforma1 -- ProcesadoDeDatos : Pide datos <
 Plataforma2 -- ProcesadoDeDatos : Pide datos <
 Plataforma3 -- ProcesadoDeDatos : Pide datos <
 
-DatosProcesados -- Accion : Se realiza >
+DatosProcesados -- Interprete : Se envia a  >
+
+Interprete -- Accion : Realiza >
 
 @enduml
