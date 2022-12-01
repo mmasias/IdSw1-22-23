@@ -1,0 +1,14 @@
+-Casos de Uso:
+	-Vicerrectorado:
+		-Aceptar viaje
+		-Denegar viaje
+	-Gestión académica:
+		-Busca alojamiento si es necesario
+		-Busca el transporte si es necesario
+		-Calcula dieta
+		-Administra facturas
+		-Organiza viaje
+	-Profesor
+		-Solicita viaje
+		-Rellena formulario
+		-Viaja
