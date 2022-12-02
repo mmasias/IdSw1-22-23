@@ -4,5 +4,6 @@ Repositorio para el proyecto de la asignatuea
 
 ## Rodrigo Zaldaña Calles (Cliente)
 
-
-* [De que se compone una red](images/ContieneRed.png)
+|Requisitado Sesion 1|
+|::|
+|![Imagen](image/ContieneRed.png)|
