@@ -2,5 +2,5 @@
 
 |Diagrama De Estados|
 |:-:|
-|![Imagen](DiagramaDeEstados.PNG)|
+|![Imagen](DiagramaDeEstados.png)|
 |[Código del modelo](DiagramaEstados.plantuml)|

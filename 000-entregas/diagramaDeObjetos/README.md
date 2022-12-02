@@ -2,5 +2,5 @@
 
 |Diagrama De Objetos|
 |:-:|
-|![Imagen](DiagramaDeObjetos.PNG)|
+|![Imagen](DiagramaDeObjetos.png)|
 |[Código del modelo](DiagramaObjetos.plantuml)|

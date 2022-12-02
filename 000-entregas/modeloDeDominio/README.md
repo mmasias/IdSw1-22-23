@@ -2,5 +2,5 @@
 
 |Modelo de dominio|
 |:-:|
-|![Imagen](ModeloDeDominio.PNG)|
+|![Imagen](ModeloDeDominio.png)|
 |[Código del modelo](ModeloDominio.plantuml)|
