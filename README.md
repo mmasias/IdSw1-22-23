@@ -6,4 +6,4 @@ Repositorio para el proyecto de la asignatuea
 
 |Requisitado Sesion 1|
 |:-:|
-|![Imagen](images/ContieneRed.png)|
+|![Imagen](images/ContieneRed.PNG)|
