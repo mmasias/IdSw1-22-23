@@ -7,4 +7,4 @@ Repositorio para el proyecto de la asignatuea
 |Requisitado Sesion 1|
 |:-:|:-:|
 |![Imagen](images/ContieneRed.PNG)|
-|![Imagen](images/RolesUsuarios)|
+|![Imagen](images/RolesUsuarios.PNG)|
