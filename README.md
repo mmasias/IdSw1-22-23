@@ -7,5 +7,7 @@ Repositorio para el proyecto de la asignatuea
 |Requisitado Sesion 1|
 |:-:|
 |![Imagen](images/ContieneRed.PNG)|
+
+|Requisitado Sesion 1|
 |:-:|
 |![Imagen](images/RolesUsuarios.PNG)|
