@@ -58,3 +58,9 @@ gestionarla o como un usuario común que desee ver información de las redes.
 - VLan: Son las redes locales en la cuales se dividen los dispositivos, dando ciertos accesos en la red a distintos dispositivos.
 
 - Dispositivo: Todo aquel hardware que sea capaz de recibir información mediante una red inalambrica o alambrica
+
+# Mockups
+
+|Mockup Vista Dashboard|
+|:-:|
+|![Imagen](images/vistaDashboard.PNG)|
