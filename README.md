@@ -28,21 +28,21 @@ Repositorio para el proyecto de la asignatuea
 |![Imagen](images/QueEsSistema.PNG)|
 
 
-* Diagramas
+# Diagramas
 
 |Modelo de Dominio|
 |:-:|
-|![Imagen](images/ModeloDeDominio.PNG)|
+|![Imagen](images/ModeloDeDominio.png)|
 
 |Diagrama de Objetos|
 |:-:|
-|![Imagen](images/DiagramaDeObjetos.PNG)|
+|![Imagen](images/DiagramaDeObjetos.png)|
 
 |Diagrama de Estados|
 |:-:|
-|![Imagen](images/DiagramaDeEstados.PNG)|
+|![Imagen](images/DiagramaDeEstados.png)|
 
-* Glosario
+# Glosario
 
 - Usuario: Todo aquel que interactúe con la aplicación, ya sea como administrador para
 gestionarla o como un usuario común que desee ver información de las redes.
