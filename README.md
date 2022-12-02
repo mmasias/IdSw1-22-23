@@ -4,6 +4,12 @@ Repositorio para el proyecto de la asignatuea
 
 ## Rodrigo Zaldaña Calles (Cliente)
 
+# Descripción del Proyecto
+
+* El objetivo de ésta aplicación es el de gestionar redes, que permita ver el estado de las partes que componen una red y notificar al administrador si hay algún fallo.
+
+* Las partes que componen una red son, proveedor, red, seguridad, switch y dispositivos
+
 # Requisitado Sesión 1
 
 |Partes que conforman una Red|
