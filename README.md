@@ -13,3 +13,17 @@ Repositorio para el proyecto de la asignatuea
 |Roles de Usuarios que se necesitan|
 |:-:|
 |![Imagen](images/RolesUsuarios.PNG)|
+
+# Requisitado Sesión 2
+|Que es una red|
+|:-:|
+|![Imagen](images/ContieneRed.PNG)|
+
+|Definicion flujo de una red|
+|:-:|
+|![Imagen](images/QueEsRed)|
+
+|Definición de un Sistema|
+|:-:|
+|![Imagen](images/QueEsSistema.PNG)
+
