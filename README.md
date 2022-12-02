@@ -21,7 +21,7 @@ Repositorio para el proyecto de la asignatuea
 
 |Definicion flujo de una red|
 |:-:|
-|![Imagen](images/QueEsRed)|
+|![Imagen](images/QueEsRed.PNG)|
 
 |Definición de un Sistema|
 |:-:|
