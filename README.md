@@ -48,7 +48,8 @@ Repositorio para el proyecto de la asignatuea
 |:-:|
 |![Imagen](images/casosDeUso.png)|
 
-|Actores|
+## Actores
+
 <div align="center">
 
 |Actor|Descripción|
