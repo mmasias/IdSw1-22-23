@@ -44,6 +44,21 @@ Repositorio para el proyecto de la asignatuea
 |:-:|
 |![Imagen](images/DiagramaDeEstados.png)|
 
+|Casos de Uso|
+|:-:|
+|![Imagen](images/casosDeUso.png)|
+
+|Actores|
+<div align="center">
+
+|Actor|Descripción|
+|-|-|
+|**Administrador**|Gestiona redes, proveedores y usuarios|
+|**Técnicos internos**|Gestionan redes y proveedores|
+|**Técnicos externos**|Ven redes|
+
+</div>
+
 # Glosario
 
 - Usuario: Todo aquel que interactúe con la aplicación, ya sea como administrador para
