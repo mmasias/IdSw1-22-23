@@ -1,6 +1,6 @@
 # Proyecto ingeniería de software
 
-|Diagrama de estados|
+|Diagrama De Estados|
 |:-:|
-|![Imagen](proyecto.PNG)|
-|[Código del diagrama](proyecto.plantuml)|
+|![Imagen](DiagramaDeEstados.PNG)|
+|[Código del modelo](DiagramaEstados.plantuml)|
