@@ -4,7 +4,7 @@ Repositorio para el proyecto de la asignatuea
 
 ## Rodrigo Zaldaña Calles (Cliente)
 
-* Requisitado Sesión 1
+# Requisitado Sesión 1
 
 |Partes que conforman una Red|
 |:-:|
@@ -22,10 +22,6 @@ Repositorio para el proyecto de la asignatuea
 |Definicion flujo de una red|
 |:-:|
 |![Imagen](images/QueEsRed.PNG)|
-
-|Definición de un Sistema|
-|:-:|
-|![Imagen](images/QueEsSistema.PNG)|
 
 
 # Diagramas
