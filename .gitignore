@@ -1,3 +1,0 @@
-# ignoro el archivo donde el plugin de plantuml deposita los documentos
-# (porque no logro entender como configurar las rutas!!!!) :@
-out/

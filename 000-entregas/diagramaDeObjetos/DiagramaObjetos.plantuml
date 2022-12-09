@@ -1,0 +1,67 @@
+@startuml proyecto
+
+object "admin : Usuario" as admin {
+    usuario = "systemAdmin"
+    contraseña = "1Sr2.4Ga=1!"
+    rol = "admin"
+}
+
+object "redIris : Red" as red1 {
+ip = "192.168.1.1"
+nombre = "red Iris"
+ubicacion = "Universidad uneatlantico"
+direccion= "C. Isabel Torres"
+}
+
+object "router001 : Router" as router {
+ip = "192.168.1.1"
+nombre = "router001"
+ubicacion = "planta 2"
+}
+
+object "uneat : Ubicacion" as uneat {
+nombre = "Universidad uneatlantico"
+direccion= "C. Isabel Torres"
+}
+
+object "movistar : Proveedor" as redIris {
+nombre = "rediris"
+numeroDeTelefono = "5311"
+redAsociada = "redIris"
+}
+
+object "firewall001 : Firewall" as firewall {
+mac = "00-1B-33-22-55-H1"
+nombre = "red alumnos"
+marca = "Pfsense"
+version = "2.0"
+ubicacion = "planta 2"
+}
+
+object "switch001 : Switch" as switch {
+    ip = "127.0.0.1"
+    numeroSerial = "j3245jh342"
+    hostname = "switch001"
+}
+
+object "vlan01 : Vlan" as vlan {
+    ip = "127.0.0.1"
+    estado = "activo"
+}
+
+object "ordenador1 : Dispositivo" as ordenador1 {
+    ip = "127.0.0.1"
+    marca = "asus"
+    estado = "activo"
+}
+
+admin -d- red1: gestiona >
+red1 -- router: posee >
+router -- firewall: tiene >
+red1 -l- redIris: contiene >
+red1 -r- uneat: está en >
+firewall -- switch: posee >
+switch -- vlan: contiene >
+vlan -l- ordenador1: contiene >
+
+@enduml

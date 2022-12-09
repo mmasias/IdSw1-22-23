@@ -1,6 +1,6 @@
 # Proyecto ingeniería de software
 
-|Modelo de dominio V3|
+|Modelo de dominio|
 |:-:|
-|![Imagen](ModeloDominioV3.PNG)|
-|[Código del modelo](ModeloDominioV3.plantuml)|
+|![Imagen](ModeloDeDominio.png)|
+|[Código del modelo](ModeloDominio.plantuml)|
