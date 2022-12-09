@@ -1,0 +1,61 @@
+@startuml
+object "balon as BalonTradicional" as balon
+object "campo : Santiago Bernabéu" as campo
+object "cesped : cesped natural" as cesped
+object "arbitro : Arbitro" as arbitro
+object "partido : Partido" as partido
+object "Real Madrid : Equipo" as equipoRealMadrid
+object "Barcelona : Equipo" as equipoBarcelona
+object "primerTiempo : Periodo" as primerTiempo
+object "segundoTiempo : Periodo" as segundoTiempo
+object "encuentro: Encuentro" as encuentro 
+object "cuerpoTecnico : Carlo Ancelotti" as cuerpoTecnicoRealMadrid
+object "cuerpoTecnico : Xavi" as cuerpoTecnicoBarcelona
+
+object "jugadorTitular: jugadorTitular" as porteroRealMadrid{
+nombre="Thibaut Courtois"
+}
+object "jugadorTitular: jugadorTitular" as jugador1RealMadrid {
+nombre="Karim Benzema"
+}
+object "jugadorTitular: jugadorTitular" as jugadorSuplenteRealMadrid {
+nombre="Nacho"
+}
+object "jugadorTitular: jugadorTitular" as porteroBarcelona{
+nombre="Marc-André ter Stegen"
+}
+object "jugadorTitular: jugadorTitular" as jugador1Barcelona {
+nombre="Pedri"
+}
+object "jugadorSuplente: jugadorTitular" as jugadorSuplenteBarcelona {
+nombre="Balde"
+}
+object "Var as Var" as Var
+campo-- equipoBarcelona
+campo-- equipoRealMadrid
+partido -- encuentro
+encuentro -- primerTiempo
+encuentro -- segundoTiempo
+encuentro -- campo
+campo -- cesped
+campo -- arbitro
+cuerpoTecnicoRealMadrid--porteroRealMadrid
+cuerpoTecnicoRealMadrid--jugador1RealMadrid 
+cuerpoTecnicoRealMadrid--jugadorSuplenteRealMadrid 
+cuerpoTecnicoBarcelona--porteroBarcelona
+cuerpoTecnicoBarcelona--jugador1Barcelona
+cuerpoTecnicoBarcelona--jugadorSuplenteBarcelona
+equipoRealMadrid--cuerpoTecnicoRealMadrid
+equipoBarcelona--cuerpoTecnicoBarcelona
+arbitro--porteroRealMadrid
+arbitro--jugador1RealMadrid
+arbitro--porteroBarcelona
+arbitro--jugador1Barcelona
+arbitro--cuerpoTecnicoRealMadrid
+arbitro--cuerpoTecnicoBarcelona
+arbitro--Var
+porteroRealMadrid--balon
+jugador1RealMadrid--balon
+porteroBarcelona--balon
+jugador1Barcelona--balon
+@enduml
