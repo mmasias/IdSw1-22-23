@@ -20,3 +20,4 @@ CdU:
 	- VisualizarCambiosAlumnos
 	- GestionarAlertas
 	- VisualizarClusters
+	- GestionarNotificaciones
