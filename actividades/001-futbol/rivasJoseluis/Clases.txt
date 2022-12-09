@@ -1,0 +1,26 @@
+@startuml
+class Partido
+class Encuentro
+class cuerpoTecnico
+class jugadorTitular
+class jugadorSuplente
+class Arbitraje
+class Equipo
+class Var
+class campo
+class balon
+Arbitraje*--cuerpoTecnico
+Arbitraje*--jugadorTitular
+Arbitraje*--Var
+cuerpoTecnico*--jugadorTitular
+campo*--cesped
+balon*--jugadorTitular
+Partido--*Encuentro
+Encuentro*-- Períodos 
+Encuentro*--campo
+campo*--Arbitraje
+Equipo*--cuerpoTecnico
+Equipo*--jugadorTitular
+Equipo*--jugadorSuplente
+campo*--Equipo
+@enduml
