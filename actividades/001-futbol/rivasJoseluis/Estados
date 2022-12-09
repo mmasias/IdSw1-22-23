@@ -1,0 +1,22 @@
+@startuml
+State Partido {
+  [*] --> Saque
+  State elección <<choice>>
+  State TiempoExtra 
+  State Saque
+  State Gol
+  State Periodo {
+    EnJuego --> Detenido
+    Detenido --> EnJuego  
+  }
+
+Saque --> Periodo
+Periodo--> elección 
+TiempoExtra -r-> [*] 
+elección --> TiempoExtra
+TiempoExtra -l-> Saque
+Periodo --> elección 
+elección --> Gol
+Gol --> Saque
+}
+@enduml
