@@ -1,0 +1,24 @@
+@startuml
+class Partido
+class CuerpoTecnico
+class Jugadores
+class Arbitraje
+class Var
+class Campo
+class Cesped
+class Balon
+class Equipo
+class Marcador
+class Resultado
+Campo--Marcador
+Equipo--CuerpoTecnico
+Equipo--Jugadores
+Partido--Campo
+Campo--Arbitraje
+Campo--Equipo
+Arbitraje--Jugadores
+Arbitraje--Var
+Campo--Cesped
+Marcador-- Resultado
+Jugadores--Balon
+@enduml
