@@ -1,9 +1,12 @@
-@startuml proyecto
+@startuml DiagramaDeObjetos
 
 object "admin : Usuario" as admin {
     usuario = "systemAdmin"
     contraseña = "1Sr2.4Ga=1!"
     rol = "admin"
+}
+
+object "tecnico : Usuario" as user {
 }
 
 object "redIris : Red" as red1 {
@@ -44,24 +47,54 @@ object "switch001 : Switch" as switch {
     hostname = "switch001"
 }
 
-object "vlan01 : Vlan" as vlan {
-    ip = "127.0.0.1"
+object "Alumnos : Vlan" as vlan {
+    ip = "127.0.10.1"
     estado = "activo"
 }
 
-object "ordenador1 : Dispositivo" as ordenador1 {
-    ip = "127.0.0.1"
+object "PDI/PAS : Vlan" as vlan2 {
+    ip = "127.0.20.1"
+    estado = "activo"
+}
+
+object "Profesores : Vlan" as vlan3 {
+    ip = "127.0.30.1"
+    estado = "activo"
+}
+
+object "Ordenador : Dispositivo" as DA1 {
+    ip = "127.0.10.2"
     marca = "asus"
     estado = "activo"
 }
 
+object "Movil : Dispositivo" as DA2 {
+}
+
+object "Portatil : Dispositivo" as DPP1 {
+}
+
+object "Impresora : Dispositivo" as DP1 {
+}
+
+object "Ordenador : Dispositivo" as DP2 {
+}
+
+
 admin -d- red1: gestiona >
+user -- red1
 red1 -- router: posee >
 router -- firewall: tiene >
 red1 -l- redIris: contiene >
 red1 -r- uneat: está en >
 firewall -- switch: posee >
-switch -- vlan: contiene >
-vlan -l- ordenador1: contiene >
+switch -- vlan
+switch -- vlan2
+switch -- vlan3
+vlan -- DA1: contiene >
+vlan -- DA2
+vlan2 -- DPP1
+vlan3 -- DP1
+vlan3 -- DP2
 
 @enduml

@@ -1,4 +1,4 @@
-@startuml
+@startuml ModeloDeDominio
 class Usuario
 class Red
 class Router
@@ -6,13 +6,16 @@ class Ubicacion
 class Firewall
 class Switch
 class Dispositivo
+class Servicio
 
 Usuario --o Red : gestiona >
 
 
 Red *-r- Ubicacion : posee >
 Red *-- Router : contiene >
-Red *-l- Proveedor : tiene >
+
+Red *-l- Servicio : tiene >
+Servicio *-l- Proveedor : tiene >
 
 Router *-- Firewall : posee >
 Firewall *-- Switch : gestiona >
