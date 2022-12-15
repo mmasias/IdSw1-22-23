@@ -62,14 +62,12 @@ Repositorio para el proyecto de la asignatuea
 
 # Glosario
 
-- Usuario: Todo aquel que interactúe con la aplicación, ya sea como administrador para
-gestionarla o como un usuario común que desee ver información de las redes.
-
-- Red: Es la entidad principal, es quien relaciona al resto de entidades. Una red tiene proveedor, router, firewall, switch como elementos propios. Es gestionada por un usuario y los dispositivos se conectan a esta.
-
-- Ubicación: Es el lugar físico en donde se encuentra la red.
-
-- Router: Dispositivo que provee a la red de conexión a internet.
+|Entidad|Definición
+|-|-
+|Usuario|Todo aquel que interactúe con la aplicación, ya sea como administrador para gestionarla o como un usuario común que desee ver información de las redes.
+|Red|Es la entidad principal, es quien relaciona al resto de entidades. Una red tiene proveedor, router, firewall, switch como elementos propios. Es gestionada por un usuario y los dispositivos se conectan a esta.
+|Ubicación|Es el lugar físico en donde se encuentra la red.
+|Router|Dispositivo que provee a la red de conexión a internet.
 
 - Proveedor: Compañía que presta el servicio de internet a la red.
 
