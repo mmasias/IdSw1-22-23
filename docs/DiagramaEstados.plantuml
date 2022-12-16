@@ -1,4 +1,4 @@
-@startuml proyecto
+@startuml DiagramaDeEstados
 
 state fork_state <<fork>>
 
