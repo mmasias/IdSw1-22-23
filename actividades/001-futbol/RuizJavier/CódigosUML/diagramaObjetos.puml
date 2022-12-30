@@ -2,6 +2,10 @@
 
 object "partidoFutbol : PartidoFutbol" as PartidoFutbol
 
+object "encuentro : Encuentro" as Encuentro
+
+object "segundoParte : Periodo" as Periodo
+
 object "arbitro : Arbitro" as Árbitro
 
 object "Camp Nou: Estadio" as Estadio
@@ -22,6 +26,8 @@ object "Lewandowski : Jugador" as jugadorBarcelona
 
 
 PartidoFutbol --> Estadio : se disputa en
+PartidoFutbol -r-> Encuentro
+Encuentro --> Periodo
 PartidoFutbol <-- Árbitro : dirige
 PartidoFutbol <-- equipoBarcelona: disputa
 PartidoFutbol <-- equipoMadrid: disputa
