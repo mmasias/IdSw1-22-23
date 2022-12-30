@@ -22,8 +22,8 @@ package Competicion {
 			usecase CrearEncuentro
 			usecase AñadirPeriodo
 
-			Relator --> CrearEncuentro
-			Relator --> AñadirPeriodo
+			Narrador--> CrearEncuentro
+			Narrador--> AñadirPeriodo
 
 			package Periodo {
 		
