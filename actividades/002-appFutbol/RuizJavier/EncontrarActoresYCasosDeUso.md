@@ -8,7 +8,7 @@
 |-|-
 |**AdministradorCompeticion**|Configura la competición
 |**Configurador**|Prepara el partido y actualiza la competición según el resultado de este
-|**Relator**|Encargado de ingresar los eventos del partido
+|**Narrador**|Encargado de ingresar los eventos del partido
 |**Observador**|Observa el seguimiento del partido
 
 </div>
