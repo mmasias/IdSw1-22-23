@@ -18,7 +18,7 @@ package Competicion {
 
 		package Encuentro {
 
-			actor Relator
+			actor Narrador
 			usecase CrearEncuentro
 			usecase AñadirPeriodo
 
@@ -29,7 +29,7 @@ package Competicion {
 		
 				useCase AgregarEvento
 
-				Relator --> AgregarEvento
+				Narrador --> AgregarEvento
 			}
 		}
 	}
@@ -50,7 +50,7 @@ package Competicion {
 
 	AdministradorCompeticion   -u-> VerCompeticiones
 	Configurador -u-> VerCompeticiones
-	Relator -u-> VerCompeticiones
+	Narrador -u-> VerCompeticiones
 
 }	
 
