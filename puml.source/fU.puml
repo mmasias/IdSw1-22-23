@@ -1,0 +1,49 @@
+package Memoria {
+
+    class  Materia {
+        ECTS
+    }
+
+    Universidad -- Facultad
+    Facultad -- Grado
+    Materia -- Asignatura
+    Grado -- Asignatura
+    Grado .l. Materia
+
+    Grado -l- Competencias
+    Materia -u- Competencias
+
+    Grado -- ActividadesFormativas
+    Materia -- ActividadesFormativas
+
+    Materia -- Caracter
+    Materia -- Rama
+    Rama -- MateriaBasica
+    Materia .. MateriaBasica
+    Materia -- ResultadosDeAprendizaje
+
+    package Competencias  {
+'        class CompetenciasGenerales
+'        class CompetenciasEspecificas
+'        class CompetenciasTransversales   
+    }
+
+    package ActividadesFormativas {}
+
+    Asignatura -- Rama
+    Asignatura .. MateriaBasica
+    Asignatura -l- ActividadesFormativas
+
+}
+
+package LaUniversidad {
+
+class VersionAsignatura
+class VersionGrado
+
+    Grado -l- VersionGrado
+    Asignatura -l- VersionAsignatura
+    VersionGrado -d- VersionAsignatura
+    VersionAsignatura -l- ActividadesFormativas
+
+}
