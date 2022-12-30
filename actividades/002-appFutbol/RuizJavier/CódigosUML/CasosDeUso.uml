@@ -1,0 +1,58 @@
+@startuml
+left to right direction
+
+package Competicion {
+
+	package Partido {
+
+		actor Configurador
+
+		usecase CrearPartido
+		usecase DefinirAlineacion
+		usecase ActualizarClasificacion
+
+		Configurador --> CrearPartido
+		Configurador --> DefinirAlineacion
+		Configurador --> ActualizarClasificacion
+
+
+		package Encuentro {
+
+			actor Relator
+			usecase CrearEncuentro
+			usecase AñadirPeriodo
+
+			Relator --> CrearEncuentro
+			Relator --> AñadirPeriodo
+
+			package Periodo {
+		
+				useCase AgregarEvento
+
+				Relator --> AgregarEvento
+			}
+		}
+	}
+
+	actor AdministradorCompeticion   
+
+	usecase InscribirJugador
+	usecase InscribirEquipo
+    usecase AñadirCalendario
+    usecase CrearCompeticion
+ 
+	AdministradorCompeticion   --> InscribirEquipo
+	AdministradorCompeticion   --> InscribirJugador
+    AdministradorCompeticion   --> AñadirCalendario
+    AdministradorCompeticion   --> CrearCompeticion
+
+    usecase VerCompeticiones
+
+	AdministradorCompeticion   -u-> VerCompeticiones
+	Configurador -u-> VerCompeticiones
+	Relator -u-> VerCompeticiones
+
+}	
+
+
+@enduml
