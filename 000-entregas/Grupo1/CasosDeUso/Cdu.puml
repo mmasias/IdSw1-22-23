@@ -17,12 +17,9 @@ package System {
     usecase "SolicitarDatosAlumno" as SDA
   }
   package Seguimiento {
-    usecase "Visualizar abandono" as VA
     usecase "Visualizar estadisticas" as VE
-    usecase "Visualizar interacciones" as VI
   }
   package Gestion {
-    usecase "Visualizar cambios de alumnos" as VC
     usecase "Visualizar clusters" as VCL
     usecase "Gestionar notificaciones" as GN
   }
@@ -36,9 +33,7 @@ User --> (Login)
 User --> (LoginOut)
 User --> (SDA)
 
-SEG --> (VA)
 SEG --> (VE)
-SEG --> (VI)
 
 GEST --> (VC)
 GEST --> (VCL)
