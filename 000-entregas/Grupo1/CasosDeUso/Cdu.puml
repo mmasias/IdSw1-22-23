@@ -6,8 +6,8 @@ actor "Gestion" as GEST
 actor "Seguimiento"	as SEG
 actor "Tiempo" as Tiempo
 
-User <|-u- GEST
 User <|-u- SEG
+SEG <|-u- GEST
 
 package System {
 
