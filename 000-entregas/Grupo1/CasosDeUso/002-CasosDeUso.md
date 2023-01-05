@@ -17,7 +17,7 @@
 
 <div align="center">
 
-|Casos de Uso :nut_and_bolt: :hammer:
+|Casos de Uso 
 |:-:
 |![](images/casosDeUso.png)
 |[Código](casosDeUso.puml)
@@ -28,7 +28,7 @@
 
 <div align="center">
 
-|Diagrama de contexto :nut_and_bolt: :hammer:
+|Diagrama de contexto
 |:-:
 |![](images/diagramaContexto.png)
 |[Código](diagramaContexto.puml)
