@@ -1,4 +1,4 @@
-@startuml Casos de uso
+@startuml CasosDeUso
 left to right direction
 
 actor User
