@@ -20,7 +20,7 @@
 
 |Casos de Uso 
 |:-:
-|![](images/casosDeUso.png)
+|![](images/CasosDeUso.png)
 |[Código](casosDeUso.puml)
 
 </div>
