@@ -2,12 +2,12 @@
 left to right direction
 
 actor User
-actor "Gestion alta direccion" as GAD
-actor "Encargados del seguimiento"	as ESA
+actor "Gestion" as GEST
+actor "Seguimiento"	as SEG
 actor "Tiempo" as Tiempo
 
-User <|-u- GAD
-User <|-u- ESA
+User <|-u- GEST
+User <|-u- SEG
 
 package System {
 
@@ -16,12 +16,12 @@ package System {
     usecase "LoginOut" as LoginOut
     usecase "SolicitarDatosAlumno" as SDA
   }
-  package Gestion {
+  package Seguimiento {
     usecase "Visualizar abandono" as VA
     usecase "Visualizar estadisticas" as VE
     usecase "Visualizar interacciones" as VI
   }
-  package Seguimiento {
+  package Gestion {
     usecase "Visualizar cambios de alumnos" as VC
     usecase "Visualizar clusters" as VCL
     usecase "Gestionar notificaciones" as GN
@@ -36,13 +36,14 @@ User --> (Login)
 User --> (LoginOut)
 User --> (SDA)
 
-GAD --> (VA)
-GAD --> (VE)
-GAD --> (VI)
+SEG --> (VA)
+SEG --> (VE)
+SEG --> (VI)
 
-ESA --> (VC)
-ESA --> (VCL)
-ESA --> (GN)
+GEST --> (VC)
+GEST --> (VCL)
+GEST --> (GN)
+
 
 Tiempo --> PD
 
