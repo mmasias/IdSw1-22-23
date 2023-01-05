@@ -1,0 +1,51 @@
+@startuml Casos de uso football
+left to right direction
+
+actor User
+actor "Gestion alta direccion" as GAD
+actor "Encargados del seguimiento"	as ESA
+actor "Tiempo" as Tiempo
+
+User <|-u- GAD
+User <|-u- ESA
+
+package System {
+
+  package Comun {
+    usecase "Login" as Login
+    usecase "LoginOut" as LoginOut
+    usecase "SolicitarDatosAlumno" as SDA
+  }
+  package Gestion {
+    usecase "Visualizar abandono" as VA
+    usecase "Visualizar estadisticas" as VE
+    usecase "Visualizar interacciones" as VI
+  }
+  package Seguimiento {
+    usecase "Visualizar cambios de alumnos" as VC
+    usecase "Gestionar alertas" as GA
+    usecase "Visualizar clusters" as VCL
+    usecase "Gestionar notificaciones" as GN
+  }
+  package Procesamiento {
+    usecase "ProcesarDatos" as PD
+  }
+}
+
+
+User --> (Login)
+User --> (LoginOut)
+User --> (SDA)
+
+GAD --> (VA)
+GAD --> (VE)
+GAD --> (VI)
+
+ESA --> (VC)
+ESA --> (GA)
+ESA --> (VCL)
+ESA --> (GN)
+
+Tiempo --> PD
+
+@enduml
