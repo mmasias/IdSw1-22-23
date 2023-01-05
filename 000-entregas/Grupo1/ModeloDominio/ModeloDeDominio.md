@@ -14,22 +14,8 @@
 |**Intérprete**|Analiza los datos procesados y saca conclusiones de estos.
 |**Acción**|Realiza acciones que el intérprete ha ofrecido como enviar una notificación, reunirse con el alumno, etc.
 
-
 ## Diagramas
 
-
-|Diagrama de clases
-|:-:
-|![Imagen](images/Clases.png)
-|[Código](Clases.puml)
-
-|Diagrama de objetos
-|:-:
-|![Imagen](images/Objetos.png)
-|[Código](Objetos.puml)
-
-
-|Diagrama de estados
-|:-:
-|![Imagen](images/Estados.png)
-|[Código](Estados.puml)
+1. [Diagrama de clases](01-DiagramaDeClases/DiagramaClases.md)
+2. [Diagrama de objetos](02-DiagramaDeObjetos/DiagramaObjetos.md)
+3. [Diagrama de estados](03-DiagramaDeEstados/DiagramaEstados.md)
