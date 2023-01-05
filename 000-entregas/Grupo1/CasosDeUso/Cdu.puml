@@ -23,7 +23,6 @@ package System {
   }
   package Seguimiento {
     usecase "Visualizar cambios de alumnos" as VC
-    usecase "Gestionar alertas" as GA
     usecase "Visualizar clusters" as VCL
     usecase "Gestionar notificaciones" as GN
   }
@@ -42,7 +41,6 @@ GAD --> (VE)
 GAD --> (VI)
 
 ESA --> (VC)
-ESA --> (GA)
 ESA --> (VCL)
 ESA --> (GN)
 
