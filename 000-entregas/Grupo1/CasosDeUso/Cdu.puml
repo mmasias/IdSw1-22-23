@@ -1,4 +1,4 @@
-@startuml Casos de uso football
+@startuml Casos de uso
 left to right direction
 
 actor User
