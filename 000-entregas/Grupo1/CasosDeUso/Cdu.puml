@@ -7,37 +7,36 @@ actor "Seguimiento"	as SEG
 actor "Tiempo" as Tiempo
 
 User <|-u- SEG
-SEG <|-u- GEST
+GEST <|-l- SEG
 
 package System {
 
   package Comun {
     usecase "Login" as Login
     usecase "LoginOut" as LoginOut
-    usecase "SolicitarDatosAlumno" as SDA
   }
   package Seguimiento {
-    usecase "Visualizar estadisticas" as VE
+    usecase "Gestionar notificaciones" as GN
+    usecase "VerAlumnos" as VA
   }
   package Gestion {
-    usecase "Visualizar clusters" as VCL
-    usecase "Gestionar notificaciones" as GN
+    usecase "Visualizar clusters" as VC
+    usecase "Visualizar estadisticas" as VE
   }
   package Procesamiento {
-    usecase "ProcesarDatos" as PD
+    usecase "Procesar Datos" as PD
   }
 }
 
 
 User --> (Login)
 User --> (LoginOut)
-User --> (SDA)
 
-SEG --> (VE)
+SEG --> (VA)
+SEG --> (GN)
 
 GEST --> (VC)
-GEST --> (VCL)
-GEST --> (GN)
+GEST --> (VE)
 
 
 Tiempo --> PD
