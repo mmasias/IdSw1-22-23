@@ -17,11 +17,14 @@ package System {
   }
   package Seguimiento {
     usecase "Gestionar notificaciones" as GN
-    usecase "VerAlumnos" as VA
+    usecase "Listar Alumnos" as LA
+    usecase "Ver Alumnos" as VA
   }
   package Gestion {
-    usecase "Visualizar clusters" as VC
-    usecase "Visualizar estadisticas" as VE
+    usecase "Listar clusters" as LC
+    usecase "Ver clusters" as VC
+    usecase "Ver Interacciones" as VI
+    usecase "Ver abandono" as VAB
   }
   package Procesamiento {
     usecase "Procesar Datos" as PD
@@ -32,11 +35,14 @@ package System {
 User --> (Login)
 User --> (LoginOut)
 
+SEG --> (LA)
 SEG --> (VA)
 SEG --> (GN)
 
+GEST --> (LC)
 GEST --> (VC)
-GEST --> (VE)
+GEST --> (VAB)
+GEST --> (VI)
 
 
 Tiempo --> PD
