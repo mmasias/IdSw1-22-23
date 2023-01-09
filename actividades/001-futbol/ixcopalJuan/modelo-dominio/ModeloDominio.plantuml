@@ -1,0 +1,28 @@
+@startuml ModeloDominioFutbol
+
+class Estadio
+class Partido
+class Marcador
+class Equipo
+class Tiempo
+class Reglamento
+class Jugador
+class DirectorTecnico
+class Arbitro
+
+Estadio --* Partido : Se disputa >
+
+Partido --* Marcador : Define <
+Partido *-- Equipo : Tiene <
+Partido --* Tiempo : Define <
+Partido --* Reglamento : Define <
+
+Equipo *-- Jugador : Tiene <
+Equipo *-- DirectorTecnico : Dirige <
+
+Tiempo *-- Arbitro : Controla <
+Reglamento *-- Arbitro : Cumple <
+
+Marcador *-- Jugador : Modifica <
+
+@enduml
