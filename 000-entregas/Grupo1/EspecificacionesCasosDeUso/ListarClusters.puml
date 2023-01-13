@@ -1,0 +1,41 @@
+@startuml 
+
+hide empty description
+
+State VisualizarCluster 
+
+State VisualizacionCluster{ 
+
+  State state1 as " "
+
+  state c <<choice>>
+
+  [*] -[#green]-> state1
+
+  note on link 
+    <b>El sistema muestra
+    * lista de alumnos contenidos en ese cluster
+  end note
+ 
+  state1 -[#green]-> c 
+
+  note on link 
+    <b>Usuario solicita
+    * Ver alumno
+  end note
+
+  c -[#green]-> VerAlumno : SI
+
+} 
+
+VisualizarCluster -[#green]-> VisualizacionCluster
+
+note on link
+ <b>Usuario requiere
+ VisualizaciónCluster
+end note
+
+c -[#red]-> [*] : NO
+
+
+@enduml
