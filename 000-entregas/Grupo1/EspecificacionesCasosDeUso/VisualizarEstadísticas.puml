@@ -1,0 +1,33 @@
+@startuml 
+
+hide empty description
+
+State VisualizarEstadísticas
+
+
+State VisualizaciónEstadísticas{ 
+
+  State state1 as " "
+
+  [*] -[#green]-> state1
+
+  note on link 
+    <b>El sistema muestra
+    * Estadísticas interacciones
+    * Estadísticas abandono
+  end note
+ 
+
+} 
+
+VisualizarEstadísticas-[#green]-> VisualizaciónEstadísticas
+
+note on link
+ <b>Usuario requiere
+ VisualizaciónEstadísticas
+end note
+
+state1 -[#green]-> [*] 
+
+
+@enduml
