@@ -1,0 +1,33 @@
+@startuml 
+
+hide empty description
+
+State VisualizarAlumnos
+
+State VisualizaciónAlumnos{ 
+
+  State state1 as " "
+
+  [*] -[#green]-> state1
+
+  note on link 
+    <b>El sistema muestra
+    * Todos los alumnos
+    <b>El sistema permite
+    * Visualizar alumno
+  end note
+ 
+
+} 
+
+VisualizarAlumnos-[#green]-> VisualizaciónAlumnos
+
+note on link
+ <b>Usuario requiere
+ Visualizar alumnos
+end note
+
+state1 -[#green]-> [*] 
+
+
+@enduml
