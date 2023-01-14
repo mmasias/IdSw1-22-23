@@ -28,7 +28,7 @@
 
 <div align="center">
 
-|Diagrama de contexto :nut_and_bolt: :hammer:
+|Diagrama de contexto
 |:-:
 |![](Images/DiagramaContexto.png)
 |[Código](DiagramaContexto/CasosDeUso.puml)
