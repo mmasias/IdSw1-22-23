@@ -21,7 +21,7 @@ VerInteracciones-[#green]-> VisualizarInteracciones
 
 note on link
  <b>Usuario requiere
- VisualizarInteracciones
+ Visualizar interacciones
 end note
 
 state1 -[#green]-> [*] 

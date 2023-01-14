@@ -1,41 +1,29 @@
-@startuml VerCluster
+@startuml ListarClusters
 
-State VerCluster 
+State ListarClusters
 
-State VisualizarCluster{ 
+State VerListaClusters{ 
 
   State state1 as " "
-
-  state c <<choice>>
 
   [*] -[#green]-> state1
 
   note on link 
     <b>El sistema muestra
-    * lista de alumnos contenidos en ese cluster
+    * Clústers
   end note
 
-  state1 -[#green]-> c 
 
-  note on link 
-    Rol de usuario
-  end note
-
-  c -[#green]-> VerAlumno : Seguimiento
-
-  note on link 
-    <b> El sistema permite ver Alumno
-  end note
 } 
 
-VerCluster -[#green]-> VisualizarCluster
+ListarClusters-[#green]-> VerListaClusters
 
 note on link
  <b>Usuario requiere
- VisualizarCluster
+ Visualizar clústers
 end note
 
-c -[#red]-> [*] : Gestión
+state1 -[#green]-> [*] 
 
 
 @enduml

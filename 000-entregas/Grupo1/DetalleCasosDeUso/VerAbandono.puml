@@ -20,7 +20,7 @@ VerAbandono-[#green]-> VisualizarAbandono
 
 note on link
  <b>Usuario requiere
- VisualizarAbandono
+ Visualizar abandono
 end note
 
 state1 -[#green]-> [*] 

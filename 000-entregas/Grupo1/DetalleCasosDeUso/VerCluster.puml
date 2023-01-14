@@ -12,13 +12,13 @@ State VisualizarCluster{
 
   note on link 
     <b>El sistema muestra
-    * lista de alumnos contenidos en ese cluster
+    * Lista de alumnos contenidos en ese clúster
   end note
  
   state1 -[#green]-> c 
 
   note on link 
-    Rol de usuario
+    <b> Rol de usuario
   end note
 
   c -[#green]-> VerAlumno : Seguimiento
@@ -32,7 +32,7 @@ VerCluster -[#green]-> VisualizarCluster
 
 note on link
  <b>Usuario requiere
- VisualizarCluster
+ Visualizar clúster
 end note
 
 c -[#red]-> [*] : Gestión

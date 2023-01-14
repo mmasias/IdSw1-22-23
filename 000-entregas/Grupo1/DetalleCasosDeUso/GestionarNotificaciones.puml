@@ -10,8 +10,8 @@ State EnviarNotificaciones{
 
   note on link 
     <b>El sistema permite enviar notificaciones
-    * A Alumnos particulares
-    * A Alumnos de un Cluster
+    * A alumnos particulares
+    * A alumnos de un clúster
   end note
  
 } 
@@ -24,8 +24,8 @@ State VerNotificacionesEnviadas{
 
   note on link 
     <b>El sistema permite ver notificaciones 
-    * De Alumnos particulares
-    * De Alumnos de un Cluster
+    * De alumnos particulares
+    * De alumnos de un clúster
   end note
 
 } 
@@ -34,14 +34,14 @@ GestionarNotificaciones-[#green]-> EnviarNotificaciones
 
 note on link
  <b>Usuario requiere
- * EnviarNotificaciones
+ * Enviar notificaciones
 end note
 
 GestionarNotificaciones-[#green]-> VerNotificacionesEnviadas
 
 note on link
  <b>Usuario requiere
- * VerNotificacionesEnviadas
+ * Ver notificaciones enviadas
 end note
 
 state1 -[#green]-> [*] 

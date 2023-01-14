@@ -15,9 +15,32 @@
 <hr>
 ## Diagramas
 
-1. [Diagrama de clases](01-DiagramaDeClases/readme.md)
-2. [Diagrama de objetos](02-DiagramaDeObjetos/readme.md)
-3. [Diagrama de estados](03-DiagramaDeEstados/readme.md)
+<details>
+  <summary>Diagrama de clases</summary>
+  
+|Diagrama de clases
+|:-:
+|![](01-DiagramaDeClases/Clases.png)
+
+</details>
+
+<details>
+  <summary>Diagrama de objetos</summary>
+  
+|Diagrama de objetos
+|:-:
+|![](02-DiagramaDeObjetos/Objetos.png)
+
+</details>
+
+<details>
+  <summary>Diagrama de estados</summary>
+  
+|Diagrama de estados
+|:-:
+|![](03-DiagramaDeEstados/Estados.png)
+
+</details>
 
 <hr>
 
