@@ -17,17 +17,17 @@ package System {
   }
   package Seguimiento {
     usecase "Gestionar notificaciones" as GN
-    usecase "Listar Alumnos" as LA
-    usecase "Ver Alumnos" as VA
+    usecase "Listar alumnos" as LA
+    usecase "Ver alumno" as VA
   }
   package Gestion {
-    usecase "Listar clusters" as LC
-    usecase "Ver clusters" as VC
-    usecase "Ver Interacciones" as VI
+    usecase "Listar clústers" as LC
+    usecase "Ver clúster" as VC
+    usecase "Ver interacciones" as VI
     usecase "Ver abandono" as VAB
   }
   package Procesamiento {
-    usecase "Procesar Datos" as PD
+    usecase "Procesar datos" as PD
   }
 }
 

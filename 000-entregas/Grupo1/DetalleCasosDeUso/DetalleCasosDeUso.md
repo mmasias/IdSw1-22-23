@@ -1,4 +1,4 @@
-# Especificaciones casos de uso
+# Detalle casos de uso
 <details>
   <summary>Listar clústers</summary>
 
@@ -8,13 +8,12 @@
 
 </details>
 <details>
-  <summary>Visualizar Alumno</summary>
+  <summary>Ver alumno</summary>
   
-  ### Heading
-  1. Foo
-  2. Bar
-     * Baz
-     * Qux
+|Ver alumno
+|:-:
+|![](images/VerAlumno.png)
+
 
 </details>
 <details>

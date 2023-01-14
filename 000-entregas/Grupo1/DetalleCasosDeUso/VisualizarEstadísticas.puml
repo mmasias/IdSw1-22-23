@@ -1,0 +1,30 @@
+@startuml VerInteracciones
+
+State VerInteracciones
+
+
+State VisualizarInteracciones{ 
+
+  State state1 as " "
+
+  [*] -[#green]-> state1
+
+  note on link 
+    <b>El sistema muestra
+    * Estadísticas interacciones
+  end note
+ 
+
+} 
+
+VerInteracciones-[#green]-> VisualizarInteracciones
+
+note on link
+ <b>Usuario requiere
+ VisualizarInteracciones
+end note
+
+state1 -[#green]-> [*] 
+
+
+@enduml
