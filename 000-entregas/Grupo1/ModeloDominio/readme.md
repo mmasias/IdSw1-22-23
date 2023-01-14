@@ -1,6 +1,3 @@
-# Requisitado
-<hr>
-
 ## Glosario
 
 |Actor|Descripción
