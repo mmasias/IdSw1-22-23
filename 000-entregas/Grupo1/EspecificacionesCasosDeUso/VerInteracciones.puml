@@ -1,11 +1,9 @@
-@startuml 
+@startuml VerInteracciones
 
-hide empty description
-
-State VisualizarEstadísticas
+State VerInteracciones
 
 
-State VisualizaciónEstadísticas{ 
+State VisualizarInteracciones{ 
 
   State state1 as " "
 
@@ -14,17 +12,16 @@ State VisualizaciónEstadísticas{
   note on link 
     <b>El sistema muestra
     * Estadísticas interacciones
-    * Estadísticas abandono
   end note
  
 
 } 
 
-VisualizarEstadísticas-[#green]-> VisualizaciónEstadísticas
+VerInteracciones-[#green]-> VisualizarInteracciones
 
 note on link
  <b>Usuario requiere
- VisualizaciónEstadísticas
+ VisualizarInteracciones
 end note
 
 state1 -[#green]-> [*] 

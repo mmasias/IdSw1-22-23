@@ -1,8 +1,6 @@
-@startuml 
+@startuml VerAlumno
 
-hide empty description 
-
-State VisualizarAlumno
+State VerAlumno
 
 
 State VisualizaciónAlumno{ 
@@ -21,11 +19,11 @@ State VisualizaciónAlumno{
 
 } 
 
-VisualizarAlumno-[#green]-> VisualizaciónAlumno
+VerAlumno-[#green]-> VisualizaciónAlumno
 
 note on link
  <b>Usuario requiere
- Visualizar alumno
+ Ver alumno
 end note
 
 state1 -[#green]-> [*] 

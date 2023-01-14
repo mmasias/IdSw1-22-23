@@ -1,10 +1,8 @@
-@startuml 
+@startuml VerCluster
 
-hide empty description
+State VerCluster 
 
-State VisualizarCluster 
-
-State VisualizacionCluster{ 
+State VisualizarCluster{ 
 
   State state1 as " "
 
@@ -20,22 +18,24 @@ State VisualizacionCluster{
   state1 -[#green]-> c 
 
   note on link 
-    <b>Usuario solicita
-    * Ver alumno
+    Rol de usuario
   end note
 
-  c -[#green]-> VerAlumno : SI
+  c -[#green]-> VerAlumno : Seguimiento
 
+  note on link 
+    <b> El sistema permite ver Alumno
+  end note
 } 
 
-VisualizarCluster -[#green]-> VisualizacionCluster
+VerCluster -[#green]-> VisualizarCluster
 
 note on link
  <b>Usuario requiere
- VisualizaciónCluster
+ VisualizarCluster
 end note
 
-c -[#red]-> [*] : NO
+c -[#red]-> [*] : Gestión
 
 
 @enduml

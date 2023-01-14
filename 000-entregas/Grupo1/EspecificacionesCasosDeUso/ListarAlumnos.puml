@@ -1,10 +1,8 @@
-@startuml 
+@startuml ListarAlumnos
 
-hide empty description
+State ListarAlumnos
 
-State VisualizarAlumnos
-
-State VisualizaciónAlumnos{ 
+State VerListaAlumnos{ 
 
   State state1 as " "
 
@@ -14,17 +12,17 @@ State VisualizaciónAlumnos{
     <b>El sistema muestra
     * Todos los alumnos
     <b>El sistema permite
-    * Visualizar alumno
+    * Ver un alumno
   end note
  
 
 } 
 
-VisualizarAlumnos-[#green]-> VisualizaciónAlumnos
+ListarAlumnos-[#green]-> VerListaAlumnos
 
 note on link
  <b>Usuario requiere
- Visualizar alumnos
+ Listar alumnos
 end note
 
 state1 -[#green]-> [*] 
