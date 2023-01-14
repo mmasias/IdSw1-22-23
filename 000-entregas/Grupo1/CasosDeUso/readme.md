@@ -20,8 +20,8 @@
 
 |Casos de Uso 
 |:-:
-|![](images/.png)
-|[Código](casosDeUso.puml)
+|![](images/CasosDeUso.png)
+|[Código](CasosDeUso.puml)
 
 </div>
 
@@ -31,7 +31,7 @@
 
 |Diagrama de contexto
 |:-:
-|![](images/.png)
+|![](images/Contexto.png)
 |[Código](diagramaContexto.puml)
 
 </div>

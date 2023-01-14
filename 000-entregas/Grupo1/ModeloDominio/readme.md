@@ -16,6 +16,6 @@
 
 ## Diagramas
 
-1. [Diagrama de clases](01-DiagramaDeClases/DiagramaClases.md)
-2. [Diagrama de objetos](02-DiagramaDeObjetos/DiagramaObjetos.md)
-3. [Diagrama de estados](03-DiagramaDeEstados/DiagramaEstados.md)
+1. [Diagrama de clases](01-DiagramaDeClases/readme.md)
+2. [Diagrama de objetos](02-DiagramaDeObjetos/readme.md)
+3. [Diagrama de estados](03-DiagramaDeEstados/readme.md)
