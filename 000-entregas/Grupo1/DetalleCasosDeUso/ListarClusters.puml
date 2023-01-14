@@ -1,6 +1,4 @@
-@startuml
-
-hide empty description
+@startuml ListarClusters
 
 State ListarClusters
 

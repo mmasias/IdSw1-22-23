@@ -1,0 +1,50 @@
+@startuml GestionarNotificaciones
+
+State GestionarNotificaciones
+
+State EnviarNotificaciones{ 
+
+  State state1 as " "
+
+  [*] -[#green]-> state1
+
+  note on link 
+    <b>El sistema permite enviar notificaciones
+    * A Alumnos particulares
+    * A Alumnos de un Cluster
+  end note
+ 
+} 
+
+State VerNotificacionesEnviadas{ 
+
+  State state2 as " "
+
+  [*] -[#green]-> state2
+
+  note on link 
+    <b>El sistema permite ver notificaciones 
+    * De Alumnos particulares
+    * De Alumnos de un Cluster
+  end note
+
+} 
+
+GestionarNotificaciones-[#green]-> EnviarNotificaciones
+
+note on link
+ <b>Usuario requiere
+ * EnviarNotificaciones
+end note
+
+GestionarNotificaciones-[#green]-> VerNotificacionesEnviadas
+
+note on link
+ <b>Usuario requiere
+ * VerNotificacionesEnviadas
+end note
+
+state1 -[#green]-> [*] 
+state2 -[#green]-> [*] 
+
+@enduml
