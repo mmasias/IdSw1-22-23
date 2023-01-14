@@ -1,4 +1,5 @@
 # Disciplina de requisitos
+<hr>
 
 1. [Modelo de dominio](ModeloDominio/readme.md)
 2. [Casos de uso](CasosDeUso/readme.md)

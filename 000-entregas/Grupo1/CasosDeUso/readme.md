@@ -1,4 +1,5 @@
 # Actores y Casos de uso
+<hr>
 
 ## Actores
 
@@ -25,6 +26,8 @@
 
 </div>
 
+<hr>
+
 ## Diagrama de contexto
 
 <div align="center">
@@ -35,3 +38,7 @@
 |[Código](diagramaContexto.puml)
 
 </div>
+
+<hr>
+
+[Atrás](../readme.md)

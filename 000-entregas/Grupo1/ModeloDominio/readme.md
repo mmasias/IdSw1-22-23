@@ -1,7 +1,6 @@
 # Requisitado
-
+<hr>
 ## Glosario
-
 
 |Actor|Descripción
 |-|-
@@ -13,9 +12,13 @@
 |**DatosProcesados**|Datos resultantes del procesado de datos.
 |**Intérprete**|Analiza los datos procesados y saca conclusiones de estos.
 |**Acción**|Realiza acciones que el intérprete ha ofrecido como enviar una notificación, reunirse con el alumno, etc.
-
+<hr>
 ## Diagramas
 
 1. [Diagrama de clases](01-DiagramaDeClases/readme.md)
 2. [Diagrama de objetos](02-DiagramaDeObjetos/readme.md)
 3. [Diagrama de estados](03-DiagramaDeEstados/readme.md)
+
+<hr>
+
+[Atrás](../readme.md)

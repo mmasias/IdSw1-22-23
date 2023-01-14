@@ -1,10 +1,38 @@
 # Detalle casos de uso
+<hr>
+<details>
+  <summary>Gestionar notificaciones</summary>
+
+|Gestionar notificaciones
+|:-:
+|![](images/GestionarNotificaciones.png)
+
+</details>
+<details>
+  <summary>Listar alumnos</summary>
+  
+|Listar alumnos
+|:-:
+|![](images/ListarAlumnos.png)
+
+
+</details>
 <details>
   <summary>Listar clústers</summary>
-
+  
 |Listar clústers
 |:-:
 |![](images/ListarClusters.png)
+
+
+</details>
+<details>
+  <summary>Ver abandono</summary>
+  
+|Ver abandono
+|:-:
+|![](images/VerAbandono.png)
+
 
 </details>
 <details>
@@ -17,32 +45,23 @@
 
 </details>
 <details>
-  <summary>Visualizar Alumnos</summary>
+  <summary>Ver clúster</summary>
   
-  ### Heading
-  1. Foo
-  2. Bar
-     * Baz
-     * Qux
+|Ver clúster
+|:-:
+|![](images/VerCluster.png)
+
 
 </details>
 <details>
-  <summary>Visualizar clústers</summary>
+  <summary>Ver interacciones</summary>
   
-  ### Heading
-  1. Foo
-  2. Bar
-     * Baz
-     * Qux
+|Ver interacciones
+|:-:
+|![](images/VerInteracciones.png)
+
 
 </details>
-<details>
-  <summary>Visualizar Estadísticas</summary>
-  
-  ### Heading
-  1. Foo
-  2. Bar
-     * Baz
-     * Qux
+<hr>
 
-</details>
+[Atrás](../readme.md)

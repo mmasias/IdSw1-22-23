@@ -1,10 +1,16 @@
+# Prototipo de interfaz
+<hr>
+<b> Interfaz funcional --> </b>
+<hr>
 <details>
   <summary>Login</summary>
-  
-  ### Heading
-  1. Foo
-  2. Bar
-     * Baz
-     * Qux
+
+|Login
+|:-:
+|![](images/GestionarNotificaciones.png)
 
 </details>
+
+<hr>
+
+[Atrás](../readme.md)
