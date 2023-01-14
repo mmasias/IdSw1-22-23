@@ -1,5 +1,6 @@
 # Requisitado
 <hr>
+
 ## Glosario
 
 |Actor|Descripción
@@ -13,6 +14,7 @@
 |**Intérprete**|Analiza los datos procesados y saca conclusiones de estos.
 |**Acción**|Realiza acciones que el intérprete ha ofrecido como enviar una notificación, reunirse con el alumno, etc.
 <hr>
+
 ## Diagramas
 
 <details>
