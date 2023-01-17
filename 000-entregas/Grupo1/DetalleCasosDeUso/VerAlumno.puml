@@ -1,0 +1,32 @@
+@startuml VerAlumno
+
+State VerAlumno
+
+
+State VisualizaciónAlumno{ 
+
+  State state1 as " "
+
+  [*] -[#green]-> state1
+
+  note on link 
+    <b>El sistema muestra
+    * Interacciones alumno
+    <b>El sistema permite
+    * Visualizar distintas interacciones del alumno
+  end note
+ 
+
+} 
+
+VerAlumno-[#green]-> VisualizaciónAlumno
+
+note on link
+ <b>Usuario requiere
+ Ver alumno
+end note
+
+state1 -[#green]-> [*] 
+
+
+@enduml

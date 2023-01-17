@@ -1,0 +1,26 @@
+@startuml Estados
+
+State alumno <<choice>>
+State accion <<choice>> 
+
+[*] -d-> Inicio
+
+Inicio --> GeneraciónDeDatos
+
+  State GeneraciónDeDatos {
+    AlumnosInteractuando --> ProcesamientoDatos
+    ProcesamientoDatos --> AlumnosInteractuando
+
+  }
+
+  GeneraciónDeDatos -r-> alumno : Salen datos
+  alumno -u-> AlumnoBajoEngagement : No satisfecho
+  alumno -d-> AlumnoAltoEngagement : Satisfecho
+  AlumnoAltoEngagement --> GeneraciónDeDatos
+  AlumnoBajoEngagement --> GeneraciónDeDatos
+
+  AlumnoBajoEngagement -r-> accion : Se realizan acciones
+  accion --> AlumnoAltoEngagement : Funciona
+  accion -r-> Abandono : No funciona
+
+@enduml

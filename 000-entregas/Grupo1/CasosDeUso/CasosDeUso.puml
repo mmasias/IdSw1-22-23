@@ -1,0 +1,50 @@
+@startuml CasosDeUso
+left to right direction
+
+actor User
+actor "Gestion" as GEST
+actor "Seguimiento"	as SEG
+actor "Tiempo" as Tiempo
+
+User <|-u- SEG
+GEST <|-l- SEG
+
+package System {
+
+  package Comun {
+    usecase "Login" as Login
+    usecase "LoginOut" as LoginOut
+  }
+  package Seguimiento {
+    usecase "Gestionar notificaciones" as GN
+    usecase "Listar alumnos" as LA
+    usecase "Ver alumno" as VA
+  }
+  package Gestion {
+    usecase "Listar clústers" as LC
+    usecase "Ver clúster" as VC
+    usecase "Ver interacciones" as VI
+    usecase "Ver abandono" as VAB
+  }
+  package Procesamiento {
+    usecase "Procesar datos" as PD
+  }
+}
+
+
+User --> (Login)
+User --> (LoginOut)
+
+SEG --> (LA)
+SEG --> (VA)
+SEG --> (GN)
+
+GEST --> (LC)
+GEST --> (VC)
+GEST --> (VAB)
+GEST --> (VI)
+
+
+Tiempo --> PD
+
+@enduml

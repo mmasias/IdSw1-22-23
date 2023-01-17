@@ -1,19 +1,7 @@
-|Diagrama de clases
-|:-:
-|![Imagen](images/Clases.png)
-|[Código](Clases_v2.puml)
+# Disciplina de requisitos
+<hr>
 
-|Diagrama de objetos
-|:-:
-|![Imagen](images/Objetos.png)
-|[Código](Objetos_v2.puml)
-
-|Diagrama de estados
-|:-:
-|![Imagen](images/Estados.png)
-|[Código](Estados_v2.puml)
-
-|Actores y casos de uso
-|:-:
-|![Imagen](images/Cdu.png)
-|[Código](Cdu.puml)
+1. [Modelo de dominio](ModeloDominio/readme.md)
+2. [Casos de uso](CasosDeUso/readme.md)
+3. [Detalle de casos de uso](DetalleCasosDeUso/readme.md)
+4. [Prototipo de interfaz](PrototipoInterfaz/readme.md)

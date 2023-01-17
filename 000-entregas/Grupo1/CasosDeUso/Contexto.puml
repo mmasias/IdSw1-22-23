@@ -1,0 +1,26 @@
+@startuml Contexto 
+
+State fork <<fork>>
+
+state VisualizarEstadisticas as " " <<state>>
+
+state VisualizarAlumnos as " " <<state>>
+state ListarClusters as " " <<state>>
+state ListarAlumnos as " " <<state>>
+state VisualizarClusters as " " <<state>>
+state GestionarNotificaciones as " " <<state>>
+
+[*] -d-> fork
+fork --> VisualizarEstadisticas : Visualizar Abandono
+fork --> VisualizarEstadisticas : Visualizar Interacciones
+
+fork --> ListarAlumnos : Listar Alumnos
+ListarAlumnos --> VisualizarAlumnos : Visualizar Alumnos
+
+fork --> ListarClusters : Listar Clusters
+ListarClusters --> VisualizarClusters : Visualizar Clusters
+
+fork --> GestionarNotificaciones : Gestionar Notificaciones
+
+
+@enduml

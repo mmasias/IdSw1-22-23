@@ -1,0 +1,29 @@
+@startuml VerAbandono
+
+State VerAbandono
+
+State VisualizarAbandono{ 
+
+  State state1 as " "
+
+  [*] -[#green]-> state1
+
+  note on link 
+    <b>El sistema muestra
+    * Estadísticas Abandono
+  end note
+ 
+
+} 
+
+VerAbandono-[#green]-> VisualizarAbandono
+
+note on link
+ <b>Usuario requiere
+ Visualizar abandono
+end note
+
+state1 -[#green]-> [*] 
+
+
+@enduml

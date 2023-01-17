@@ -1,0 +1,29 @@
+@startuml ListarClusters
+
+State ListarClusters
+
+State VerListaClusters{ 
+
+  State state1 as " "
+
+  [*] -[#green]-> state1
+
+  note on link 
+    <b>El sistema muestra
+    * Clústers
+  end note
+
+
+} 
+
+ListarClusters-[#green]-> VerListaClusters
+
+note on link
+ <b>Usuario requiere
+ Visualizar clústers
+end note
+
+state1 -[#green]-> [*] 
+
+
+@enduml
