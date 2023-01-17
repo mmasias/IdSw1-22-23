@@ -1,0 +1,17 @@
+@startuml Contexto football
+
+state Login as " "
+state VIEW_LIST as " "
+state CREATE_MATCH as " "
+state VIEW_MATCH as " "
+
+[*] --> Login : Login
+Login --> VIEW_LIST : listarPartidos
+VIEW_LIST --> VIEW_MATCH : VerPartido
+VIEW_MATCH --> VIEW_MATCH : LeerEventos
+
+VIEW_LIST -[#blue]-> CREATE_MATCH : CrearPartido
+CREATE_MATCH -[#blue]-> CREATE_MATCH : AgregarEvento
+CREATE_MATCH -[#blue]-> CREATE_MATCH : ConcluirPartido
+
+@enduml

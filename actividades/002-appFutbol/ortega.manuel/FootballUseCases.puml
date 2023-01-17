@@ -3,22 +3,23 @@ left to right direction
 
 package FootbalLogger {
   usecase "Login" as Login
-  usecase "Acceder a partido" as AP
-  usecase "Leer eventos del partido" as REP
   usecase "Listar partidos" as LP
+  usecase "Ver partido" as AP
+  usecase "Leer eventos del partido" as REP
 
   usecase "Agregar evento" as CE
   usecase "Crear partido" as CP
   usecase "Concluir partido" as CLP
 }
 
-User --> (Login)
-User --> (AP)
-User --> (REP)
-User --> (LP)
+User <|-u- Admin
 
-Admin --> (Login)
-Admin --> (CE)
-Admin --> (CP)
-Admin --> (CLP)
+User ---> (Login)
+User ---> (AP)
+User ---> (REP)
+User ---> (LP)
+
+Admin ---> (CE)
+Admin ---> (CP)
+Admin ---> (CLP)
 @enduml
