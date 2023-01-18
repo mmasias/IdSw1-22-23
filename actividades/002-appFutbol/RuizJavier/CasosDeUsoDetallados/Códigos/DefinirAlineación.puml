@@ -1,0 +1,79 @@
+@startuml 
+
+hide empty description
+
+State DefinirAlineacion
+
+State DefiniciónAlineación{ 
+
+  State state1 as " "
+  State state2 as " "
+  State state3 as " "
+  State state4 as " "
+  State state5 as " "
+
+
+  state c <<choice>>
+
+  [*] -[#green]-> state1
+
+  state1-[#green]-> state2
+
+  note on link 
+    <b>El sistema permite
+    * Definir alineación
+    * Finalizar definición alineacion
+  end note
+
+  state2 -[#green]-> state1
+ 
+  note on link 
+    <b>Usuario proporciona
+    * Alineación
+  end note
+
+  state2 -[#green]-> state3
+  
+  note on link 
+    <b>Usuario requiere
+    * Definir alineación
+  end note
+
+  state3 -[#green]-> c
+
+  c -[#green]-> state4
+
+  state4 -[#green]-> state1
+  
+  note on link 
+    <b>El sistema muestra
+    * Definición alineación completada
+  end note
+
+  c-[#red]-> state5
+
+  state5 -l[#red]-> state1
+
+  note on link 
+    <b>El sistema muestra
+    * Error definir alineación
+  end note
+
+
+} 
+
+DefinirAlineacion-[#green]-> DefiniciónAlineación
+
+note on link
+ <b>Usuario requiere
+ Definición alineación
+end note
+
+state2 -[#green]-> [*] 
+
+note on link
+ <b>Usuario requiere
+ Finalizar definición alineación
+end note
+
+@enduml
