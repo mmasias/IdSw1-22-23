@@ -1,0 +1,10 @@
+@startuml objetoDeDominio_EstadoInicial
+
+object "editorial : Editorial" as editorial {
+nombre="Uneatlantico"
+direccion="Santander"
+telefono="600999999"
+email="uneatlantico@gmail.com"
+}
+
+@enduml

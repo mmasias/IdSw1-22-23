@@ -1,0 +1,135 @@
+@startuml objetoDeDominio_EstadoAvanzado
+
+object "editorial : Editorial" as editorial {
+nombre="Uneatlantico"
+direccion="Santander"
+telefono="600999999"
+email="uneatlantico@gmail.com"
+}
+
+object "revista: Revista" as revista {
+ISSN="2830-8566"
+tematica="Ciencias experimentales"
+}
+
+object "volumen1: Volumen" as volumen1 {
+año="2023"
+}
+
+object "numero1: Numero" as numero1 {
+portada="https://imprimirmirevista.es/revista.jpg"
+idioma="ES"
+}
+
+object "numero2: Numero" as numero2 {
+portada="https://imprimirmirevista.es/revista2.jpg"
+idioma="ES"
+}
+
+
+object "articulo1: Articulo" as articulo1n1 {
+titulo="ciencias naturales en Bachillerato"
+idioma="ES"
+DOI="https://doi.org/10.555/v1"
+autor= articulo1n2
+}
+object "articulo2: Articulo" as articulo2n1 {
+titulo="Ecología y Medio Ambiente"
+idioma="ES"
+DOI="https://doi.org/10.45342/v1"
+}
+object "articulo3: Articulo" as articulo3n1 {
+titulo="Historia de la vida"
+idioma="ES"
+DOI="https://doi.org/10.22552/v1"
+}
+object "articulo4: Articulo" as articulo4n1 {
+titulo="Análisis de los grupos de mamíferos"
+idioma="ES"
+DOI="https://doi.org/10.11532/v2"
+}
+object "articulo5: Articulo" as articulo5n1 {
+titulo="Sistemas de organismos vivos"
+idioma="ES"
+DOI="https://doi.org/10.45532/v1"
+}
+object "articulo6: Articulo" as articulo6n1 {
+titulo="Sistema digestivo"
+idioma="ES"
+DOI="https://doi.org/10.7332/v1"
+}
+object "articulo7: Articulo" as articulo7n1 {
+titulo="Motricidad"
+idioma="ES"
+DOI="https://doi.org/10.4142/v1"
+}
+object "articulo8: Articulo" as articulo8n1 {
+titulo="Células eucariotas"
+idioma="ES"
+DOI="https://doi.org/10.8892/v1"
+}
+
+object "articulo1: Articulo" as articulo1n2 {
+titulo="ciencias naturales en la primaria"
+idioma="ES"
+DOI="https://doi.org/10.55547/v1"
+}
+object "articulo2: Articulo" as articulo2n2 {
+titulo="Ecología"
+idioma="ES"
+DOI="https://doi.org/10.45542/v1"
+}
+object "articulo3: Articulo" as articulo3n2 {
+titulo="Historia de la vida en la Tierra"
+idioma="ES"
+DOI="https://doi.org/10.22542/v1"
+}
+object "articulo4: Articulo" as articulo4n2 {
+titulo="Análisis de los grupos de animales"
+idioma="ES"
+DOI="https://doi.org/10.11542/v2"
+}
+object "articulo5: Articulo" as articulo5n2 {
+titulo="Sistemas de organismos"
+idioma="ES"
+DOI="https://doi.org/10.45542/v1"
+}
+object "articulo6: Articulo" as articulo6n2 {
+titulo="Sistemas de reproducción"
+idioma="ES"
+DOI="https://doi.org/10.7232/v1"
+}
+object "articulo7: Articulo" as articulo7n2 {
+titulo="Sistema respiratorio"
+idioma="ES"
+DOI="https://doi.org/10.3142/v1"
+}
+object "articulo8: Articulo" as articulo8n2 {
+titulo="División celular"
+idioma="ES"
+DOI="https://doi.org/10.7892/v1"
+}
+
+editorial --- revista : "Gestiona >" 
+revista --- volumen1 : "> Tiene"
+volumen1 -r-- numero1 : "> Contiene"
+volumen1 -l-- numero2 : "> Contiene"
+numero1 --- articulo1n1 : "< Pertenece "
+numero1 --- articulo2n1 : "< Pertenece "
+numero1 --- articulo3n1 : "< Pertenece "
+numero1 --- articulo4n1 : "< Pertenece "
+numero1 -u-- articulo5n1 : "< Pertenece "
+numero1 -u-- articulo6n1 : "< Pertenece "
+numero1 -u-- articulo7n1 : "< Pertenece "
+numero1 -u-- articulo8n1 : "< Pertenece "
+
+numero2 --- articulo1n2 : "< Pertenece "
+numero2 --- articulo2n2 : "< Pertenece "
+numero2 --- articulo3n2 : "< Pertenece "
+numero2 --- articulo4n2 : "< Pertenece "
+numero2 -u-- articulo5n2 : "< Pertenece "
+numero2 -u-- articulo6n2 : "< Pertenece "
+numero2 -u-- articulo7n2 : "< Pertenece "
+numero2 -u-- articulo8n2 : "< Pertenece "
+
+@enduml

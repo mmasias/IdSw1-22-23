@@ -1,27 +1,90 @@
 @startuml casosDeUso
-
-actor Usuario
-actor Gestor
-actor Editor
-actor Revisor
-actor Autor
-actor Traductor
-
-
-usecase Leer
-usecase Configurar
-usecase LlevarAsignacion
-usecase AnalizarContenido
-usecase Traducir
-usecase SubirArticulo
-
 left to right direction
-Usuario ..> Leer
-Gestor ..> Configurar
-Editor ..> LlevarAsignacion
-Revisor ..> AnalizarContenido
-Traductor ..> Traducir
-Autor ..> SubirArticulo
 
+actor "Gestor" as GS
+actor "Autor" as AU
+actor "Traductor" as TR
+actor "Revisor" as RV
+actor "Editor" as ED
+
+
+
+package Sistema { 
+
+
+ package Sesión{
+  usecase "Iniciar sesión" as login
+  usecase "Finalizar sesión" as logout
+  usecase "Leer revista" as read
+}
+  package Revista {
+    usecase "Crear revista" as createR
+    usecase "Modificar revista" as updateR
+    usecase "Eliminar revista" as deleteR   
+  }
+  
+  package Articulo {
+    usecase "Públicar artículo" as createA
+    usecase "Modificar artículo" as updateA
+    usecase "Eliminar artículo" as deleteA
+    usecase "Aprobar artículo" as aprA
+    usecase "Rechazar artículo" as rechaA   
+    usecase "Leer artículo" as readA   
+    usecase "Traducir artículo" as traducir
+  }
+
+  package Volumen {
+    usecase "Crear revista" as createV
+    usecase "Modificar revista" as updateV
+    usecase "Eliminar revista" as deleteV   
+  }
+  
+  package Número {
+    usecase "Crear revista" as createN
+    usecase "Modificar revista" as updateN
+    usecase "Eliminar revista" as deleteN  
+  }
+
+ 
+}
+
+GS --> login
+GS --> logout
+GS --> read
+GS --> createR
+GS --> updateR
+GS --> deleteR
+GS --> createV
+GS --> updateV
+GS --> deleteV
+GS --> createN
+GS --> updateN
+GS --> deleteN
+
+AU -->createA
+AU --> login
+AU --> logout
+AU --> read
+
+
+RV --> aprA
+RV --> rechaA
+RV --> login
+RV --> logout
+RV --> read
+RV --> readA
+
+
+ED --> login
+ED --> logout
+ED --> read
+ED --> updateA
+ED --> deleteA
+
+
+TR --> login
+TR --> logout
+TR --> read
+TR --> traducir
 
 @enduml

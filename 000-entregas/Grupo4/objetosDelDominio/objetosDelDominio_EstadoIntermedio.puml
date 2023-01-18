@@ -1,0 +1,79 @@
+@startuml objetoDeDominio_EstadoIntermedio
+
+object "editorial : Editorial" as editorial {
+nombre="Uneatlantico"
+direccion="Santander"
+telefono="600999999"
+email="uneatlantico@gmail.com"
+}
+
+object "revista: Revista" as revista {
+ISSN="2830-8566"
+tematica="Ciencias experimentales"
+}
+
+object "volumen1: Volumen" as volumen1 {
+año="2023"
+}
+
+object "numero1: Numero" as numero1 {
+portada="https://imprimirmirevista.es/revista.jpg"
+idioma="ES"
+}
+
+
+object "articulo1: Articulo" as articulo1 {
+titulo="ciencias naturales en la primaria"
+idioma="ES"
+DOI="https://doi.org/10.55547/v1"
+}
+object "articulo2: Articulo" as articulo2 {
+titulo="Ecología"
+idioma="ES"
+DOI="https://doi.org/10.45542/v1"
+}
+object "articulo3: Articulo" as articulo3 {
+titulo="Historia de la vida en la Tierra"
+idioma="ES"
+DOI="https://doi.org/10.22542/v1"
+}
+object "articulo4: Articulo" as articulo4 {
+titulo="Análisis de los grupos de animales"
+idioma="ES"
+DOI="https://doi.org/10.11542/v2"
+}
+object "articulo5: Articulo" as articulo5 {
+titulo="Sistemas de organismos."
+idioma="ES"
+DOI="https://doi.org/10.45542/v1"
+}
+object "articulo6: Articulo" as articulo6 {
+titulo="Sistemas de organismos."
+idioma="ES"
+DOI="https://doi.org/10.7232/v1"
+}
+object "articulo7: Articulo" as articulo7 {
+titulo="Videojuegos"
+idioma="ES"
+DOI="https://doi.org/10.3142/v1"
+}
+object "articulo8: Articulo" as articulo8 {
+titulo="División celular"
+idioma="ES"
+DOI="https://doi.org/10.7892/v1"
+}
+
+
+editorial -r-- revista : "Gestiona >" 
+revista -r-- volumen1 : "> Tiene"
+volumen1 -r-- numero1 : "> Contiene"
+numero1 --- articulo1 : "< Pertenece "
+numero1 --- articulo2 : "< Pertenece "
+numero1 --- articulo3 : "< Pertenece "
+numero1 --- articulo4 : "< Pertenece "
+numero1 -u-- articulo5 : "< Pertenece "
+numero1 -u-- articulo6 : "< Pertenece "
+numero1 -u-- articulo7 : "< Pertenece "
+numero1 -u-- articulo8 : "< Pertenece "
+
+@enduml
