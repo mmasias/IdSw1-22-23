@@ -21,7 +21,7 @@ State VisualizaciónCompeticiones{
 
 } 
 
-VerCompeticiones-[#green]-> VisualizaciónEstadísticas
+VerCompeticiones-[#green]-> VisualizaciónCompeticiones
 
 note on link
  <b>Usuario requiere
