@@ -66,14 +66,14 @@ InscribirJugador-[#green]-> InscripciónJugador
 
 note on link
  <b>Usuario requiere
- CreaciónCompetición
+  Inscripción jugador
 end note
 
 state2 -[#green]-> [*] 
 
 note on link
  <b>Usuario requiere
- FinalizarCreación
+ Finalizar inscripción
 end note
 
 @enduml
