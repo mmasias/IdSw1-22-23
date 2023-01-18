@@ -70,7 +70,7 @@ CrearPartido-[#green]-> CreaciónPartido
 
 note on link
  <b>Usuario requiere
- Inscripción equipo
+ Creación partido
 end note
 
 state2 -[#green]-> [*] 
