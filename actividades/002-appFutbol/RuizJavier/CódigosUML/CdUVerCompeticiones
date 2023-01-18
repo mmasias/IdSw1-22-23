@@ -1,0 +1,34 @@
+@startuml 
+
+hide empty description
+
+State VerCompeticiones
+
+
+State VisualizaciónEstadísticas{ 
+
+  State state1 as " "
+
+  [*] -[#green]-> state1
+
+  note on link 
+    <b>El sistema muestra
+    * Todas las competiciones
+    <b>El sistema permite
+    * Seleccionar competición
+  end note
+ 
+
+} 
+
+VerCompeticiones-[#green]-> VisualizaciónEstadísticas
+
+note on link
+ <b>Usuario requiere
+ VisualizaciónCompeticiones
+end note
+
+state1 -[#green]-> [*] 
+
+
+@enduml
