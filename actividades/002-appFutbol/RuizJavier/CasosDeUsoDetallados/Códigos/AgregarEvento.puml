@@ -2,7 +2,7 @@
 
 hide empty description
 
-State AgregarEvento
+State DefinirAlineación
 
 State AgregaciónEvento{ 
 
@@ -21,7 +21,7 @@ State AgregaciónEvento{
 
   note on link 
     <b>El sistema permite
-    * Crear evento
+    * Agregar evento
         * Nombre
         * Descripción
         * Minuto
@@ -39,7 +39,7 @@ State AgregaciónEvento{
   
   note on link 
     <b>Usuario requiere
-    * Crear evento
+    * Agregar evento
   end note
 
   state3 -[#green]-> c
@@ -50,7 +50,7 @@ State AgregaciónEvento{
   
   note on link 
     <b>El sistema muestra
-    * Creación evento completada
+    * Agregación evento completada
   end note
 
   c-[#red]-> state5
@@ -59,7 +59,7 @@ State AgregaciónEvento{
 
   note on link 
     <b>El sistema muestra
-    * Error crear evento
+    * Error agregar evento
   end note
 
 
