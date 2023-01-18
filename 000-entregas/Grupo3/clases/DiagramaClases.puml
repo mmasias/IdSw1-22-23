@@ -1,0 +1,27 @@
+@startuml
+Profesor *- PeticionViaje : Solicita >
+Vicerrectorado --> PeticionViaje : Acepta / Deniega
+PeticionViaje : RazonViaje
+PeticionViaje --* Destino
+PeticionViaje --* Fechas
+PeticionViaje -> Viaje
+Destino : Pais
+Destino : Ciudad
+Destino : Provincia
+Destino : LugarEvento
+Fechas : Fecha Ida
+Fechas : Fecha Retorno
+Gestion --> Viaje : Tramita
+Viaje -o Ocurrencias
+Ocurrencias- Factura : genera
+DietaAlimentaria ---o Ocurrencias
+DietaAlimentaria : Presupuesto
+Transporte ---o Ocurrencias
+Transporte : Distancia
+Transporte : Medio: Avion|Tren|Coche
+Transporte : Disponibilidad: Particular|Universidad
+Morada ---o  Ocurrencias
+Morada : Tipo: Familiar|Hotel|Airbnb
+Morada : Financiamiento: Personal|Universidad
+GastosExtra ---o Ocurrencias
+@enduml
