@@ -5,7 +5,7 @@ hide empty description
 State VerCompeticiones
 
 
-State VisualizaciónEstadísticas{ 
+State VisualizaciónCompeticiones{ 
 
   State state1 as " "
 
