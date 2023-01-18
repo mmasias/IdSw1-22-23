@@ -23,6 +23,8 @@ State InscripciónEquipo{
     <b>El sistema permite
     * Inscribir equipo
     * Finalizar inscripción
+    <b>El sistema muestra
+    * Equipos en la competición
   end note
 
   state2 -[#green]-> state1
