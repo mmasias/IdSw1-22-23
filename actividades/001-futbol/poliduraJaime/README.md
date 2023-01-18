@@ -1,10 +1,10 @@
-#Futbol
+# Futbol
 
-##Diagrama clases
+## Diagrama clases
 ![Imagen](DiagramaClases.png)
 
-##Diagrama objetos
+## Diagrama objetos
 ![Imagen](DigramaObjectos.png)
 
-##Diagrama estados
+## Diagrama estados
 ![Imagen](DiagramaEstados.png)
