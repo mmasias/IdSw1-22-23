@@ -23,6 +23,8 @@ State InscripciónJugador{
     <b>El sistema permite
     * Inscribir jugador
     * Finalizar inscripción
+    <b>El sistema muestra
+    * Jugadores en la competición
   end note
 
   state2 -[#green]-> state1
@@ -77,3 +79,4 @@ note on link
 end note
 
 @enduml
+
