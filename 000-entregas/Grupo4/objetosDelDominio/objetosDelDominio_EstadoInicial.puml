@@ -1,10 +1,9 @@
 @startuml objetoDeDominio_EstadoInicial
 
-object "editorial : Editorial" as editorial {
-nombre="Uneatlantico"
-direccion="Santander"
-telefono="600999999"
-email="uneatlantico@gmail.com"
-}
+object "editorialUneatlantico : Editorial" as editorial
+object "gestor : Usuario" as gestor
+
+editorial --- gestor : Gestiona <
+
 
 @enduml

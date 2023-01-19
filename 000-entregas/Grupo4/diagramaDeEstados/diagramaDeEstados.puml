@@ -3,13 +3,11 @@
 State Revista{
 
     State Numero {
-        State NumeroCreado as "Creado"
-        State Selector1 <<choice>>
-
-
+        
         State Artículo {
 
-            State ArticuloCreado as "Creado"
+            State Selector1 <<choice>>
+
             State ArticuloRevisado as "Revisado"
             State ArticuloRegistrado as "Registrado"
             State ArticuloAprobado as "Aprobado"
@@ -25,21 +23,22 @@ State Revista{
             Selector2 -d-> ArticuloRechazado : Rechazar
 
 
-            ArticuloAprobado -u-> ArticuloCreado
+            ArticuloAprobado --> Selector1 : ¿Hay 8 Artículos aprobados?
 
             ArticuloRechazado -u-> ArticuloRegistrado : Reintentar
 
-            ArticuloCreado -d-> Selector1 : ¿Hay 8 Artículos creados?
+            
 
         }
-
-        Selector1 --> NumeroCreado : Si los hay
+        Selector1 --> Maquetado: Si los hay, Maquetar número
         Selector1 --> ArticuloRegistrado : Si no los hay
+        
 
-        NumeroCreado --> Traducido : Traducir Numero
-        Traducido --> [*] : Publicar Número 
+        Maquetado--> ArticulosTraducidos: Traducir Artículos del número
+        ArticulosTraducidos --> [*] : Publicar Número 
          
     }
+}
         
 
 @enduml
