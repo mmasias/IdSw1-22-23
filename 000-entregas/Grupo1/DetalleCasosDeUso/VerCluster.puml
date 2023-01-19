@@ -13,6 +13,12 @@ State VisualizarCluster{
   note on link 
     <b>El sistema muestra
     * Lista de alumnos contenidos en ese clúster
+    <b>El sistema permite filtrar
+    * Por nombre 
+    * Por apellidos
+    * Por DNI
+    * Por Master
+    * Por porcentaje de abandono
   end note
  
   state1 -[#green]-> c 
