@@ -1,5 +1,5 @@
-# Aplicacion gestion viajes
-1. [Introduccion](#Introduccion)
+# Aplicación gestión viajes
+1. [Introducción](#Introducción)
 2. [Diagrama de clases](#Diagrama-de-clases)
 3. [Diagrama de objetos](#Diagrama-de-objetos)
 4. [Diagrama de estados](#Diagrama-de-estados)
@@ -26,6 +26,10 @@ A partir de la finalización del viaje hasta que lo entregue, se le mandará un 
 De esta manera, la administración tendría de manera más eficaz, las fechas, datos personales y autorización del viaje por parte del vicerrectorado y el resto de datos dados por el profesor, todo de manera automática. Una vez tienen todos los datos, organizaron el viaje, y al final de este, el profesor entregará los tickets de manera manual y se calculará si se le debe dar más de dietas o debe devolver a la universidad.
 
 
+=======
+## Introducción
+El cliente requiere una solución informática que pueda facilitar la gestión de las solicitudes de viaje y los viajes por parte de los profesores al ser invitado o ser participe de algún evento.
+>>>>>>> eeb636761fce281a843ccd236abbb86f9fd3eb1f
 ## Diagrama de clases
 ![Imagen](clases/DiagramaClases.png)
 ## Diagrama de objetos
