@@ -6,3 +6,4 @@
 |VerCompeticiones
 |:-:
 |![](Imagenes/VerCompeticiones.png)
+|[Código](Códigos/VerCompeticiones.puml)
