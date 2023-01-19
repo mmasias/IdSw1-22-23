@@ -89,16 +89,16 @@ ED -u-> deleteA
 TR --> traducir
 (aprA) .u.> (createA) : include
 
-(readA) .u.> (aprA) : exclude
-(readA) .u.> (rechaA) : exclude
-(rechaA) .u.> (updateA) : exclude
+(readA) .u.> (aprA) : extends
+(readA) .u.> (rechaA) : extends
+(rechaA) .u.> (updateA) : extends
 
 (createA) .u.> (traducir) : include
 (postularA) .u.> (readA) : include
 (rechaA) .u.> (deleteA) : extends
-(updateA) .u.> (postularA) : exclude
-(createA) .l.> (publicarN) : exclude 
-(publicarN) ..> (createN) : exclude 
+(updateA) .u.> (postularA) : extends
+(createA) .l.> (publicarN) : extends
+(publicarN) ..> (createN) : extends
 (logout) .d.> (login) : include
 (createV) .u.> (createN) : include
 @enduml  
