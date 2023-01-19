@@ -49,25 +49,25 @@ Una vez tienen todos los datos, organizaron el viaje, y al final de este, el pro
 ##### Gestión Académica
 
 <ul>
-    <li>**Planificar viaje** Una vez el profesor haya rellenado el formulario con las necesidades. La gestión asignará al viaje las reservas del hotel, el transporte etc.</li>
-    <li>**Ver viajes aceptados** La gestión podrá ver todos los viajes que hayan sido aceptados y que el formulario con las necesidades haya sido rellenado.</li>
-    <li>**Ver facturas recibidas** La gestión podrá ver todos las facturas enviadas por el profesor que esté viajando o haya viajado.</li>
-    <li>**Aprovisionar fondos** La gestión podrá establecer fondos para el viaje incluido para las dietas.</li>
-    <li>**Enviar facturas** El profesor cuando esté viajando, podrá enviar fotos de las facturas del viaje.</li>
-    <li>**Ver planificación del viaje** El profesor podrá ver todos los datos de las reservas, transportes establecidos por la gestión.</li>
+    <li><strong>Planificar viaje</strong> Una vez el profesor haya rellenado el formulario con las necesidades. La gestión asignará al viaje las reservas del hotel, el transporte etc.</li>
+    <li><strong>Ver viajes aceptados</strong> La gestión podrá ver todos los viajes que hayan sido aceptados y que el formulario con las necesidades haya sido rellenado.</li>
+    <li><strong>Ver facturas recibidas</strong> La gestión podrá ver todos las facturas enviadas por el profesor que esté viajando o haya viajado.</li>
+    <li><strong>Aprovisionar fondos</strong> La gestión podrá establecer fondos para el viaje incluido para las dietas.</li>
+    <li><strong>Enviar facturas</strong> El profesor cuando esté viajando, podrá enviar fotos de las facturas del viaje.</li>
+    <li><strong>Ver planificación del viaje</strong> El profesor podrá ver todos los datos de las reservas, transportes establecidos por la gestión.</li>
 </ul>
 
 #### Profesor
 <ul>
-    <li>**Solicitar viaje** El profesor puede solicitar el viaje que desee. Esta petición, vendrá con datos básicos, como fechas, lugar, carta de invitación si la hay.</li>
-    <li>**Rellenar necesidades** Una vez el viaje haya sido aceptado, el profesor rellena una serie de necesidades que se le solicita. Como tipo de transporte, lugar de hospedaje si hay (por ejemplo si tiene familia) etc.</li>
-    <li>**Ver sus solicitudes** En este caso de uso, el profesor puede acceder al estado de sus solicitudes. Aceptada/Denegada/Pendiente/Pendiente de organización…</li>
+    <li><strong>Solicitar viaje</strong> El profesor puede solicitar el viaje que desee. Esta petición, vendrá con datos básicos, como fechas, lugar, carta de invitación si la hay.</li>
+    <li><strong>Rellenar necesidades</strong> Una vez el viaje haya sido aceptado, el profesor rellena una serie de necesidades que se le solicita. Como tipo de transporte, lugar de hospedaje si hay (por ejemplo si tiene familia) etc.</li>
+    <li><strong>Ver sus solicitudes</strong> En este caso de uso, el profesor puede acceder al estado de sus solicitudes. Aceptada/Denegada/Pendiente/Pendiente de organización…</li>
 </ul>
 
 #### Vicerrectorado
 <ul>
-    <li>**Aceptar/Denegar solicitud** En este caso de uso, los miembros del vicerrectorado, encargados de aceptar/denegar los viajes, tendrán la opción de ello, dependiendo del tipo de viaje que se solicita</li>
-    <li>**Ver solicitudes pendientes** Los miembros del vicerrectorado, podrían entrar a un buzón, donde se encontrarán todas las solicitudes pendientes de aceptación o denegación de viaje.</li>
+    <li><strong>Aceptar/Denegar solicitud** En este caso de uso, los miembros del vicerrectorado, encargados de aceptar/denegar los viajes, tendrán la opción de ello, dependiendo del tipo de viaje que se solicita</li>
+    <li><strong>Ver solicitudes pendientes** Los miembros del vicerrectorado, podrían entrar a un buzón, donde se encontrarán todas las solicitudes pendientes de aceptación o denegación de viaje.</li>
 </ul>
 
 ## Interfaz
