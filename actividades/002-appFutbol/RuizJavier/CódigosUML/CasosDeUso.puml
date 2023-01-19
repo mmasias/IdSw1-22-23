@@ -38,15 +38,14 @@ package Competicion {
 
 	usecase InscribirJugador
 	usecase InscribirEquipo
-    usecase AñadirCalendario
-    usecase CrearCompeticion
+    
+        usecase CrearCompeticion
  
 	AdministradorCompeticion   --> InscribirEquipo
 	AdministradorCompeticion   --> InscribirJugador
-    AdministradorCompeticion   --> AñadirCalendario
-    AdministradorCompeticion   --> CrearCompeticion
+        AdministradorCompeticion   --> CrearCompeticion
 
-    usecase VerCompeticiones
+        usecase VerCompeticiones
 
 	AdministradorCompeticion   -u-> VerCompeticiones
 	Configurador -u-> VerCompeticiones
