@@ -1,6 +1,6 @@
 ## Glosario
 
-|Actor|Descripción
+|Clase|Descripción
 |-|-
 |**Alumno**|Estudiante que cursa un máster.
 |**Máster**|Titulación académica impartida por una universidad
@@ -34,6 +34,18 @@
 
 <details>
   <summary>Diagrama de estados</summary>
+
+  <div align="center">
+
+| Estado                      | Descripción                                                                   |
+| -------------------------- | ----------------------------------------------------------------------------- |
+| **Alumnos Interactuando**  | El alumno interactúa con la plataforma o el sistema de gestión y genera datos |
+| **Procesamiento Datos**    | Se procesan los datos generados por los alumnos                               |
+| **Alumno Bajo Engagement** | Alumno con baja interacción y compromiso                                      |
+| **Alumno Alto Engagement** | Alumno con alta interacción y compromiso                                      |
+| **Abandono**               | Alumno deja la institución                                                    |
+
+</div>
   
 |Diagrama de estados
 |:-:
