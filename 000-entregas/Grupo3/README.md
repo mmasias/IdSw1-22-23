@@ -19,17 +19,14 @@ El cliente requiere una solución informática que pueda facilitar la gestión d
 9. Comentarios en las fotos de los tickets subidos
 
 ### Explicación solución
-El problema planteado, consiste en que un profesor, solicita un viaje en unas fechas, el cual es aceptado o denegado. Si es aceptado, se le entregará un formulario, el cual el profesor rellenará un formulario donde se le preguntará el medio de transporte que desea, si es en coche, elegirá entre privado o de la universidad, si es de la universidad deberá reservarlo en la web, después deberá introducir por Google Maps el destino y deberemos calcular la distancia desde la Universidad hasta el destino, si es en tren la estación desde donde desea salir y si es en avión, el aeropuerto que desee.
-Tras ello, deberá elegir si desea hotel o no, si necesitara dietas y fondos
+El problema planteado, consiste en que un profesor, solicita un viaje en unas fechas, el cual es aceptado o denegado. Si es aceptado, se le entregará un formulario, el cual el profesor rellenará un formulario donde se le preguntará el medio de transporte que desea, si es en coche, elegirá entre privado o de la universidad, si es de la universidad deberá reservarlo en la web, después deberá introducir por Google Maps el destino y deberemos calcular la distancia desde la Universidad hasta el destino, si es en tren la estación desde donde desea salir y si es en avión, el aeropuerto que desee.Tras ello, deberá elegir si desea hotel o no, si necesitara dietas y fondos
+
 Al final del formulario, podrá añadir en una caja de comentarios, sugerencias de hoteles (provistos por la organización del evento por ejemplo)
 A partir de la finalización del viaje hasta que lo entregue, se le mandará un recordatorio de que debe entregar fotos de los tickets para justificar los gastos a administración y el coste de estos de manera manual, estos tickets serán validados automáticamente.
-De esta manera, la administración tendría de manera más eficaz, las fechas, datos personales y autorización del viaje por parte del vicerrectorado y el resto de datos dados por el profesor, todo de manera automática. Una vez tienen todos los datos, organizaron el viaje, y al final de este, el profesor entregará los tickets de manera manual y se calculará si se le debe dar más de dietas o debe devolver a la universidad.
+De esta manera, la administración tendría de manera más eficaz, las fechas, datos personales y autorización del viaje por parte del vicerrectorado y el resto de datos dados por el profesor, todo de manera automática. 
 
+Una vez tienen todos los datos, organizaron el viaje, y al final de este, el profesor entregará los tickets de manera manual y se calculará si se le debe dar más de dietas o debe devolver a la universidad.
 
-=======
-## Introducción
-El cliente requiere una solución informática que pueda facilitar la gestión de las solicitudes de viaje y los viajes por parte de los profesores al ser invitado o ser participe de algún evento.
->>>>>>> eeb636761fce281a843ccd236abbb86f9fd3eb1f
 ## Diagrama de clases
 ![Imagen](clases/DiagramaClases.png)
 ## Diagrama de objetos
