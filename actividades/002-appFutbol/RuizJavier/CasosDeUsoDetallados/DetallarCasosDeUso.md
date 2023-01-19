@@ -39,3 +39,63 @@
 |[Código](Códigos/CrearCompetición.puml)
 
 </details>
+
+<details>
+  <summary>Crear Partido</summary>
+
+|CrearPartido
+|:-:
+|![](Imagenes/CrearPartido.png)
+|[Código](Códigos/CrearPartido.puml)
+  
+</details>
+  
+<details>
+  <summary>Definir Alineación</summary>
+
+|DefinirAlineación
+|:-:
+|![](Imagenes/DefinirAlineación.png)
+|[Código](Códigos/DefinirAlineación.puml)
+
+</details>
+
+<details>
+  <summary>Actualizar Clasificación</summary>
+
+|ActualizarClasificación
+|:-:
+|![](Imagenes/ActualizarClasificación.png)
+|[Código](Códigos/ActualizarClasificación.puml)
+
+</details>
+      
+<details>
+  <summary>Crear Encuentro</summary>
+
+|CrearEncuentro
+|:-:
+|![](Imagenes/CrearEncuentro.png)
+|[Código](Códigos/CrearEncuentro.puml)
+
+</details>
+
+<details>
+  <summary>Añadir Período</summary>
+
+|AñadirPeríodo
+|:-:
+|![](Imagenes/AñadirPeríodo.png)
+|[Código](Códigos/AñadirPeríodo.puml)
+
+</details>
+      
+<details>
+  <summary>Agregar Evento</summary>
+
+|AgregarEvento
+|:-:
+|![](Imagenes/AgregarEvento.png)
+|[Código](Códigos/AgregarEvento.puml)
+
+</details>
