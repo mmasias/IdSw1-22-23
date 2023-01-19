@@ -14,6 +14,8 @@ State VisualizaciónAlumno{
     * Interacciones alumno
     <b>El sistema permite
     * Visualizar distintas interacciones del alumno
+    <b>El sistema permite filtrar
+    *Por fechas
   end note
  
 
