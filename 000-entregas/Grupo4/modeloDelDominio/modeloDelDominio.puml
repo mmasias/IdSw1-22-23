@@ -1,49 +1,31 @@
 @startuml modeloDelDominio
 
 
-class Editorial{
-    -nombre: String
-    -direccion: String
-    -telefono: String
-    -email: String
-}
+class Editorial
+class Volumen 
+class Numero
+abstract class Persona
+class Usuario
+
 class Revista {
     -ISSN: String
-    -tematica: String
 }
-
-class Volumen {
-    -año: Integer
-}
-
-class Numero {
-    -portada: String
-    -idioma: String
-}
-
+ 
 class Articulo {
-    -titulo: String
     -DOI: String
-    -idioma: String
-    -autor: Autor
 }
-
-abstract class Persona {
-}
-
-class Usuario extends Persona {
-    -nombreUsuario: String
-    -contraseña: String
-}
-
 class Autor extends Usuario {
     -ORCID: string
 }
+
+Usuario -l-|> Persona
 
 Editorial "1 " *--  "n " Revista
 Revista "1 " *-- "n " Volumen
 Volumen "1 " *-- "n " Numero
 Numero "1 " *-- "n " Articulo
+Articulo "1 " *--  " n" Autor
+Revista"1 " *--  " n" Usuario
 
 Editorial "1 " *--  " n" Usuario
 
