@@ -1,90 +1,104 @@
 @startuml casosDeUso
 left to right direction
-
 actor "Gestor" as GS
 actor "Autor" as AU
 actor "Traductor" as TR
 actor "Revisor" as RV
 actor "Editor" as ED
-
-
-
-package Sistema { 
-
-
+actor "Gestor" as GS1
+actor "Autor" as AU1
+actor "Traductor" as TR1
+actor "Revisor" as RV1
+actor "Editor" as ED1
+actor "Gestor" as GS2
+actor "Gestor" as GS3
+actor "Gestor" as GS4
+actor "Gestor" as GS5
+actor "Autor" as AU5
+actor "Traductor" as TR5
+actor "Revisor" as RV5
+actor "Editor" as ED5
+ usecase "Leer revista" as read
  package Sesión{
   usecase "Iniciar sesión" as login
   usecase "Finalizar sesión" as logout
-  usecase "Leer revista" as read
 }
   package Revista {
     usecase "Crear revista" as createR
     usecase "Modificar revista" as updateR
-    usecase "Eliminar revista" as deleteR   
+    usecase "Eliminar revista" as deleteR
   }
-  
   package Articulo {
     usecase "Públicar artículo" as createA
+    usecase "Postular artículo" as postularA
     usecase "Modificar artículo" as updateA
     usecase "Eliminar artículo" as deleteA
     usecase "Aprobar artículo" as aprA
-    usecase "Rechazar artículo" as rechaA   
-    usecase "Leer artículo" as readA   
+    usecase "Rechazar artículo" as rechaA
+    usecase "Revisar artículo" as readA
     usecase "Traducir artículo" as traducir
   }
-
   package Volumen {
-    usecase "Crear revista" as createV
-    usecase "Modificar revista" as updateV
-    usecase "Eliminar revista" as deleteV   
+    usecase "Crear volumen" as createV
+    usecase "Modificar volumen" as updateV
+    usecase "Eliminar volumen" as deleteV
   }
-  
   package Número {
-    usecase "Crear revista" as createN
-    usecase "Modificar revista" as updateN
-    usecase "Eliminar revista" as deleteN  
+    usecase "Crear número" as createN
+    usecase "Modificar número" as updateN
+    usecase "Eliminar número" as deleteN
+    usecase "Públicar número" as publicarN
   }
-
- 
-}
-
-GS --> login
-GS --> logout
-GS --> read
-GS --> createR
-GS --> updateR
-GS --> deleteR
-GS --> createV
-GS --> updateV
-GS --> deleteV
-GS --> createN
-GS --> updateN
-GS --> deleteN
-
-AU -->createA
-AU --> login
-AU --> logout
-AU --> read
-
-
+'Package Sesion'
+GS1 -u-> login
+GS1 -u-> logout
+AU1 -u-> login
+AU1 -u-> logout
+RV1 -u-> login
+RV1 -u-> logout
+ED1 -u-> login
+ED1 -u-> logout
+TR1 -u-> login
+TR1 -u-> logout
+'General'
+GS5 --> read
+AU5 --> read
+RV5 --> read
+ED5 --> read
+TR5 --> read
+'Package Número'
+GS2 --> createN
+GS2 --> updateN
+GS2 --> deleteN
+'Package Volumen'
+GS3 --> createV
+GS3 --> updateV
+GS3 --> deleteV
+'Package Volumen'
+GS4 --> createR
+GS4 --> updateR
+GS4 --> deleteR
+'package Articulo'
+GS -u->createA
+AU --> postularA
 RV --> aprA
 RV --> rechaA
-RV --> login
-RV --> logout
-RV --> read
 RV --> readA
-
-
-ED --> login
-ED --> logout
-ED --> read
-ED --> updateA
-ED --> deleteA
-
-
-TR --> login
-TR --> logout
-TR --> read
+ED -u-> updateA
+ED -u-> deleteA
 TR --> traducir
+(aprA) .u.> (createA) : include
 
-@enduml
+(readA) .u.> (aprA) : exclude
+(readA) .u.> (rechaA) : exclude
+(rechaA) .u.> (updateA) : exclude
+
+(createA) .u.> (traducir) : include
+(postularA) .u.> (readA) : include
+(rechaA) .u.> (deleteA) : extends
+(updateA) .u.> (postularA) : exclude
+(createA) .l.> (publicarN) : exclude 
+(publicarN) ..> (createN) : exclude 
+(logout) .d.> (login) : include
+(createV) .u.> (createN) : include
+@enduml  
