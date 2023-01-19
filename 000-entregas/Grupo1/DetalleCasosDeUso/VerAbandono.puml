@@ -11,6 +11,9 @@ State VisualizarAbandono{
   note on link 
     <b>El sistema muestra
     * Estadísticas Abandono
+    <b>El sistema permite filtrar
+    * Por fecha
+    * Por abandono
   end note
  
 
