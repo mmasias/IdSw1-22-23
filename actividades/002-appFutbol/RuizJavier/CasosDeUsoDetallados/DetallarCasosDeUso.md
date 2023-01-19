@@ -8,7 +8,7 @@
 |![](Imagenes/VerCompeticiones.png)
 |[Código](Códigos/VerCompeticiones.puml)
   
-  <details>
+<details>
   <summary>Inscribir Jugador</summary>
 
 |InscribirJugador
@@ -17,7 +17,7 @@
 |[Código](Códigos/InscribirJugador.puml)
 
     
-    <details>
+<details>
   <summary>Inscribir Equipo</summary>
 
 |InscribirEquipo
@@ -26,7 +26,7 @@
 |[Código](Códigos/InscribirEquipo.puml)
 
       
-      <details>
+<details>
   <summary>Crear Competición</summary>
 
 |CrearCompetición
