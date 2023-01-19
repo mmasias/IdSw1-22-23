@@ -23,3 +23,16 @@ El cliente requiere una solución informática que pueda facilitar la gestión d
 
 ### Casos de usos
 ![Imagen](casosdeusos/CasosDeUsos.png)
+
+## Interfaz
+
+### Administración académica
+![Imagen](interfaz/Administracion-1.png)
+![Imagen](interfaz/Administracion-2.png)
+![Imagen](interfaz/Administracion-3.png)
+
+### Trabajadores
+![Imagen](interfaz/Profesor-1.png)
+![Imagen](interfaz/Profesor-2.png)
+![Imagen](interfaz/Profesor-3.png)
+![Imagen](interfaz/Profesor-4.png)
