@@ -66,8 +66,8 @@ Una vez tienen todos los datos, organizaron el viaje, y al final de este, el pro
 
 #### Vicerrectorado
 <ul>
-    <li><strong>Aceptar/Denegar solicitud** En este caso de uso, los miembros del vicerrectorado, encargados de aceptar/denegar los viajes, tendrán la opción de ello, dependiendo del tipo de viaje que se solicita</li>
-    <li><strong>Ver solicitudes pendientes** Los miembros del vicerrectorado, podrían entrar a un buzón, donde se encontrarán todas las solicitudes pendientes de aceptación o denegación de viaje.</li>
+    <li><strong>Aceptar/Denegar solicitud</strong> En este caso de uso, los miembros del vicerrectorado, encargados de aceptar/denegar los viajes, tendrán la opción de ello, dependiendo del tipo de viaje que se solicita</li>
+    <li><strong>Ver solicitudes pendientes</strong> Los miembros del vicerrectorado, podrían entrar a un buzón, donde se encontrarán todas las solicitudes pendientes de aceptación o denegación de viaje.</li>
 </ul>
 
 ## Interfaz
