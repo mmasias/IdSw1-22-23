@@ -13,6 +13,11 @@ State VerListaAlumnos{
     * Todos los alumnos
     <b>El sistema permite
     * Ver un alumno
+    <b>El sistema permite filtrar
+    * Por Nombre
+    * Por Apellidos
+    * Por DNI
+    * Por Master 
   end note
  
 
