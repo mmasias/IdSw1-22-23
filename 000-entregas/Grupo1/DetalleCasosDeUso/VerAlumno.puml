@@ -28,7 +28,6 @@ note on link
  Ver alumno
 end note
 
-state1 -[#green]-> [] 
 
 
 @enduml
