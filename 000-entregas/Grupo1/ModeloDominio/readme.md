@@ -10,6 +10,7 @@
 |**DatosProcesados**|Datos resultantes del procesado de datos.
 |**Intérprete**|Analiza los datos procesados y saca conclusiones de estos.
 |**Acción**|Realiza acciones que el intérprete ha ofrecido como enviar una notificación, reunirse con el alumno, etc.
+|**Cluster**|Conjunto de alumnos que tienen características comunes
 <hr>
 
 ## Diagramas
