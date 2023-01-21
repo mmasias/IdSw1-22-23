@@ -14,6 +14,8 @@ State VisualizaciónAlumno{
     * Interacciones alumno
     <b>El sistema permite
     * Visualizar distintas interacciones del alumno
+    <b>El sistema permite filtrar
+    Por fechas
   end note
  
 
@@ -26,7 +28,7 @@ note on link
  Ver alumno
 end note
 
-state1 -[#green]-> [*] 
+state1 -[#green]-> [] 
 
 
 @enduml
