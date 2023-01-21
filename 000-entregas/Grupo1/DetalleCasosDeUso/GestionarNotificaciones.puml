@@ -48,7 +48,4 @@ note on link
  * Ver notificaciones enviadas
 end note
 
-state1 -[#green]-> [] 
-state2 -[#green]-> [] 
-
 @enduml
