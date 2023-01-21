@@ -26,6 +26,10 @@ State VerNotificacionesEnviadas{
     <b>El sistema permite ver notificaciones 
     * De alumnos particulares
     * De alumnos de un clúster
+    <b>El sistema permite filtrar
+    * Por fecha
+    * Por asunto
+    * Por para quien es la notificacion
   end note
 
 } 
@@ -44,7 +48,7 @@ note on link
  * Ver notificaciones enviadas
 end note
 
-state1 -[#green]-> [*] 
-state2 -[#green]-> [*] 
+state1 -[#green]-> [] 
+state2 -[#green]-> [] 
 
 @enduml
