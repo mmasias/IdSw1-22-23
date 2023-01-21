@@ -12,6 +12,9 @@ State VisualizarInteracciones{
   note on link 
     <b>El sistema muestra
     * Estadísticas interacciones
+    <b>El sistema permite filtrar
+    * Por fecha
+    * Por iteraciones
   end note
  
 
@@ -27,4 +30,4 @@ end note
 state1 -[#green]-> [*] 
 
 
-@enduml
+@endum
