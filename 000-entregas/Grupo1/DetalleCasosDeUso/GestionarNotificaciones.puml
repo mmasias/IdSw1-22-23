@@ -26,10 +26,11 @@ State VerNotificacionesEnviadas{
     <b>El sistema permite ver notificaciones 
     * De alumnos particulares
     * De alumnos de un clúster
+
     <b>El sistema permite filtrar
     * Por fecha
     * Por asunto
-    * Por para quien es la notificacion
+    * Por destino
   end note
 
 } 

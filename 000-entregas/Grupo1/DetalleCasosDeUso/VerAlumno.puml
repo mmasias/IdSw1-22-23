@@ -12,10 +12,12 @@ State VisualizaciónAlumno{
   note on link 
     <b>El sistema muestra
     * Interacciones alumno
+
     <b>El sistema permite
     * Visualizar distintas interacciones del alumno
+
     <b>El sistema permite filtrar
-    Por fechas
+    * Por fechas
   end note
  
 

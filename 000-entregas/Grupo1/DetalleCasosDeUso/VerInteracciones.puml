@@ -12,9 +12,10 @@ State VisualizarInteracciones{
   note on link 
     <b>El sistema muestra
     * Estadísticas interacciones
+
     <b>El sistema permite filtrar
     * Por fecha
-    * Por iteraciones
+    * Por interacciones
   end note
  
 

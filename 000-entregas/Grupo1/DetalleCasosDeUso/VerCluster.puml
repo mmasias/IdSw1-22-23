@@ -13,6 +13,7 @@ State VisualizarCluster{
   note on link 
     <b>El sistema muestra
     * Lista de alumnos contenidos en ese clúster
+
     <b>El sistema permite filtrar
     * Por nombre 
     * Por apellidos
@@ -30,7 +31,7 @@ State VisualizarCluster{
   c -[#green]-> VerAlumno : Seguimiento
 
   note on link 
-    <b> El sistema permite ver Alumno
+    <b> El sistema permite ver alumno
   end note
 } 
 
