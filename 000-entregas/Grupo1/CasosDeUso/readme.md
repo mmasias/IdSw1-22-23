@@ -1,6 +1,18 @@
 # Actores y Casos de uso
 <hr>
 
+## Actores
+
+<div align="center">
+
+|Actor|Descripción
+|-|-
+|**Gestión**|Vista general de clúster, interacciones y abandonos
+|**Seguimiento**|Encargado de gestionar notificaciones y vista detallada de los alumnos
+|**Tiempo**|Período en el que se procesan los datos  
+
+</div>
+
 ## Casos de Uso
 
 <div align="center">
