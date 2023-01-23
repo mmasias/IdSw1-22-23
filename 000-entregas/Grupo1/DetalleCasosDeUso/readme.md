@@ -69,6 +69,15 @@
 |![](images/GestionarNotificaciones.png)
 
 </details>
+<details>
+
+  <summary>Procesar datos</summary>
+
+|Procesar datos
+|:-:
+|![](images/ProcesarDatos.png)
+
+</details>
 
 <hr>
 
