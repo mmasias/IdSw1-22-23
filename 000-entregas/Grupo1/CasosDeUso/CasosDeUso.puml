@@ -34,7 +34,7 @@ Tiempo --> AD
 Tiempo --> PD
 Tiempo --> ID
 
-GEST <|-- SEG
+SEG --|> GEST
 
 GEST --> (Login)
 GEST --> (LoginOut)
