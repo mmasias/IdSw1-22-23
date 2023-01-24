@@ -15,9 +15,9 @@ ProcesadoDeDatos -- DatosProcesados : Procesa los datos del alumno >
 
 Plataforma -r- SistemaGestionUniversitario : Intercambian datos
 
-SistemaGestionUniversitario -- ProcesadoDeDatos : Envía datos >
-Plataforma -- ProcesadoDeDatos : Envía datos >
-
+SistemaGestionUniversitario -- RecopiladorDeDatos: Solicita datos <
+Plataforma -- RecopiladorDeDatos: Solicita datos <
+RecopiladorDeDatos--ProcesadoDeDatos : Envía datos 
 DatosProcesados -- Interprete : Se envia a >
 
 Interprete -- Accion : Sugiere al usuario >
