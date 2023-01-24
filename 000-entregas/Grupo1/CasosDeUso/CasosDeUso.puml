@@ -1,16 +1,20 @@
 @startuml CasosDeUso
 left to right direction
 
+actor "Tiempo" as Tiempo
 actor User
 actor "Gestion" as GEST
 actor "Seguimiento"	as SEG
-actor "Tiempo" as Tiempo
 
 User <|-u- SEG
 GEST <|-l- SEG
 
 package System {
 
+  package Procesamiento {
+    usecase "Procesar datos" as PD
+    usecase "Solicitar datos" as SD
+  }
   package Comun {
     usecase "Login" as Login
     usecase "LoginOut" as LoginOut
@@ -26,11 +30,10 @@ package System {
     usecase "Ver interacciones" as VI
     usecase "Ver abandono" as VAB
   }
-  package Procesamiento {
-    usecase "Procesar datos" as PD
-  }
 }
 
+Tiempo --> SD
+Tiempo --> PD
 
 User --> (Login)
 User --> (LoginOut)
@@ -44,7 +47,5 @@ GEST --> (VC)
 GEST --> (VAB)
 GEST --> (VI)
 
-
-Tiempo --> PD
 
 @enduml
