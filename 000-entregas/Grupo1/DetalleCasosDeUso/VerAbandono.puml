@@ -1,8 +1,6 @@
-@startuml VerAbandono
+@startuml VerInteracciones
 
-State VerAbandono
-
-State VisualizarAbandono{ 
+State VisualizarInteracciones{ 
 
   State state1 as " "
 
@@ -10,21 +8,21 @@ State VisualizarAbandono{
 
   note on link 
     <b>El sistema muestra
-    * Estadísticas abandono
+    * Estadísticas interacciones
 
     <b>El sistema permite filtrar
     * Por fecha
-    * Por abandono
+    * Por interacciones
   end note
  
 
 } 
 
-VerAbandono-[#green]-> VisualizarAbandono
+[*] -[#green]-> VisualizarInteracciones
 
 note on link
  <b>Usuario requiere
- Visualizar abandono
+ Visualizar interacciones
 end note
 
 state1 -[#green]-> [*] 
