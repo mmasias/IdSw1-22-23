@@ -1,6 +1,6 @@
 @startuml VerCluster
 
-State VerCluster 
+State ListarClusters 
 
 State VisualizarCluster{ 
 
@@ -35,7 +35,7 @@ State VisualizarCluster{
   end note
 } 
 
-VerCluster -[#green]-> VisualizarCluster
+ListarClusters -[#green]-> VisualizarCluster
 
 note on link
  <b>Usuario requiere
