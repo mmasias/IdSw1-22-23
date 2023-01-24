@@ -49,7 +49,6 @@
 | **Solicitando Datos**      | Sistema solicitando datos de alumnos                                          |
 | **Procesando Datos**       | Sistema procesa los datos de los alumnos                                      |
 | **Interpretando Datos**    | Sistema interpreta los datos procesados y los almacena en clústers            |
-| **Solicitando Datos**      | Sistema solicitando datos a entidad externa                                   |
 | **Realizando acciones**    | Sistema realiza acciones para que alumno no abandone, esto también puede realizarse fuera del sistema                          |
 
 </div>
