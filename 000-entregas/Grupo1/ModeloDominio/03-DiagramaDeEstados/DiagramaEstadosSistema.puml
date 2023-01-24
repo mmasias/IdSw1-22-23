@@ -1,0 +1,19 @@
+@startuml
+
+State accion <<choice>> 
+
+[*] --> SolicitandoDatos
+
+SolicitandoDatos --> ProcesandoDatos
+
+ProcesandoDatos --> InterpretandoDatos
+
+InterpretandoDatos --> accion : Acciones
+
+accion --> RealizandoAcciones : SI
+
+accion --> SolicitandoDatos: NO
+
+RealizandoAcciones -l-> SolicitandoDatos
+
+@enduml
