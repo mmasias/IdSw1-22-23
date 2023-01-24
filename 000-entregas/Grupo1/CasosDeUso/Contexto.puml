@@ -2,25 +2,29 @@
 
 State fork <<fork>>
 
-state VisualizarEstadisticas as " " <<state>>
-
-state VisualizarAlumnos as " " <<state>>
+state VerEstadisticas as " " <<state>>
+state VerAlumno as " " <<state>>
 state ListarClusters as " " <<state>>
 state ListarAlumnos as " " <<state>>
-state VisualizarClusters as " " <<state>>
+state VerCluster as " " <<state>>
 state GestionarNotificaciones as " " <<state>>
-
+state SoliciatarDatos as " " <<state>>
+state ProcesarDatos as " " <<state>>
+state InterpretarDatos as " " <<state>>
+state AlmacenarDatos as " " <<state>>
 [*] -d-> fork
-fork --> VisualizarEstadisticas : Visualizar Abandono
-fork --> VisualizarEstadisticas : Visualizar Interacciones
+fork --> VerEstadisticas : Ver Abandono
+fork --> VerEstadisticas : Ver Interacciones
 
 fork --> ListarAlumnos : Listar Alumnos
-ListarAlumnos --> VisualizarAlumnos : Visualizar Alumnos
+ListarAlumnos --> VerAlumno : Ver Alumno
 
 fork --> ListarClusters : Listar Clusters
-ListarClusters --> VisualizarClusters : Visualizar Clusters
-
+ListarClusters --> VerCluster : Ver Cluster
+VerCluster -> VerAlumno : Ver Alumno
 fork --> GestionarNotificaciones : Gestionar Notificaciones
-
-
+fork --> SoliciatarDatos : Solicitar Datos
+SoliciatarDatos --> ProcesarDatos : Procesar Datos
+ProcesarDatos --> InterpretarDatos : Interpretar Datos
+InterpretarDatos-->AlmacenarDatos : AlmacenarDatos
 @enduml
