@@ -41,11 +41,16 @@
 
 | Estado                     | Descripción                                                                   |
 | -------------------------- | ----------------------------------------------------------------------------- |
-| **Alumnos Interactuando**  | El alumno interactúa con la plataforma o el sistema de gestión y genera datos |
-| **Procesamiento Datos**    | Se procesan los datos generados por los alumnos                               |
+| **Alumnos Matriculado**    | El alumno esta matriculado en el máster                                       |
+| **Alumno Tomando Curso**   | El alumno toma el curso mientras pasa el tiempo                               |
 | **Alumno Bajo Engagement** | Alumno con baja interacción y compromiso                                      |
 | **Alumno Alto Engagement** | Alumno con alta interacción y compromiso                                      |
 | **Abandono**               | Alumno deja la institución                                                    |
+| **Solicitando Datos**      | Sistema solicitando datos de alumnos                                          |
+| **Procesando Datos**       | Sistema procesa los datos de los alumnos                                      |
+| **Interpretando Datos**    | Sistema interpreta los datos procesados y los almacena en clústers            |
+| **Solicitando Datos**      | Sistema solicitando datos a entidad externa                                   |
+| **Realizando acciones**    | Sistema realiza acciones para que alumno no abandone, esto también puede realizarse fuera del sistema                          |
 
 </div>
   
