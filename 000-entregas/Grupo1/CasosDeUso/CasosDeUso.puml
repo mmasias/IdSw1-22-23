@@ -2,22 +2,17 @@
 left to right direction
 
 actor "Tiempo" as Tiempo
-actor User
 actor "Gestion" as GEST
 actor "Seguimiento"	as SEG
 
-User <|-u- SEG
-GEST <|-l- SEG
 
 package System {
 
   package Procesamiento {
-    usecase "Procesar datos" as PD
     usecase "Solicitar datos" as SD
-  }
-  package Comun {
-    usecase "Login" as Login
-    usecase "LoginOut" as LoginOut
+    usecase "Procesar datos" as PD
+    usecase "Interpretar datos" as ID
+    usecase "Almacenar datos" as AD
   }
   package Seguimiento {
     usecase "Gestionar notificaciones" as GN
@@ -25,6 +20,8 @@ package System {
     usecase "Ver alumno" as VA
   }
   package Gestion {
+    usecase "Login" as Login
+    usecase "LoginOut" as LoginOut
     usecase "Listar clústers" as LC
     usecase "Ver clúster" as VC
     usecase "Ver interacciones" as VI
@@ -33,19 +30,22 @@ package System {
 }
 
 Tiempo --> SD
+Tiempo --> AD
 Tiempo --> PD
+Tiempo --> ID
 
-User --> (Login)
-User --> (LoginOut)
+GEST <|-- SEG
 
-SEG --> (LA)
-SEG --> (VA)
-SEG --> (GN)
-
+GEST --> (Login)
+GEST --> (LoginOut)
 GEST --> (LC)
 GEST --> (VC)
 GEST --> (VAB)
 GEST --> (VI)
+
+SEG --> (LA)
+SEG --> (VA)
+SEG --> (GN)
 
 
 @enduml
