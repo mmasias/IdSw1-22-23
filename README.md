@@ -84,7 +84,7 @@ Repositorio para el proyecto de la asignatuea
 |Inicio|
 |:-:|
 |![Imagen](mockups/inicioUsuario.PNG)|
-|![Imagen](mockups/Contrase%C3%B1aUsuario.png)|
+|![Imagen](mockups/ContrasenaUsuario.png)|
 
 
 
