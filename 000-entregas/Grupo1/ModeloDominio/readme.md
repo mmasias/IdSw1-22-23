@@ -48,13 +48,10 @@
 
 </div>
   
-|Diagrama de estados alumno
-|:-:
-|![](03-DiagramaDeEstados/DiagramaEstadosAlumno.png)
+|Diagrama de estados alumno |Diagrama de estados sistema
+|:-:|:-:
+|![](03-DiagramaDeEstados/DiagramaEstadosAlumno.png)|![](03-DiagramaDeEstados/DiagramaEstadosSistema.png)
 
-|Diagrama de estados sistema
-|:-:
-|![](03-DiagramaDeEstados/DiagramaEstadosSistema.png)
 
 </details>
 
