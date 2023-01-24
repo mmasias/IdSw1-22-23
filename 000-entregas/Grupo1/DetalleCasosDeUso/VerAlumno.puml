@@ -1,7 +1,7 @@
 @startuml VerAlumno
 
-State VerAlumno
-
+State ListarAlumno
+State VerCluster
 
 State VisualizaciónAlumno{ 
 
@@ -23,13 +23,16 @@ State VisualizaciónAlumno{
 
 } 
 
-VerAlumno-[#green]-> VisualizaciónAlumno
-
+ListarAlumno-[#green]-> VisualizaciónAlumno
 note on link
  <b>Usuario requiere
  Ver alumno
 end note
-
+VerCluster-[#green]-> VisualizaciónAlumno
+note on link
+ <b>Usuario requiere
+ Ver alumno
+end note
 
 
 @enduml
