@@ -8,7 +8,6 @@ state NONAME_DISPOSITIVOS as " "
 state NONAME_ROUTERS as " "
 state NONAME_PROVEEDORES as " "
 state NONAME_SWITCHES as " "
-state NONAME_UBICACION as " "
 state NONAME_VLANES as " "
 state NONAME_FIREWALL as " "
 
@@ -19,22 +18,16 @@ Inicio --> fork_state
 fork_state --> NONAME_USUARIOS: listarUsuarios
 NONAME_USUARIOS --> NONAME_USUARIOS: gestionar usuarios
 NONAME_USUARIOS -up-> Inicio
+'Proveedores
+fork_state --> NONAME_PROVEEDORES: listarProveedores
+NONAME_PROVEEDORES --> NONAME_PROVEEDORES: gestionar proveedores
+NONAME_PROVEEDORES -up-> Inicio
 'Redes
 fork_state --> NONAME_REDES: listarRedes
 NONAME_REDES --> NONAME_REDES: gestionar redes
 NONAME_REDES --> Red: AbrirRed
 NONAME_REDES <-r- Red
 NONAME_REDES -up-> Inicio
-
-'Proveedores
-Red --> NONAME_PROVEEDORES: listarProveedores
-NONAME_PROVEEDORES --> NONAME_PROVEEDORES: gestionar proveedores 
-NONAME_PROVEEDORES --> Red
-
-'Ubicacion
-Red --> NONAME_UBICACION: verUbicacion
-NONAME_UBICACION --> NONAME_UBICACION: gestionar ubicacion 
-NONAME_UBICACION --> Red
 
 'Routers
 Red --> NONAME_ROUTERS: listarRouters
