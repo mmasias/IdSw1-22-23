@@ -1,31 +1,21 @@
 @startuml ProcesarDatos
 
-State ProcesarDatos
 
-State ProcesadoDeDatos{ 
+State ProcesarDatos{ 
 
-  State state1 as " "
-
-  [*] -[#green]-> state1
+  [*] -[#green]-> InterpretarDatos
 
   note on link 
-    <b>El sistema
-    * Recibe datos de plataformas
-    * Normaliza y procesa datos
-    * Segmenta y almacena datos
+    <b>El sistema procesa datos a travez de un
+    <b>analisis exploratorio de datos (EDA) e 
+    <b>ingenieria de caracteristicas (FI) 
   end note
-
 
 } 
 
-ProcesarDatos-[#green]-> ProcesadoDeDatos
+SolicitarDatos-[#green]-> ProcesarDatos
 
-note on link
- <b>Paso del tiempo
- Lanza procesado de datos
-end note
-
-state1 -[#green]-> [*] 
+InterpretarDatos -[#green]-> [*] 
 
 
 @enduml
