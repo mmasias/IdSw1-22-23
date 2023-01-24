@@ -1,0 +1,20 @@
+@startuml
+
+State alumno <<choice>>
+State accion <<choice>> 
+
+[*] -d-> AlumnoMatriculado
+AlumnoMatriculado --> AlumnoTomandoCurso
+
+AlumnoTomandoCurso-r-> alumno
+
+alumno -d-> AlumnoBajoEngagement : No satisfecho
+alumno -d-> AlumnoAltoEngagement : Satisfecho
+
+AlumnoAltoEngagement -d-> AlumnoTomandoCurso
+AlumnoBajoEngagement -d-> accion : Se realizan acciones
+
+accion -d-> AlumnoAltoEngagement : Funciona
+accion -d-> Abandono : No funciona
+
+@enduml
