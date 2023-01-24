@@ -1,6 +1,5 @@
 @startuml ListarAlumnos
 
-State ListarAlumnos
 
 State VerListaAlumnos{ 
 
@@ -25,7 +24,7 @@ State VerListaAlumnos{
 
 } 
 
-ListarAlumnos-[#green]-> VerListaAlumnos
+[*]-[#green]-> VerListaAlumnos
 
 note on link
  <b>Usuario requiere

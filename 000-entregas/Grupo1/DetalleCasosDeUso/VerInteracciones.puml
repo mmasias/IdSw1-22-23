@@ -1,8 +1,5 @@
 @startuml VerInteracciones
 
-State VerInteracciones
-
-
 State VisualizarInteracciones{ 
 
   State state1 as " "
@@ -21,7 +18,7 @@ State VisualizarInteracciones{
 
 } 
 
-VerInteracciones-[#green]-> VisualizarInteracciones
+[*] -[#green]-> VisualizarInteracciones
 
 note on link
  <b>Usuario requiere

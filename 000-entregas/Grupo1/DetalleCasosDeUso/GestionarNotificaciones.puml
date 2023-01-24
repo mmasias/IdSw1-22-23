@@ -1,6 +1,6 @@
 @startuml GestionarNotificaciones
 
-State GestionarNotificaciones
+
 
 State EnviarNotificaciones{ 
 
@@ -35,14 +35,14 @@ State VerNotificacionesEnviadas{
 
 } 
 
-GestionarNotificaciones-[#green]-> EnviarNotificaciones
+[*]-[#green]-> EnviarNotificaciones
 
 note on link
  <b>Usuario requiere
  * Enviar notificaciones
 end note
 
-GestionarNotificaciones-[#green]-> VerNotificacionesEnviadas
+[*]-[#green]-> VerNotificacionesEnviadas
 
 note on link
  <b>Usuario requiere

@@ -1,6 +1,6 @@
 @startuml ListarClusters
 
-State ListarClusters
+State Login
 
 State VerListaClusters{ 
 
@@ -16,7 +16,7 @@ State VerListaClusters{
 
 } 
 
-ListarClusters-[#green]-> VerListaClusters
+Login-[#green]-> VerListaClusters
 
 note on link
  <b>Usuario requiere
