@@ -1,5 +1,4 @@
 # Disciplina de requisitos
-<hr>
 
 ## Introducción
 
@@ -8,7 +7,7 @@ El proyecto sobre el que se va a hablar trata de un sistema de gestión y ayuda 
 El sistema funciona de la siguiente manera:
     <ul>
         <li> Se recibe un DataSet con datos proporcionados por un tercero
-        <li> Se procesan estos datos y se envían a una IA
+        <li> Se procesan estos datos y se interpretan por a una IA
         <li> La IA se encarga de segmentar estos datos en distintos clústers
         <li> Desde los distintos dashboard se muestran los datos (alumnos, clústers...)
     </ul>
