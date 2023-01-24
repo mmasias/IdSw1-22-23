@@ -1,16 +1,17 @@
 ## Glosario
 
-| Clase                           | Descripción                                                                                               |
-| ------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| **Alumno**                      | Estudiante que cursa un máster.                                                                           |
-| **Máster**                      | Titulación académica impartida por una universidad                                                        |
-| **Plataforma**                  | Página con la que los alumnos interaccionan.                                                              |
-| **SistemaGestionUniversitario** | Plataforma administrativa de la universidad en la que se registran los alumnos                            |
-| **ProcesadoDeDatos**            | Recibe los datos de la plataforma y sistema de gestión y los normaliza                                    |
-| **DatosProcesados**             | Datos resultantes del procesado de datos.                                                                 |
-| **Intérprete**                  | Analiza los datos procesados y saca conclusiones de estos.                                                |
-| **Acción**                      | Realiza acciones que el intérprete ha ofrecido como enviar una notificación, reunirse con el alumno, etc. |
-| **Clúster**                     | Conjunto de alumnos que tienen características comunes                                                    |
+| Clase                           | Descripción                                                                                             |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| **Alumno**                      | Estudiante que cursa un máster.                                                                         |
+| **Máster**                      | Titulación académica impartida por una universidad                                                      |
+| **Plataforma**                  | Página con la que los alumnos interaccionan.                                                            |
+| **SistemaGestionUniversitario** | Plataforma administrativa de la universidad en la que se registran los alumnos                          |
+| **Sistema**                     | Representacion de la solucion desarrollada                                                              |
+| **RecopiladorDeDatos**          | Entidad externa al sistema que recopila los datos de la plataforma y sistema de gestión y los normaliza |
+| **ProcesadoDeDatos**            | Entidad que se encarga de solicitar datos al recopilador y procesarlos                                  |
+| **Intérprete**                  | Analiza los datos procesados y saca conclusiones de estos.                                              |
+| **Acción**                      | Realiza acciones que el intérprete ha ofrecido como enviar un correo, reunirse con el alumno, etc.      |
+| **Clúster**                     | Conjunto de alumnos que tienen características comunes                                                  |
 <hr>
 
 ## Diagramas
@@ -48,9 +49,9 @@
 
 </div>
   
-|Diagrama de estados alumno |Diagrama de estados sistema
-|:-:|:-:
-|![](03-DiagramaDeEstados/DiagramaEstadosAlumno.png)|![](03-DiagramaDeEstados/DiagramaEstadosSistema.png)
+|             Diagrama de estados alumno              |             Diagrama de estados sistema              |
+| :-------------------------------------------------: | :--------------------------------------------------: |
+| ![](03-DiagramaDeEstados/DiagramaEstadosAlumno.png) | ![](03-DiagramaDeEstados/DiagramaEstadosSistema.png) |
 
 
 </details>
