@@ -1,7 +1,7 @@
 # Actores y Casos de uso
 <hr>
 
-## Actores
+## Actores 
 
 <div align="center">
 
