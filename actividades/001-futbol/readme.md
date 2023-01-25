@@ -15,7 +15,17 @@ Les animo a generar discusiones en la [sección de issues](https://github.com/mm
 |![Image](ixcopalJuan/modelo-dominio/ModeloDominioFutbol.png)|
 |[Código del diagrama](ixcopalJuan/modelo-dominio/ModeloDominio.plantuml)|
 
-* Diagrama(s) de objetos
+
+|Diagrama de Objetos|
+|:-:|
+|![Image](ixcopalJuan/diagrama-objetos/DiagramaObjetosFutbol.png)|
+|[Código del diagrama](ixcopalJuan/diagrama-objetos/DiagramaObjetos.plantuml)|
+
+|Diagrama de Estados|
+|:-:|
+|![image](ixcopalJuan/diagrama-estados/DiagramaEstadosFutbol.png)|
+|[Código del diagrama](ixcopalJuan/diagrama-estados/DiagramaEstados.plantuml)|
+
 * Diagrama de estados
 
 ## Glosario
