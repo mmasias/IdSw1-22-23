@@ -14,7 +14,7 @@ state Login as " " <<state>>
 
 [*] -d-> Login : Login
 
-Login -r-> ListarClusters : Listar cluster
+Login -r-> ListarClusters : Listar clusters
 
 ListarClusters -d-> fork
 
