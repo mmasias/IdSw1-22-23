@@ -1,85 +1,112 @@
 @startuml DiagramaDeObjetos
 
-object "admin : Usuario" as admin {
-    usuario = "systemAdmin"
-    contraseña = "1Sr2.4Ga=1!"
+object "Usuario : admin" as admin {
+    usuario = "admin"
+    contraseña = "123ABC"
     rol = "admin"
 }
 
-object "tecnico : Usuario" as user {
+object "Usuario : tecnico" as user {
+    usuario = "tecnico"
+    contraseña = "ABC123"
+    rol = "tecnico"
 }
 
-object "redIris : Red" as red1 {
-ip = "192.168.1.1"
-nombre = "red Iris"
-ubicacion = "Universidad uneatlantico"
-direccion= "C. Isabel Torres"
+object "Red : red01" as red1 {
+nombreRed = "red01"
+telefonoAsociado = "123-123-123"
 }
 
-object "router001 : Router" as router {
+object "Router : router01" as router {
 ip = "192.168.1.1"
-nombre = "router001"
+mac = "00-B0-D0-63-C2-26"
+nombre = "router01"
 ubicacion = "planta 2"
 }
 
-object "uneat : Ubicacion" as uneat {
+object "Ubicacion : uneatlantico" as uneat {
 nombre = "Universidad uneatlantico"
 direccion= "C. Isabel Torres"
+planta = "-2"
 }
 
-object "movistar : Proveedor" as redIris {
-nombre = "rediris"
-numeroDeTelefono = "5311"
-redAsociada = "redIris"
+object "Proveedor : vodafone" as redIris {
+nombre = "linea dedicada 1"
 }
 
-object "firewall001 : Firewall" as firewall {
+object "Firewall : firewall01" as firewall {
 mac = "00-1B-33-22-55-H1"
-nombre = "red alumnos"
+nombre = "firewall01"
 marca = "Pfsense"
-version = "2.0"
+modelo = "Y009"
 ubicacion = "planta 2"
 }
 
-object "switch001 : Switch" as switch {
+object "Switch : sw01" as switch {
     ip = "127.0.0.1"
-    numeroSerial = "j3245jh342"
-    hostname = "switch001"
+    mac = "00-1B-33-22-55-H1"
+    nombre = "sw01"
+    modelo = "110-8T-D"
+    marca = "Cisco"
 }
 
-object "Alumnos : Vlan" as vlan {
+object "Vlan : gestion" as vlan {
     ip = "127.0.10.1"
+    mac = "00-1B-33-22-55-H1"
     estado = "activo"
 }
 
-object "PDI/PAS : Vlan" as vlan2 {
+object "Vlan : pdi/pass" as vlan2 {
     ip = "127.0.20.1"
+    mac = "00-1B-33-22-55-H1"
     estado = "activo"
 }
 
-object "Profesores : Vlan" as vlan3 {
+object "Vlan : profesores" as vlan3 {
     ip = "127.0.30.1"
+    mac = "00-1B-33-22-55-H1"
     estado = "activo"
 }
 
-object "Ordenador : Dispositivo" as DA1 {
+object "Dispositivo : antena" as DA1 {
     ip = "127.0.10.2"
-    marca = "asus"
+    mac = "00-1B-33-22-55-H1"
+    marca = "Ubiquiti"
+    ubicacion = "planta 1"
     estado = "activo"
 }
 
-object "Movil : Dispositivo" as DA2 {
+object "Dispositivo : cámara" as DA2 {
+    ip = "127.0.10.2"
+    mac = "00-1B-33-22-55-H1"
+    marca = "Canon"
+    ubicacion = "planta 2"
+    estado = "activo"
 }
 
-object "Portatil : Dispositivo" as DPP1 {
+object "Dispositivo : telefono voIP" as DA3{
+    ip = "127.0.10.2"
+    mac = "00-1B-33-22-55-H1"
+    marca = "yealink"
+    docenteAsiado = "docente1"
+    estado = "activo"
 }
 
-object "Impresora : Dispositivo" as DP1 {
+object "Dispositivo : telefono voIp" as DPP1 {
+    ip = "127.0.10.2"
+    mac = "00-1B-33-22-55-H1"
+    marca = "yealink"
+    docenteAsiado = "docente1"
+    estado = "activo"
 }
 
-object "Ordenador : Dispositivo" as DP2 {
+object "Dispositivo : impresora" as DP1 {
+    ip = "127.0.10.2"
+    mac = "00-1B-33-22-55-H1"
+    marca = "Canon"
+    ubicacion = "planta 2"
+    estado = "activo"
 }
-
 
 admin -d- red1: gestiona >
 user -- red1
@@ -93,8 +120,8 @@ switch -- vlan2
 switch -- vlan3
 vlan -- DA1: contiene >
 vlan -- DA2
+vlan -- DA3
 vlan2 -- DPP1
 vlan3 -- DP1
-vlan3 -- DP2
 
 @enduml
