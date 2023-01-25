@@ -1,14 +1,6 @@
 # Detalle casos de uso
-<details>
 
-  <summary>Solicitar datos</summary>
 
-|Solicitar datos
-|:-:
-|![](images/SolicitarDatos.png)
-* [Set de datos](../Anexos/SetDeDatos.csv)
-
-</details>
 <details>
 
   <summary>Procesar datos</summary>
@@ -16,24 +8,6 @@
 |Procesar datos
 |:-:
 |![](images/ProcesarDatos.png)
-
-</details>
-<details>
-
-  <summary>Interpretar datos</summary>
-
-|Interpretar datos
-|:-:
-|![](images/InterpretarDatos.png)
-
-</details>
-<details>
-
-  <summary>Almacenar datos</summary>
-
-|Almacenar datos
-|:-:
-|![](images/AlmacenarDatos.png)
 
 </details>
 <details>
@@ -107,5 +81,16 @@
 
 
 <hr>
+
+
+## Glosario
+
+| Término                           | Descripción                                                                                             |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| **Análisis exploratorio de datos (EDA)**                      | El análisis exploratorio de datos (EDA) es utilizado por los científicos de datos para analizar e investigar conjuntos de datos y resumir sus principales características, empleando a menudo métodos de visualización de datos.                                                             |
+| **Ingeniería de características (FI)**                      | La ingeniería de características implica la extracción y transformación de variables a partir de datos sin procesar, como las listas de precios, las descripciones de los productos y los volúmenes de ventas, de modo que sea posible utilizar las características para el entrenamiento y la predicción.                                                                      |
+
+<hr>
+
 
 [Atrás](../readme.md)

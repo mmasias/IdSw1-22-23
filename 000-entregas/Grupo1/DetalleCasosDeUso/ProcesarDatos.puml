@@ -1,21 +1,60 @@
 @startuml ProcesarDatos
 
 
-State ProcesarDatos{ 
+State ProcesarDatos {
 
-  [*] -[#green]-> InterpretarDatos
+    State StateProcesar as "  "
+    State StateInterpretar as "  "
+    State StateAlmacenar as "  "
+    state Choice1 <<choice>>
 
-  note on link 
-    <b>El sistema procesa datos a travez de un
-    <b>analisis exploratorio de datos (EDA) e 
-    <b>ingenieria de caracteristicas (FI) 
+    [*] -[#green]-> Choice1
+
+    note on link
+      <b>El sistema solicita un nuevo set de datos y
+      <b>compara con los anteriores buscando diferencias
+    end note
+
+    Choice1 -[#green]-> StateProcesar : Diferencia > 0.1%
+
+    StateProcesar -[#green]-> StateInterpretar
+
+    note right of StateProcesar
+      <b>El sistema procesa datos a través de un
+      <b>análisis exploratorio de datos (EDA) e 
+      <b>ingeniería de características (FI) 
+    end note
+
+    StateInterpretar -[#green]-> StateAlmacenar
+
+    note right of StateInterpretar
+      <b>El sistema interpreta datos a través de
+      <b>algoritmos de aprendizaje no supervisado
+      <b>y se agrupan en clústers
+    end note
+
+    note right of StateAlmacenar
+      <b>El sistema almacena datos 
+      <b>de clústers y alumnos</b>
+    end note
+}
+
+[*] --> ProcesarDatos
+
+note on link
+ <b>Paso del tiempo
+ Lanza procesado de datos una vez a la semana
+end note
+
+Choice1 -[#red]r-> [*] : Diferencia < 0.1%
+
+  note on link
+    Se espera a la semana siguiente 
+    para volver a solicitar datos
   end note
 
-} 
+StateAlmacenar -[#green]-> [*]
 
-SolicitarDatos-[#green]-> ProcesarDatos
-
-InterpretarDatos -[#green]-> [*] 
 
 
 @enduml
