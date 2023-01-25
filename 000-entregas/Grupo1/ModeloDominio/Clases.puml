@@ -9,7 +9,7 @@ Plataforma -r- SistemaGestionUniversitario : Intercambian datos
 
 SistemaGestionUniversitario -- RecopiladorDeDatos: Solicita datos <
 Plataforma -- RecopiladorDeDatos: Solicita datos <
-RecopiladorDeDatos--Sistema: Envía datos 
+RecopiladorDeDatos--Sistema: Solicita datos <
 
 Sistema -- Accion : Sugiere al usuario >
 

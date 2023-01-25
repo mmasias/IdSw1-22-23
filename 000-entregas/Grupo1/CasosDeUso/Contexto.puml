@@ -8,23 +8,30 @@ state ListarClusters as " " <<state>>
 state ListarAlumnos as " " <<state>>
 state VerCluster as " " <<state>>
 state GestionarNotificaciones as " " <<state>>
-state SoliciatarDatos as " " <<state>>
 state ProcesarDatos as " " <<state>>
-state InterpretarDatos as " " <<state>>
-state AlmacenarDatos as " " <<state>>
-[*] -d-> fork
+state Login as " " <<state>>
+
+
+[*] -d-> Login : Login
+
+Login -r-> ListarClusters : Listar cluster
+
+ListarClusters -d-> fork
+
+ListarClusters --> VerCluster : Ver Cluster
+VerCluster --> VerAlumno : Ver Alumno
+
+
 fork --> VerEstadisticas : Ver Abandono
 fork --> VerEstadisticas : Ver Interacciones
-
 fork --> ListarAlumnos : Listar Alumnos
+fork --> GestionarNotificaciones : Gestionar Notificaciones
+fork --> ProcesarDatos : Procesar Datos
+fork --> ListarClusters : Listar clusters
+
 ListarAlumnos --> VerAlumno : Ver Alumno
 
-fork --> ListarClusters : Listar Clusters
-ListarClusters --> VerCluster : Ver Cluster
-VerCluster -> VerAlumno : Ver Alumno
-fork --> GestionarNotificaciones : Gestionar Notificaciones
-fork --> SoliciatarDatos : Solicitar Datos
-SoliciatarDatos --> ProcesarDatos : Procesar Datos
-ProcesarDatos --> InterpretarDatos : Interpretar Datos
-InterpretarDatos-->AlmacenarDatos : AlmacenarDatos
+
+
+
 @enduml

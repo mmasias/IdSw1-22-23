@@ -21,7 +21,7 @@
   
 |         Diagrama de clases          |             Diagrama de sistema             |
 | :---------------------------------: | :----------------------------------------: |
-| ![](01-DiagramaDeClases/Clases.png) | ![](01-DiagramaDeClases/ClasesSistema.png) |
+| ![](images/Clases.png) | ![](images/ClasesSistema.png) |
 
 </details>
 
@@ -30,7 +30,7 @@
   
 |Diagrama de objetos
 |:-:
-|![](02-DiagramaDeObjetos/Objetos.png)
+|![](images/Objetos.png)
 
 </details>
 
@@ -41,21 +41,21 @@
 
 | Estado                     | Descripción                                                                                           |
 | -------------------------- | ----------------------------------------------------------------------------------------------------- |
-| **Alumnos Matriculado**    | El alumno esta matriculado en el máster                                                               |
-| **Alumno Tomando Curso**   | El alumno toma el curso mientras pasa el tiempo                                                       |
-| **Alumno Bajo Engagement** | Alumno con baja interacción y compromiso                                                              |
-| **Alumno Alto Engagement** | Alumno con alta interacción y compromiso                                                              |
+| **Alumnos matriculado**    | El alumno esta matriculado en el máster                                                               |
+| **Alumno tomando curso**   | El alumno toma el curso mientras pasa el tiempo                                                       |
+| **Alumno bajo engagement** | Alumno con baja interacción y compromiso                                                              |
+| **Alumno alto engagement** | Alumno con alta interacción y compromiso                                                              |
 | **Abandono**               | Alumno deja la institución                                                                            |
-| **Solicitando Datos**      | Sistema solicitando datos de alumnos                                                                  |
-| **Procesando Datos**       | Sistema procesa los datos de los alumnos                                                              |
-| **Interpretando Datos**    | Sistema interpreta los datos procesados y los almacena en clústers                                    |
-| **Realizando acciones**    | Sistema realiza acciones para que alumno no abandone, esto también puede realizarse fuera del sistema |
+| **Solicitando datos**      | Sistema solicitando datos de alumnos                                                                  |
+| **Procesando datos**       | Sistema procesando los datos de los alumnos                                                              |
+| **Interpretando datos**    | Sistema interpretando los datos procesados y agrupándolos en clústers                                    |
+| **Realizando acciones**    | Sistema realizando acciones para que el alumno no abandone, esto también puede realizarse fuera del sistema |
 
 </div>
   
 |             Diagrama de estados alumno              |             Diagrama de estados sistema              |
 | :-------------------------------------------------: | :--------------------------------------------------: |
-| ![](03-DiagramaDeEstados/DiagramaEstadosAlumno.png) | ![](03-DiagramaDeEstados/DiagramaEstadosSistema.png) |
+| ![](images/DiagramaEstadosAlumno.png) | ![](images/DiagramaEstadosSistema.png) |
 
 
 </details>
