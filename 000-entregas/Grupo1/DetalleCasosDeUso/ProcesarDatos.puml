@@ -1,0 +1,21 @@
+@startuml ProcesarDatos
+
+
+State ProcesarDatos{ 
+
+  [*] -[#green]-> InterpretarDatos
+
+  note on link 
+    <b>El sistema procesa datos a travez de un
+    <b>analisis exploratorio de datos (EDA) e 
+    <b>ingenieria de caracteristicas (FI) 
+  end note
+
+} 
+
+SolicitarDatos-[#green]-> ProcesarDatos
+
+InterpretarDatos -[#green]-> [*] 
+
+
+@enduml

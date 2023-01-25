@@ -1,6 +1,6 @@
 @startuml GestionarNotificaciones
 
-State GestionarNotificaciones
+
 
 State EnviarNotificaciones{ 
 
@@ -26,25 +26,27 @@ State VerNotificacionesEnviadas{
     <b>El sistema permite ver notificaciones 
     * De alumnos particulares
     * De alumnos de un clúster
+
+    <b>El sistema permite filtrar
+    * Por fecha
+    * Por asunto
+    * Por destino
   end note
 
 } 
 
-GestionarNotificaciones-[#green]-> EnviarNotificaciones
+[*]-[#green]-> EnviarNotificaciones
 
 note on link
  <b>Usuario requiere
  * Enviar notificaciones
 end note
 
-GestionarNotificaciones-[#green]-> VerNotificacionesEnviadas
+[*]-[#green]-> VerNotificacionesEnviadas
 
 note on link
  <b>Usuario requiere
  * Ver notificaciones enviadas
 end note
-
-state1 -[#green]-> [*] 
-state2 -[#green]-> [*] 
 
 @enduml

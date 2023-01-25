@@ -1,0 +1,12 @@
+@startuml
+
+package "Sistema" #DDDDDD {
+    class ProcesadoDeDatos
+    class Intérprete
+
+note "Envia datos procesados" as N2
+ProcesadoDeDatos -- N2
+N2 -- Intérprete
+}
+
+@enduml

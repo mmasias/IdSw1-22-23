@@ -1,0 +1,51 @@
+Métrica,Ámbito
+cantidad (sobre dim en gris),actividad
+tiempo_activo (sobre dim en gris),actividad
+dias con accesos,actividad
+promedio de dias con accesos,actividad
+dias desde ultimo acceso,actividad
+actividad en foros (ver pestaña foros),actividad
+max periodo de inactividad,actividad
+max periodo de actividad,actividad
+id_inscripción,auxiliar
+Asignaturas aprobadas,avance
+Actividades aprobadas,avance
+Examenes aprobados,avance
+avance_tiempo,avance
+avance_asignaturas,avance
+avance_actividades,avance
+dias_transcurridos,avance
+dias_transcurridos_abandono,avance
+dias_restantes_abandono,avance
+deuda pendiente,estado economico
+con impagos,estado economico
+nivel de renta,estado economico
+reincorporado,estado persona
+prorrogas otorgadas,estado persona
+convalidado,estado persona
+estado estudios,estado persona
+motivo abandono,estado persona
+Sexo,personal
+pais,personal
+idioma,personal
+id_persona_sg,personal
+fecha nacimiento,personal
+estudios online anteriores,personal
+fecha de graduación de pregrado,personal
+estado_civil,personal
+hijos,personal
+situación laboral,personal
+estudios anteriores obligatorios,personal
+duracion,programa
+creditos,programa
+calendarizado,programa
+con_tfc,programa
+tipo_master,programa
+programa,programa
+area,programa
+Total de examenes,programa
+Total de asignaturas,programa
+Total de actividades,programa
+coste del programa,programa
+calificaciones,rendimiento
+aprobado en primera convocatoria,rendimiento

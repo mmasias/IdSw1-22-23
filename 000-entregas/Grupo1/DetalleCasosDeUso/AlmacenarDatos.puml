@@ -1,0 +1,17 @@
+@startuml AlmacenarDatos
+
+
+State AlmacenarDatos{ 
+
+  [*] -[#green]-> [*]
+
+  note on link 
+    <b>El sistema almacena datos en clusters</b>
+  end note
+
+} 
+
+InterpretarDatos-[#green]-> AlmacenarDatos
+
+
+@enduml

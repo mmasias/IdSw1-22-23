@@ -1,6 +1,41 @@
 # Detalle casos de uso
-<hr>
+<details>
 
+  <summary>Solicitar datos</summary>
+
+|Solicitar datos
+|:-:
+|![](images/SolicitarDatos.png)
+* [Set de datos](../Anexos/SetDeDatos.csv)
+
+</details>
+<details>
+
+  <summary>Procesar datos</summary>
+
+|Procesar datos
+|:-:
+|![](images/ProcesarDatos.png)
+
+</details>
+<details>
+
+  <summary>Interpretar datos</summary>
+
+|Interpretar datos
+|:-:
+|![](images/InterpretarDatos.png)
+
+</details>
+<details>
+
+  <summary>Almacenar datos</summary>
+
+|Almacenar datos
+|:-:
+|![](images/AlmacenarDatos.png)
+
+</details>
 <details>
   <summary>Listar alumnos</summary>
   
@@ -69,6 +104,7 @@
 |![](images/GestionarNotificaciones.png)
 
 </details>
+
 
 <hr>
 

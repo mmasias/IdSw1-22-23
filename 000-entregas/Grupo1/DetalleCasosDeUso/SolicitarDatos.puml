@@ -1,0 +1,38 @@
+@startuml SolicitarDatos
+
+
+State SolicitarDatos{ 
+
+  State state1 as "ProcesarDatos"
+  State state2 as " "
+  state c <<choice>>
+
+  [*] -[#green]-> c
+
+  note on link 
+    <b>El sistema solicita un nuevo set de datos y
+    <b>compara con los anteriores buscando diferencias
+  end note
+
+  c -[#green]-> state1 : Diferencia > 0.1%
+  c -[#red]-> state2 : Diferencia < 0.1%
+
+  note right of state2
+    Se espera una semana para volver a solicitar datos
+  end note
+
+
+} 
+
+[*]-[#green]-> SolicitarDatos
+
+note on link
+ <b>Paso del tiempo
+ Lanza procesado de datos una vez a la semana
+end note
+
+state1 -[#green]-> [*] 
+state2 -[#red]-> [*] 
+
+
+@enduml

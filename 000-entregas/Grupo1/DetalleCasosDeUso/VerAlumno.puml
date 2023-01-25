@@ -1,7 +1,7 @@
 @startuml VerAlumno
 
-State VerAlumno
-
+State ListarAlumno
+State VerCluster
 
 State VisualizaciónAlumno{ 
 
@@ -12,21 +12,27 @@ State VisualizaciónAlumno{
   note on link 
     <b>El sistema muestra
     * Interacciones alumno
+
     <b>El sistema permite
     * Visualizar distintas interacciones del alumno
+
+    <b>El sistema permite filtrar
+    * Por fechas
   end note
  
 
 } 
 
-VerAlumno-[#green]-> VisualizaciónAlumno
-
+ListarAlumno-[#green]-> VisualizaciónAlumno
 note on link
  <b>Usuario requiere
  Ver alumno
 end note
-
-state1 -[#green]-> [*] 
+VerCluster-[#green]-> VisualizaciónAlumno
+note on link
+ <b>Usuario requiere
+ Ver alumno
+end note
 
 
 @enduml

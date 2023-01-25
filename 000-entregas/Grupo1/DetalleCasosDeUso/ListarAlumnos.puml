@@ -1,6 +1,5 @@
 @startuml ListarAlumnos
 
-State ListarAlumnos
 
 State VerListaAlumnos{ 
 
@@ -11,14 +10,21 @@ State VerListaAlumnos{
   note on link 
     <b>El sistema muestra
     * Todos los alumnos
+
     <b>El sistema permite
     * Ver un alumno
+
+    <b>El sistema permite filtrar
+    * Por nombre
+    * Por apellidos
+    * Por DNI
+    * Por máster 
   end note
  
 
 } 
 
-ListarAlumnos-[#green]-> VerListaAlumnos
+[*]-[#green]-> VerListaAlumnos
 
 note on link
  <b>Usuario requiere

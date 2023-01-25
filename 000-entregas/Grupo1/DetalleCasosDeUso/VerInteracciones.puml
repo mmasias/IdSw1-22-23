@@ -1,8 +1,5 @@
 @startuml VerInteracciones
 
-State VerInteracciones
-
-
 State VisualizarInteracciones{ 
 
   State state1 as " "
@@ -12,12 +9,16 @@ State VisualizarInteracciones{
   note on link 
     <b>El sistema muestra
     * Estadísticas interacciones
+
+    <b>El sistema permite filtrar
+    * Por fecha
+    * Por interacciones
   end note
  
 
 } 
 
-VerInteracciones-[#green]-> VisualizarInteracciones
+[*] -[#green]-> VisualizarInteracciones
 
 note on link
  <b>Usuario requiere

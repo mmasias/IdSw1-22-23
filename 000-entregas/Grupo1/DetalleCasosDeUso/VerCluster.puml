@@ -1,8 +1,8 @@
 @startuml VerCluster
 
-State VerCluster 
+State ListarClusters 
 
-State VisualizarCluster{ 
+State VerCluster{ 
 
   State state1 as " "
 
@@ -13,6 +13,13 @@ State VisualizarCluster{
   note on link 
     <b>El sistema muestra
     * Lista de alumnos contenidos en ese clúster
+
+    <b>El sistema permite filtrar
+    * Por nombre 
+    * Por apellidos
+    * Por DNI
+    * Por Master
+    * Por porcentaje de abandono
   end note
  
   state1 -[#green]-> c 
@@ -24,15 +31,15 @@ State VisualizarCluster{
   c -[#green]-> VerAlumno : Seguimiento
 
   note on link 
-    <b> El sistema permite ver Alumno
+    <b> El sistema permite ver alumno
   end note
 } 
 
-VerCluster -[#green]-> VisualizarCluster
+ListarClusters -[#green]-> VerCluster
 
 note on link
  <b>Usuario requiere
- Visualizar clúster
+ Ver clúster
 end note
 
 c -[#red]-> [*] : Gestión
