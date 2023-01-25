@@ -13,6 +13,7 @@ El sistema funciona de la siguiente manera:
     </ul>
 
 <hr>
+
 ## Índice
 
 1. [Modelo de dominio](ModeloDominio/readme.md)
