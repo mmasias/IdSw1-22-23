@@ -6,6 +6,7 @@
 |Solicitar datos
 |:-:
 |![](images/SolicitarDatos.png)
+* [Set de datos](../Anexos/SetDeDatos.csv)
 
 </details>
 <details>
