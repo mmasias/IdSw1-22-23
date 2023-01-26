@@ -86,6 +86,8 @@ Repositorio para el proyecto de la asignatuea
 
 # Mockups
 
+Enlace a los mockups en Balsamiq: <https://balsamiq.cloud/smsb541/pds9efr/rC71E>
+
 |                  Inicio                  |
 | :--------------------------------------: |
 |   ![Imagen](mockups/inicioUsuario.PNG)   |
