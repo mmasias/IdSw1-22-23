@@ -52,7 +52,11 @@ Repositorio para el proyecto de la asignatuea
 
 |           Diagrama de Estados           |
 | :-------------------------------------: |
-| ![Imagen](images/DiagramaDeEstados.png) |
+| ![Imagen](images/Objetos.jpeg) |
+
+## Caso de uso principal: Notificación
+* Descripción:  El sistema hace peticiones cada cierto tiempo a las partes de una Red para verificar su estado.
+Si un dispositivo está desconectado lanza una Notificación con la información del dispositivo
 
 |           Casos de Uso           |
 | :------------------------------: |
@@ -67,6 +71,7 @@ Repositorio para el proyecto de la asignatuea
 | **Administrador**     | Gestiona redes, proveedores y usuarios |
 | **Técnicos internos** | Gestionan redes y proveedores          |
 | **Técnicos externos** | Ven redes                              |
+| **Tiempo** | Notifica cuando la parte de una Red está caida    |
 
 </div>
 
@@ -90,73 +95,69 @@ Enlace a los mockups en Balsamiq: <https://balsamiq.cloud/smsb541/pds9efr/rC71E>
 
 |                  Inicio                  |
 | :--------------------------------------: |
-|   ![Imagen](mockups/inicioUsuario.PNG)   |
-| ![Imagen](mockups/ContrasenaUsuario.png) |
+|   ![Imagen](https://share.balsamiq.com/c/wkkCjzvRoVbGHouhwBv9fP.png)   |
+| ![Imagen](https://share.balsamiq.com/c/qmp7cvw1AAJAURXn51YuQ2.png) |
 
-|            Listar Proveedores             |
+|            Proveedores             |
 | :---------------------------------------: |
-| ![Imagen](mockups/ListadoProveedores.png) |
+| ![Imagen](https://share.balsamiq.com/c/jurFUvf9twDWhXiyigdid4.png) |
+| ![Imagen](https://share.balsamiq.com/c/f6C1B32qWcrCW12trXJmqd.png) |
+| ![Imagen](https://share.balsamiq.com/c/tzaRYRHJo9fPx3Aqorr5hC.png) |
+| ![Imagen](https://share.balsamiq.com/c/58BeanW9cqhcWJDJkMjHu2.png) |
 
-|            Crear Proveedor            |
-| :-----------------------------------: |
-| ![Imagen](mockups/NuevoProveedor.png) |
-
-|            Listar Redes             |
+|            Redes             |
 | :---------------------------------: |
-| ![Imagen](mockups/ListadoRedes.png) |
+| ![Imagen](https://share.balsamiq.com/c/91D4B9SqubVVaouMsbP91U.png) |
+| ![Imagen](https://share.balsamiq.com/c/tw2FvaJL3JyDnXdU158sdp.png) |
+| ![Imagen](https://share.balsamiq.com/c/d1f4wZAJrvThphGT7bWtX9.png) |
+| ![Imagen](https://share.balsamiq.com/c/kzzvMU2JJkCyUs5Yj9eJ4C.png) |
 
-|             Routes de una Red             |
+|             Parte de Red - Router             |
 | :---------------------------------------: |
-| ![Imagen](mockups/PartesDeRed-Router.png) |
+| ![Imagen](https://share.balsamiq.com/c/1iFW9VbrNjUstZ4wLCAHEk.png) |
+| ![Imagen](https://share.balsamiq.com/c/91h1J55qAteUKtMWJgAPVP.png) |
+| ![Imagen](https://share.balsamiq.com/c/47f1kaTukKVyMJyq3thR7V.png) |
+| ![Imagen](https://share.balsamiq.com/c/9x4eZFirKabLfa9uktNPPS.png) |
 
-|             Firewall de una Red             |
+|             Parte de Red - Firewall             |
 | :-----------------------------------------: |
-| ![Imagen](mockups/PartesDeRed-Firewall.png) |
+| ![Imagen](https://share.balsamiq.com/c/vk8amV1FZwH96TaWbfwukK.png) |
+| ![Imagen](https://share.balsamiq.com/c/9EW9Yu2XsDt3TEUNTwzzu7.png) |
+| ![Imagen](https://share.balsamiq.com/c/wC9nMjo8hmXoB51CXCewFD.png) |
+| ![Imagen](https://share.balsamiq.com/c/7FBgbTMYtrMgGYpqAyeyK5.png) |
 
-|             Switch de una Red             |
+
+|             Partes de Red - Switch             |
 | :---------------------------------------: |
-| ![Imagen](mockups/PartesDeRed-Switch.png) |
+| ![Imagen](https://share.balsamiq.com/c/okU94FuTjH46QeJqCjwpoe.png) |
+| ![Imagen](https://share.balsamiq.com/c/eAN3QMb9mHtZ4JT2xM2aHY.png) |
+| ![Imagen](https://share.balsamiq.com/c/s9BcouQXTTqPXRurwasLH5.png) |
+| ![Imagen](https://share.balsamiq.com/c/ao54V5mATsWqSJXmXJHA7i.png) |
 
-|             Vlan de una Red             |
+
+|             Partes de una Red - Vlan             |
 | :-------------------------------------: |
-| ![Imagen](mockups/PartesDeRed-Vlan.png) |
+| ![Imagen](https://share.balsamiq.com/c/65G1xnmvHfAPw58scR4mtj.png) |
+| ![Imagen](https://share.balsamiq.com/c/izjphcMMKoHt18NZvNi1No.png) |
+| ![Imagen](https://share.balsamiq.com/c/vozNTvCz64x2oL5f7bRGGv.png) |
+| ![Imagen](https://share.balsamiq.com/c/xftbNVJesjCBqmHUe99adZ.png) |
 
-|             Dispositivos de una Red             |
+|             Partes de una Red - Dispositivo             |
 | :---------------------------------------------: |
-| ![Imagen](mockups/PartesDeRed-Dispositivos.png) |
+| ![Imagen](https://share.balsamiq.com/c/uSYFmtqhTtUjwjuvSc5jt3.png) |
+| ![Imagen](https://share.balsamiq.com/c/cMmCWpzKhGdCBvNEUxkvup.png) |
+| ![Imagen](https://share.balsamiq.com/c/aQxmkefmJGZza48CN4Ajn9.png) |
+| ![Imagen](https://share.balsamiq.com/c/vqXbY7ZVDETsZiA7aDKdYs.png) |
 
-|          Crear una Red          |
+
+|          Usuarios          |
 | :-----------------------------: |
-| ![Imagen](mockups/NuevaRed.png) |
+| ![Imagen](https://share.balsamiq.com/c/2TXWKLEtjVCZnEsunCaqF6.png) |
+| ![Imagen](https://share.balsamiq.com/c/72UcL2PLaJWuQ9SVwEVyCr.png) |
+| ![Imagen](https://share.balsamiq.com/c/aVbAZ4sRHhfj5y2P6DRkbK.png) |
+| ![Imagen](https://share.balsamiq.com/c/szEJ8Vdkya5mxb1TBzKXJ6.png) |
 
-|                  Crear Router                  |
-| :--------------------------------------------: |
-| ![Imagen](mockups/PartesDeRed-NuevoRouter.png) |
-
-|                  Crear Firewall                  |
-| :----------------------------------------------: |
-| ![Imagen](mockups/PartesDeRed-NuevoFirewall.png) |
-
-|                  Crear Switch                  |
-| :--------------------------------------------: |
-| ![Imagen](mockups/PartesDeRed-NuevoSwitch.png) |
-
-|                  Crear Vlan                  |
-| :------------------------------------------: |
-| ![Imagen](mockups/PartesDeRed-NuevoVlan.png) |
-
-|                 Crear Dispositivos                  |
-| :-------------------------------------------------: |
-| ![Imagen](mockups/PartesDeRed-NuevoDispositivo.png) |
-
-|            Listar Usuarios             |
-| :------------------------------------: |
-| ![Imagen](mockups/ListadoUsuarios.png) |
-
-|            Crear Usuario            |
-| :---------------------------------: |
-| ![Imagen](mockups/NuevoUsuario.png) |
 
 |          Perfil de Usuario           |
 | :----------------------------------: |
-| ![Imagen](mockups/PerfilUsuario.png) |
+| ![Imagen](https://share.balsamiq.com/c/6if66SbVvvhdRJPrR8iUgh.png) |
