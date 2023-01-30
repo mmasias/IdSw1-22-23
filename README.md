@@ -20,61 +20,6 @@ Repositorio para el proyecto de la asignatuea
 - Switch
 - Dispositivos conectados
 
-# Requisitado Sesión 1
-
-|   Partes que conforman una Red    |
-| :-------------------------------: |
-| ![Imagen](images/ContieneRed.PNG) |
-
-| Roles de Usuarios que se necesitan  |
-| :---------------------------------: |
-| ![Imagen](images/RolesUsuarios.PNG) |
-
-# Requisitado Sesión 2
-
-|          Que es una red           |
-| :-------------------------------: |
-| ![Imagen](images/ContieneRed.PNG) |
-
-|  Definicion flujo de una red   |
-| :----------------------------: |
-| ![Imagen](images/QueEsRed.PNG) |
-
-# Diagramas
-
-|           Modelo de Dominio           |
-| :-----------------------------------: |
-| ![Imagen](images/ModeloDeDominio.png) |
-
-|           Diagrama de Objetos           |
-| :-------------------------------------: |
-| ![Imagen](images/DiagramaDeObjetos.png) |
-
-|           Diagrama de Estados           |
-| :-------------------------------------: |
-| ![Imagen](images/Objetos.jpeg) |
-
-## Caso de uso principal: Notificación
-* Descripción:  El sistema hace peticiones cada cierto tiempo a las partes de una Red para verificar su estado.
-Si un dispositivo está desconectado lanza una Notificación con la información del dispositivo
-
-|           Casos de Uso           |
-| :------------------------------: |
-| ![Imagen](images/casosDeUso.png) |
-
-## Actores
-
-<div align="center">
-
-| Actor                 | Descripción                            |
-| --------------------- | -------------------------------------- |
-| **Administrador**     | Gestiona redes, proveedores y usuarios |
-| **Técnicos internos** | Gestionan redes y proveedores          |
-| **Técnicos externos** | Ven redes                              |
-| **Tiempo** | Notifica cuando la parte de una Red está caida    |
-
-</div>
-
 # Glosario
 
 | Entidad     | Definición                                                                                                                                                                                                                |
@@ -88,6 +33,71 @@ Si un dispositivo está desconectado lanza una Notificación con la información
 | Switch      | Es el dispositivo que reparte el tráfico de red a los dispositivos y que además crea VLans                                                                                                                                |
 | VLan        | Son las redes locales en la cuales se dividen los dispositivos, dando ciertos accesos en la red a distintos dispositivos.                                                                                                 |
 | Dispositivo | Hardware que al usuario le interesa conocer su estado, entre estos se encuentran: antenas, cámaras de vigilancia, lector de huellas, servidores, impresoras, teléfonos VoIP, Router y en casos muy puntuales móviles.     |
+
+
+# Diagramas
+
+|           Modelo de Dominio           |
+| :-----------------------------------: |
+| ![Imagen](images/ModeloDeDominio.png) |
+
+|           Diagrama de Objetos           |
+| :-------------------------------------: |
+| ![Imagen](images/DiagramaDeObjetos.png) |
+
+|           Diagrama de Estados           |
+| :-------------------------------------: |
+| ![Imagen](images/DiagramaDeEstados.png) |
+
+|           Diagrama de Contexto           |
+| :-------------------------------------: |
+| ![Imagen](images/diagramaDeContexto.PNG) |
+
+
+# Actores y Casos de Uso
+
+## Actores
+| Actor                 | Descripción                            |
+| --------------------- | -------------------------------------- |
+| **Administrador**     | Gestiona redes, proveedores y usuarios |
+| **Técnicos internos** | Gestionan redes y proveedores          |
+| **Técnicos externos** | Ven redes                              |
+| **Tiempo** | Notifica cuando la parte de una Red está caida    |
+
+## Casos de Uso
+
+|                      |                      |
+| -------------------- | -------------------- |
+|       nueva red      |  nuevo dispositivo   |
+|     actualizar red   |actualizar dispositivo|
+|      eliminar red    | eliminar dispositivo |
+|     listar redes     | listar dispositivos  |
+|     nuevo router     |    nuevo proveedor   |
+|   actualizar router  | actualizar proveedor |
+|    eliminar router   |  eliminar proveedor  |
+|    listar routers    |  listar proveedores  |
+|    nuevo firewall    |    nuevo usuario     |
+| actualizar firewall  |  actualizar usuario  |
+|   eliminar firewall  |   eliminar usuario   |
+|   listar firewalls   |   listar usuarios    |
+|    nuevo switch      |        perfil        |
+|  actualizar switch   |     notificación     |
+|   eliminar switch    |
+|    listar switchs    |
+|      nueva vlan      |
+|    actualizar vlan   |
+|     eliminar vlan    |
+|    listar vlanes     |
+
+* Notificación:
+El sistema hace peticiones cada cierto tiempo a las partes de una Red para verificar su estado.
+Si un dispositivo está desconectado lanza una Notificación con la información del dispositivo
+
+
+|           Casos de Uso           |
+| :------------------------------: |
+| ![Imagen](images/casosDeUso.png) |
+|![Imagen](images/casosDeUsoRed.PNG)|
 
 # Mockups
 

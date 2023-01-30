@@ -2,56 +2,104 @@
 
 state fork_state <<fork>>
 
-state NONAME_REDES as " "
-state NONAME_USUARIOS as " "
-state NONAME_DISPOSITIVOS as " "
-state NONAME_ROUTERS as " "
-state NONAME_PROVEEDORES as " "
-state NONAME_SWITCHES as " "
-state NONAME_VLANES as " "
-state NONAME_FIREWALL as " "
-
 [*] --> Inicio
 Inicio --> fork_state
+note on link 
+ login
+ sign in
+end note
 
 'Usuarios
-fork_state --> NONAME_USUARIOS: listarUsuarios
-NONAME_USUARIOS --> NONAME_USUARIOS: gestionar usuarios
-NONAME_USUARIOS -up-> Inicio
+fork_state --> listarUsuarios
+listarUsuarios --> listarUsuarios
+note on link 
+ crear usuario
+ actualizar usuario
+ eliminar usuario
+end note
+
 'Proveedores
-fork_state --> NONAME_PROVEEDORES: listarProveedores
-NONAME_PROVEEDORES --> NONAME_PROVEEDORES: gestionar proveedores
-NONAME_PROVEEDORES -up-> Inicio
+fork_state --> listarProveedores
+listarProveedores --> listarProveedores
+note on link 
+ crear proveedor
+ actualizar proveedor
+ eliminar proveedor
+end note
+
 'Redes
-fork_state --> NONAME_REDES: listarRedes
-NONAME_REDES --> NONAME_REDES: gestionar redes
-NONAME_REDES --> Red: AbrirRed
-NONAME_REDES <-r- Red
-NONAME_REDES -up-> Inicio
+fork_state --> listarRedes
+
+listarRedes --> listarRedes
+note on link 
+ crear red
+ actualizar red
+ eliminar red
+end note
+listarRedes --> Red
+listarRedes <-- Red
 
 'Routers
-Red --> NONAME_ROUTERS: listarRouters
-NONAME_ROUTERS --> NONAME_ROUTERS: gestionar routers 
-NONAME_ROUTERS --> Red
+Red --> listarRouters
+note on link 
+ crear router
+ actualizar router
+ eliminar router
+end note
+listarRouters --> listarRouters 
+listarRouters --> Red
 
 'Firewall
-NONAME_ROUTERS --> NONAME_FIREWALL: listarFirewalls
-NONAME_FIREWALL --> NONAME_FIREWALL: gestionar firewalls 
-NONAME_FIREWALL --> NONAME_ROUTERS
+Red --> listarFirewalls
+note on link 
+ crear firewall
+ actualizar firewall
+ eliminar firewall
+end note
+listarFirewalls --> listarFirewalls 
+listarFirewalls --> Red
 
 'Switches
-NONAME_FIREWALL --> NONAME_SWITCHES: listarSwitches
-NONAME_SWITCHES --> NONAME_SWITCHES: gestionar switches 
-NONAME_SWITCHES --> NONAME_FIREWALL
+Red --> listarSwitches
+note on link 
+ crear switch
+ actualizar switch
+ eliminar switch
+end note
+listarSwitches --> listarSwitches 
+listarSwitches --> Red
 
 'Vlanes
-NONAME_SWITCHES --> NONAME_VLANES: listarVlanes
-NONAME_VLANES --> NONAME_VLANES: gestionar vlanes 
-NONAME_VLANES --> NONAME_SWITCHES
+Red --> listarVlanes
+note on link 
+ crear vlan
+ actualizar vlan
+ eliminar vlan
+end note
+listarVlanes --> listarVlanes 
+listarVlanes --> Red
 
 'Dispositivos
-NONAME_VLANES --> NONAME_DISPOSITIVOS: listarDispositivos
-NONAME_DISPOSITIVOS --> NONAME_DISPOSITIVOS: gestionar dispositivos 
-NONAME_DISPOSITIVOS --> NONAME_VLANES
+Red --> listarDispositivos
+note on link 
+ crear dispostivo
+ actualizar dispostivo
+ eliminar dispostivo
+end note
+listarDispositivos --> listarDispositivos 
+listarDispositivos --> Red
+
+listarRedes --> [*]
+listarUsuarios --> [*]
+listarProveedores --> [*]
+listarProveedores --> [*]
+listarRouters --> [*]
+listarFirewalls --> [*]
+listarSwitches --> [*]
+listarVlanes --> [*]
+listarDispositivos --> [*]
+note on link 
+ logout
+end note
 
 @enduml
