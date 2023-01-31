@@ -1,8 +1,7 @@
-@startuml casos de uso
-
+@startuml CasosDeUsoRed
 left to right direction
 
-package Red {
+package Wan {
     package Router {
         usecase CrearRouter
         usecase ActualizarRouter

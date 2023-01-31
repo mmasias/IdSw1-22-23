@@ -45,9 +45,9 @@ Repositorio para el proyecto de la asignatuea
 | :-------------------------------------: |
 | ![Imagen](images/DiagramaDeObjetos.png) |
 
-|           Diagrama de Estados           |
+|           Diagrama de Estados de Notificación         |
 | :-------------------------------------: |
-| ![Imagen](images/DiagramaDeEstados.png) |
+| ![Imagen](images/DiagramDeEstadosNotificacion.png) |
 
 |           Diagrama de Contexto           |
 | :-------------------------------------: |
@@ -96,10 +96,10 @@ Si un dispositivo está desconectado lanza una Notificación con la información
 
 |           Casos de Uso           |
 | :------------------------------: |
-| ![Imagen](images/casosDeUso.png) |
-|![Imagen](images/casosDeUsoRed.PNG)|
+| ![Imagen](images/CasosDeUso.png) |
+|![Imagen](images/CasosDeUsoRed.png)|
 
-# Mockups
+<!-- # Mockups
 
 Enlace a los mockups en Balsamiq: <https://balsamiq.cloud/smsb541/pds9efr/rC71E>
 
@@ -170,4 +170,4 @@ Enlace a los mockups en Balsamiq: <https://balsamiq.cloud/smsb541/pds9efr/rC71E>
 
 |          Perfil de Usuario           |
 | :----------------------------------: |
-| ![Imagen](https://share.balsamiq.com/c/6if66SbVvvhdRJPrR8iUgh.png) |
+| ![Imagen](https://share.balsamiq.com/c/6if66SbVvvhdRJPrR8iUgh.png) | -->

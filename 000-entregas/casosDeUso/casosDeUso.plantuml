@@ -1,4 +1,4 @@
-@startuml casos de uso
+@startuml CasosDeUso
 
 left to right direction
 
@@ -21,15 +21,15 @@ package Sistema {
 
     Administrador -l-> Usuario
 
-    package Red {
-        usecase CrearRed
-        usecase ActualizarRed
-        usecase EliminarRed
-        usecase ObtenerRed
+    package Wan {
+        usecase CrearWan
+        usecase ActualizarWan
+        usecase EliminarWan
+        usecase ObtenerWan
     }
 
-    Administrador --> Red
-    TecnicosInternos --> Red
+    Administrador --> Wan
+    TecnicosInternos --> Wan
 
     package Proveedor {
         usecase CrearProveedor
@@ -40,6 +40,12 @@ package Sistema {
 
     Administrador --> Proveedor
     TecnicosInternos --> Proveedor
+
+    package Notificacion {
+        usecase ObtenerNotificacion
+    }
+
+    Notificacion -l-> Perfil
 
     Administrador --> ListarUsuarios
     Administrador --> ListarRedes

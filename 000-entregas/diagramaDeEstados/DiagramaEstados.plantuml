@@ -1,105 +1,12 @@
-@startuml DiagramaDeEstados
+@startuml DiagramDeEstadosNotificacion
 
-state fork_state <<fork>>
-
-[*] --> Inicio
-Inicio --> fork_state
-note on link 
- login
- sign in
-end note
-
-'Usuarios
-fork_state --> listarUsuarios
-listarUsuarios --> listarUsuarios
-note on link 
- crear usuario
- actualizar usuario
- eliminar usuario
-end note
-
-'Proveedores
-fork_state --> listarProveedores
-listarProveedores --> listarProveedores
-note on link 
- crear proveedor
- actualizar proveedor
- eliminar proveedor
-end note
-
-'Redes
-fork_state --> listarRedes
-
-listarRedes --> listarRedes
-note on link 
- crear red
- actualizar red
- eliminar red
-end note
-listarRedes --> Red
-listarRedes <-- Red
-
-'Routers
-Red --> listarRouters
-note on link 
- crear router
- actualizar router
- eliminar router
-end note
-listarRouters --> listarRouters 
-listarRouters --> Red
-
-'Firewall
-Red --> listarFirewalls
-note on link 
- crear firewall
- actualizar firewall
- eliminar firewall
-end note
-listarFirewalls --> listarFirewalls 
-listarFirewalls --> Red
-
-'Switches
-Red --> listarSwitches
-note on link 
- crear switch
- actualizar switch
- eliminar switch
-end note
-listarSwitches --> listarSwitches 
-listarSwitches --> Red
-
-'Vlanes
-Red --> listarVlanes
-note on link 
- crear vlan
- actualizar vlan
- eliminar vlan
-end note
-listarVlanes --> listarVlanes 
-listarVlanes --> Red
-
-'Dispositivos
-Red --> listarDispositivos
-note on link 
- crear dispostivo
- actualizar dispostivo
- eliminar dispostivo
-end note
-listarDispositivos --> listarDispositivos 
-listarDispositivos --> Red
-
-listarRedes --> [*]
-listarUsuarios --> [*]
-listarProveedores --> [*]
-listarProveedores --> [*]
-listarRouters --> [*]
-listarFirewalls --> [*]
-listarSwitches --> [*]
-listarVlanes --> [*]
-listarDispositivos --> [*]
-note on link 
- logout
-end note
+(*) --> "Read_Wan_States"
+    if "Wan_States" then
+      ->[activo] (*)
+ 
+    else
+      -->[inactivo] "Create_Notification"
+      --> (*)
+    endif
 
 @enduml

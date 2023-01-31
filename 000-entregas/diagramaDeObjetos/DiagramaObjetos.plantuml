@@ -12,7 +12,13 @@ object "Usuario : tecnico" as user {
     rol = "tecnico"
 }
 
-object "Red : red01" as red1 {
+object "Notificación : Alerta" as notificacion {
+    prioridad: "Alta"
+    estado: "inactivo"
+    mensaje: "El Sw01 se encuentra caido"
+}
+
+object "Wan : wan02" as red1 {
 nombreRed = "red01"
 telefonoAsociado = "123-123-123"
 }
@@ -108,8 +114,11 @@ object "Dispositivo : impresora" as DP1 {
     estado = "activo"
 }
 
-admin -d- red1: gestiona >
+admin -- red1: gestiona >
+admin -r- notificacion : notifica <
+user -l- notificacion : notifica <
 user -- red1
+notificacion -- red1: crea <
 red1 -- router: posee >
 router -- firewall: tiene >
 red1 -l- redIris: contiene >
