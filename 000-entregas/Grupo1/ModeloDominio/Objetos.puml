@@ -1,6 +1,6 @@
 @startuml Objetos
 object "Javier Ruiz : Alumno" as Alumno{
-    posibilidadAbandono: 100
+    porcentajeAbandono: 100
 }
 
 object "Gestion Sanitaria : Master" as Master {
@@ -30,7 +30,7 @@ SistemaGestionUniversitario -- RecopiladorDeDatos : Solicita datos <
 Plataforma1 -- RecopiladorDeDatos : Solicita datos <
 Plataforma2 -- RecopiladorDeDatos : Solicita datos <
 Plataforma3 -- RecopiladorDeDatos : Solicita datos <
-RecopiladorDeDatos --ProcesadoDeDatos : Envia datos >
+RecopiladorDeDatos --ProcesadoDeDatos : Solicita datos <
 ProcesadoDeDatos -d- N2  
 N2 -d- Interprete 
 
