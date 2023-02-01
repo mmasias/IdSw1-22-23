@@ -114,7 +114,7 @@ Repositorio para el proyecto de la asignatuea
 
 |    Prototipo de Interfaz de Usuario     |
 | :-------------------------------------: |
-| ![Imagen](images/interfazDeUsuario.PNG) |
+| ![Imagen](images/InterfazDeUsuario.PNG) |
 
 </br>
 
