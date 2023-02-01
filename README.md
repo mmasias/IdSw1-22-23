@@ -85,9 +85,9 @@ Repositorio para el proyecto de la asignatuea
 | Actualizar firewall | Actualizar usuario     |
 | Eliminar firewall   | Eliminar usuario       |
 | Listar firewalls    | Listar usuarios        |
-| Nuevo switch        | Perfil                 |
+| Nuevo switch        | Obtener usuario        |
 | Actualizar switch   | Notificación           |
-| Eliminar switch     |
+| Eliminar switch     | Perfil                 |
 | Listar switchs      |
 | Nueva vlan          |
 | Actualizar vlan     |
