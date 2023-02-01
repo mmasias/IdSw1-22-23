@@ -34,6 +34,8 @@ Repositorio para el proyecto de la asignatuea
 - Switch
 - Dispositivos conectados
 
+</br>
+
 # Modelo de Dominio
 
 |           Modelo de Dominio           |
