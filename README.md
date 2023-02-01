@@ -112,4 +112,82 @@ Repositorio para el proyecto de la asignatuea
 
 |    Prototipo de Interfaz de Usuario     |
 | :-------------------------------------: |
-| ![Imagen](images/InterfazDeUsuario.png) |
+| ![Imagen](images/interfazDeUsuario.PNG) |
+
+</br>
+
+## A continuación se presentan los prototipos de interfaz restantes que pertenecen a cada interfaz representada en la imagen anterior:
+
+|                  Inicio                  |
+| :--------------------------------------: |
+| ![Imagen](https://share.balsamiq.com/c/qmp7cvw1AAJAURXn51YuQ2.png) |
+
+</br>
+
+|            Proveedores             |
+| :---------------------------------------: |
+| ![Imagen](https://share.balsamiq.com/c/f6C1B32qWcrCW12trXJmqd.png) |
+| ![Imagen](https://share.balsamiq.com/c/tzaRYRHJo9fPx3Aqorr5hC.png) |
+| ![Imagen](https://share.balsamiq.com/c/58BeanW9cqhcWJDJkMjHu2.png) |
+
+</br>
+
+|            Redes             |
+| :---------------------------------: |
+| ![Imagen](https://share.balsamiq.com/c/tw2FvaJL3JyDnXdU158sdp.png) |
+| ![Imagen](https://share.balsamiq.com/c/d1f4wZAJrvThphGT7bWtX9.png) |
+| ![Imagen](https://share.balsamiq.com/c/kzzvMU2JJkCyUs5Yj9eJ4C.png) |
+
+</br>
+
+|             Parte de Red - Router             |
+| :---------------------------------------: |
+| ![Imagen](https://share.balsamiq.com/c/91h1J55qAteUKtMWJgAPVP.png) |
+| ![Imagen](https://share.balsamiq.com/c/47f1kaTukKVyMJyq3thR7V.png) |
+| ![Imagen](https://share.balsamiq.com/c/9x4eZFirKabLfa9uktNPPS.png) |
+
+</br>
+
+|             Parte de Red - Firewall             |
+| :-----------------------------------------: |
+| ![Imagen](https://share.balsamiq.com/c/9EW9Yu2XsDt3TEUNTwzzu7.png) |
+| ![Imagen](https://share.balsamiq.com/c/wC9nMjo8hmXoB51CXCewFD.png) |
+| ![Imagen](https://share.balsamiq.com/c/7FBgbTMYtrMgGYpqAyeyK5.png) |
+
+</br>
+
+|             Partes de Red - Switch             |
+| :---------------------------------------: |
+| ![Imagen](https://share.balsamiq.com/c/eAN3QMb9mHtZ4JT2xM2aHY.png) |
+| ![Imagen](https://share.balsamiq.com/c/s9BcouQXTTqPXRurwasLH5.png) |
+| ![Imagen](https://share.balsamiq.com/c/ao54V5mATsWqSJXmXJHA7i.png) |
+
+</br>
+
+|             Partes de una Red - Vlan             |
+| :-------------------------------------: |
+| ![Imagen](https://share.balsamiq.com/c/izjphcMMKoHt18NZvNi1No.png) |
+| ![Imagen](https://share.balsamiq.com/c/vozNTvCz64x2oL5f7bRGGv.png) |
+| ![Imagen](https://share.balsamiq.com/c/xftbNVJesjCBqmHUe99adZ.png) |
+
+</br>
+
+|             Partes de una Red - Dispositivo             |
+| :---------------------------------------------: |
+| ![Imagen](https://share.balsamiq.com/c/cMmCWpzKhGdCBvNEUxkvup.png) |
+| ![Imagen](https://share.balsamiq.com/c/aQxmkefmJGZza48CN4Ajn9.png) |
+| ![Imagen](https://share.balsamiq.com/c/vqXbY7ZVDETsZiA7aDKdYs.png) |
+
+</br>
+
+|          Usuarios          |
+| :-----------------------------: |
+| ![Imagen](https://share.balsamiq.com/c/72UcL2PLaJWuQ9SVwEVyCr.png) |
+| ![Imagen](https://share.balsamiq.com/c/aVbAZ4sRHhfj5y2P6DRkbK.png) |
+| ![Imagen](https://share.balsamiq.com/c/szEJ8Vdkya5mxb1TBzKXJ6.png) |
+
+</br>
+
+|          Perfil de Usuario           |
+| :----------------------------------: |
+| ![Imagen](https://share.balsamiq.com/c/6if66SbVvvhdRJPrR8iUgh.png) |
