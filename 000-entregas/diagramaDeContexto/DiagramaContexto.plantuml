@@ -1,0 +1,105 @@
+@startuml DiagramaDeContexto
+
+state fork_state <<fork>>
+
+[*] --> Inicio
+Inicio --> fork_state
+note on link 
+ login
+ sign in
+end note
+
+'Usuarios
+fork_state --> listarUsuarios
+listarUsuarios --> listarUsuarios
+note on link 
+ crear usuario
+ actualizar usuario
+ eliminar usuario
+end note
+
+'Proveedores
+fork_state --> listarProveedores
+listarProveedores --> listarProveedores
+note on link 
+ crear proveedor
+ actualizar proveedor
+ eliminar proveedor
+end note
+
+'Redes
+fork_state --> listarWans
+
+listarWans --> listarWans
+note on link 
+ crear wan
+ actualizar wan
+ eliminar wan
+end note
+listarWans --> Wan
+listarWans <-- Wan
+
+'Routers
+Wan --> listarRouters
+note on link 
+ crear router
+ actualizar router
+ eliminar router
+end note
+listarRouters --> listarRouters 
+listarRouters --> Wan
+
+'Firewall
+Wan --> listarFirewalls
+note on link 
+ crear firewall
+ actualizar firewall
+ eliminar firewall
+end note
+listarFirewalls --> listarFirewalls 
+listarFirewalls --> Wan
+
+'Switches
+Wan --> listarSwitches
+note on link 
+ crear switch
+ actualizar switch
+ eliminar switch
+end note
+listarSwitches --> listarSwitches 
+listarSwitches --> Wan
+
+'Vlanes
+Wan --> listarVlanes
+note on link 
+ crear vlan
+ actualizar vlan
+ eliminar vlan
+end note
+listarVlanes --> listarVlanes 
+listarVlanes --> Wan
+
+'Dispositivos
+Wan --> listarDispositivos
+note on link 
+ crear dispostivo
+ actualizar dispostivo
+ eliminar dispostivo
+end note
+listarDispositivos --> listarDispositivos 
+listarDispositivos --> Wan
+
+listarWans --> [*]
+listarUsuarios --> [*]
+listarProveedores --> [*]
+listarProveedores --> [*]
+listarRouters --> [*]
+listarFirewalls --> [*]
+listarSwitches --> [*]
+listarVlanes --> [*]
+listarDispositivos --> [*]
+note on link 
+ logout
+end note
+
+@enduml

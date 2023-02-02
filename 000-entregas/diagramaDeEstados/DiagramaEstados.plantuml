@@ -1,64 +1,12 @@
-@startuml DiagramaDeEstados
+@startuml DiagramDeEstadosNotificacion
 
-state fork_state <<fork>>
-
-state NONAME_REDES as " "
-state NONAME_USUARIOS as " "
-state NONAME_DISPOSITIVOS as " "
-state NONAME_ROUTERS as " "
-state NONAME_PROVEEDORES as " "
-state NONAME_SWITCHES as " "
-state NONAME_UBICACION as " "
-state NONAME_VLANES as " "
-state NONAME_FIREWALL as " "
-
-[*] --> Inicio
-Inicio --> fork_state
-
-'Usuarios
-fork_state --> NONAME_USUARIOS: listarUsuarios
-NONAME_USUARIOS --> NONAME_USUARIOS: gestionar usuarios
-NONAME_USUARIOS -up-> Inicio
-'Redes
-fork_state --> NONAME_REDES: listarRedes
-NONAME_REDES --> NONAME_REDES: gestionar redes
-NONAME_REDES --> Red: AbrirRed
-NONAME_REDES <-r- Red
-NONAME_REDES -up-> Inicio
-
-'Proveedores
-Red --> NONAME_PROVEEDORES: listarProveedores
-NONAME_PROVEEDORES --> NONAME_PROVEEDORES: gestionar proveedores 
-NONAME_PROVEEDORES --> Red
-
-'Ubicacion
-Red --> NONAME_UBICACION: verUbicacion
-NONAME_UBICACION --> NONAME_UBICACION: gestionar ubicacion 
-NONAME_UBICACION --> Red
-
-'Routers
-Red --> NONAME_ROUTERS: listarRouters
-NONAME_ROUTERS --> NONAME_ROUTERS: gestionar routers 
-NONAME_ROUTERS --> Red
-
-'Firewall
-NONAME_ROUTERS --> NONAME_FIREWALL: listarFirewalls
-NONAME_FIREWALL --> NONAME_FIREWALL: gestionar firewalls 
-NONAME_FIREWALL --> NONAME_ROUTERS
-
-'Switches
-NONAME_FIREWALL --> NONAME_SWITCHES: listarSwitches
-NONAME_SWITCHES --> NONAME_SWITCHES: gestionar switches 
-NONAME_SWITCHES --> NONAME_FIREWALL
-
-'Vlanes
-NONAME_SWITCHES --> NONAME_VLANES: listarVlanes
-NONAME_VLANES --> NONAME_VLANES: gestionar vlanes 
-NONAME_VLANES --> NONAME_SWITCHES
-
-'Dispositivos
-NONAME_VLANES --> NONAME_DISPOSITIVOS: listarDispositivos
-NONAME_DISPOSITIVOS --> NONAME_DISPOSITIVOS: gestionar dispositivos 
-NONAME_DISPOSITIVOS --> NONAME_VLANES
+(*) --> "Read_Wan_States"
+    if "Wan_States" then
+      ->[activo] (*)
+ 
+    else
+      -->[inactivo] "Create_Notification"
+      --> (*)
+    endif
 
 @enduml

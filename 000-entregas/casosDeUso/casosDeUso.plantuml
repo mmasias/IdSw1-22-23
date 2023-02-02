@@ -1,0 +1,63 @@
+@startuml CasosDeUso
+
+left to right direction
+
+package Sistema {
+    actor Administrador
+    actor TecnicosInternos
+    actor TecnicosExternos
+
+    usecase ListarUsuarios
+    usecase ListarProveedores
+    usecase ListarRedes
+    usecase Perfil
+
+    package Usuario {
+        usecase CrearUsuario
+        usecase ActualizarUsuario
+        usecase EliminarUsuario
+        usecase ObtenerUsuario
+    }
+
+    Administrador -l-> Usuario
+
+    package Wan {
+        usecase CrearWan
+        usecase ActualizarWan
+        usecase EliminarWan
+        usecase ObtenerWan
+    }
+
+    Administrador --> Wan
+    TecnicosInternos --> Wan
+
+    package Proveedor {
+        usecase CrearProveedor
+        usecase ActualizarProveedor
+        usecase EliminarProveedor
+        usecase ObtenerProveedor
+    }
+
+    Administrador --> Proveedor
+    TecnicosInternos --> Proveedor
+
+    package Notificacion {
+        usecase ObtenerNotificacion
+    }
+
+    Notificacion -l-> Perfil
+
+    Administrador --> ListarUsuarios
+    Administrador --> ListarRedes
+    Administrador --> ListarProveedores 
+    Administrador -l-> Perfil 
+
+    TecnicosInternos -u-> ListarProveedores
+    TecnicosInternos -u-> ListarRedes
+    TecnicosInternos -u-> Perfil
+    TecnicosExternos -u-> ListarRedes
+    TecnicosExternos -u-> Perfil
+
+}
+
+@enduml

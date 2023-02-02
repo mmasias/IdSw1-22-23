@@ -1,21 +1,22 @@
 @startuml ModeloDeDominio
 class Usuario
-class Red
+class Wan
 class Router
 class Ubicacion
 class Firewall
 class Switch
 class Dispositivo
-class Servicio
+class Notificacion
 
-Usuario --o Red : gestiona >
+Usuario --o Wan : gestiona >
 
 
-Red *-r- Ubicacion : posee >
-Red *-- Router : contiene >
+Wan *-l- Ubicacion : posee >
+Wan *-r- Proveedor : tiene >
+Wan *-- Router : contiene >
 
-Red *-l- Servicio : tiene >
-Servicio *-l- Proveedor : tiene >
+Notificacion -l-* Usuario : Notifica >
+Notificacion *-- Wan : Crea <
 
 Router *-- Firewall : posee >
 Firewall *-- Switch : gestiona >

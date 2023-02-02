@@ -1,0 +1,41 @@
+@startuml CasosDeUsoRed
+left to right direction
+
+package Wan {
+    package Router {
+        usecase CrearRouter
+        usecase ActualizarRouter
+        usecase EliminarRouter
+        usecase ObtenerRouter
+    }
+
+    package Firewall {
+        usecase CrearFirewall
+        usecase ActualizarFirewall
+        usecase EliminarFirewall
+        usecase ObtenerFirewall
+    }
+
+    package Switch {
+        usecase CrearSwitch
+        usecase ActualizarSwitch
+        usecase EliminarSwitch
+        usecase ObtenerSwitch
+    }
+
+    package Vlan {
+        usecase CrearVlan
+        usecase ActualizarVlan
+        usecase EliminarVlan
+        usecase ObtenerVlan
+    }
+
+    package Dispositivo {
+        usecase CrearDispositivo
+        usecase ActualizarDispositivo
+        usecase EliminarDispositivo
+        usecase ObtenerDispositivo
+    }
+}
+
+@enduml
