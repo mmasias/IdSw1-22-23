@@ -4,6 +4,7 @@
 class Editorial
 class Volumen 
 class Numero
+class BolsaDeArticulos
 abstract class Persona
 class Usuario
 
@@ -18,15 +19,18 @@ class Autor extends Usuario {
     -ORCID: string
 }
 
+
+
 Usuario -l-|> Persona
+Revista *-- BolsaDeArticulos
+BolsaDeArticulos *-- Articulo
+Editorial  *--   Revista
+Revista  *--  Volumen
+Volumen  *--  Numero
+Numero  *--  Articulo
+Articulo  *--  Autor
+Revista *--  Usuario
 
-Editorial "1 " *--  "n " Revista
-Revista "1 " *-- "n " Volumen
-Volumen "1 " *-- "n " Numero
-Numero "1 " *-- "n " Articulo
-Articulo "1 " *--  " n" Autor
-Revista"1 " *--  " n" Usuario
-
-Editorial "1 " *--  " n" Usuario
+Editorial  *--  Usuario
 
 @enduml
