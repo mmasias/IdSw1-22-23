@@ -146,9 +146,9 @@ Repositorio para el proyecto de la asignatuea
 
 # Prototipos de Interfaz de Usuario
 
-|    Prototipo de Interfaz de Usuario     |
-| :-------------------------------------: |
-| ![Imagen](images/interfazDeUsuario.png) |
+|   Prototipo de Interfaz de Usuario    |
+| :-----------------------------------: |
+| ![Imagen](images/InterfazUsuario.png) |
 
 </br>
 
