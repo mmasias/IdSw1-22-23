@@ -72,7 +72,7 @@ Se han identificado 6 actores y 24 casos de uso y se han clasificado en casos de
   
 ![](EncontrarCasosDeUso/images/Revista.png)
 <br/>
-[Código](EncontrarCasosDeUso/articulo.puml)  
+[Código](EncontrarCasosDeUso/revista.puml)  
 
 </details>
 
