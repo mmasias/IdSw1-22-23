@@ -1,0 +1,29 @@
+@startuml Detalle Caso de Uso Ver Revista
+
+State VerRevista {
+
+    State VerNumero 
+    [*] ---> VerNumero
+    note on link
+        **El sistema muestra **
+        * Los numeros por volumen de la revista
+        * Informacion y descripcion de la revista
+        
+        **El sistema permite **
+        * Acceder a cada numero de la revista
+
+    end note
+
+}
+
+[*] --> VerRevista
+note on link
+    **Usuario Requiere **
+    Visualizar Revista
+end note
+
+
+
+
+
+@enduml
