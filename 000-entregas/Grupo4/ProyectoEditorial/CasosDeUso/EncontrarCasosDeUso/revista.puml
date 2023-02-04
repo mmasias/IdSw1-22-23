@@ -10,7 +10,7 @@ package Revista{
     actor Usuario as us
 
     usecase "Crear revista" as create
-    usecase "Leer revista" as read
+    usecase "Ver revista" as read
     usecase "Modificar revista" as update
     usecase "Eliminar revista" as delete
 }
@@ -21,7 +21,7 @@ tr --|> us
 rv --|> us
 ed --|> us
 
-us ---> read
+us --> read
 gs ---> create
 gs ---> update
 gs ---> delete

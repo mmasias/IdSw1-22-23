@@ -1,14 +1,49 @@
-@startuml Casos de uso Artículo
+@startuml Casos de uso Articulo
 
-actor Gestor
-actor Autor
-actor Traductor
-actor Revisor
-actor Editor
-actor Usuario
+left to right direction
+package Articulo{
+    actor Gestor as gs
+    actor Autor as au
+    actor Traductor as tr
+    actor Editor as ed
+    actor Usuario as us
+    actor Revisor as rv
 
-package Revista {
-
+    usecase "Públicar artículo" as create
+    usecase "Postular artículo" as postular
+    usecase "Modificar artículo" as update
+    usecase "Eliminar artículo" as delete
+    usecase "Aprobar artículo" as aprobar
+    usecase "Rechazar artículo" as rechazar
+    usecase "Revisar artículo" as revisar
+    usecase "Ver artículo" as read
+    usecase "Traducir artículo" as traducir
 }
+
+gs -u-|> us
+au -u-|> us
+tr -u-|> us
+rv -u-|> us
+ed -u-|> us
+
+us ---> read
+
+au ----> postular
+tr ----> traducir
+rv ----> revisar
+ed ----> update
+ed ----> delete
+gs ----> create
+gs ----> delete
+
+(revisar) <.. (aprobar) : <<extends>>
+(revisar) <.. (rechazar) : <<extends>>
+(create) ..> (read) : include>>
+(postular) ..> (read) :<<include>>
+(aprobar) ..> (read) : <<include>>
+(rechazar) ..> (read) : <<include>>
+(traducir) ..> (read) : <<include>>
+(update) ..> (read) : <<include>>
+
 
 @enduml

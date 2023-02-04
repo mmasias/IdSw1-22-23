@@ -2,7 +2,7 @@
 
 ## Encontrar actores y casos de uso 
 
-Se han identificado 6 actores y 18 casos de uso y se han clasificado en casos de uso relacionados con Sesión, Revista, Artículo, Volúmen, Número.
+Se han identificado 6 actores y 24 casos de uso y se han clasificado en casos de uso relacionados con Sesión, Revista, Artículo, Volúmen, Número.
 
 
 ### Actores
@@ -26,12 +26,14 @@ Se han identificado 6 actores y 18 casos de uso y se han clasificado en casos de
 
 |                   |                    |                   | 
 | ----------------- | ------------------ | ----------------- |
-| Iniciar sesión    | Finalizar sesión   | Publicar artículo |
-| Postular artículo | Modificar artículo | Eliminar artículo |
+| Iniciar sesión    | Finalizar sesión   | Postular artículo |
+| Publicar artículo | Modificar artículo | Eliminar artículo |
 | Aprobar artículo  | Rechazar artículo  | Revisar artículo  |
-| Traducir artículo | Crear Volumen      | Modificar Volumen |
-| Eliminar Volumen  | Crear número       | Modificar número  |
-| Eliminar número   | Publicar número    | Leer revista      |
+| Traducir artículo | Ver artículo       | Modificar Volumen |
+| Eliminar Volumen  | Crear Volumen      | Listar Números    |
+| Modificar número  | Eliminar número    | Publicar número   |
+| Crear número      | Ver Numero         | Ver Revista       |
+| Eliminar Revista  | Modificar Revista  | Crear Revista     |
 
 </div>
 
@@ -39,37 +41,42 @@ Se han identificado 6 actores y 18 casos de uso y se han clasificado en casos de
 ### Casos de Uso Por paquetes
 
 <details>
-  <summary>Sesión</summary>
-  
-![](EncontrarCasosDeUso/images/Sesion.png) 
-
-</details>
-
-<details>
-  <summary>Revista</summary>
-  
-![](EncontrarCasosDeUso/images/Revista.png)  
-
-</details>
-
-<details>
   <summary>Artículo</summary>
   
-![](EncontrarCasosDeUso/images/Artículo.png)  
-
-</details>
-
-<details>
-  <summary>Volúmen</summary>
-  
-![](EncontrarCasosDeUso/images/Volúmen.png)  
+![](EncontrarCasosDeUso/images/Articulo.png)
+[Código](EncontrarCasosDeUso/articulo.puml)  
 
 </details>
 
 <details>
   <summary>Número</summary>
   
-![](EncontrarCasosDeUso/images/Número.png)  
+![](EncontrarCasosDeUso/images/Numero.png)
+[Código](EncontrarCasosDeUso/numero.puml)  
+
+</details>
+
+<details>
+  <summary>Volúmen</summary>
+  
+![](EncontrarCasosDeUso/images/Volumen.png)
+[Código](EncontrarCasosDeUso/volumen.puml)  
+
+</details>
+
+<details>
+  <summary>Revista</summary>
+  
+![](EncontrarCasosDeUso/images/Revista.png)
+[Código](EncontrarCasosDeUso/articulo.puml)  
+
+</details>
+
+<details>
+  <summary>Sesión</summary>
+  
+![](EncontrarCasosDeUso/images/Sesion.png)
+[Código](EncontrarCasosDeUso/sesion.puml) 
 
 </details>
 
@@ -80,8 +87,8 @@ Se han identificado 6 actores y 18 casos de uso y se han clasificado en casos de
 
 |Diagrama de contexto
 |:-:
-|![](images/diagramaContexto.png)
-|[Código](diagramaContexto.puml)
+|![](EncontrarCasosDeUso/images/DiagramaDeContexto.png)
+|[Código](EncontrarCasosDeUso/DiagramaDeContexto.puml)
 
 </div>
 

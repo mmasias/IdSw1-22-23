@@ -25,7 +25,8 @@ El modelo del dominio nos da un contexto del proyecto e identifica las entidades
   
 |         Diagrama de clases         
 | :-: 
-| ![](images/modeloDelDominio.png) 
+| ![](images/modeloDelDominio.png)
+| [Código](modeloDelDominio.puml) 
 
 </details>
 
@@ -55,6 +56,7 @@ El modelo del dominio nos da un contexto del proyecto e identifica las entidades
 | Diagrama de estados Publicación de un número
 | :-: 
 | ![](images/diagramaDeEstadosProcesoEditorial.png)
+| [Código](diagramaDeEstadosProcesoEditorial.puml) 
 
 
 </details>
@@ -67,10 +69,12 @@ El modelo del dominio nos da un contexto del proyecto e identifica las entidades
 |Diagrama de objetos Estado Inicial
 |:-:
 |![](images/objetosDelDominio_EstadoInicial.png)
+| [Código](objetosDelDominio_EstadoInicial.puml) 
 
 |Diagrama de objetos Estado Avanzado
 |:-:
 |![](images/objetosDelDominio_EstadoAvanzado.png)
+| [Código](objetosDelDominio_EstadoAvanzado.puml) 
 
 
 </details>
