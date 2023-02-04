@@ -1,0 +1,27 @@
+@startuml Detalle Caso de Uso Ver Numero
+
+State VerNumero {
+
+    State  VerArticulo  
+    [*] ---> VerArticulo
+    note on link
+        **El sistema muestra **
+        * La informacion del numero
+        * Los articulos relacionados al numero
+        **El sistema permite **
+        * Visualizar el articulo    
+    end note
+
+}
+
+[*] --> VerNumero
+note on link
+    **Usuario Requiere **
+    Visualizar Numero
+end note
+
+
+
+
+
+@enduml
