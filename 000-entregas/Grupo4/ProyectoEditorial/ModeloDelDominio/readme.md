@@ -1,5 +1,5 @@
 ## Glosario
-
+|                      | Descripción                                                                                                                                                |
 | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Persona**          | Individuo que accede a la plataforma.                                                                                                                      |
 | **Usuario**          | Persona registrada con cualquier tipo de rol de los permitidos por el programa; sea autor, editor, gestor, traductor o revisor.                            |
@@ -8,9 +8,9 @@
 | **Volumen**          | Divide la revista por años, conformados por uno o dos números cuando más.                                                                                  |
 | **Numero**           | Cada sección de un volumen de la revista ofrecida a los usuarios, normalmente dos anuales.                                                                 |
 | **Articulo**         | Conforman los números, pueden ser de temas diferentes pero con una temática general entre ellos.                                                           |
-| **BolsaDeArticulos** |                                               |
+| **BolsaDeArticulos** | Es el lugar donde se almacenan todos los artículos que se encuentran aprobados y pendientes de agregar a un número                                         |
 | **Autor**            | Usuario que postula un artículo para su publicación.                                                                                                       |
-| **Traducción**       |                                                  |
+| **Traducción**       | Es una versión de un artículo en otro idioma                                                                                                               |
 
 <hr>
 
