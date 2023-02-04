@@ -44,6 +44,7 @@ Se han identificado 6 actores y 24 casos de uso y se han clasificado en casos de
   <summary>Artículo</summary>
   
 ![](EncontrarCasosDeUso/images/Articulo.png)
+<br/>
 [Código](EncontrarCasosDeUso/articulo.puml)  
 
 </details>
@@ -52,6 +53,7 @@ Se han identificado 6 actores y 24 casos de uso y se han clasificado en casos de
   <summary>Número</summary>
   
 ![](EncontrarCasosDeUso/images/Numero.png)
+<br/>
 [Código](EncontrarCasosDeUso/numero.puml)  
 
 </details>
@@ -60,6 +62,7 @@ Se han identificado 6 actores y 24 casos de uso y se han clasificado en casos de
   <summary>Volúmen</summary>
   
 ![](EncontrarCasosDeUso/images/Volumen.png)
+<br/>
 [Código](EncontrarCasosDeUso/volumen.puml)  
 
 </details>
@@ -68,6 +71,7 @@ Se han identificado 6 actores y 24 casos de uso y se han clasificado en casos de
   <summary>Revista</summary>
   
 ![](EncontrarCasosDeUso/images/Revista.png)
+<br/>
 [Código](EncontrarCasosDeUso/articulo.puml)  
 
 </details>
@@ -76,6 +80,7 @@ Se han identificado 6 actores y 24 casos de uso y se han clasificado en casos de
   <summary>Sesión</summary>
   
 ![](EncontrarCasosDeUso/images/Sesion.png)
+<br/>
 [Código](EncontrarCasosDeUso/sesion.puml) 
 
 </details>
