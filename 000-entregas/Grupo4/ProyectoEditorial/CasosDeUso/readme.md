@@ -80,7 +80,7 @@ Se han identificado 6 actores y 18 casos de uso y se han clasificado en casos de
 
 |Diagrama de contexto
 |:-:
-|![](images/Contexto.png)
+|![](images/diagramaContexto.png)
 |[Código](diagramaContexto.puml)
 
 </div>

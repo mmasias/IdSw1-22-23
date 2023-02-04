@@ -21,7 +21,7 @@ tr --|> us
 rv --|> us
 ed --|> us
 
-us --> read
+us ---> read
 gs ---> create
 gs ---> update
 gs ---> delete
