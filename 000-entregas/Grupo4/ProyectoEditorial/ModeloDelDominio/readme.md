@@ -1,3 +1,6 @@
+
+El modelo del dominio nos da un contexto del proyecto e identifica las entidades que dan valor e intervienen en el mismo.
+
 ## Glosario
 |                      | Descripción                                                                                                                                                |
 | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -28,20 +31,23 @@
 <details>
   <summary>Diagrama de estados</summary>
 
+    Describe el proceso que sigue un número perteneciente al volumen de una revista antes de ser publicado.
+
+
   <div align="center">
 
 | Estado                              | Descripción                                                                                           |
 | ----------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| **Artículo Postulado**              | El alumno esta matriculado en el máster                                                               |
-| **Artículo Pendiente de Revisar**   | El alumno toma el curso mientras pasa el tiempo                                                       |
-| **Artículo Revisado**               | Alumno con baja interacción y compromiso                                                              |
-| **Artículo Aprobado**               | Alumno con alta interacción y compromiso                                                              |
-| **Artículo Rechazado**              | Alumno deja la institución                                                                            |
-| **Artículo editado**                | Sistema solicitando datos de alumnos                                                                  |
-| **Artículo Eliminado**              | Sistema procesando los datos de los alumnos                                                              |
-| **Artículo Pendiente de Publicar**  | Sistema interpretando los datos procesados y agrupándolos en clústers                                    |
-| **Número Maquetado**                | Sistema realizando acciones para que el alumno no abandone, esto también puede realizarse fuera del sistema |
-| **Número Traducido**                | Sistema realizando acciones para que el alumno no abandone, esto también puede realizarse fuera del sistema |
+| **Artículo Postulado**              | El artículo ya se encuentra postulado por el autor.                                                   |
+| **Artículo Pendiente de Revisar**   | El artículo se encuentra pendiente de ser revisado por el revisor.                                    |
+| **Artículo Revisado**               | El artículo ya ha sido revisado por el revisor.                                                       |
+| **Artículo Aprobado**               | El artículo cumplió todos los parámetros y fue aprobado.                                              |
+| **Artículo Rechazado**              | El artículo no fue aprobado.                                                                          |
+| **Artículo editado**                | El artículo fue editado para volver a pasar todo el proceso de aceptación.                            |
+| **Artículo Eliminado**              | El autor tomó la decición de eliminar su artículo y no volver a postularlo.                           |
+| **Artículo Pendiente de Publicar**  | El artículo fue aprobado y se encuentra en la bolsa de artículos pendiente de publicación.            |
+| **Número Maquetado**                | Se conformó un número y fue maquetado con los artículos correspondientes.                             |
+| **Número Traducido**                | Todos los artículos del número fueron traducidos.                                                     |
 
 </div>
   
@@ -53,17 +59,14 @@
 </details>
 
 <details>
-  <summary>Diagrama de objetos Estado Inicial</summary>
+  <summary>Diagrama de objetos</summary>
   
+Brinda una imágen de cómo se puede comportar la aplicación.
+
 |Diagrama de objetos Estado Inicial
 |:-:
 |![](images/objetosDelDominio_EstadoInicial.png)
 
-</details>
-
-<details>
-  <summary>Diagrama de objetos Estado Avanzado</summary>
-  
 |Diagrama de objetos Estado Avanzado
 |:-:
 |![](images/objetosDelDominio_EstadoAvanzado.png)
