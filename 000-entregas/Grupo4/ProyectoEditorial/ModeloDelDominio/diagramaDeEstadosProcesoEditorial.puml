@@ -47,7 +47,8 @@
         
 
         Maquetado --> Traducido: Traducir Artículos del número
-        Traducido --> [*] : Publicar Número 
+        Traducido --> Publicado : Publicar Número 
+        Publicado --> [*]
          
     }
         
