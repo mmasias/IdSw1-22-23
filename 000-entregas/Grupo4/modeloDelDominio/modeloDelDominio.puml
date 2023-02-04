@@ -22,15 +22,16 @@ class Autor extends Usuario {
 
 
 Usuario -l-|> Persona
-Revista *-- BolsaDeArticulos
-BolsaDeArticulos *-- Articulo
-Editorial  *--   Revista
-Revista  *--  Volumen
-Volumen  *--  Numero
-Numero  *--  Articulo
-Articulo  *--  Autor
-Revista *--  Usuario
+Revista "1 " *-- "1  " BolsaDeArticulos
+BolsaDeArticulos "1 " *-- "n " Articulo
+Editorial "1 " *-- "n "  Revista
+Revista "1 " *-- "n " Volumen
+Volumen "1 " *-- "n " Numero
+Numero "1 " *-- "n " Articulo
+Articulo "1 " *-- "n " Autor
+Revista "1 " *-- "n" Usuario
+Articulo "1 " *-- "n " Traducciones
 
-Editorial  *--  Usuario
+Editorial "1 " *-- "n " Usuario
 
 @enduml

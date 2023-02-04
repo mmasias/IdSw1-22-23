@@ -2,8 +2,8 @@
 
 |Diagrama de clases|Diagrama de Estados|
 |:-:|:-:|
-|![Imagen](modeloDelDominio/modeloDelDominio.png)|![Imagen](diagramaDeEstados/diagramaDeEstados.png)
-|[Código](modeloDelDominio/modeloDelDominio.puml)|[Código](diagramaDeEstados/diagramaDeEstados.puml)
+|![Imagen](modeloDelDominio/modeloDelDominio.png)|![Imagen](diagramaDeEstados/diagramaDeEstadosProcesoEditorial.png)
+|[Código](modeloDelDominio/modeloDelDominio.puml)|[Código](diagramaDeEstados/diagramaDeEstadosProcesoEditorial.puml)
 |Diagrama de Casos de Uso|Diagrama de Secuencia de Casos de Uso|
 |![Imagen](casosDeUso/casosDeUso.png)|![Imagen](secuenciaCasosDeUso/secuenciaCasosDeUso.png)
 |[Código](casosDeUso/casosDeUso.puml)|[Código](secuenciaCasosDeUso/secuenciaCasosDeUso.puml)
