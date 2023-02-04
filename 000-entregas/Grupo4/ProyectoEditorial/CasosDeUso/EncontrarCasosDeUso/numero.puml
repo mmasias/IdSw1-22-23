@@ -1,0 +1,12 @@
+@startuml Casos de uso Número
+
+actor Gestor
+actor Autor
+actor Traductor
+actor Revisor
+actor Editor
+actor Usuario
+
+
+
+@enduml

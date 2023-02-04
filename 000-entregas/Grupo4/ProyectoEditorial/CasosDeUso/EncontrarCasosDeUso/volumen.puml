@@ -1,0 +1,14 @@
+@startuml Casos de uso Volúmen
+
+actor Gestor
+actor Autor
+actor Traductor
+actor Revisor
+actor Editor
+actor Usuario
+
+package Revista {
+
+}
+
+@enduml
