@@ -298,11 +298,11 @@ Se han identificado 6 actores y 24 casos de uso y se han clasificado en casos de
   <summary>Paquete Revista</summary>
 
   <details>
-    <summary>Leer Revista</summary>
+    <summary>Ver Revista</summary>
     
-  ![](DetallarCasosDeUso/images/LeerRevista.png)
+  ![](DetallarCasosDeUso/images/VerRevista.png)
   <br/>
-  [Código](DetallarCasosDeUso/LeerRevista.puml) 
+  [Código](DetallarCasosDeUso/VerRevista.puml) 
 
   </details>
 

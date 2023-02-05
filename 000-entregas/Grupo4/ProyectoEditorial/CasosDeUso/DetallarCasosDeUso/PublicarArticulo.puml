@@ -1,0 +1,45 @@
+@startuml Detalle Caso de Uso Publicar Artículo
+
+State PublicarArtículo {
+
+    State  " " as vacio1  
+    State  "VerArticulo" as vacio2  
+    State  " " as vacio3 
+
+    [*] ---> vacio1
+    note on link
+        **El sistema muestra **
+        *Artículo a Publicar
+        **El sistema requiere **
+        * Confirmación de Publicación
+        * Numero al que pertenece el Artículo
+    end note
+
+    vacio1 -[#Green]-> vacio2
+    note on link
+        **El gestor ingresa**
+        *Número al que pertenece el Artículo
+        **El gestor confirma publicación del Artículo **
+        **El sistema muestra**
+        *Artículo Publicado
+    end note
+
+    vacio1 -[#Red]-> vacio3
+    note on link
+        **El gestor cancela**
+        **El sistema muestra **
+        *Artículo que no se publicó
+    end note
+
+
+}
+
+[*] --> PublicarArtículo
+note on link
+    **Gestor Requiere ** 
+    Publicar Artículo
+end note
+
+PublicarArtículo --> [*]
+
+@enduml

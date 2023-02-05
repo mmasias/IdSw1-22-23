@@ -1,0 +1,45 @@
+@startuml Detalle Caso de Uso Publicar Número
+
+State PublicarNúmero {
+
+    State  " " as vacio1  
+    State  "VerNumero" as vacio2  
+    State  " " as vacio3 
+
+    [*] ---> vacio1
+    note on link
+        **El sistema muestra **
+        *Número a Publicar
+        **El sistema requiere **
+        * Confirmación de Publicación
+        * Volumen al que pertenece el Número
+    end note
+
+    vacio1 -[#Green]-> vacio2
+    note on link
+        **El gestor ingresa**
+        *Volumen al que pertenece el Número
+        **El gestor confirma publicación del Número **
+        **El sistema muestra**
+        *Número Publicado
+    end note
+
+    vacio1 -[#Red]-> vacio3
+    note on link
+        **El gestor cancela**
+        **El sistema muestra **
+        *Número que no se publicó
+    end note
+
+
+}
+
+[*] --> PublicarNúmero
+note on link
+    **Gestor Requiere ** 
+    Publicar Número
+end note
+
+PublicarNúmero --> [*]
+
+@enduml

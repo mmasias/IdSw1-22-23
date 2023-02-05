@@ -1,6 +1,6 @@
-@startuml Detalle Caso de Uso Crear Revista
+@startuml Detalle Caso de Uso Crear Volumen
 
-State CrearRevista {
+State CrearVolumen {
 
     State " " as vacio2 <<choice>>
     State " " as vacio3
@@ -9,49 +9,39 @@ State CrearRevista {
     [*] ---> vacio2
     note on link
         **El sistema requiere **
-        * Revista
-            * Nombre 
-            * Descripción 
-            * Tema 
-            * Logo
+        * Volumen
+            * Año
         **El sistema muestra **
-        * Formulario de creación de revista
+        * Formulario de creación de Volumen
         * Cancelar creacion
-
     end note
     
 
     vacio2 -[#green]-> VerRevista 
     note on link
         **El gestor ingresa **
-        * Revista
-            * Nombre 
-            * Descripción 
-            * Tema 
-            * Logo
+        * Volumen
+            * Año
         **El sistema valida **
-        * Revista
-            * Nombre 
-            * Descripción 
-            * Tema 
-            * Logo
+        * Volumen
+            * Año
     end note
     vacio2 -l[#red]-> vacio3
     note on link
         **El gestor requiere **
-        * Cancelar creación de la revista
+        * Cancelar creación del Volumen
     end note    
     vacio3 -[#red]-> [*]
 
 }
 
-[*] --> CrearRevista
+[*] --> CrearVolumen
 note on link
     **Gestor Requiere **
-    Crear Revista
+    Crear Volumen
 end note
 
-CrearRevista --> [*]
+CrearVolumen --> [*]
 
 
 

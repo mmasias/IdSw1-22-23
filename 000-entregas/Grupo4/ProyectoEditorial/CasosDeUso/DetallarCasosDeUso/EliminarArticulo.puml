@@ -1,0 +1,50 @@
+@startuml Detalle Caso de Uso Eliminar Artículo
+
+State  " " as vacio4  
+State  " " as vacio5 
+
+State EliminarArtículo {
+
+    State  " " as vacio1  
+    State  "VerNumero" as vacio2  
+    State  " " as vacio3 
+
+    [*] ---> vacio1
+    note on link
+        **El sistema muestra **
+        *Artículo a Eliminar
+        **El sistema requiere **
+        * Confirmación de Eliminación
+    end note
+
+    vacio1 -[#Green]-> vacio2
+    note on link
+        **El usuario confirma**
+        **El sistema muestra**
+        *Numero de Artículo Eliminado
+    end note
+
+    vacio1 -[#Red]-> vacio3
+    note on link
+        **El usuario cancela**
+        **El sistema muestra **
+        *Artículo que no se Eliminó
+    end note
+
+
+}
+
+vacio4 --> EliminarArtículo
+note on link
+    **Editor Requiere ** 
+    Eliminar Artículo
+end note
+vacio5 --> EliminarArtículo
+note on link
+    **Gestor Requiere ** 
+    Eliminar Artículo
+end note
+
+EliminarArtículo --> [*]
+
+@enduml

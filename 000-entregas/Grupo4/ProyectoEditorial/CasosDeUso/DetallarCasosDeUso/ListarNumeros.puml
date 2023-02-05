@@ -1,0 +1,25 @@
+@startuml Detalle Caso de Uso Listar Numeros
+
+State ListarNumeros {
+
+    State  VerNumero  
+    [*] ---> VerNumero
+    note on link
+        **El sistema muestra **
+        * Todos los Numeros y su volumen correspondiente 
+        de la revista
+        **El sistema permite **
+        * Visualizar los detalles de un numero en específico
+    end note
+
+}
+
+[*] --> ListarNumeros
+note on link
+    **Usuario Requiere **
+    Visualizar Numero
+end note
+
+ListarNumeros --> [*]
+
+@enduml

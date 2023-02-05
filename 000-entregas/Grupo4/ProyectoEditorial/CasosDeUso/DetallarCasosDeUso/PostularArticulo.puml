@@ -1,0 +1,38 @@
+@startuml Detalle Caso de Uso Postular Artículo
+
+State PostularArtículo {
+
+    State  " " as vacio1  
+    State  "VerArticulo" as vacio2  
+
+    [*] ---> vacio1
+    note on link
+        **El sistema muestra **
+        * Espacio para escribir Artículo
+        * Espacio para subir Archivo
+        **El sistema requiere **
+        * Escribir Artículo
+        * Subir Archivo
+    end note
+
+    vacio1 --> vacio2
+    note on link
+        **El autor ingresa**
+        * Artículo
+        * Archivo
+        **El sistema muestra**
+        * Artículo postulado
+    end note
+
+
+}
+
+[*] --> PostularArtículo
+note on link
+    **Autor Requiere ** 
+    Postular Artículo
+end note
+
+PostularArtículo --> [*]
+
+@enduml

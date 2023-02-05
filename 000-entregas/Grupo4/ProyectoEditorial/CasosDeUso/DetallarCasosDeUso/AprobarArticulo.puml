@@ -1,0 +1,22 @@
+@startuml Detalle Caso de Uso Aprobar Artículo
+
+State AprobarArticulo {
+
+    State  "VerArticulo" as vacio  
+    [*] ---> vacio
+    note on link
+        **El sistema muestra **
+        *El artículo aprobado
+    end note
+
+}
+
+[*] --> AprobarArticulo
+note on link
+    **Revisor Requiere **
+    Aprobar Artículo
+end note
+
+AprobarArticulo --> [*]
+
+@enduml

@@ -1,0 +1,43 @@
+@startuml Detalle Caso de Uso Modificar Artículo
+
+State ModificarArtículo {
+
+    State  " " as vacio  
+    State  "VerArticulo" as vacio2  
+    State  "VerArticulo" as vacio3 
+
+    [*] ---> vacio
+    note on link
+        **El sistema muestra **
+        *Artículo a Modificar
+        *Campo disponibles para modificar
+        **El sistema requiere **
+        * Realizar cambios
+    end note
+
+    vacio -[#Green]-> vacio2
+    note on link
+        **El editor realiza cambios **
+        **El sistema muestra **
+        *Artículo modificado
+    end note
+
+    vacio -[#Red]-> vacio3
+    note on link
+        **El editor no realiza cambios **
+        **El sistema muestra **
+        *Artículo sin modificar
+    end note
+
+
+}
+
+[*] --> ModificarArtículo
+note on link
+    **Editor Requiere **
+    Modificar Artículo
+end note
+
+ModificarArtículo --> [*]
+
+@enduml

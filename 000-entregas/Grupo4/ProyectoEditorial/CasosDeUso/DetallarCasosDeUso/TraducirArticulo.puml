@@ -1,0 +1,43 @@
+@startuml Detalle Caso de Uso Traducir Artículo
+
+State TraducirArtículo {
+
+    State  " " as vacio  
+    State  "VerArticulo" as vacio2  
+    State  " " as vacio3 
+
+    [*] ---> vacio
+    note on link
+        **El sistema muestra **
+        *Artículo a traducir
+        *Campo para subir el artículo traducido
+        **El sistema requiere **
+        * Artículo traducido
+    end note
+
+    vacio -[#Green]-> vacio2
+    note on link
+        **El traductor ingresa **
+        *Artículo traducido
+        **El sistema muestra **
+        *Artículo traducido
+    end note
+
+    vacio -[#Red]-> vacio3
+    note on link
+        **El traductor **
+        * Cancela la traducción
+    end note
+
+
+}
+
+[*] --> TraducirArtículo
+note on link
+    **Traductor Requiere **
+    Traducir Artículo
+end note
+
+TraducirArtículo --> [*]
+
+@enduml

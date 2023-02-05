@@ -6,10 +6,10 @@ State VerNumero {
     [*] ---> VerArticulo
     note on link
         **El sistema muestra **
-        * La informacion del numero
-        * Los articulos relacionados al numero
+        * La informacion del número
+        * Los articulos relacionados al número
         **El sistema permite **
-        * Visualizar el articulo    
+        * Visualizar un articulo del número
     end note
 
 }
@@ -20,8 +20,6 @@ note on link
     Visualizar Numero
 end note
 
-
-
-
+VerNumero --> [*]
 
 @enduml

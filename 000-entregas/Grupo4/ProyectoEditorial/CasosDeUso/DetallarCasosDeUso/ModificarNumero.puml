@@ -1,0 +1,39 @@
+@startuml Detalle Caso de Uso Modificar Número
+
+State ModificarNúmero {
+
+    State  " " as vacio  
+    State  " " as vacio2  
+    State  " " as vacio3 
+
+    [*] ---> vacio
+    note on link
+        **El sistema muestra **
+        *Número a Modificar
+        *Campo disponibles para modificar
+        **El sistema requiere **
+        * Realizar cambios
+    end note
+
+    vacio -[#Green]-> vacio2
+    note on link
+        **El gestor realiza cambios **
+    end note
+
+    vacio -[#Red]-> vacio3
+    note on link
+        **El gestor no realiza cambios **
+    end note
+
+
+}
+
+[*] --> ModificarNúmero
+note on link
+    **Gestor Requiere **
+    Modificar Número
+end note
+
+ModificarNúmero --> [*]
+
+@enduml
