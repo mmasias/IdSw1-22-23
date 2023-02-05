@@ -4,6 +4,7 @@ State "Inicio" as inicial
 State "Panel Inicial" as admin
 State "Vista Revista" as revista
 State "Vista Listar Numeros" as volumenesYNumeros
+State "Vista Listar Articulos" as ListarArticulos
 State "Vista Número" as Articulos
 State "Vista Articulo" as Articulo
 
@@ -76,7 +77,6 @@ end note
 
 revista --> revista
 note on link
-    Modificar Revista
     Eliminar Revista
     Modificar Revista
     Crear Volumen
@@ -84,7 +84,7 @@ note on link
     Postular Articulo
 end note
 
-volumenesYNumeros --> volumenesYNumeros
+Articulos --> Articulos
 note on link
     Eliminar Número
     Modificar Número
@@ -108,12 +108,27 @@ end note
 Articulo --> Articulo
 note on link
     Publicar Articulo
+    Traducir Artículo
     Modificar Articulo
     Aprobar Articulo
     Rechazar Articulo
     Revisar Articulo
 end note
 
+revista --> ListarArticulos
+note on link
+    Listar Articulos
+end note
+
+ListarArticulos --> revista
+note on link
+    Ver Revista
+end note
+
+ListarArticulos --> Articulo
+note on link
+    Ver Articulo
+end note
 
 
 

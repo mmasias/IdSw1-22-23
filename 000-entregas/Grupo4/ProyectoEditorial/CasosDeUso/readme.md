@@ -2,7 +2,7 @@
 
 ## Encontrar actores y casos de uso 
 
-Se han identificado 6 actores y 24 casos de uso y se han clasificado en casos de uso relacionados con Sesión, Revista, Artículo, Volumen, Número.
+Se han identificado 6 actores y 25 casos de uso y se han clasificado en casos de uso relacionados con Sesión, Revista, Artículo, Volumen, Número.
 
 
 ### Actores
@@ -29,11 +29,12 @@ Se han identificado 6 actores y 24 casos de uso y se han clasificado en casos de
 | Iniciar sesión    | Finalizar sesión   | Postular artículo |
 | Publicar artículo | Modificar artículo | Eliminar artículo |
 | Aprobar artículo  | Rechazar artículo  | Revisar artículo  |
-| Traducir artículo | Ver artículo       | Modificar Volumen |
-| Eliminar Volumen  | Crear Volumen      | Listar Números    |
+| Traducir artículo | Ver artículo       | Listar Articulos  |
+| Eliminar Volumen  | Crear Volumen      | Modificar Volumen |
 | Modificar número  | Eliminar número    | Publicar número   |
-| Crear número      | Ver Numero         | Ver Revista       |
+| Crear número      | Ver Numero         | Listar Numeros    |
 | Eliminar Revista  | Modificar Revista  | Crear Revista     |
+| Ver Revista       |                    |                   |
 
 </div>
 
@@ -120,6 +121,15 @@ Se han identificado 6 actores y 24 casos de uso y se han clasificado en casos de
   ![](DetallarCasosDeUso/images/VerArticulo.png)
   <br/>
   [Código](DetallarCasosDeUso/VerArticulo.puml) 
+
+  </details>
+
+  <details>
+    <summary>Listar Artículos</summary>
+    
+  ![](DetallarCasosDeUso/images/ListarArticulos.png)
+  <br/>
+  [Código](DetallarCasosDeUso/ListarArticulos.puml) 
 
   </details>
 

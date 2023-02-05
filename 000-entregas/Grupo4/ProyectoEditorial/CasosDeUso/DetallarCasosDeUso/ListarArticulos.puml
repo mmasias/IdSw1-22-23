@@ -1,0 +1,24 @@
+@startuml Detalle Caso de Uso Listar Articulos
+
+State ListarArticulos {
+
+    State  VerArticulo  
+    [*] ---> VerArticulo
+    note on link
+        **El sistema muestra **
+        * Todos los Articulos de la revista
+        **El sistema permite **
+        * Visualizar los detalles de un Articulo en específico
+    end note
+
+}
+
+[*] --> ListarArticulos
+note on link
+    **Usuario Requiere **
+    Listar Articulos
+end note
+
+ListarArticulos --> [*]
+
+@enduml
