@@ -78,7 +78,6 @@ revista --> revista
 note on link
     Modificar Revista
     Eliminar Revista
-    Eliminar Revista
     Modificar Revista
     Crear Volumen
     Crear Número
@@ -100,9 +99,14 @@ note on link
     Ver Articulo
 end note
 
-Articulo --> Articulo
+Articulo --> Articulos
 note on link
     Eliminar Articulo
+    Ver Numero
+end note
+
+Articulo --> Articulo
+note on link
     Publicar Articulo
     Modificar Articulo
     Aprobar Articulo
