@@ -28,12 +28,12 @@ ed -u-|> us
 
 us ---> read
 
-au ----> postular
-tr ----> traducir
+au -----> postular
+tr -----> traducir
 rv ----> revisar
-ed ----> update
+ed -----> update
 ed ----> delete
-gs ----> create
+gs -----> create
 gs ----> delete
 
 (revisar) <.. (aprobar) : <<extends>>
