@@ -1,0 +1,12 @@
+@startuml
+[*] --> Jugando
+Jugando--> Descanso: Pasam 45 minutos
+Descanso --> Jugando
+Jugando --> Penalti: Jugador hace falta
+Penalti --> Jugando
+Jugando --> TiempoAcabado: Se acaba el tiempo
+TiempoAcabado --> Penaltis: Empate
+TiempoAcabado --> FinJuego: No hay empate
+Penaltis--> [*]
+FinJuego--> [*]
+@enduml

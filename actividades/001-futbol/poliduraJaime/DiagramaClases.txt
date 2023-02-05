@@ -1,0 +1,20 @@
+@startuml
+
+class Equipo
+class Jugador
+class Partido
+class ContadorPuntos
+class ContadorTiempo
+class Arbitro
+class Reglas
+class Campo
+
+Equipo --> Jugador : "Tiene varios"
+Jugador --> Partido : "Juega en"
+Campo --> Partido : "Se juega un"
+Partido --> ContadorTiempo: "Tiene"
+Partido --> ContadorPuntos: "Tiene"
+Partido --> Arbitro : "Tiene 1"
+Arbitro --> Reglas : "Sigue"
+
+@enduml
