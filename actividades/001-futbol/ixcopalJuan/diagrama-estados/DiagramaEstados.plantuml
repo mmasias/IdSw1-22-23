@@ -1,0 +1,35 @@
+@startuml DiagramaEstadosFutbol
+
+state fork_state <<fork>>
+
+state NONAME_PARTIDO as "PARTIDO"
+state NONAME_MARCADOR as "MARCADOR"
+state NONAME_EQUIPO as "EQUIPO"
+state NONAME_TIEMPO as "TIEMPO"
+state NONAME_JUGADOR as "JUGADOR"
+state NONAME_ARBITRO as "ARBITRO"
+state NONAME_GOL as "GOL"
+
+[*] --> Inicio
+' Inicio --> fork_state
+
+'Arbitro pita
+Inicio --> NONAME_ARBITRO : arbitro pita inicio
+NONAME_ARBITRO --> fork_state
+
+fork_state --> NONAME_MARCADOR : muestra marcador
+fork_state --> NONAME_TIEMPO : cuenta atras
+fork_state --> NONAME_PARTIDO : inicia partido
+
+NONAME_PARTIDO --> NONAME_EQUIPO : equipo juega partido
+
+NONAME_EQUIPO --> NONAME_JUGADOR : juegan
+
+NONAME_JUGADOR -r-> NONAME_GOL : anota
+
+
+NONAME_GOL -up-> NONAME_MARCADOR : modifica
+
+NONAME_MARCADOR --> Inicio
+
+@enduml

@@ -10,7 +10,32 @@ Les animo a generar discusiones en la [sección de issues](https://github.com/mm
 
 ## Artefactos del modelo del dominio
 
-* Diagrama(s) de clases
-* Diagrama(s) de objetos
+|Diagrama de Clases|
+|:-:|
+|![Image](ixcopalJuan/modelo-dominio/ModeloDominioFutbol.png)|
+|[Código del diagrama](ixcopalJuan/modelo-dominio/ModeloDominio.plantuml)|
+
+
+|Diagrama de Objetos|
+|:-:|
+|![Image](ixcopalJuan/diagrama-objetos/DiagramaObjetosFutbol.png)|
+|[Código del diagrama](ixcopalJuan/diagrama-objetos/DiagramaObjetos.plantuml)|
+
+|Diagrama de Estados|
+|:-:|
+|![image](ixcopalJuan/diagrama-estados/DiagramaEstadosFutbol.png)|
+|[Código del diagrama](ixcopalJuan/diagrama-estados/DiagramaEstados.plantuml)|
+
 * Diagrama de estados
-* Texto
+
+## Glosario
+
+* **Estadio**: Lugar en donde se disputa un partido de futbol.
+* **Partido**: Hecho que sucede cuando dos equipos juegan futbol.
+* **Marcador**: Cantidad de goles anotados por dos equipos en un encuentro de futbol.
+* **Equipo**: Grupo de personas conformadas por Jugadores, Director Técico, entre otros.
+* **Tiempo**: Período determinado en el que se disputa un partido de futbol.
+* **Reglamento**: Conjunto de reglas que rigen el fútbol o balompié en todo el mundo.
+* **Jugador**: Persona que pertenece a un equipo de futbol y cuenta con un dorsal dentro del equipo.
+* **Director Técnico**: Es la persona encargada del entrenamiento físico, mental y técnico de un equipo de futbol.
+* **Arbitro**: Persona encargada de que se cumplan las reglas del juego durante el transcurso de un partido.

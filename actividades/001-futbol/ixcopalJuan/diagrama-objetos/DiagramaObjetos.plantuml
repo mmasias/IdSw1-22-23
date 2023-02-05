@@ -1,0 +1,100 @@
+@startuml DiagramaObjetosFutbol
+
+object " Spotify Camp Nou : Estadio" as estadio{
+    Direccion = "C. d'Arístides Maillol, Barcelona"
+}
+
+object "Partido : Partido" as partido{
+    partido = "Barca - Madrid"
+    Fecha = "20/12/2022"
+}
+
+object "Marcador : marcador" as marcador{
+    Barca = "0"
+    Madrid = "0"
+}
+
+object "Barca : equipo" as equipo{
+    equipo: "Barca"
+}
+
+object "Madrid : equipo" as equipo2{
+    equipo : "Madrid"
+}
+
+object "Tiempo : tiempo" as tiempo{
+    tiempo_partido : "90"
+    formato_tiempo : "minutos"
+}
+
+object "Reglas : reglamento" as reglamento{
+    regla1 : "no usar las manos"
+    regla2 : "saltar sobre el oponente"
+}
+
+object "Juan : jugador" as jugador1{
+    equipo : "Barca"
+    dorsal : "11"
+    posicion : "defensa"
+}
+
+object "Jose : jugador" as jugador2{
+    equipo : "Barca"
+    dorsal : "10"
+    posicion : "delantero"
+}
+
+object "Pedro : jugador" as jugador3{
+    equipo : "Madrid"
+    dorsal : "5"
+    posicion : "defensa"
+}
+
+object "Marcos : jugador" as jugador4{
+    equipo "Madrid"
+    dorsal : "15"
+    posicion : "delantero"
+}
+
+object "Xavi : directorTecnico" as dt1{
+    nombre : "Xavi"
+    apellido : "Hernandez"
+    equipoDirige : "Barca"
+}
+
+object "Carlo : directorTecnico" as dt2{
+    nombre : "Carlo"
+    apellido : "Ancelotti"
+    equipoDirige : "Madrid"
+}
+
+object "Arbitro central : arbitro" as arbitro{
+    nombre : "Rogelio"
+    apellido : "Aurelio"
+}
+
+estadio -- partido : se disputa >
+partido -- marcador : define <
+partido -- equipo : tiene <
+partido -- equipo2 : tiene <
+partido -- tiempo : tiene <
+partido -- reglamento : define <
+
+equipo -- jugador1 : tiene >
+equipo -- jugador2 : tiene >
+equipo -- dt1 : dirige <
+
+equipo2 -- jugador3 : tiene >
+equipo2 -- jugador4 : tiene >
+equipo2 -- dt2 : dirige <
+
+marcador -- jugador1 : modifica <
+marcador -- jugador2 : modifica <
+marcador -- jugador3 : modifica <
+marcador -- jugador4 : modifica <
+
+tiempo -- arbitro : controla <
+reglamento -- arbitro : controla <
+
+
+@enduml
