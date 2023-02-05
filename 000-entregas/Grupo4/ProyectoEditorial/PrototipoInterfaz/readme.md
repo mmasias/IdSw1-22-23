@@ -3,6 +3,17 @@
 
 ## Prototipos
 
+Las vistas que se detallan son genéricas y muestran todas las opciones disponibles para cualquier usuario con cualquier tipo de rol.
+<ul>
+    <li>Las opciones de color verde son las que se encuentran disponibles para el rol de gestor unicamente.
+    <li>Las opciones de color azul son las que se encuentran disponibles para el rol de autor unicamente.
+    <li>Las opciones de color violeta son las que se encuentran disponibles para cualquier rol excepto para el de autor.
+    <li>Las opciones de color rojo son las que se encuentran disponibles para el rol de traductor unicamente.
+    <li>Las opciones de color naranja son las que se encuentran disponibles para el rol de revisor unicamente.
+    <li>Las opciones de color rosa son las que se encuentran disponibles para el rol de revisor y gestor unicamente.
+</ul>
+<br>
+
 <details>
     <summary>Inicio</summary>
     ![](images/Inicio.png)
@@ -26,6 +37,10 @@
 <details>
     <summary>Vista Número</summary>
     ![](images/VistaNumero.png)
+</details>
+<details>
+    <summary>Vista Listar Articulos</summary>
+    ![](images/VistaListarArticulos.png)
 </details>
 
 <details>
