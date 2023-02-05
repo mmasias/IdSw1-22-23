@@ -1,0 +1,13 @@
+start
+fork
+    start
+    :Agregar agua;
+    :Encender;
+fork again
+    start
+    :Limpiar filtro;
+    :Agregar café;
+end fork
+:Hacer cafe;
+:Servir café;
+end

@@ -1,0 +1,39 @@
+@startuml
+left to right direction
+
+package Solicitudes {
+  usecase "Ver sus solicitudes" as S_P_VS
+  usecase "Ver solicitudes pendientes" as S_V_VS
+  usecase "Aceptar/Denegar solicitud" as S_V_AC
+  usecase "Solicitar viaje" as S_P_S
+  usecase "Rellenar necesidades" as S_P_R
+}
+
+package Viajes {
+  usecase "Enviar facturas" as V_P_EF
+  usecase "Ver facturas recibidas" as V_G_VF 
+  usecase "Aprovisionar fondos" as V_G_AF
+  usecase "Planificar viaje" as V_G_PV
+  usecase "Ver planificacion viaje" AS V_P_VP
+  usecase "Ver viajes aceptados" AS V_G_VA
+}
+
+actor "Gestion" as G
+actor "Profesor" as P
+actor "Vicerrectorado" as V
+
+V --> S_V_VS
+V --> S_V_AC
+
+P --> S_P_VS
+P --> S_P_S
+P --> S_P_R
+P --> V_P_EF
+P --> V_P_VP
+
+G --> V_G_VA
+G --> V_G_VF 
+G --> V_G_AF
+G --> V_G_PV
+
+@enduml

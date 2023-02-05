@@ -1,0 +1,70 @@
+@startuml
+
+object "campo: Campo" as campo {
+      partido: partido
+}
+
+campo --> partido
+
+object "partido: Partido" as partido {
+      arbitro: arbitro
+      equipo1: equipo1
+      equipo2: equipo2
+      contadorTiempo: contadorTiempo
+      contadorPuntos: contadorPuntos
+}
+
+partido --> arbitro
+partido --> equipo1
+partido --> equipo2
+partido --> contadorPuntos
+partido --> contadorTiempo
+
+object "contadorTiempo: ContadorTiempo" as contadorTiempo{
+       tiempo: 2
+       duracion: 30
+}
+
+object "contadorPuntos: ContadorPuntos" as contadorPuntos{
+      equipo1: 3
+      equipo2: 2
+}
+
+object "arbitro: Arbitro" as arbitro{
+}
+
+object "equipo1: Equipo" as equipo1 {
+       nombre: "Nombre"
+       integrantes: [jugador1, jugador2]
+}
+
+equipo1--> jugador1
+equipo1--> jugador2
+
+object "jugador1: Jugador" as jugador1 {
+       nombre: "Nombre1"
+       posicion: "Algo"
+}
+object "jugador2: Jugador" as jugador2 {
+       nombre: "Nombre2"
+       posicion: "Algo"
+}
+
+object "equipo2: Equipo" as equipo2 {
+       nombre: "Nombre"
+       integrantes: [jugador1, jugador2]
+}
+
+equipo2--> jugador21
+equipo2--> jugador22
+
+object "jugador21: Jugador" as jugador21 {
+       nombre: "Nombre1"
+       posicion: "Algo"
+}
+object "jugador22: Jugador" as jugador22 {
+       nombre: "Nombre2"
+       posicion: "Algo"
+}
+
+@enduml
