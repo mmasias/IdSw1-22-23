@@ -59,7 +59,7 @@ Las vistas que se detallan son genéricas y muestran todas las opciones disponib
 
 ## Relación Casos de Uso - Prototipos
 
-![](images/RelacionCasosDeUsoPrototipos.png)
+![](images/RelacionCasosDeUsoPrototipos.svg)
 
 
 <hr>
