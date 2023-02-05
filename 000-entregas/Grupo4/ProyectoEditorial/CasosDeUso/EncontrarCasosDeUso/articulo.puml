@@ -18,6 +18,7 @@ package Articulo{
     usecase "Revisar artículo" as revisar
     usecase "Ver artículo" as read
     usecase "Traducir artículo" as traducir
+    usecase "Listar artículos" as listar
 }
 
 gs -u-|> us
@@ -27,6 +28,7 @@ rv -u-|> us
 ed -u-|> us
 
 us ---> read
+us ------> listar
 
 au -----> postular
 tr -----> traducir
