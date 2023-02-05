@@ -1,4 +1,4 @@
-@startuml
+@startuml objetoDeDominio_EstadoAvanzado
 object "editorialUneatlantico : Editorial" as editorial
 
 object "Juan Perez Autor : Autor" as autor1 {
