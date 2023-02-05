@@ -1,0 +1,26 @@
+@startuml LeerEventos
+
+State LeerEventos{ 
+
+  State state1 as " "
+
+  [*] -[#green]-> state1
+
+  note on link 
+    <b>El sistema muestra
+    * lista de eventos
+  end note
+
+} 
+
+[*] -[#green]-> LeerEventos
+
+note on link
+ <b>Usuario solicita
+ Leer eventos de un Partido
+end note
+
+state1 -[#green]-> [*] 
+
+
+@enduml

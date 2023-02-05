@@ -1,0 +1,28 @@
+@startuml VerPartido
+
+State VerPartido{ 
+
+  State state1 as " "
+
+  [*] -[#green]-> state1
+
+  note on link 
+    <b>El sistema muestra
+    * informacion del Partido
+    <b>El sistema permite
+    * Ver eventos del Partido
+  end note
+
+} 
+
+[*] -[#green]-> VerPartido
+
+note on link
+ <b>Usuario solicita
+ Ver Partido
+end note
+
+state1 -[#green]-> [*] 
+
+
+@enduml

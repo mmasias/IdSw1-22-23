@@ -1,0 +1,29 @@
+@startuml ListarPartidos
+
+State ListarPartidos{ 
+
+  State state1 as " "
+
+  [*] -[#green]-> state1
+
+  note on link 
+    <b>El sistema muestra
+    * Todos los partidos
+    <b>El sistema permite
+    * Ver un partido
+  end note
+ 
+
+} 
+
+[*] -[#green]-> ListarPartidos
+
+note on link
+ <b>Usuario solicita
+ Listar Partidos
+end note
+
+state1 -[#green]-> [*] 
+
+
+@enduml

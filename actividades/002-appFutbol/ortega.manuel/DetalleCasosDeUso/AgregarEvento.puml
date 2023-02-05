@@ -1,0 +1,32 @@
+@startuml AgregarEvento
+
+State AgregarEvento{ 
+
+  State state1 as " "
+  State state2 as " "
+
+  [*] -[#green]-> state1
+
+  note on link 
+    <b>El sistema solicita
+    * Hora del evento
+    * Titulo del evento
+    * Descripción del evento
+  end note
+
+} 
+
+[*] -[#green]-> AgregarEvento
+
+note on link
+ <b>Usuario solicita
+ AgregarEvento
+end note
+
+state1 -[#gray]-> state2 
+note on link
+ <b>Usuario provee información
+end note
+state2 -[#green]-> [*] 
+
+@enduml
