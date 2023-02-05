@@ -1,0 +1,82 @@
+@startuml 
+
+hide empty description
+
+State InscribirJugador
+
+State InscripciónJugador{ 
+
+  State state1 as " "
+  State state2 as " "
+  State state3 as " "
+  State state4 as " "
+  State state5 as " "
+
+
+  state c <<choice>>
+
+  [*] -[#green]-> state1
+
+  state1-[#green]-> state2
+
+  note on link 
+    <b>El sistema permite
+    * Inscribir jugador
+    * Finalizar inscripción
+    <b>El sistema muestra
+    * Jugadores en la competición
+  end note
+
+  state2 -[#green]-> state1
+ 
+  note on link 
+    <b>Usuario proporciona
+    * Información jugador
+  end note
+
+  state2 -[#green]-> state3
+  
+  note on link 
+    <b>Usuario requiere
+    * Inscribir jugador
+  end note
+
+  state3 -[#green]-> c
+
+  c -[#green]-> state4
+
+  state4 -[#green]-> state1
+  
+  note on link 
+    <b>El sistema muestra
+    * Inscripción jugador completada
+  end note
+
+  c-[#red]-> state5
+
+  state5 -l[#red]-> state1
+
+  note on link 
+    <b>El sistema muestra
+    * Error incribir jugador
+  end note
+
+
+} 
+
+InscribirJugador-[#green]-> InscripciónJugador
+
+note on link
+ <b>Usuario requiere
+  Inscripción jugador
+end note
+
+state2 -[#green]-> [*] 
+
+note on link
+ <b>Usuario requiere
+ Finalizar inscripción
+end note
+
+@enduml
+

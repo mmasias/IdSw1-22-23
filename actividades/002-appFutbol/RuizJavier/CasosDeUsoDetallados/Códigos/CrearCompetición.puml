@@ -1,0 +1,80 @@
+@startuml 
+
+hide empty description
+
+State CrearCompetición
+
+
+State CreaciónCompetición{ 
+
+  State state1 as " "
+  State state2 as " "
+  State state3 as " "
+  State state4 as " "
+  State state5 as " "
+
+
+  state c <<choice>>
+
+  [*] -[#green]-> state1
+
+  state1-[#green]-> state2
+
+  note on link 
+    <b>El sistema permite
+    * Crear competición
+    * Finalizar creación
+  end note
+
+  state2 -[#green]-> state1
+ 
+  note on link 
+    <b>Usuario proporciona
+    * Información competición
+  end note
+
+  state2 -[#green]-> state3
+  
+  note on link 
+    <b>Usuario requiere
+    * Crear competición
+  end note
+
+  state3 -[#green]-> c
+
+  c -[#green]-> state4
+
+  state4 -[#green]-> state1
+  
+  note on link 
+    <b>El sistema muestra
+    * Crear competición completada
+  end note
+
+  c-[#red]-> state5
+
+  state5 -l[#red]-> state1
+
+  note on link 
+    <b>El sistema muestra
+    * Error crear competición
+  end note
+
+
+} 
+
+CrearCompetición-[#green]-> CreaciónCompetición
+
+note on link
+ <b>Usuario requiere
+ CreaciónCompetición
+end note
+
+state2 -[#green]-> [*] 
+
+note on link
+ <b>Usuario requiere
+ FinalizarCreación
+end note
+
+@enduml

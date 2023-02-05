@@ -1,0 +1,81 @@
+@startuml 
+
+hide empty description
+
+State CrearEncuentro
+
+State CreaciónEncuentro{ 
+
+  State state1 as " "
+  State state2 as " "
+  State state3 as " "
+  State state4 as " "
+  State state5 as " "
+
+
+  state c <<choice>>
+
+  [*] -[#green]-> state1
+
+  state1-[#green]-> state2
+
+  note on link 
+    <b>El sistema permite
+    * Crear encuentro
+        * Marcador
+        * Periodos
+    * Finalizar creación encuentro
+  end note
+
+  state2 -[#green]-> state1
+ 
+  note on link 
+    <b>Usuario proporciona
+    * Información encuentro
+  end note
+
+  state2 -[#green]-> state3
+  
+  note on link 
+    <b>Usuario requiere
+    * Crear encuentro
+  end note
+
+  state3 -[#green]-> c
+
+  c -[#green]-> state4
+
+  state4 -[#green]-> state1
+  
+  note on link 
+    <b>El sistema muestra
+    * Creación encuentro completada
+  end note
+
+  c-[#red]-> state5
+
+  state5 -l[#red]-> state1
+
+  note on link 
+    <b>El sistema muestra
+    * Error crear encuentro
+  end note
+
+
+} 
+
+CrearEncuentro-[#green]-> CreaciónEncuentro
+
+note on link
+ <b>Usuario requiere
+ Creación encuentro
+end note
+
+state2 -[#green]-> [*] 
+
+note on link
+ <b>Usuario requiere
+ Finalizar creación encuentro
+end note
+
+@enduml

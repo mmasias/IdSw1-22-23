@@ -1,0 +1,81 @@
+@startuml 
+
+hide empty description
+
+State ActualizarClasificación
+
+State ActualizaciónClasificación{ 
+
+  State state1 as " "
+  State state2 as " "
+  State state3 as " "
+  State state4 as " "
+  State state5 as " "
+
+
+  state c <<choice>>
+
+  [*] -[#green]-> state1
+
+  state1-[#green]-> state2
+
+  note on link 
+    <b>El sistema permite
+    * Actualizar clasificación
+       * Resultado partido
+    * Finalizar actualización clasificación
+    <b>El sistema muestra
+    * Clasificación competición
+  end note
+
+  state2 -[#green]-> state1
+ 
+  note on link 
+    <b>Usuario proporciona
+    * Información resultado del partido
+  end note
+
+  state2 -[#green]-> state3
+  
+  note on link 
+    <b>Usuario requiere
+    * Actualizar clasificación
+  end note
+
+  state3 -[#green]-> c
+
+  c -[#green]-> state4
+
+  state4 -[#green]-> state1
+  
+  note on link 
+    <b>El sistema muestra
+    * Actualización clasificación completada
+  end note
+
+  c-[#red]-> state5
+
+  state5 -l[#red]-> state1
+
+  note on link 
+    <b>El sistema muestra
+    * Error actualizar clasificación
+  end note
+
+} 
+
+ActualizarClasificación-[#green]-> ActualizaciónClasificación
+
+note on link
+ <b>Usuario requiere
+ Actualización clasificación
+end note
+
+state2 -[#green]-> [*] 
+
+note on link
+ <b>Usuario requiere
+ Finalizar actualizar clasificación
+end note
+
+@enduml

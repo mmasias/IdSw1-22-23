@@ -1,0 +1,79 @@
+@startuml 
+
+hide empty description
+
+State AñadirPeriodo
+
+State AdiciónPeriodo{ 
+
+  State state1 as " "
+  State state2 as " "
+  State state3 as " "
+  State state4 as " "
+  State state5 as " "
+
+
+  state c <<choice>>
+
+  [*] -[#green]-> state1
+
+  state1-[#green]-> state2
+
+  note on link 
+    <b>El sistema permite
+    * Añadir período
+       * Duración
+    * Finalizar adición período
+  end note
+
+  state2 -[#green]-> state1
+ 
+  note on link 
+    <b>Usuario proporciona
+    * Información período
+  end note
+
+  state2 -[#green]-> state3
+  
+  note on link 
+    <b>Usuario requiere
+    * Añadir período
+  end note
+
+  state3 -[#green]-> c
+
+  c -[#green]-> state4
+
+  state4 -[#green]-> state1
+  
+  note on link 
+    <b>El sistema muestra
+    * Adición período completada
+  end note
+
+  c-[#red]-> state5
+
+  state5 -l[#red]-> state1
+
+  note on link 
+    <b>El sistema muestra
+    * Error añadir período
+  end note
+
+} 
+
+AñadirPeriodo-[#green]-> AdiciónPeriodo
+
+note on link
+ <b>Usuario requiere
+ Adición período
+end note
+
+state2 -[#green]-> [*] 
+
+note on link
+ <b>Usuario requiere
+ Finalizar añadir período
+end note
+
+@enduml

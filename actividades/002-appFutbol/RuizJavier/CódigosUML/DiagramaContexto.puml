@@ -1,0 +1,42 @@
+@startuml
+ 
+hide empty description
+
+state Inicio
+state state1 as " "
+state state2 as "CompeticiónAbierta"
+state state3 as " "
+state state4 as " "
+state state5 as "PartidoAbierto"
+state state6 as " "
+state state7 as "EncuentroAbierto"
+state state8 as "PeriodoAbierto "
+
+
+[*] --> Inicio
+
+Inicio -->  state1 : VerCompeticiones
+
+state1 --> state1 : CrearCompetición
+
+state1 --> state2 : AbrirCompetición
+
+state2 --> state3 : InscribirEquipo
+state3 --> state2
+
+state2 --> state4 : InscribirJugador
+state4 --> state2
+
+state2 --> state5 : CrearPartido
+state5 --> state2 : ActualizarClasificación
+
+state5 --> state6 : DefinirAlineación
+
+state5 --> state7 : CrearEncuentro
+
+state7 --> state8 : AñadirPeriodo
+state8 --> state7
+
+state8 --> state8 : AgregarEvento
+
+@enduml

@@ -1,0 +1,83 @@
+@startuml 
+
+hide empty description
+
+State CrearPartido
+
+State CreaciónPartido{ 
+
+  State state1 as " "
+  State state2 as " "
+  State state3 as " "
+  State state4 as " "
+  State state5 as " "
+
+
+  state c <<choice>>
+
+  [*] -[#green]-> state1
+
+  state1-[#green]-> state2
+
+  note on link 
+    <b>El sistema permite
+    * Crear partido
+        * Fecha
+        * Equipo A
+        * Equipo B
+        * Estadio
+    * Finalizar creación partido
+  end note
+
+  state2 -[#green]-> state1
+ 
+  note on link 
+    <b>Usuario proporciona
+    * Información partido
+  end note
+
+  state2 -[#green]-> state3
+  
+  note on link 
+    <b>Usuario requiere
+    * Crear partido
+  end note
+
+  state3 -[#green]-> c
+
+  c -[#green]-> state4
+
+  state4 -[#green]-> state1
+  
+  note on link 
+    <b>El sistema muestra
+    * Creación partido completada
+  end note
+
+  c-[#red]-> state5
+
+  state5 -l[#red]-> state1
+
+  note on link 
+    <b>El sistema muestra
+    * Error crear partido
+  end note
+
+
+} 
+
+CrearPartido-[#green]-> CreaciónPartido
+
+note on link
+ <b>Usuario requiere
+ Creación partido
+end note
+
+state2 -[#green]-> [*] 
+
+note on link
+ <b>Usuario requiere
+ Finalizar creación
+end note
+
+@enduml
