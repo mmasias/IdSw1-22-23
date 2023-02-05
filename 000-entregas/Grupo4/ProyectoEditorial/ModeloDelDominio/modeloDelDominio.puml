@@ -31,13 +31,13 @@ Volumen "1 "  --- "n "  Numero : > Contiene
 Numero "1 "  --- "n "  Articulo : > Contiene
 
 Revista "1 "  --- "1 "  BolsaDeArticulos : > Tiene
-BolsaDeArticulos "1 "  -r-- "n " Articulo : > Contiene
+BolsaDeArticulos "1 "  -r-- "    0 .. n" Articulo : > Contiene
 
 
 
 Articulo "1 "  --- "n "  Autor : < Postula
 Revista "1 "  -l-- "n "  Usuario : > Tiene
-Articulo "1 "  --- "n " Traduccion : > Tiene
+Articulo "1 "  --- "0 .. n " Traduccion : > Tiene
 
 Editorial "1 "  -l-- "n "  Usuario : > Tiene
 
