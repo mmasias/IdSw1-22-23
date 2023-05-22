@@ -48,78 +48,79 @@ Una vez tienen todos los datos, organizaron el viaje, y al final de este, el pro
 
 <details>
     <summary style="cursor: pointer">Solicitar viaje</summary>
-    El trabajador puede solicitar el viaje que desee. Esta petición vendrá con datos básicos, como fechas, lugar, carta de invitación si la hay.<br>
+    El trabajador puede solicitar el viaje que desee. Esta petición vendrá con datos básicos, como fechas, lugar, carta de invitación si la hay.<br><br>
     <img src="casosdeusos/solicitarviaje/SolicitarViaje.png" alt="Detalle caso de uso"></img>
 </details>
 <details>
     <summary style="cursor: pointer">Ver sus solicitudes</summary>
-    El trabajador puede ver todas sus solicitudes pendientes.<br>
+    El trabajador puede ver todas sus solicitudes pendientes.<br><br>
     <img src="casosdeusos/versussolicitudes/VerSusSolicitudes.png" alt="Detalle caso de uso"></img>
 </details>
 <details>
     <summary style="cursor: pointer">Ver solicitudes pendientes</summary>
-    La gestión podrá ver todas las solicitudes que aun no se han validado.<br>
+    La gestión podrá ver todas las solicitudes que aun no se han validado.<br><br>
     <img src="casosdeusos/versolicitudespendientes/VerSolicitudesPendientes.png" alt="Detalle caso de uso"></img>
 </details>
 <details>
     <summary style="cursor: pointer">Validar solicitud</summary>
-    La gestión podrá aceptar o denegar las solicitudes pendientes de los viajes de los trabajadores.<br>
+    La gestión podrá aceptar o denegar las solicitudes pendientes de los viajes de los trabajadores.<br><br>
     <img src="casosdeusos/validarsolicitud/ValidarSolicitud.png" alt="Detalle caso de uso"></img>
 </details>
 <details>
     <summary style="cursor: pointer">Ver justificantes</summary>
-    La gestión podrá ver todos los justificantes de un viaje.<br>
+    La gestión podrá ver todos los justificantes de un viaje.<br><br>
     <img src="casosdeusos/verjustificantes/VerJustificantes.png" alt="Detalle caso de uso"></img>
 </details>
 <details>
     <summary style="cursor: pointer">Enviar justificante</summary>
-    El trabajador podrá enviar fotos de los justificantes cuando esté viajando o una vez acabado el viaje.<br>
+    El trabajador podrá enviar fotos de los justificantes cuando esté viajando o una vez acabado el viaje.<br><br>
     <img src="casosdeusos/enviarjustificante/EnviarJustificante.png" alt="Detalle caso de uso"></img>
 </details>
 <details>
     <summary style="cursor: pointer">Validar justificante</summary>
-    Una vez recibido el justificante, la gestión tendrá que validarlo. Si es inválido se denegará anotando un comentario, que el profesor podrá leer. Si es válido se aceptará ys se anotará el importe.<br>        
+    Una vez recibido el justificante, la gestión tendrá que validarlo. Si es inválido se denegará anotando un comentario, que el profesor podrá leer. Si es válido se aceptará ys se anotará el importe.<br>        <br>
     <img src="casosdeusos/validarjustificante/ValidarJustificante.png" alt="Detalle caso de uso"></img>
 </details>
 <details>
     <summary style="cursor: pointer">Planificar viaje</summary>
-    Una vez la solicitud haya sido aceptada, la gestión establecerá el transporte, alojamiento y las dietas al viaje.<br>
+    Una vez la solicitud haya sido aceptada, la gestión establecerá el transporte, alojamiento y las dietas al viaje.<br><br>
     <img src="casosdeusos/planificarviaje/PlanificarViaje.png" alt="Detalle caso de uso"></img>
 </details>
 <details>
     <summary style="cursor: pointer">Ver planificación viaje</summary>
-    Una vez el viaje haya sido planificado por la gestión, el profesor podrá ver el transporte, alojamiento y dietas.<br>
+    Una vez el viaje haya sido planificado por la gestión, el profesor podrá ver el transporte, alojamiento y dietas.<br><br>
     <img src="casosdeusos/verplanificacionviaje/VerPlanificacionViaje.png" alt="Detalle caso de uso"></img>
 </details>
 <details>
     <summary style="cursor: pointer">Ver viajes</summary>
-    La gestión podrá ver todos los viajes.<br>
+    La gestión podrá ver todos los viajes.<br><br>
     <img src="casosdeusos/verviajes/VerViajes.png" alt="Detalle caso de uso"></img>
 </details>
 <details>
     <summary style="cursor: pointer">Crear Informe</summary>
-    La gestión podrá crear un informe del viaje.<br>
+    La gestión podrá crear un informe del viaje.<br><br>
     <img src="casosdeusos/crearinforme/CrearInforme.png" alt="Detalle caso de uso"></img>
 </details>
 <details>
     <summary style="cursor: pointer">Calcular cobros necesarios</summary>
-    Este caso de uso se ejecutará automáticamente cada X tiempo, es una tarea en segundo plano. Calculará todos los gastos de un viaje acabados y lo compara con los fondos para saber si la universidad debe dinero al trabajador o al revés.<br>
+    Este caso de uso se ejecutará automáticamente cada X tiempo, es una tarea en segundo plano. Calculará todos los gastos de un viaje acabados y lo compara con los fondos para saber si la universidad debe dinero al trabajador o al revés.<br><br>
     <img src="casosdeusos/calcularcobrosnecesarios/CalcularCobrosNecesarios.png" alt="Detalle caso de uso"></img>
 </details>
 <details>
     <summary style="cursor: pointer">Comprobar gestión de cobros penddientes</summary>
-    Este caso de uso se ejecutará automáticamente cada X tiempo, es una tarea en segundo plano. Si un viaje no se han gestionado los cobros en un tiempo límite, este caso de uso generará una alerta que le llegará a gestión.
-    <img src="casosdeusos/comprobargestioncobrospendientes/ComprobarGestionCobrosPendientes.png.png" alt="Detalle caso de uso"></img>
+    Este caso de uso se ejecutará automáticamente cada X tiempo, es una tarea en segundo plano. Si un viaje no se han gestionado los cobros en un tiempo límite, este caso de uso generará una alerta que le llegará a gestión.<br><br>
+    <img src="casosdeusos/comprobargestioncobrospendientes/ComprobarGestionCobrosPendientes.png" alt="Detalle caso de uso"></img>
 </details>
 
 ## Interfaz
-### Administración académica
-![Imagen](interfaz/Administracion-1.png)
-![Imagen](interfaz/Administracion-2.png)
-![Imagen](interfaz/Administracion-3.png)
+### Gestion
+![Imagen](interfaz/Gestion-DashBoard.png)
+![Imagen](interfaz/Gestion-Informe.png)
+![Imagen](interfaz/Gestion-RechazarFactura.png)
+![Imagen](interfaz/Gestion-SubirPlanificacion.png)
+![Imagen](interfaz/Gestion-VerSolicitud.png)
+![Imagen](interfaz/Gestion-VerSolicitudes.png)
+![Imagen](interfaz/Gestion-VerViajes.png)
 
 ### Trabajadores
-![Imagen](interfaz/Profesor-1.png)
-![Imagen](interfaz/Profesor-2.png)
-![Imagen](interfaz/Profesor-3.png)
-![Imagen](interfaz/Profesor-4.png)
+![Imagen](interfaz/Trabajador-EnviarJustificante.png)
