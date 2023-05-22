@@ -1,0 +1,19 @@
+@startuml
+[*] --> CalcularCobrosNecesarios
+note on link
+ <b> Ejecutado cada X tiempo
+end note
+State CalcularCobrosNecesarios{
+    CalcularCobrosNecesarios --> EjecutarParaTodosLosViajesEnGestionDeCobro
+    State EjecutarParaTodosLosViajesEnGestionDeCobro as "Ejecutar para todos los viajes en gestion de cobro"
+    State CrearAlertaDelViaje as "Crear alerta de que el viaje no se gestionado los cobros"
+    State c <<choice>>
+
+    EjecutarParaTodosLosViajesEnGestionDeCobro  --> c
+    c --> CrearAlertaDelViaje : Tiempo desde que se calculo los cobros pendientes >= Limite
+    c --> EjecutarParaTodosLosViajesEnGestionDeCobro : Tiempo desde que se calculo los cobros pendientes < Limite
+    CrearAlertaDelViaje --> EjecutarParaTodosLosViajesEnGestionDeCobro : Hay mas viajes
+    CrearAlertaDelViaje --> [*] : No hay mas viajes
+
+}
+@enduml

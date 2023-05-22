@@ -1,0 +1,23 @@
+@startuml
+[*] --> CalcularCobrosNecesarios
+note on link
+ <b> Ejecutado cada X tiempo
+end note
+State CalcularCobrosNecesarios{
+    State EjecutarParaTodosLosViajesEnGestionDeCobro as "Ejecutar para todos los viajes en gestion de cobro"
+    State SumarImporteJustificantesAprobados as "Sumar todos los importes de los justificantes aprobados"
+    State c <<choice>>
+    State MarcarUniversidadPendienteDePagar as "Marcar universidad como pendiente de pagar"
+    State MarcarTrabajadorPendienteDePagar as "Marcar trabajador como pendiente de pagar"
+    State GestionDeCobroFinalizado as "Gestion de cobro finalizado"
+    EjecutarParaTodosLosViajesEnGestionDeCobro --> SumarImporteJustificantesAprobados
+    SumarImporteJustificantesAprobados --> c
+    c --> MarcarUniversidadPendienteDePagar : Suma > fondos
+    c --> MarcarTrabajadorPendienteDePagar : Suma < fondos
+    MarcarUniversidadPendienteDePagar --> GestionDeCobroFinalizado
+    MarcarTrabajadorPendienteDePagar --> GestionDeCobroFinalizado
+
+    GestionDeCobroFinalizado --> EjecutarParaTodosLosViajesEnGestionDeCobro : Hay mas viajes
+    GestionDeCobroFinalizado --> [*] : No hay mas viajes
+}
+@enduml

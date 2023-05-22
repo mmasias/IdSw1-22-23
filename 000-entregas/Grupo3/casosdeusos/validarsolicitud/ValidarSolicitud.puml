@@ -1,0 +1,33 @@
+@startuml ValidarSolicitud
+    [*] --> ValidarSolicitud
+
+State ValidarSolicitud {
+    note on link
+      <b>Trabajador solicita un viaje
+    end note
+
+    State StateSolicitudRecibida as "Solicitud recibida"
+    State StateGestionObservaSolicitud as "Gestion observa solicitud"
+    State StateSolicitudAprobada as "Solicitud aprobada"
+    State StateSolicitudDenegada as "Solicitud denegada"
+    state c <<choice>>
+    state b <<choice>>
+
+    StateSolicitudRecibida --> StateGestionObservaSolicitud
+    StateGestionObservaSolicitud --> c
+    c --> StateSolicitudAprobada
+    c --> StateSolicitudDenegada
+    StateSolicitudDenegada --> [*]
+
+    note right of StateSolicitudRecibida
+      <b>Gestion recibe una solicitud de viaje.
+    end note
+
+    note right of c
+      <b>Gestion aprueba o rechaza el viaje
+    end note
+
+StateSolicitudAprobada ---> [*]
+}
+
+@enduml

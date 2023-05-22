@@ -5,11 +5,11 @@
 4. [Diagrama de estados](#Diagrama-de-estados)
 5. [Casos de usos](#Casos-de-usos)
 
-## Introduccion
-El cliente requiere una solución informática que pueda facilitar la gestión de las solicitudes de viaje y los viajes por parte de los profesores al ser invitado o ser participe de algún evento. Por lo tanto expresa que necesita de qué administración tenga esta solución para poder buscar vuelos, hoteles y recogida de tickets (si es que proporcionan dinero para dicho viaje). La solución necesita tener:
+## Introduction
+El cliente requiere una solución informática que pueda facilitar la gestión de las solicitudes de viaje y los viajes por parte de los profesores al ser invitado o ser partícipe de algún evento. Por lo tanto expresa que necesita de qué administración tenga esta solución para poder buscar vuelos, hoteles y recogida de tickets (si es que proporcionan dinero para dicho viaje). La solución necesita tener:
 
 1. Una calendarización de cuantos días el profesor irá de viaje
-2. Lista de necesidades proporcionados por el profesor (auto, avión, estancia, comida, etc)
+2. Lista de necesidades proporcionadas por el profesor (auto, avión, estancia, comida, etc)
 3. Dieta (dinero que no necesita ser justificado)
 4. Recorrido de la Universidad al destino
 5. Estado de la solicitud del viaje
@@ -17,9 +17,10 @@ El cliente requiere una solución informática que pueda facilitar la gestión d
 7. Subida de foto de tickets para constatar en que se ha gastado el dinero
 8. Datos personales (formulario)
 9. Comentarios en las fotos de los tickets subidos
+10. Control de cobros
 
 ### Explicación solución
-El problema planteado, consiste en que un profesor, solicita un viaje en unas fechas, el cual es aceptado o denegado. Si es aceptado, se le entregará un formulario, el cual el profesor rellenará un formulario donde se le preguntará el medio de transporte que desea, si es en coche, elegirá entre privado o de la universidad, si es de la universidad deberá reservarlo en la web, después deberá introducir por Google Maps el destino y deberemos calcular la distancia desde la Universidad hasta el destino, si es en tren la estación desde donde desea salir y si es en avión, el aeropuerto que desee.Tras ello, deberá elegir si desea hotel o no, si necesitara dietas y fondos
+El problema planteado consiste en que un profesor, solicita un viaje en unas fechas, el cual es aceptado o denegado. Si es aceptado, se le entregará un formulario, el cual el profesor rellenará un formulario donde se le preguntará el medio de transporte que desea, si es en coche, elegirá entre privado o de la universidad, si es de la universidad deberá reservarlo en la web, después deberá introducir por Google Maps el destino y deberemos calcular la distancia desde la Universidad hasta el destino, si es en tren la estación desde donde desea salir y si es en avión, el aeropuerto que desee.Tras ello, deberá elegir si desea hotel o no, si necesitara dietas y fondos
 
 Al final del formulario, podrá añadir en una caja de comentarios, sugerencias de hoteles (provistos por la organización del evento por ejemplo)
 A partir de la finalización del viaje hasta que lo entregue, se le mandará un recordatorio de que debe entregar fotos de los tickets para justificar los gastos a administración y el coste de estos de manera manual, estos tickets serán validados automáticamente.
@@ -35,40 +36,81 @@ Una vez tienen todos los datos, organizaron el viaje, y al final de este, el pro
 ![Imagen](estados/DiagramaEstados.png)
 ## Casos de usos
 ### Actores
-| Actor                      | Descripción                                                                   |
-| -------------------------- | ----------------------------------------------------------------------------- |
-| **Gestión académica**      | Organizan el viaje y gestionan la provisión de fondos. 			     |
-| **Profesores**             | Solicitan viajar y viajan. 					             |
-| **Vicerrectorado**         | Aceptan y deniegan solicitudes de viajes.   				     |
-
+| Actor            | Descripción                                                                          |
+|------------------|--------------------------------------------------------------------------------------|
+| **Gestión**      | Validan el viaje, organizan el viaje y gestionan la provisión de fondos. 			         |
+| **Trabajadores** | Solicitan viajar y viajan. 					                                                     |
+| **Tiempo**       | Crea alerta a gestión si el viaje una vez finalizado no se ha gestionado los cobros. |
 ### Casos de usos
 ![Imagen](casosdeusos/CasosDeUsos.png)
 
-### Explicacion casos de usos
+### Detalle casos de usos
 
-##### Gestión Académica
-
-<ul>
-    <li><strong>Planificar viaje</strong> Una vez el profesor haya rellenado el formulario con las necesidades. La gestión asignará al viaje las reservas del hotel, el transporte etc.</li>
-    <li><strong>Ver viajes aceptados</strong> La gestión podrá ver todos los viajes que hayan sido aceptados y que el formulario con las necesidades haya sido rellenado.</li>
-    <li><strong>Ver facturas recibidas</strong> La gestión podrá ver todos las facturas enviadas por el profesor que esté viajando o haya viajado.</li>
-    <li><strong>Aprovisionar fondos</strong> La gestión podrá establecer fondos para el viaje incluido para las dietas.</li>
-    <li><strong>Enviar facturas</strong> El profesor cuando esté viajando, podrá enviar fotos de las facturas del viaje.</li>
-    <li><strong>Ver planificación del viaje</strong> El profesor podrá ver todos los datos de las reservas, transportes establecidos por la gestión.</li>
-</ul>
-
-#### Profesor
-<ul>
-    <li><strong>Solicitar viaje</strong> El profesor puede solicitar el viaje que desee. Esta petición, vendrá con datos básicos, como fechas, lugar, carta de invitación si la hay.</li>
-    <li><strong>Rellenar necesidades</strong> Una vez el viaje haya sido aceptado, el profesor rellena una serie de necesidades que se le solicita. Como tipo de transporte, lugar de hospedaje si hay (por ejemplo si tiene familia) etc.</li>
-    <li><strong>Ver sus solicitudes</strong> En este caso de uso, el profesor puede acceder al estado de sus solicitudes. Aceptada/Denegada/Pendiente/Pendiente de organización…</li>
-</ul>
-
-#### Vicerrectorado
-<ul>
-    <li><strong>Aceptar/Denegar solicitud</strong> En este caso de uso, los miembros del vicerrectorado, encargados de aceptar/denegar los viajes, tendrán la opción de ello, dependiendo del tipo de viaje que se solicita</li>
-    <li><strong>Ver solicitudes pendientes</strong> Los miembros del vicerrectorado, podrían entrar a un buzón, donde se encontrarán todas las solicitudes pendientes de aceptación o denegación de viaje.</li>
-</ul>
+<details>
+    <summary style="cursor: pointer">Solicitar viaje</summary>
+    El trabajador puede solicitar el viaje que desee. Esta petición vendrá con datos básicos, como fechas, lugar, carta de invitación si la hay.<br>
+    <img src="casosdeusos/solicitarviaje/SolicitarViaje.png" alt="Detalle caso de uso"></img>
+</details>
+<details>
+    <summary style="cursor: pointer">Ver sus solicitudes</summary>
+    El trabajador puede ver todas sus solicitudes pendientes.<br>
+    <img src="casosdeusos/versussolicitudes/VerSusSolicitudes.png" alt="Detalle caso de uso"></img>
+</details>
+<details>
+    <summary style="cursor: pointer">Ver solicitudes pendientes</summary>
+    La gestión podrá ver todas las solicitudes que aun no se han validado.<br>
+    <img src="casosdeusos/versolicitudespendientes/VerSolicitudesPendientes.png" alt="Detalle caso de uso"></img>
+</details>
+<details>
+    <summary style="cursor: pointer">Validar solicitud</summary>
+    La gestión podrá aceptar o denegar las solicitudes pendientes de los viajes de los trabajadores.<br>
+    <img src="casosdeusos/validarsolicitud/ValidarSolicitud.png" alt="Detalle caso de uso"></img>
+</details>
+<details>
+    <summary style="cursor: pointer">Ver justificantes</summary>
+    La gestión podrá ver todos los justificantes de un viaje.<br>
+    <img src="casosdeusos/verjustificantes/VerJustificantes.png" alt="Detalle caso de uso"></img>
+</details>
+<details>
+    <summary style="cursor: pointer">Enviar justificante</summary>
+    El trabajador podrá enviar fotos de los justificantes cuando esté viajando o una vez acabado el viaje.<br>
+    <img src="casosdeusos/enviarjustificante/EnviarJustificante.png" alt="Detalle caso de uso"></img>
+</details>
+<details>
+    <summary style="cursor: pointer">Validar justificante</summary>
+    Una vez recibido el justificante, la gestión tendrá que validarlo. Si es inválido se denegará anotando un comentario, que el profesor podrá leer. Si es válido se aceptará ys se anotará el importe.<br>        
+    <img src="casosdeusos/validarjustificante/ValidarJustificante.png" alt="Detalle caso de uso"></img>
+</details>
+<details>
+    <summary style="cursor: pointer">Planificar viaje</summary>
+    Una vez la solicitud haya sido aceptada, la gestión establecerá el transporte, alojamiento y las dietas al viaje.<br>
+    <img src="casosdeusos/planificarviaje/PlanificarViaje.png" alt="Detalle caso de uso"></img>
+</details>
+<details>
+    <summary style="cursor: pointer">Ver planificación viaje</summary>
+    Una vez el viaje haya sido planificado por la gestión, el profesor podrá ver el transporte, alojamiento y dietas.<br>
+    <img src="casosdeusos/verplanificacionviaje/VerPlanificacionViaje.png" alt="Detalle caso de uso"></img>
+</details>
+<details>
+    <summary style="cursor: pointer">Ver viajes</summary>
+    La gestión podrá ver todos los viajes.<br>
+    <img src="casosdeusos/verviajes/VerViajes.png" alt="Detalle caso de uso"></img>
+</details>
+<details>
+    <summary style="cursor: pointer">Crear Informe</summary>
+    La gestión podrá crear un informe del viaje.<br>
+    <img src="casosdeusos/crearinforme/CrearInforme.png" alt="Detalle caso de uso"></img>
+</details>
+<details>
+    <summary style="cursor: pointer">Calcular cobros necesarios</summary>
+    Este caso de uso se ejecutará automáticamente cada X tiempo, es una tarea en segundo plano. Calculará todos los gastos de un viaje acabados y lo compara con los fondos para saber si la universidad debe dinero al trabajador o al revés.<br>
+    <img src="casosdeusos/calcularcobrosnecesarios/CalcularCobrosNecesarios.png" alt="Detalle caso de uso"></img>
+</details>
+<details>
+    <summary style="cursor: pointer">Comprobar gestión de cobros penddientes</summary>
+    Este caso de uso se ejecutará automáticamente cada X tiempo, es una tarea en segundo plano. Si un viaje no se han gestionado los cobros en un tiempo límite, este caso de uso generará una alerta que le llegará a gestión.
+    <img src="casosdeusos/comprobargestioncobrospendientes/ComprobarGestionCobrosPendientes.png.png" alt="Detalle caso de uso"></img>
+</details>
 
 ## Interfaz
 ### Administración académica

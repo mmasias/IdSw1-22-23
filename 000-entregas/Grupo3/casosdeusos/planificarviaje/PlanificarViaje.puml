@@ -1,0 +1,27 @@
+@startuml PlanificarViaje
+    [*] --> PlanificarViaje
+
+State PlanificarViaje{
+    note on link
+      <b>Gestion acepta viaje
+    end note
+
+    State StateGestionObservaNecesidades as "Gestion observa necesidades"
+    State StateSeAdquiereAlojamiento as "Se adquiere alojamiento"
+    State StateSeAdquiereTransporte as "Se adquiere transporte"
+    State StateSeEstableceDietas as "Se establece dietas"
+    State c <<choice>>
+
+    StateGestionObservaNecesidades --> StateSeAdquiereAlojamiento
+    StateSeAdquiereAlojamiento --> c
+    c --> StateSeAdquiereTransporte
+
+    note right of c
+      <b>Si se necesita transporte, se obtiene
+    end note
+
+}
+StateSeAdquiereTransporte  --> StateSeEstableceDietas
+StateSeEstableceDietas  --> [*]
+c -->  [*]
+@enduml

@@ -1,40 +1,42 @@
 @startuml
-State Peticion {
-  state c <<choice>>
-  PeticionPendiente -> c  
-  c --r> PeticionDenegada : No es aceptable
-  c --l> PeticionAceptada : Es aceptable
+SolicitaViaje --> Solicitud : Trabajador solicita viaje
 
-  state c1 <<choice>>
-  PeticionDenegada --> c1 
-  PeticionPendiente <--- c1 : Se corrige Solicitud
-
-
-  State Viaje{
-    state c3 <<choice>>
-    PeticionAceptada --> ViajePendiente
-
-    State Gestion{
-      ViajePendiente --> GestionEnTramite
-      GestionEnTramite --> GestionTramitada
-    }
-    
-    GestionTramitada -->  ViajeEnCurso
-
-    State Factura{
-      state c2 <<choice>>
-      ViajeEnCurso ---r> c2
-      c2 --> FacturaPendienteDeEnvio :se Genera factura
-      c2 ----> c3 : no se genera factura
-      FacturaPendienteDeEnvio -l> FacturaEnviada
-    }
-      
-    FacturaEnviada --l> c3 
-    ViajeEnCurso <r--- c3 : viaje continua
-    c3 ---> ViajeFinalizado :viaje se termina  
-  }
+state AlertaViajePendienteDeGestionarCobros {
 }
-[*] --> PeticionPendiente
-c1 --> [*] : No se corrige solicitud
-ViajeFinalizado --> [*] 
+
+State Viaje{
+  EnOrganizacion --> EnEspera
+  EnEspera --> EnProceso
+  EnProceso --> Justificante : Se generan gastos
+State EnGestionDeCobros {
+   state h <<choice>>
+note right of h
+  Se suman todos los importes de los justificantes
+end note
+   EnGestionDeCobros --> h
+   h --> TrabajadorDebeDinero : Suma< Provision fondos
+   h --> UniversidadDebeDinero : Suma > Provision fondos
+   TrabajadorDebeDinero --> Cerrado : Se realizan los pagos
+   UniversidadDebeDinero --> Cerrado
+   EnGestionDeCobros --> AlertaViajePendienteDeGestionarCobros : No se gestiona cobro en un tiempo
+}
+
+Justificante --> EnProceso
+  EnProceso --> EnGestionDeCobros : El viaje acaba
+}
+State Justificante{
+  state b <<choice>>
+  PendientePorValidar --> b
+  b --> Aceptado
+  b --> Denegado
+}
+State Solicitud{
+  state c <<choice>>
+  Pendiente --> c
+  c --> Denegada : Rechazada
+  c --> Aceptada : Aceptada
+  Aceptada --> Viaje
+  Denegada -> [*]
+}
+Cerrado --> [*]
 @enduml

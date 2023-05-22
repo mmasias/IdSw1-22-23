@@ -1,53 +1,67 @@
 @startuml
 object "viaje: Viaje" as viaje {
 }
-object "ocurrencias: Ocurrencias" as ocurrencias{
+object "gastos: Gastos" as gastos{
 }
-object "factura: Factura" as factura{
-}
-object "dietaAlimentaria: DietaAlimentaria" as dietaAlimentaria{ 
-         Presupuesto: 100 
+object "comida: Comida" as comida{
+         Presupuesto: 100
 }
 object "transporte: Transporte" as transporte{
 	Medio: Coche
 	Distancia: 400
 	Disponibilidad: Universidad
 }
-object "morada: Morada" as morada{
+object "alojamiento: Alojamiento" as alojamiento{
 	Tipo: Hotel
 	Financiamiento: Universidad
 }
 object "gastosExtra: gastosExtra" as gastosExtra{
 }
+object "justificante: Justificante" as justificante{
+}
 object "gestion: Gestion" as gestion{
 }
-object "peticionViaje: PeticionViaje" as peticionViaje{
-        RazonViaje: Concurso de Debate
+object "informeViajes: InformeViajes" as informeViajes{
+}
+object "solicitudViaje: SolicitudViaje" as solicitudViaje{
+}
+object "gastosOrdinarios: GastosOrdinarios" as gastosOrdinarios{
 }
 object "destino: Destino" as destino{
         Pais: España
         Provincia: Comunidad de Madrid
-        Ciudad: Madrid    
+        Ciudad: Madrid
         LugarEvento: Ifema
 }
 object "fechas: Fechas" as fechas{
         Fecha Ida: 10-11-2022
         Fecha Vuelta: 11-11-2022
 }
-object "profesor: Profesor" as profesor{
+object "razon: Razon" as razon{
+        Razon: Charla sobre software
 }
-object "vicerrectorado: Vicerrectorado" as vicerrectorado{
+object "trabajador: Trabajador" as trabajador{
 }
-vicerrectorado --> peticionViaje : Acepta / Deniega
-viaje -o ocurrencias
-ocurrencias - factura : Genera
-dietaAlimentaria ---o ocurrencias
-transporte ---o ocurrencias
-morada ---o ocurrencias
-gastosExtra ---o ocurrencias
-gestion --> viaje : Tramita
-peticionViaje -> viaje
-peticionViaje --* destino
-peticionViaje --* fechas
-profesor *- peticionViaje : Solicita >
+object "registro: Registro" as registro{
+}
+object "dieta: Dieta" as dieta{
+}
+gestion--> solicitudViaje : valida
+viaje -> gastos
+gastos -> justificante: Genera
+gastos --> gastosExtra
+gestion -> informeViajes
+gestion --> justificante : valida
+gastos --> gastosOrdinarios
+gastosOrdinarios --> comida
+gastosOrdinarios --> transporte
+gastosOrdinarios --> alojamiento
+solicitudViaje -> viaje
+solicitudViaje --> destino
+solicitudViaje --> fechas
+solicitudViaje --> razon
+viaje --> dieta
+viaje --> registro : genera
+trabajador -> solicitudViaje : solicita
+gestion --> viaje : administra
 @enduml
