@@ -25,6 +25,8 @@ El cliente requiere una solución informática que pueda facilitar la gestión d
 | Gestion  | Gestión académica que se encarga de realizar las gestiones de la universidad  |
 | Gastos  | El conjunto de costes que se generan cuando un trabajador de una empresa debe desplazarse a otro lugar, diferente al de su centro de trabajo habitual, para llevar a cabo su trabajo y realizar sus tareas profesionales  |
 | Justificante  | Documento, suele ser un ticket, que valida el gasto realizado  |
+| Registro  | Resumen del viaje con los datos generados  |
+| Dieta  | Son las compensaciones económicas que satisfacen las empresas a sus trabajadores cuando estos se deben desplazar por motivo de trabajo  |
 ### Explicación solución
 El problema planteado consiste en que un profesor, solicita un viaje en unas fechas, el cual es aceptado o denegado. Si es aceptado, se le entregará un formulario, el cual el profesor rellenará un formulario donde se le preguntará el medio de transporte que desea, si es en coche, elegirá entre privado o de la universidad, si es de la universidad deberá reservarlo en la web, después deberá introducir por Google Maps el destino y deberemos calcular la distancia desde la Universidad hasta el destino, si es en tren la estación desde donde desea salir y si es en avión, el aeropuerto que desee.Tras ello, deberá elegir si desea hotel o no, si necesitara dietas y fondos
 
