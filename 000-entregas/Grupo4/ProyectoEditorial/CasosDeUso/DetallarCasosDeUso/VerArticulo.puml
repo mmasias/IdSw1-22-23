@@ -1,0 +1,25 @@
+@startuml Detalle Caso de Uso Ver Artculo
+
+State VerArticulo {
+
+    State  " " as vacio  
+    [*] ---> vacio
+    note on link
+        **El sistema muestra **
+        *El artículo
+        *Informacion extra del artículo como:
+        **autor
+        **fecha de publicación
+    end note
+
+}
+
+[*] --> VerArticulo
+note on link
+    **Usuario Requiere **
+    Visualizar Artículo
+end note
+
+VerArticulo --> [*]
+
+@enduml

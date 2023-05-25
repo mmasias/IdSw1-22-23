@@ -1,0 +1,154 @@
+@startuml objetoDeDominio_EstadoAvanzado
+object "editorialUneatlantico : Editorial" as editorial
+
+object "Juan Perez Autor : Autor" as autor1 {
+    ORCID="https://orcid.org/0000-0001-5727-2427"
+}
+object "Pedro Lopez : Autor" as autor2 {
+    ORCID="https://orcid.org/0000-0001-5727-2428"
+}
+object "Juan Valdez : Autor" as autor3 {
+    ORCID="https://orcid.org/0000-0001-5727-2429"
+}
+object "Karen Alvares : Autor" as autor4 {
+    ORCID="https://orcid.org/0000-0001-5727-2430"
+}
+object "Carlos Ernesto : Autor" as autor5 {
+    ORCID="https://orcid.org/0000-0001-5727-2431"
+}
+object "Carlos Prado : Autor" as autor6 {
+    ORCID="https://orcid.org/0000-0001-5727-2431"
+}
+
+object "gestor : Usuario" as gestor
+object "traductor : Usuario" as traductor
+object "revisor : Usuario" as revisor
+object "editor : Usuario" as editor
+object "Bolsa De Articulos Biología : BolsaDeArticulos" as bolsaDeArticulos
+
+object "Traduccion Inglés: Traduccion" as traduccion1a1n1
+object "Traduccion Portugues: Traduccion" as traduccion2a1n1
+object "Traduccion Inglés: Traduccion" as traduccion1a2n1
+object "Traduccion Portugues: Traduccion" as traduccion2a2n1
+object "Traduccion Inglés: Traduccion" as traduccion1a3n1
+object "Traduccion Portugues: Traduccion" as traduccion2a3n1
+object "Traduccion Inglés: Traduccion" as traduccion1a4n1
+object "Traduccion Portugues: Traduccion" as traduccion2a4n1
+object "Traduccion Inglés: Traduccion" as traduccion1a5n1
+object "Traduccion Portugues: Traduccion" as traduccion2a5n1
+object "Traduccion Inglés: Traduccion" as traduccion1a6n1
+object "Traduccion Portugues: Traduccion" as traduccion2a6n1
+object "Traduccion Inglés: Traduccion" as traduccion1a7n1
+object "Traduccion Portugues: Traduccion" as traduccion2a7n1
+object "Traduccion Inglés: Traduccion" as traduccion1a8n1
+object "Traduccion Portugues: Traduccion" as traduccion2a8n1
+
+object "Revista de Biología : Revista" as revista {
+    ISSN="2830-8566"
+}
+
+object "volumen 1 (2023): Volumen" as volumen1
+
+object "Numero 1: Numero" as numero1
+
+
+'Articulos numero 1'
+object "articulo1: Articulo" as articulo1n1 {
+    DOI="https://doi.org/10.55547/v1"
+}
+object "articulo2: Articulo" as articulo2n1 {
+    DOI="https://doi.org/10.45542/v1"
+}
+object "articulo3: Articulo" as articulo3n1 {
+    DOI="https://doi.org/10.22542/v1"
+}
+object "articulo4: Articulo" as articulo4n1 {
+    DOI="https://doi.org/10.11542/v2"
+}
+object "articulo5: Articulo" as articulo5n1 {
+    DOI="https://doi.org/10.45542/v1"
+}
+object "articulo6: Articulo" as articulo6n1 {
+    DOI="https://doi.org/10.7232/v1"
+}
+object "articulo7: Articulo" as articulo7n1 {
+    DOI="https://doi.org/10.3142/v1"
+}
+object "articulo8: Articulo" as articulo8n1 {
+    DOI="https://doi.org/10.7892/v1"
+}
+
+'Articulos Bolsa'
+object "articulo1: Articulo" as articulo1b {
+    DOI="https://doi.org/10.55547/v1"
+}
+object "articulo2: Articulo" as articulo2b {
+    DOI="https://doi.org/10.45542/v1"
+}
+object "articulo3: Articulo" as articulo3b {
+    DOI="https://doi.org/10.22542/v1"
+}
+object "articulo4: Articulo" as articulo4b {
+    DOI="https://doi.org/10.11542/v1"
+}
+
+editorial   ---   revista : > Contiene
+revista   ---  volumen1 : > Contiene
+volumen1   -l--  numero1 : > Contiene
+
+numero1 --- articulo1n1 : > Contiene
+numero1 --- articulo2n1 : > Contiene
+numero1 --- articulo3n1 : > Contiene
+numero1 --- articulo4n1 : > Contiene
+numero1 -u-- articulo5n1 : > Contiene
+numero1 -u-- articulo6n1 : > Contiene
+numero1 -u-- articulo7n1 : > Contiene
+numero1 -u-- articulo8n1 : > Contiene
+
+revista ---  bolsaDeArticulos : > Tiene
+
+bolsaDeArticulos -d-- articulo1b : > Contiene
+bolsaDeArticulos -d-- articulo2b : > Contiene
+bolsaDeArticulos -d-- articulo3b : > Contiene
+bolsaDeArticulos -d-- articulo4b : > Contiene
+
+articulo1n1  ---  autor1 : < Postula
+articulo1n1  ---  autor6 : < Postula
+articulo2n1  ---  autor6 : < Postula
+articulo3n1  ---  autor1 : < Postula
+articulo4n1  ---  autor6 : < Postula
+articulo5n1  -u--  autor3 : < Postula
+articulo6n1  -u--  autor3 : < Postula
+articulo7n1  -u--  autor2 : < Postula
+articulo8n1  -u--  autor2 : < Postula
+
+articulo1n1  -d--  traduccion1a1n1 : > Tiene
+articulo1n1  -d--  traduccion2a1n1 : > Tiene
+articulo2n1  -d--  traduccion1a2n1 : > Tiene
+articulo2n1  -d--  traduccion2a2n1 : > Tiene
+articulo3n1  -d--  traduccion1a3n1 : > Tiene
+articulo3n1  -d--  traduccion2a3n1 : > Tiene
+articulo4n1  -d--  traduccion1a4n1 : > Tiene
+articulo4n1  -d--  traduccion2a4n1 : > Tiene
+articulo5n1  -u--  traduccion1a5n1 : > Tiene
+articulo5n1  -u--  traduccion2a5n1 : > Tiene
+articulo6n1  -u--  traduccion1a6n1 : > Tiene
+articulo6n1  -u--  traduccion2a6n1 : > Tiene
+articulo7n1  -u--  traduccion1a7n1 : > Tiene
+articulo7n1  -u--  traduccion2a7n1 : > Tiene
+articulo8n1  -u--  traduccion1a8n1 : > Tiene
+articulo8n1  -u--  traduccion2a8n1 : > Tiene
+
+
+articulo1b  ---  autor4 : < Postula
+articulo2b  ---  autor4 : < Postula
+articulo3b  -r--  autor4 : < Postula
+articulo3b  ---  autor5 : < Postula
+articulo4b  ---  autor5 : < Postula
+
+gestor -u-- editorial : "> Tiene"
+editor -u-- revista : "> Tiene"
+traductor -u-- revista : "> Tiene"
+revisor -u-- revista : "> Tiene"
+
+@enduml

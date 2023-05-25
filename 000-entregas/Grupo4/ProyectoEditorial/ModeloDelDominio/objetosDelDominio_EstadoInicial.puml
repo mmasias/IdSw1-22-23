@@ -1,0 +1,9 @@
+@startuml objetoDeDominio_EstadoInicial
+
+object "editorialUneatlantico : Editorial" as editorial
+object "gestor : Usuario" as gestor
+
+editorial --- gestor : Tiene >
+
+
+@enduml

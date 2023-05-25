@@ -1,0 +1,50 @@
+@startuml Detalle Caso de Uso Crear Volumen
+
+State CrearVolumen {
+
+    State " " as vacio2 <<choice>>
+    State " " as vacio3
+    State VerRevista
+
+    [*] ---> vacio2
+    note on link
+        **El sistema requiere **
+        * Volumen
+            * Año
+        **El sistema muestra **
+        * Formulario de creación de Volumen
+        * Cancelar creacion
+    end note
+    
+
+    vacio2 -[#green]-> VerRevista 
+    note on link
+        **El gestor ingresa **
+        * Volumen
+            * Año
+        **El sistema valida **
+        * Volumen
+            * Año
+    end note
+    vacio2 -l[#red]-> vacio3
+    note on link
+        **El gestor requiere **
+        * Cancelar creación del Volumen
+    end note    
+    vacio3 -[#red]-> [*]
+
+}
+
+[*] --> CrearVolumen
+note on link
+    **Gestor Requiere **
+    Crear Volumen
+end note
+
+CrearVolumen --> [*]
+
+
+
+
+
+@enduml

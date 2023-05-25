@@ -1,0 +1,29 @@
+@startuml Casos de uso Revista
+
+left to right direction
+package Revista{
+    actor Gestor as gs
+    actor Autor as au
+    actor Traductor as tr
+    actor Revisor as rv
+    actor Editor as ed
+    actor Usuario as us
+
+    usecase "Crear revista" as create
+    usecase "Ver revista" as read
+    usecase "Modificar revista" as update
+    usecase "Eliminar revista" as delete
+}
+
+gs --|> us
+au --|> us
+tr --|> us
+rv --|> us
+ed --|> us
+
+us --> read
+gs ---> create
+gs ---> update
+gs ---> delete
+
+@enduml

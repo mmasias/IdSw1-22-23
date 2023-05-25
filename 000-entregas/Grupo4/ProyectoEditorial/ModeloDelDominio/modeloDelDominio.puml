@@ -1,0 +1,44 @@
+@startuml modeloDelDominio
+
+
+class Editorial
+class Volumen 
+class Numero
+class BolsaDeArticulos
+class Persona
+class Usuario
+class Traduccion
+
+class Revista {
+    -ISSN: String
+}
+ 
+class Articulo {
+    -DOI: String
+}
+class Autor {
+    -ORCID: string
+}
+
+
+
+Usuario -l-- Persona : > es una
+Autor -u-- Usuario : > es un
+
+Editorial "1 "  --- "n "   Revista : > Contiene
+Revista "1 "  --- "n "  Volumen : > Contiene
+Volumen "1 "  --- "n "  Numero : > Contiene
+Numero "1 "  --- "n "  Articulo : > Contiene
+
+Revista "1 "  --- "1 "  BolsaDeArticulos : > Tiene
+BolsaDeArticulos "1 "  -r-- "    0 .. n" Articulo : > Contiene
+
+
+
+Articulo "1 "  --- "n "  Autor : < Postula
+Revista "1 "  -l-- "n "  Usuario : > Tiene
+Articulo "1 "  --- "0 .. n " Traduccion : > Tiene
+
+Editorial "1 "  -l-- "n "  Usuario : > Tiene
+
+@enduml

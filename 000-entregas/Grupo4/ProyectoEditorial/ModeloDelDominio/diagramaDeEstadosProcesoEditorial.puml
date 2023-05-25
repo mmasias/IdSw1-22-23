@@ -1,0 +1,56 @@
+@startuml diagramaDeEstados
+
+    State Número {
+        State Maquetado
+        State Selector4 <<choice>>
+        
+        State Artículo {
+            State Selector1 <<choice>>
+            State Selector2 <<choice>>
+            State Selector3 <<choice>>
+            
+            State ArticuloRevisado as "Revisado"
+            State ArticuloPostulado as "Postulado"
+            State ArticuloAprobado as "Aprobado"
+            State ArticuloRechazado as "Rechazado"
+            State ArticuloPendienteDePublicar as "PendienteDePublicar"
+            State ArticuloEliminado as "Eliminado"
+            State Editado
+            State PendienteDeRevisar
+            
+
+            [*] --> ArticuloPostulado : Postular Artículo
+
+            ArticuloPostulado -d-> PendienteDeRevisar
+            PendienteDeRevisar -d-> ArticuloRevisado
+
+            ArticuloRevisado -d-> Selector2: ¿Se aprobó?
+            Selector2 -[#Green]-> ArticuloAprobado
+            Selector2 -l[#red]-> ArticuloRechazado
+            
+            ArticuloRechazado -r-> Selector3 : ¿Se va a volver a postular?
+            Selector3 -u[#Green]-> Editado : Editar
+            Selector3 -[#red]-> ArticuloEliminado
+
+            ArticuloEliminado --> [*]
+
+            Editado -u-> ArticuloPostulado : Volver a postular
+            ArticuloAprobado --> ArticuloPendienteDePublicar
+
+            ArticuloPendienteDePublicar --> Selector1
+            Selector1 -[#Green]-> Maquetado: [articulos >=8] Maquetar Numero
+            Selector1 -[#red]-> Selector4 : [articulos < 8] : ¿Plazo maximo de publicación?
+            Selector4 -[#red]-> ArticuloPendienteDePublicar
+            Selector4 -[#Green]-> Maquetado
+
+        }
+        
+
+        Maquetado --> Traducido: Traducir Artículos del número
+        Traducido --> Publicado : Publicar Número 
+        Publicado --> [*]
+         
+    }
+        
+
+@enduml

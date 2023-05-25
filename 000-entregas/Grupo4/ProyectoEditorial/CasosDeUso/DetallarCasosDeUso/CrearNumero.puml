@@ -1,0 +1,50 @@
+@startuml Detalle Caso de Uso Crear Número
+
+State CrearNúmero {
+
+    State " " as vacio2 <<choice>>
+    State " " as vacio3
+    State VerNúmero
+
+    [*] ---> vacio2
+    note on link
+        **El sistema requiere **
+        * Número
+            * Volumen
+        **El sistema muestra **
+        * Formulario de creación de Número
+        * Cancelar creacion
+    end note
+    
+
+    vacio2 -[#green]-> VerNúmero 
+    note on link
+        **El gestor ingresa **
+        * Número
+            * Volumen
+        **El sistema valida **
+        * Número
+            * Volumen
+    end note
+    vacio2 -l[#red]-> vacio3
+    note on link
+        **El gestor requiere **
+        * Cancelar creación del Número
+    end note    
+    vacio3 -[#red]-> [*]
+
+}
+
+[*] --> CrearNúmero
+note on link
+    **Gestor Requiere **
+    Crear Número
+end note
+
+CrearNúmero --> [*]
+
+
+
+
+
+@enduml

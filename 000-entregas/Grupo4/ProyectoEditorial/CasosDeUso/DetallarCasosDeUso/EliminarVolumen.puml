@@ -1,0 +1,43 @@
+@startuml Detalle Caso de Uso Eliminar Volumen
+
+
+State EliminarVolumen {
+
+    State  " " as vacio1  
+    State  "VerRevista" as vacio2  
+    State  " " as vacio3 
+
+    [*] ---> vacio1
+    note on link
+        **El sistema muestra **
+        *Volumen a Eliminar
+        **El sistema requiere **
+        * Confirmación de Eliminación
+    end note
+
+    vacio1 -[#Green]-> vacio2
+    note on link
+        **El gestor confirma**
+        **El sistema muestra**
+        *Revista a la que pertenecia el Volumen
+    end note
+
+    vacio1 -[#Red]-> vacio3
+    note on link
+        **El gestor cancela**
+        **El sistema muestra **
+        *Volumen que no se Eliminó
+    end note
+
+
+}
+
+[*] --> EliminarVolumen
+note on link
+    **Gestor Requiere ** 
+    Eliminar Volumen
+end note
+
+EliminarVolumen --> [*]
+
+@enduml

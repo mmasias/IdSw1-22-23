@@ -1,0 +1,47 @@
+@startuml Detalle Caso de Uso Iniciar Sesion
+
+State PanelInicial
+
+State IniciarSesion {
+
+    State " " as vacio
+    State " " as vacio2
+    State " " as vacio3  <<choice>>
+    [*] ---> vacio
+
+    vacio ---> vacio2
+    note on link
+        **El sistema requiere **
+        * Nombre de usuario
+        * Contraseña
+    end note
+
+    vacio2 --> vacio3
+    note on link
+        **El usuario ingresa **
+        * Nombre de usuario
+        * Contraseña
+    end note
+
+    vacio3 -[#Red]-> vacio
+    note on link
+        **Usuario y contraseñas** 
+        **ingresadas son incorrectas**
+    end note
+    vacio3 -[#Green]-> [*] 
+
+}
+
+[*] --> IniciarSesion
+note on link
+    **Usuario Requiere **
+    Iniciar Sesion
+end note
+
+IniciarSesion --> PanelInicial
+PanelInicial --> [*]
+
+
+
+
+@enduml

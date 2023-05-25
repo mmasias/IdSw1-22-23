@@ -1,0 +1,24 @@
+@startuml Casos de uso Sesión
+
+left to right direction
+package Sesión{
+    actor Gestor as gs
+    actor Autor as au
+    actor Traductor as tr
+    actor Revisor as rv
+    actor Editor as ed
+    actor Usuario as us
+
+    usecase "Iniciar sesión" as login 
+    usecase "Finalizar sesión" as logout
+}
+
+gs --|> us
+au --|> us
+tr --|> us
+rv --|> us
+ed --|> us
+us --> login
+us --> logout
+
+@enduml

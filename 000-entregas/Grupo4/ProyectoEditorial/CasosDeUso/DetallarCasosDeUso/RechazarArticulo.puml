@@ -1,0 +1,22 @@
+@startuml Detalle Caso de Uso Rechazar Artículo
+
+State RechazarArticulo {
+
+    State  "VerArticulo" as vacio  
+    [*] ---> vacio
+    note on link
+        **El sistema muestra **
+        *El artículo rechazado
+    end note
+
+}
+
+[*] --> RechazarArticulo
+note on link
+    **Revisor Requiere **
+    Rechazar Artículo
+end note
+
+RechazarArticulo --> [*]
+
+@enduml

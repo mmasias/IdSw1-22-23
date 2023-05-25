@@ -1,0 +1,33 @@
+@startuml Casos de uso Número
+
+left to right direction
+package Numero{
+    actor Gestor as gs
+    actor Autor as au
+    actor Traductor as tr
+    actor Revisor as rv
+    actor Editor as ed
+    actor Usuario as us
+
+    usecase "Crear número" as create
+    usecase "Ver número" as read
+    usecase "Listar números" as list
+    usecase "Modificar número" as update
+    usecase "Eliminar número" as delete
+    usecase "Públicar número" as publicar
+}
+
+gs --|> us
+au --|> us
+tr --|> us
+rv --|> us
+ed --|> us
+
+us --> read
+us --> list
+gs ---> create
+gs ---> update
+gs ---> delete
+gs ---> publicar
+
+@enduml

@@ -1,0 +1,43 @@
+@startuml Detalle Caso de Uso Eliminar Revista
+
+
+State EliminarRevista {
+
+    State  " " as vacio1  
+    State  " " as vacio2  
+    State  " " as vacio3 
+
+    [*] ---> vacio1
+    note on link
+        **El sistema muestra **
+        *Revista a Eliminar
+        **El sistema requiere **
+        * Confirmación de Eliminación
+    end note
+
+    vacio1 -[#Green]-> vacio2
+    note on link
+        **El gestor confirma**
+        **El sistema muestra**
+        *Panel inicial
+    end note
+
+    vacio1 -[#Red]-> vacio3
+    note on link
+        **El gestor cancela**
+        **El sistema muestra **
+        *Revista que no se Eliminó
+    end note
+
+
+}
+
+[*] --> EliminarRevista
+note on link
+    **Gestor Requiere ** 
+    Eliminar Revista
+end note
+
+EliminarRevista --> [*]
+
+@enduml

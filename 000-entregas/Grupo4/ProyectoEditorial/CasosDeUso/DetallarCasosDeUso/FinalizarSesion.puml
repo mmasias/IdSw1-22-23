@@ -1,0 +1,26 @@
+@startuml Detalle Caso de Uso Finalizar Sesion
+
+State FinalizarSesion {
+
+    State " " as vacio 
+    [*] ---> vacio
+    note on link
+        **El sistema permite **
+        * Finalizar Sesion
+
+    end note
+
+}
+
+[*] --> FinalizarSesion
+note on link
+    **Usuario Requiere **
+    Finalizar Sesion
+end note
+
+FinalizarSesion --> [*]
+
+
+
+
+@enduml

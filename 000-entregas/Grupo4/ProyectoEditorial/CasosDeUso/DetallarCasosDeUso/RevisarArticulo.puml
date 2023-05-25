@@ -1,0 +1,65 @@
+@startuml Detalle Caso de Uso Revisar Artículo
+
+State RevisarArtículo {
+
+    State  " " as vacio  
+    State  " " as vacio2  
+    State  " " as vacio3  
+    State  "RechazarArtículo" as vacio4  
+    State  "AprobarArtículo" as vacio5  
+    [*] ---> vacio
+    note on link
+        **El sistema muestra **
+        *Artículo a revisar
+        *Campo para ingresar comentarios
+        *Botón para aprobar artículo
+        *Botón para rechazar artículo
+        *Cancelar revisión
+        **El sistema requiere **
+        * Confirmar revisión
+    end note
+
+    vacio -[#Green]-> vacio2
+    note on link
+        **El revisor requiere **
+        * Confirmar revisión del artículo
+
+        ** El sistema requiere **
+        * Comentarios del revisor
+        * Artículo aprobado
+        * Artículo rechazado
+    end note
+
+    vacio2 -l[#Red]-> vacio4
+    note on link
+        **El revisor requiere **
+        * Rechazar revisión del artículo
+        **El revisor ingresa**
+        * Comentarios del Artículo
+    end note
+
+    vacio2 -[#Green]-> vacio5
+    note on link
+        **El revisor requiere **
+        * Aprobar revisión del artículo
+        **El revisor ingresa**
+        * Comentarios del Artículo
+    end note
+
+    vacio -l[#Red]-> vacio3
+    note on link
+        **El revisor requiere **
+        * Cancelar revisión del artículo
+    end note
+
+}
+
+[*] --> RevisarArtículo
+note on link
+    **Revisor Requiere **
+    Revisar Artículo
+end note
+
+RevisarArtículo --> [*]
+
+@enduml

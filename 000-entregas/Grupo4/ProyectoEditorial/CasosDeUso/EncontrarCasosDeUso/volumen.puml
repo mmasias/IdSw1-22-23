@@ -1,0 +1,16 @@
+@startuml Casos de uso Volúmen
+
+left to right direction
+package Volumen{
+    actor Gestor as gs
+
+    usecase "Crear volumen" as create
+    usecase "Modificar volumen" as update
+    usecase "Eliminar volumen" as delete
+}
+
+gs --> create
+gs --> update
+gs --> delete
+
+@enduml

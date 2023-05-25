@@ -1,0 +1,137 @@
+@startuml Diagrama De Contexto
+
+State "Inicio" as inicial
+State "Panel Inicial" as admin
+State "Vista Revista" as revista
+State "Vista Listar Numeros" as volumenesYNumeros
+State "Vista Listar Articulos" as ListarArticulos
+State "Vista Número" as Articulos
+State "Vista Articulo" as Articulo
+
+[*] --> inicial
+
+admin --> [*]
+note on link
+    Finalizar Sesión
+end note
+revista --> [*]
+note on link
+    Finalizar Sesión
+end note
+volumenesYNumeros -r-> [*]
+note on link
+    Finalizar Sesión
+end note
+Articulos --> [*]
+note on link
+    Finalizar Sesión
+end note
+Articulo --> [*]
+note on link
+    Finalizar Sesión
+end note
+
+
+
+inicial --> admin
+note on link
+    Iniciar Sesión
+end note
+
+admin --> admin
+note on link
+    Crear Revista
+end note
+
+admin --> revista
+note on link
+    Ver Revista
+end note
+
+revista -r-> volumenesYNumeros
+note on link
+    Listar Números
+end note
+volumenesYNumeros --> revista
+note on link
+    Ver Revista
+end note
+
+volumenesYNumeros --> Articulos
+note on link
+    Ver Numero
+end note
+Articulos --> volumenesYNumeros
+note on link
+    Listar Números
+end note
+
+revista -r-> Articulos
+note on link
+    Ver Numero
+end note
+Articulos -l-> revista
+note on link
+    Ver Revista
+end note
+
+revista --> revista
+note on link
+    Eliminar Revista
+    Modificar Revista
+    Crear Volumen
+    Crear Número
+    Postular Articulo
+end note
+
+Articulos --> Articulos
+note on link
+    Eliminar Número
+    Modificar Número
+    Publicar Número
+    Modificar Volumen
+    Eliminar Volumen
+end note
+
+
+Articulos --> Articulo
+note on link
+    Ver Articulo
+end note
+
+Articulo --> Articulos
+note on link
+    Eliminar Articulo
+    Ver Numero
+end note
+
+Articulo --> Articulo
+note on link
+    Publicar Articulo
+    Traducir Artículo
+    Modificar Articulo
+    Aprobar Articulo
+    Rechazar Articulo
+    Revisar Articulo
+end note
+
+revista --> ListarArticulos
+note on link
+    Listar Articulos
+end note
+
+ListarArticulos --> revista
+note on link
+    Ver Revista
+end note
+
+ListarArticulos --> Articulo
+note on link
+    Ver Articulo
+end note
+
+
+
+
+
+@enduml
