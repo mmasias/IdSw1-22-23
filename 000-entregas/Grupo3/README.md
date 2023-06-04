@@ -133,3 +133,4 @@ Una vez tienen todos los datos, organizaron el viaje, y al final de este, el pro
 ### Trabajadores
 ![Imagen](interfaz/Trabajador-EnviarJustificante.png)
 ![Imagen](interfaz/Trabajador-GenerarReporte.png)
+![Imagen](interfaz/Trabajador-VerSolicitudes.png)
