@@ -1,0 +1,23 @@
+@startuml VerSusSolicitudes
+    [*] --> VerSusSolicitudes
+note on link
+ <b> El trabajador desea ver el estado de sus solicitudes de viaje.
+end note
+
+State VerSusSolicitudes{
+
+    State StateEntraSuPerfil as "EntraASuPerfil"
+    State StateEntraAViajes as "EntraAViajes"
+    State StateSolicitudesPendientes as "EntraASolicitudesPendientes"
+
+    StateEntraSuPerfil  --> StateEntraAViajes
+    StateEntraAViajes --> StateSolicitudesPendientes
+    StateSolicitudesPendientes --> [*]
+
+}
+note on link
+ <b> El trabajador ve el estado de sus solicitudes de viaje.
+end note
+
+@enduml
+

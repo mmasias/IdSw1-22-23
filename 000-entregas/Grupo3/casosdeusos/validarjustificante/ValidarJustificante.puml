@@ -1,0 +1,33 @@
+@startuml ValidarJustificante
+    [*] --> ValidarJustificante
+
+State ValidarJustificante {
+    note on link
+      <b>Gestion recibe justificante
+    end note
+
+    State StateJustificanteRecibido as "Justificante recibido"
+    State StateGestionObservaJustificante as "Gestion observa foto justificante"
+    State StateJustificanteAprobado as "Justificante aprobado"
+    State StateJustificanteDenegado as "Justificante denegado"
+    State StateJustificanteComentario as "Gestion pone comentario"
+    State StateJustificanteImporte as "Gestion anota importe"
+    state c <<choice>>
+
+
+    StateJustificanteRecibido --> StateGestionObservaJustificante
+    StateGestionObservaJustificante  --> c
+    c --> StateJustificanteAprobado
+    c --> StateJustificanteDenegado
+    StateJustificanteDenegado --> StateJustificanteComentario
+    StateJustificanteComentario  --> [*]
+    StateJustificanteAprobado ---> StateJustificanteImporte
+    StateJustificanteImporte  --> [*]
+
+    note right of c
+      <b>¿Es válido?
+    end note
+
+}
+
+@enduml

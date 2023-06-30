@@ -1,0 +1,22 @@
+@startuml CrearInformes
+    [*] --> CrearInformes
+note on link
+ <b> Gestion desea crear informe del viaje tras acabar el viaje
+end note
+
+State CrearInformes{
+
+    State StateInformeAcabado as "InformeAcabado"
+    State StateInformeGenerandose as "InformeGenerandose"
+    State StateDatosViajeGuardados as "DatosViajeGuardados"
+
+    StateDatosViajeGuardados  --> StateInformeGenerandose
+    StateInformeGenerandose --> StateInformeAcabado
+    StateInformeAcabado --> [*]
+ note on link
+ <b> Gestion guarda el informe del viaje
+end note
+
+}
+
+@enduml

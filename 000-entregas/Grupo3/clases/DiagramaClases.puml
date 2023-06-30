@@ -1,0 +1,22 @@
+@startuml
+class Trabajador
+class Gestion
+Trabajador -> SolicitudViaje : solicita
+SolicitudViaje --> Fecha
+SolicitudViaje --> Destino
+SolicitudViaje --> Razon
+SolicitudViaje -> Viaje : aceptado
+Viaje --> Resgistro : genera
+Gestion --> SolicitudViaje : valida
+Gestion --> Viaje : administra
+Gestion -> InformeResgistros : crea
+Gestion --> Justificante : valida
+Viaje -> Gastos : tiene
+Viaje --> Dieta
+Gastos -> Justificante : genera
+Gastos --> GastosExtra
+Gastos --> GastosOrdinarios
+GastosOrdinarios --> Alojamiento
+GastosOrdinarios --> Transporte
+GastosOrdinarios --> Comida
+@enduml

@@ -1,0 +1,42 @@
+@startuml
+SolicitaViaje --> Solicitud : Trabajador solicita viaje
+
+state AlertaViajePendienteDeGestionarCobros {
+}
+
+State Viaje{
+  EnOrganizacion --> EnEspera
+  EnEspera --> EnProceso
+  EnProceso --> Justificante : Se generan gastos
+State EnGestionDeCobros {
+   state h <<choice>>
+note right of h
+  Se suman todos los importes de los justificantes
+end note
+   EnGestionDeCobros --> h
+   h --> TrabajadorDebeDinero : Suma< Provision fondos
+   h --> UniversidadDebeDinero : Suma > Provision fondos
+   TrabajadorDebeDinero --> Cerrado : Se realizan los pagos
+   UniversidadDebeDinero --> Cerrado
+   EnGestionDeCobros --> AlertaViajePendienteDeGestionarCobros : No se gestiona cobro en un tiempo
+}
+
+Justificante --> EnProceso
+  EnProceso --> EnGestionDeCobros : El viaje acaba
+}
+State Justificante{
+  state b <<choice>>
+  PendientePorValidar --> b
+  b --> Aceptado
+  b --> Denegado
+}
+State Solicitud{
+  state c <<choice>>
+  Pendiente --> c
+  c --> Denegada : Rechazada
+  c --> Aceptada : Aceptada
+  Aceptada --> Viaje
+  Denegada -> [*]
+}
+Cerrado --> [*]
+@enduml

@@ -1,0 +1,20 @@
+@startuml VerSolicitudesPendientes
+    [*] --> VerSolicitudesPendientes
+note on link
+ <b> Gestion desea ver las solicitudes pendientes
+end note
+
+State VerSolicitudesPendientes{
+
+    State StateEntraAViajes as "EntraAViajes"
+    State StateSolicitudesPendientes as "EntraASolicitudesPendientes"
+
+    StateEntraAViajes --> StateSolicitudesPendientes
+    StateSolicitudesPendientes --> [*]
+
+}
+note on link
+ <b> Gestion ve todas las solicitudes de viaje pendientes.
+end note
+
+@enduml

@@ -1,0 +1,48 @@
+@startuml EnviarJustificante
+    [*] --> EnviarJustificante
+
+State EnviarJustificante{
+
+    State StateTrabajadorViajando as "Trabajador viajando"
+    state StateViajeAcabado as "Viaje acabado"
+    state StateSeGeneraJustificante as "Justificante generada"
+    state StateJustificanteEnviado as "Justificante enviado"
+    state StateJustificanteValidada as "Justificante validada"
+    state StateJustificanteRechazada as "Justificante rechazada"
+    state c <<choice>>
+
+    StateSeGeneraJustificante  --> StateTrabajadorViajando
+    StateSeGeneraJustificante  --> StateViajeAcabado
+    StateViajeAcabado --> StateJustificanteEnviado
+    StateTrabajadorViajando --> StateJustificanteEnviado
+    StateJustificanteEnviado --> c
+    c --> StateJustificanteValidada
+    c --> StateJustificanteRechazada
+    StateJustificanteRechazada --> StateJustificanteEnviado
+
+    note right of StateSeGeneraJustificante
+      <b>El Trabajador genera una Justificante
+      <b>durante el viaje, pero la puede
+      <b>enviar durante el viaje o
+      <b>tras el viaje.
+    end note
+
+    note right of StateJustificanteEnviado
+      <b>El Trabajador envia una foto de la justificante.
+    end note
+
+    note right of c
+      <b>Se valida o rechaza la justificante.
+    end note
+}
+StateJustificanteValidada  --> [*]
+note on link
+ <b>Paso del tiempo
+ Trabajador rellena la solicitud de viaje con destino, fecha...
+end note
+
+note on link
+      <b> justificante enviado
+    end note
+
+@enduml

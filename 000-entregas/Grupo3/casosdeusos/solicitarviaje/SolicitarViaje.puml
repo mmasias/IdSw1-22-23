@@ -1,0 +1,37 @@
+@startuml SolicitaViaje
+    [*] --> SolicitaViaje
+
+State SolicitaViaje{
+
+    State StateRelleno as "  "
+    state StateRellenar as " "
+
+
+    note on link
+      <b> Trabajador tiene propuesta de viaje
+    end note
+
+    StateRellenar --> StateRelleno
+
+    note right of StateRellenar
+      <b>El trabajador debe rellenar el formulario
+      <b>para poder solicitar el viaje
+    end note
+
+    note right of StateRelleno
+      <b>Solicitud de viaje rellenada
+      <b>con todos los datos necesarios
+    end note
+}
+note on link
+ <b>Paso del tiempo
+ El trabajador rellena la solicitud de viaje con destino, fecha inicio, fecha fin, carta de invitación o razón de viaje.
+end note
+
+StateRelleno --> [*]
+
+note on link
+      <b> Solicitud enviada a gestión
+    end note
+
+@enduml

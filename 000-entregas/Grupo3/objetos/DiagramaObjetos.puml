@@ -1,0 +1,67 @@
+@startuml
+object "viaje: Viaje" as viaje {
+}
+object "gastos: Gastos" as gastos{
+}
+object "comida: Comida" as comida{
+         Presupuesto: 100
+}
+object "transporte: Transporte" as transporte{
+	Medio: Coche
+	Distancia: 400
+	Disponibilidad: Universidad
+}
+object "alojamiento: Alojamiento" as alojamiento{
+	Tipo: Hotel
+	Financiamiento: Universidad
+}
+object "gastosExtra: gastosExtra" as gastosExtra{
+}
+object "justificante: Justificante" as justificante{
+}
+object "gestion: Gestion" as gestion{
+}
+object "informeViajes: InformeViajes" as informeViajes{
+}
+object "solicitudViaje: SolicitudViaje" as solicitudViaje{
+}
+object "gastosOrdinarios: GastosOrdinarios" as gastosOrdinarios{
+}
+object "destino: Destino" as destino{
+        Pais: España
+        Provincia: Comunidad de Madrid
+        Ciudad: Madrid
+        LugarEvento: Ifema
+}
+object "fechas: Fechas" as fechas{
+        Fecha Ida: 10-11-2022
+        Fecha Vuelta: 11-11-2022
+}
+object "razon: Razon" as razon{
+        Razon: Charla sobre software
+}
+object "trabajador: Trabajador" as trabajador{
+}
+object "registro: Registro" as registro{
+}
+object "dieta: Dieta" as dieta{
+}
+gestion--> solicitudViaje : valida
+viaje -> gastos
+gastos -> justificante: Genera
+gastos --> gastosExtra
+gestion -> informeViajes
+gestion --> justificante : valida
+gastos --> gastosOrdinarios
+gastosOrdinarios --> comida
+gastosOrdinarios --> transporte
+gastosOrdinarios --> alojamiento
+solicitudViaje -> viaje
+solicitudViaje --> destino
+solicitudViaje --> fechas
+solicitudViaje --> razon
+viaje --> dieta
+viaje --> registro : genera
+trabajador -> solicitudViaje : solicita
+gestion --> viaje : administra
+@enduml

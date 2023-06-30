@@ -1,0 +1,21 @@
+@startuml VerViajes
+    [*] --> VerViajes
+note on link
+ <b> Gestion desea ver todos los viajes
+end note
+
+State VerViajes{
+
+    State StateEntraEnViajes as "EntraEnViajes"
+    State StateObservaViajes as "ObservaViajes"
+
+    StateEntraEnViajes --> StateObservaViajes
+    StateObservaViajes --> [*]
+ note on link
+ <b> Gestion observa todos los viajes, que se han realizado
+ <b> y que estan realizandose
+end note
+
+}
+
+@enduml

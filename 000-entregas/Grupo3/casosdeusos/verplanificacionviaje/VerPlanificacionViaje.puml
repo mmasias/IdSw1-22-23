@@ -1,0 +1,23 @@
+@startuml VerPlanificacionDeViaje
+    [*] --> VerPlanificacionDeViaje
+note on link
+ <b> Profesor recibe notificacion de que viaje
+ <b> esta planificado
+end note
+
+State VerPlanificacionDeViaje{
+
+    State StateRecibeCorreo as "RecibeCorreo"
+    State StateEntraAlCorreo as "EntraAlCorreo"
+    State StateVePlanificacion as "VePlanificacion"
+
+    StateRecibeCorreo --> StateEntraAlCorreo
+    StateEntraAlCorreo--> StateVePlanificacion
+    StateVePlanificacion --> [*]
+ note on link
+ <b> Profesor viaja
+end note
+
+}
+
+@enduml

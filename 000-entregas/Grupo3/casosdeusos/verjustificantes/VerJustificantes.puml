@@ -1,0 +1,16 @@
+@startuml VerJustificantes
+    [*] --> VerJustificantes
+note on link
+ <b> Gestion o trabajador desea ver
+ <b> los justificantes del viaje.
+end note
+
+State VerJustificantes{
+
+    State StateEntraAlViaje as "EntraAlViaje"
+    State StateEntraAJustificantes as "EntraAJustificantes"
+
+    StateEntraAlViaje --> StateEntraAJustificantes
+}
+
+@enduml
